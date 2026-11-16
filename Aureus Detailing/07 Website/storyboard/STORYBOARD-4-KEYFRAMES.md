@@ -4,6 +4,9 @@ Written 16 Nov 2026 (replaces the foam version; the old one is in git history).
 
 **The idea:** the website is a dive into a car's paint. You start with a whole car, a lens drops onto the bonnet, and you sink into the paint at microscope scale. There, swirl marks are canyons that get polished flat in front of you, the metallic flake glitters like a galaxy, and ceramic coating grows over the surface like crystal. Each package is a deeper layer: **Silver = the surface, Gold = the clear coat, Aureus = the ceramic shield**. It shows customers what detailing actually does.
 
+## Where to generate
+In Higgsfield (Plus account), open **Projects → Aureus Detailing** and generate there, so all keyframes and clips stay together. Claude saves its own generations into the same project.
+
 ## How to keep the 4 images consistent
 1. **Make keyframe 2 first** (the master hero). Pick the best result.
 2. Attach **that image and the logo** (`Aureus Detailing/02 Logo/Icons/social-profile-1080.png`) as references for keyframes 1, 3 and 4.

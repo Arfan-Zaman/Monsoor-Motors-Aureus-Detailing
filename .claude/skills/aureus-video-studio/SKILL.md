@@ -49,6 +49,8 @@ Other packs (anime, fight scenes, music video, food, fashion, podcast, SaaS, cou
 - The same seed plus the same references gives a matching look. Log both.
 
 ## 4. Asset library (where things live)
+- **Higgsfield destination:** project **Aureus Detailing** in the Plus workspace. workspace_id `68fdca71-5be8-4d53-ac58-fa86267eb49b`, project/folder_id `5b8de463-c51c-494a-9cf5-608268e53889`. Pass this `folder_id` on every Aureus generation. Monsoor Motors work does not go in this project.
+
 - `assets/ASSET-REGISTER.md`: every reusable asset: characters, reference elements, Soul IDs, logos uploaded to Higgsfield (media IDs), approved style prompts, music.
 - `assets/GENERATION-LOG.md`: one line per generation: date, project, model, prompt file, seed, references, cost, result link, keep / reject and why.
 - Finished files: `Aureus Detailing/08 Social Media/Posts/<YYYY-MM-DD>-<slug>/` (or `Ready Posts/` for Monsoor). Keep raw videos out of git (`.gitignore` already blocks `.mp4`). Store the Higgsfield link in the log instead.
