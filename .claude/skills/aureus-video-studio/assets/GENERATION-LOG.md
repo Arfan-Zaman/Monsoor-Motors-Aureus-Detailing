@@ -49,3 +49,9 @@ One line per Higgsfield generation. Reuse the prompt, seed and references of kee
 | 2026-11-17 | Persona voice lines g1-g6 (gruff, few words) | seed_audio cloned voice | ad/AD-V2-DIRECTOR-BRIEF.md | - | his-voice-ref.wav | 2.4 | job f9bb7263, d2740eda, 4784abef, eacc64ee, 0464ac0c, a8dbbe51 | Keep (audio/v3/) |
 | 2026-11-17 | Casual voice lines c1-c6 | seed_audio | ad/AD-V2-DIRECTOR-BRIEF.md | - | his-voice-ref.wav | 2.4 | job jobs5.txt | Not used: persona chosen instead |
 | 2026-11-17 | Bell still + bell shot (taps chrome service bell) | nano_banana_pro 2k + kling4_0 3 s | ad/AD-V2-DIRECTOR-BRIEF.md | - | character board + hero | 11.75 | job 2b5c33db, 58a0ebb2 | Keep: tap lands at 1.5 s into the shot |
+
+| 2026-11-17 | Ad v3 links L1-L8 (3 s, start image + end image, so each last frame = next first frame) | kling4_0 i2v 1080p 9:16 | ad/make_ad_v3.py | - | v2 keyframe stills | 78 | job ad/jobs9.txt | Keep: the one-take film |
+| 2026-11-17 | Ad v3 foam + full-car rinse stills | nano_banana_pro 9:16 2k | ad/make_ad_v3.py | - | character board + trainer-01 + p1 | 4 | job f48f56b7, 3ff45e48 | Keep (owner asked for foaming and rinsing shots) |
+| 2026-11-17 | Ad v3 links LA foam>rinse, LB rinse>polish, LC steam>wheel, LD wheel>paint macro | kling4_0 i2v 3 s | ad/make_ad_v3.py | - | stills above | 39 | job d6a977a2, a446d269, 11158ab9, 4f2bd268 | Keep: 30 s cut uses A B 1 2 C D 7 8; 36 s cut uses A B 1-8 |
+| 2026-11-17 | ASMR sound per activity (11 x 3 s) + 30 s Perth ambience + foam, rinse | mirelo_text_to_audio | ad/make_ad_v3.py | - | - | about 11 | job ad/jobs7.txt, jobs10.txt | Keep (audio/asmr/). Kling's own audio track was unusable: mostly 'dramatic music' |
+| 2026-11-17 | Persona voice lines h1-h5, cloned from the on-camera take so the voice matches | seed_audio | ad/make_ad_v3.py | - | audio/v4/persona-voice-ref.wav | 2 | job ad/jobs8.txt, jobs10.txt | Keep h3 'Yeah. That'll do.' and h5 'Every spoke... by hand.'; h2 replaced (unclear) |

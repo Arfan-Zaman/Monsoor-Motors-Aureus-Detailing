@@ -166,6 +166,12 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Decisions / feedback: owner wants Hollywood-style direction, the detailer talking about the solution, a dramatic finished-paint close-up, and transparent brand-colour graphics.
 - To-do next: owner to watch with sound on and approve voice; AI label when posting; Higgsfield Ads Studio "micro drama" film is a separate job needing its own budget.
 
+### 17 Nov 2026 (Aureus ad v3: one take)
+- What we made / changed: Ad v3 as one continuous take: snow foam → rinse → machine polish → hand wax → steam → wheels → sealed paint → bell → he speaks. Raw footage, ASMR sound first, his own voice, a few glass labels. Two cuts: 30 s for paid ads, 36 s full cut for organic.
+- Files: `Aureus Detailing/08 Social Media/Launch Reels/ad/` → `Aureus-Ad-v3-30s.mp4`, `Aureus-Ad-v3-36s.mp4` (+ `-NO-MUSIC`), `make_ad_v3.py`. All Higgsfield jobs filed in four folders of the Higgsfield "Aureus Detailing" project; brief saved in its description.
+- Decisions / feedback: owner prefers raw shots to edits; no grade or effects; music must not cover the ASMR; narrator must match his on-camera voice; text minimal, glassy, weather-matched colours; don't spend credits on what can be done free; shots must connect last frame to first frame.
+- To-do next: owner listens and approves; decide whether the last (midday) speaking shot needs a golden-hour retake (about 36 credits); owner runs /send-to-project to start the Claude project; reel 2.
+
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
 - What we made / changed:

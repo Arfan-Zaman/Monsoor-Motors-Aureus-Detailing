@@ -76,3 +76,13 @@ See `SOURCES.md` in this folder.
 - **Format:** every reel image and video is **9:16 vertical, 1080×1920** (Instagram Reels, Facebook Reels, TikTok). Keep text and faces inside the centre safe area (avoid the top 250 px and bottom 400 px, which the apps cover). Reference sheets and boards may be 16:9.
 - **Lead character:** "the master detailer" (real staff member, consent confirmed). Always pass the character board job and the face reference uploads from `assets/ASSET-REGISTER.md` as image references; never describe his face from scratch and never alter it.
 - **Uniform (v1, also the real staff uniform design):** deep navy #071A33 piqué polo, twin aqua #00A8A8 tipping on collar and cuffs, aqua inner placket, embroidered chrome A + "AUREUS DETAILING" on the left chest only, charcoal work trousers, black belt, black work shoes.
+
+## 8. One-take method (owner's preferred look, set 17 Nov 2026)
+The owner prefers raw Higgsfield footage to edited versions. Build ads like this:
+- **Keyframes first:** one 9:16 still per step with the detailer in it (character board + face reference + a scene still for light and place). 2 credits each.
+- **Links, not clips:** Kling 4.0 image-to-video, 3 s (the minimum, 9.75 credits), `--start-image` = this step, `--end-image` = next step. Each shot's last frame is the next shot's first frame, so the film plays as one take. Plan is capped at 6 jobs at once.
+- **Real speed only.** Never retime a shot. No grade, grain, zooms, flashes or pop-up graphics on the footage.
+- **Sound:** Kling's own audio is unreliable (often music). Use `mirelo_text_to_audio` (0.75 credits per 3 s) for close-mic ASMR per activity; his voice only, cloned from `ad/audio/v4/persona-voice-ref.wav`; music about 13 dB under the sound.
+- **Text:** a few frosted-glass labels (footage blurred behind them), warm white, no brand colours pushed; watermark top left at about 55%.
+- **Lengths:** 30 s for paid ads with the offer on screen in the first 3 s; a longer full cut for organic.
+- **Edit free on this Mac:** `Launch Reels/ad/make_ad_v3.py` (`CUT=30` or `CUT=36`). Spend credits only on new shots, and file every job in the Higgsfield project folders (asset register).
