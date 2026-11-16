@@ -80,9 +80,10 @@ See `SOURCES.md` in this folder.
 ## 8. One-take method (owner's preferred look, set 17 Nov 2026)
 The owner prefers raw Higgsfield footage to edited versions. Build ads like this:
 - **Keyframes first:** one 9:16 still per step with the detailer in it (character board + face reference + a scene still for light and place). 2 credits each.
-- **Links, not clips:** Kling 4.0 image-to-video, 3 s (the minimum, 9.75 credits), `--start-image` = this step, `--end-image` = next step. Each shot's last frame is the next shot's first frame, so the film plays as one take. Plan is capped at 6 jobs at once.
+- **Clean cuts, not connected moves.** The owner tried start-image + end-image links (one continuous take) and rejected the look on 17 Nov 2026. Make one 3 s Kling 4.0 shot per keyframe (start image only, 9.75 credits) and cut between them. The first 1.5 s of an existing link is still a clean shot and can be reused free.
+- **He speaks early:** van arrives, then him to camera with the offer inside the first 10 s, then the services, the bell, the offer card.
 - **Real speed only.** Never retime a shot. No grade, grain, zooms, flashes or pop-up graphics on the footage.
 - **Sound:** Kling's own audio is unreliable (often music). Use `mirelo_text_to_audio` (0.75 credits per 3 s) for close-mic ASMR per activity; his voice only, cloned from `ad/audio/v4/persona-voice-ref.wav`; music about 13 dB under the sound.
 - **Text:** a few frosted-glass labels (footage blurred behind them), warm white, no brand colours pushed; watermark top left at about 55%.
 - **Lengths:** 30 s for paid ads with the offer on screen in the first 3 s; a longer full cut for organic.
-- **Edit free on this Mac:** `Launch Reels/ad/make_ad_v3.py` (`CUT=30` or `CUT=36`). Spend credits only on new shots, and file every job in the Higgsfield project folders (asset register).
+- **Edit free on this Mac:** `Launch Reels/ad/make_ad_v4.py`. Spend credits only on new shots, and file every job in the Higgsfield project folders (asset register).

@@ -172,6 +172,11 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Decisions / feedback: owner prefers raw shots to edits; no grade or effects; music must not cover the ASMR; narrator must match his on-camera voice; text minimal, glassy, weather-matched colours; don't spend credits on what can be done free; shots must connect last frame to first frame.
 - To-do next: owner listens and approves; decide whether the last (midday) speaking shot needs a golden-hour retake (about 36 credits); owner runs /send-to-project to start the Claude project; reel 2.
 
+### 17 Nov 2026 (Aureus ad v4: clean cuts)
+- What we made / changed: owner did not like the connected one-take shots (v3). Ad v4 goes back to separate shots with clean cuts: swirl close-up → van → he speaks (offer) → foam → rinse → polish → hand wax → steam → vents → wheels → wheel rinse → sealed paint → bell → offer. Raw footage, real sound, his own voice, light glass labels. 0 credits.
+- Files: `Aureus Detailing/08 Social Media/Launch Reels/ad/Aureus-Ad-v4.mp4`, `Aureus-Ad-v4-NO-MUSIC.mp4`, `make_ad_v4.py`.
+- To-do next: owner listens and approves; Higgsfield Ads Studio only if he wants a different concept.
+
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
 - What we made / changed:

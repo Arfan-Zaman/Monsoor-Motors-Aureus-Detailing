@@ -55,3 +55,5 @@ One line per Higgsfield generation. Reuse the prompt, seed and references of kee
 | 2026-11-17 | Ad v3 links LA foam>rinse, LB rinse>polish, LC steam>wheel, LD wheel>paint macro | kling4_0 i2v 3 s | ad/make_ad_v3.py | - | stills above | 39 | job d6a977a2, a446d269, 11158ab9, 4f2bd268 | Keep: 30 s cut uses A B 1 2 C D 7 8; 36 s cut uses A B 1-8 |
 | 2026-11-17 | ASMR sound per activity (11 x 3 s) + 30 s Perth ambience + foam, rinse | mirelo_text_to_audio | ad/make_ad_v3.py | - | - | about 11 | job ad/jobs7.txt, jobs10.txt | Keep (audio/asmr/). Kling's own audio track was unusable: mostly 'dramatic music' |
 | 2026-11-17 | Persona voice lines h1-h5, cloned from the on-camera take so the voice matches | seed_audio | ad/make_ad_v3.py | - | audio/v4/persona-voice-ref.wav | 2 | job ad/jobs8.txt, jobs10.txt | Keep h3 'Yeah. That'll do.' and h5 'Every spoke... by hand.'; h2 replaced (unclear) |
+
+**Ad v4 (17 Nov 2026): 0 credits.** Owner rejected the connected one-take look; v4 is a cut edit from existing shots (`ad/make_ad_v4.py`). Links L1-L7, LC, LD are unused; LA, LB and L8 are used only for their clean opening seconds.
