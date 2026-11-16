@@ -1,0 +1,22 @@
+hook-still [
+  "a00d9da5-e289-42ee-b607-0f914d0188cf"
+]
+
+reveal-still [
+  "45703c8c-8eb9-481f-b399-fd689df91a1a"
+]
+
+van Error: Higgsfield API request failed.
+
+polish [
+  "179ab4c7-d863-451c-abe1-2b18c9d9b5d0"
+]
+
+steam [
+  "13708277-7eab-4df1-b169-3571ed26c888"
+]
+
+wheel [
+  "2b8f0b0d-c5aa-494d-ae65-df978dab3ab0"
+]
+
