@@ -42,7 +42,14 @@ A clean deep-navy (#071A33) mid-size van, the chrome A + "AUREUS DETAILING" logo
 Voice and lips made in one generation give the cleanest sync. Two separate clips would risk two slightly different voices, so all his speech sits in a single take.
 
 ## Free work done on this Mac (no credits)
-Camera moves on stills, cuts, captions in Montserrat and Cormorant, end-card text, and export, all with ffmpeg and Python. Music: add a licensed track inside Instagram/Facebook when posting.
+Camera moves on stills, cuts, captions in Montserrat and Cormorant, end-card text, and export, all with ffmpeg and Python. Music: see the next section.
+
+## Trending music (added when posting, not baked into the file)
+- **Why not inside the video file:** a chart song baked into the MP4 gets muted or taken down for copyright, and a business can be billed for using it in an ad. The apps only count a reel toward a trending sound when the sound is picked from their own library at posting.
+- **How:** the reel is exported with his voice and light sound effects (water, polisher, a soft whoosh on cuts). At posting, choose a trending track in the Instagram / Facebook / TikTok audio picker and set it to about 10–15% volume so his words stay clear.
+- **Which track:** pick on posting day from the "Trending" tab (Instagram shows an upward arrow next to rising audio). Choose a calm, confident instrumental or low-vocal track with a steady beat around 90–110 bpm; the cuts at 8, 11, 14 and 17 s are placed to land on the beat. Avoid tracks with strong lyrics over his line.
+- **Business-account limit:** Instagram and Facebook business accounts can only use music cleared for commercial use, so some chart songs won't appear. If the picker is thin, the choice is between the commercial library's trending tracks and switching the Instagram account type to Creator (wider music, but music then can't be used in paid ads).
+- **Two exports:** one with space for music (voice + effects) and one "clean" version with no effects, for boosting as an ad later.
 
 ## Checks before it's called finished
 - Frame-by-frame check of the speaking clip: lips match every word, face matches the board, hands and logo correct. If not clean, one retake; if still not clean, stop and report instead of spending more.
