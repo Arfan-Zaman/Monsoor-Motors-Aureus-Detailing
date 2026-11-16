@@ -106,7 +106,8 @@ Covers are in `Highlight Covers/`. Create these highlights in this order:
   Silver $149 · Gold $199 · Aureus $299
   Open 7 days 8:30–6
   ```
-- [ ] Instagram: upload the profile picture; add contact buttons (the website returned "try again later") and the booking link in the phone app; turn on 2-factor authentication.
+- [x] Instagram profile picture uploaded (16 Nov 2026).
+- [ ] Instagram, **phone app only**: contact options (email, phone, address), booking link and Book now button, two-factor authentication. Instagram's website doesn't offer these for business accounts.
 - [ ] The Aureus website lists carwashandpolish.wa@gmail.com, but Instagram uses info@monsoormotors.com.au. Pick one for all customer-facing places.
 - [ ] Create TikTok (section 7) and send Claude the link. Claude will then add both links to the website footer and the playbook.
 - [ ] Register the business name **"Aureus Detailing"** with ASIC to Monsoor Motors Pty Ltd. ABN Lookup shows it isn't registered yet, and a Sydney detailer uses the name on TikTok.
