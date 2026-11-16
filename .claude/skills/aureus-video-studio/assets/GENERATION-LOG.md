@@ -14,3 +14,4 @@ One line per Higgsfield generation. Reuse the prompt, seed and references of kee
 | 2026-11-17 | Ferrari start frame (silk cover) | nano_banana_pro 4k | - | - | ref 9f0d0c2f | ~4 | job 872c8104 | Keep (storyboard/ferrari/start.png) |
 | 2026-11-17 | Ferrari end frame (rear wheel, beads) | nano_banana_pro 4k | - | - | ref 9f0d0c2f | ~4 | job 704672a3 | Keep (storyboard/ferrari/end.png) |
 | 2026-11-17 | Website hero film, Ferrari 15 s | kling4_0 image-to-video 1080p 16:9 | (prompt in chat) | - | start 872c8104, end 704672a3 | 48.75 | job ac84e277 | Keep: silk reveal → orbit → rear wheel; encoded to assets/film/ (replaces the SUV film, kept in storyboard/suv-film-old/) |
+| 2026-11-17 | Character board v1 (master detailer) | nano_banana_pro 16:9 4k | Character Board/BOARD-PROMPT.md | - | 5 face refs + logo | ~4 | job bfc4292f | Keep: likeness and uniform approved for review |

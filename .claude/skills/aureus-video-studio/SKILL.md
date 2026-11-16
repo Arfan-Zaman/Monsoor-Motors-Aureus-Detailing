@@ -71,3 +71,8 @@ Other packs (anime, fight scenes, music video, food, fashion, podcast, SaaS, cou
 
 ## Sources of the installed packs
 See `SOURCES.md` in this folder.
+
+## 7. Launch reel framework (set 17 Nov 2026)
+- **Format:** every reel image and video is **9:16 vertical, 1080×1920** (Instagram Reels, Facebook Reels, TikTok). Keep text and faces inside the centre safe area (avoid the top 250 px and bottom 400 px, which the apps cover). Reference sheets and boards may be 16:9.
+- **Lead character:** "the master detailer" (real staff member, consent confirmed). Always pass the character board job and the face reference uploads from `assets/ASSET-REGISTER.md` as image references; never describe his face from scratch and never alter it.
+- **Uniform (v1, also the real staff uniform design):** deep navy #071A33 piqué polo, twin aqua #00A8A8 tipping on collar and cuffs, aqua inner placket, embroidered chrome A + "AUREUS DETAILING" on the left chest only, charcoal work trousers, black belt, black work shoes.

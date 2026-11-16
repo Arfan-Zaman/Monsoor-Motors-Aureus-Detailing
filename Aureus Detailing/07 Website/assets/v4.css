@@ -373,7 +373,7 @@ html.motion:not(.hud-in) .v4 .scroll-cue, html.motion:not(.hud-in) .v4 .skip-fil
 .v4 .facts { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); min-height: 120px; }
 .v4 .facts::before, .v4 .facts::after { content: ""; position: absolute; left: 0; right: 0; height: 1px; background: var(--lightline); box-shadow: 0 0 12px rgba(95, 240, 230, .55); opacity: .75; transform-origin: left; }
 .v4 .facts::before { top: 0; } .v4 .facts::after { bottom: 0; }
-.v4 .facts li { display: grid; gap: 10px; align-content: center; padding: 24px 28px; border-left: 1px solid var(--line); }
+.v4 .facts li { display: grid; gap: 10px; align-content: start; padding: 24px 28px; border-left: 1px solid var(--line); }
 .v4 .facts li:first-child { border-left: 0; padding-left: 0; }
 .v4 .facts .mask { display: block; overflow: hidden; padding-bottom: .14em; margin-bottom: -.14em; }
 .v4 .facts b { display: block; font: 500 clamp(2rem, 3vw, 2.75rem)/1 var(--serif); letter-spacing: -.01em; font-variant-numeric: lining-nums tabular-nums; }
@@ -732,3 +732,66 @@ html.motion .v4 .closing.settled .boxbtn { transition: transform var(--t-micro) 
   .v4 .book-details .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }
   .v4 .book-details .fields > :is(.full, .field:has(select), .field:has(#f-car), .field:has(#f-plate)) { grid-column: 1 / -1; }
 }
+
+/* ---------- landing on #booking: its own top padding clears the floating nav, so the end of the packages section never sits under it ---------- */
+.v4 #booking { scroll-margin-top: -24px; }
+
+/* ---------- booking fields: two columns whenever there is room (auto-fit fell to one column at 1181 to 1300 px) ---------- */
+@media (min-width: 561px) { .v4 .book-details .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1181px) and (max-width: 1360px) {
+  .v4 .book-grid { grid-template-columns: 360px minmax(0, 1fr) 300px; }
+  .v4 .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .v4 .slot { padding: 0 6px; }
+}
+
+/* ---------- short desktops (laptops): tighter rhythm so the page stays near 7 screens ---------- */
+@media (min-width: 861px) and (max-height: 940px) {
+  .v4 { --space-section: clamp(40px, 5.5vh, 56px); }
+  .v4 .facts { min-height: 0; }
+  .v4 .facts li { padding-block: 18px; gap: 8px; }
+  .v4 .pk-head { margin-top: 36px; }
+  .v4 .bento { margin-top: 24px; }
+  .v4 .pack { padding: 20px 22px; }
+  .v4 .pack-pick { margin: -20px -22px -10px; }
+  .v4 .pack-head { margin-top: 10px; }
+  .v4 .pack-price { margin-top: 12px; }
+  .v4 .pack-body { margin-top: 14px; }
+  .v4 .pack-body > div { gap: 12px; }
+  .v4 .pack-list { gap: 4px; }
+  .v4 .book .wrap > .lightline, .v4 .info .lightline { margin-bottom: 18px; }
+  .v4 .book-grid { margin-top: 20px; }
+  .v4 .fs { padding: 18px; }
+  .v4 .fs legend { margin-bottom: 10px; }
+  .v4 .fields { gap: 10px 12px; }
+  .v4 .input { min-height: 44px; padding-block: 10px; }
+  .v4 .xtras-toggle { min-height: 44px; }
+  .v4 .opt > span { padding: 11px 16px; }
+  .v4 .day { aspect-ratio: auto; height: 38px; }
+  .v4 .slots-label { margin: 12px 0 8px; }
+  .v4 .sum { padding: 20px; }
+  .v4 .cell:not(.map):not(.reel) { padding: 22px; }
+  .v4 .shop-facts > div { padding: 7px 0; }
+  .v4 .faq summary { padding: 12px 0; }
+  .v4 .reel { min-height: 360px; }
+  .v4 .closing-copy { padding-block: 20px 40px; }
+  .v4 .logo3d { width: 104px; }
+  .v4 .foot { padding-block: 36px 28px; }
+  .v4 .foot-base { margin-top: 24px; }
+  .v4 .help { padding: 16px 22px; }
+  .v4 .closing-h { font-size: clamp(2.5rem, 4.4vw, 3.75rem); }
+  .v4 .closing-actions { margin-top: 22px; }
+  .v4 .quote-form { margin-top: 16px; }
+}
+
+/* ---------- tablet portrait: the film panel grows to fill the screen above the copy (no empty band under the beats) ---------- */
+@media (min-width: 600px) and (max-width: 860px) and (orientation: portrait) {
+  .v4 { --film-h: max(46svh, calc(100svh - 380px)); }
+  .v4 .stage-media, html.motion .v4 .stage-media { height: var(--film-h); }
+  html.motion .v4 .beat, html.motion .v4 .beat-1, html.motion .v4 .beat-2, html.motion .v4 .beat-3 { top: calc(var(--film-h) - 14px); }
+  html.motion .v4 .chapters { top: calc(var(--film-h) - 44px); }
+  .v4 .skip-film { top: calc(var(--film-h) - 76px); }
+  html:not(.motion) .v4 .beat-1 { padding-top: calc(var(--film-h) - 20px); }
+}
+
+/* ---------- laptops of 820 px or less in height: the phone hero length (1.4 screens of pinned film, same three beats) ---------- */
+@media (min-width: 861px) and (max-height: 820px) { html.motion .v4 .hero { height: 240svh; } }

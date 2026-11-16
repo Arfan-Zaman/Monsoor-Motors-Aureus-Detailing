@@ -150,6 +150,15 @@
   // ---------- shared, in both modes ----------
   enhancePacks(); priceRolls(); reel();
 
+  // app.js marks the section in the middle band as current but never clears it, so a tile stayed lit on the hero.
+  // Above the packages section nothing is current: drop the stale mark.
+  var packsSec = $('#packages');
+  function clearStaleCurrent() {
+    if (!packsSec || packsSec.getBoundingClientRect().top <= win.innerHeight * 0.5) return;
+    $$('a[aria-current]', navLinks).forEach(function (a) { a.removeAttribute('aria-current'); });
+  }
+  win.addEventListener('scroll', clearStaleCurrent, { passive: true });
+
   var heroTop = 0, heroTravel = 1;
   function measure() { heroTop = hero.getBoundingClientRect().top + win.scrollY; heroTravel = Math.max(1, hero.offsetHeight - win.innerHeight); }
   function heroP() { return clamp((win.scrollY - heroTop) / heroTravel, 0, 1); }
@@ -172,7 +181,7 @@
 
   var lenis = null;
   if (win.Lenis && win.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    lenis = new win.Lenis({ lerp: 0.11, smoothWheel: true, syncTouch: false, anchors: { offset: -84 } });
+    lenis = new win.Lenis({ lerp: 0.11, smoothWheel: true, syncTouch: false, anchors: true });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
     gsap.ticker.lagSmoothing(0);
@@ -385,7 +394,7 @@
     if (hudTl && p > 0.03) hudTl.progress(1);
     setCompact(p >= COMPACT_AT);
     setChapter(p < CH2_AT ? 0 : p < CH3_AT ? 1 : 2);
-    var act = [p < 0.14, p >= 0.20 && p < 0.58, p >= 0.62];
+    var act = [p < 0.14, p >= 0.20 && p < 0.60, p >= 0.60];
     beats.forEach(function (b, i) { if (act[i]) b.setAttribute('data-active', ''); else b.removeAttribute('data-active'); });
   }
   var mm = gsap.matchMedia();
@@ -412,8 +421,9 @@
       tl.fromTo($$('.ministats li', beat), { '--rule': 0 }, { '--rule': 1, duration: 0.06 }, at + 0.03);
     }
     beatIn(b2, 0.20);
-    tl.to(b2, { opacity: 0, duration: 0.08 }, 0.50);
-    beatIn(b3, 0.62);
+    // 02 is still fading out while 03 fades in, so there is never an empty frame. On phones both sit in the same place: keep the overlap short.
+    tl.to(b2, { opacity: 0, duration: phone ? 0.06 : 0.08 }, phone ? 0.555 : 0.54);
+    beatIn(b3, 0.58);
     tl.fromTo($('.beat-actions', b3), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.05 }, 0.86);   // S08 (ends before the Protect chapter stop at p 0.92)
 
     // S07: hotspots on the final hold
@@ -427,9 +437,9 @@
     // S09: side scrims follow the copy
     if (!phone) {
       tl.fromTo($('.scrim-l', hero), { opacity: 1 }, { opacity: 0, duration: 0.08, immediateRender: false }, 0.10)
-        .to($('.scrim-l', hero), { opacity: 1, duration: 0.10 }, 0.60)
+        .to($('.scrim-l', hero), { opacity: 1, duration: 0.10 }, 0.56)
         .fromTo($('.scrim-r', hero), { opacity: 0 }, { opacity: 1, duration: 0.10 }, 0.18)
-        .to($('.scrim-r', hero), { opacity: 0, duration: 0.10 }, 0.50);
+        .to($('.scrim-r', hero), { opacity: 0, duration: 0.10 }, 0.56);
     } else {
       tl.fromTo(stage, { '--film-x': '50%' }, { '--film-x': '80%', duration: 0.20 }, 0.55);                // S10: keep the wheel in the cropped panel
     }
@@ -450,6 +460,7 @@
   hero.addEventListener('focusin', function (e) {
     var beat = e.target.closest && e.target.closest('.beat');
     if (beat && !beat.hasAttribute('data-active')) scrollToY(heroY(parseFloat(beat.dataset.p) || 0), true);
+    else if (!beat && !phoneMq.matches && e.target.closest && e.target.closest('.hud-right') && heroP() > 0.02) scrollToY(heroY(0), true);   // the price dock lives on the rest frame
   });
 
   // ---------- section motion (each plays once) ----------

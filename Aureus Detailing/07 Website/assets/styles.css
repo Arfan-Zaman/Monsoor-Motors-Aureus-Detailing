@@ -1,7 +1,7 @@
 /* Aureus Detailing. Ocean Pulse: navy, deep aqua, hot pink (actions only), ice. */
 @font-face {
   font-family: "Montserrat";
-  src: url("fonts/Montserrat-Variable-latin.ttf") format("truetype");
+  src: url("fonts/Montserrat-Variable-latin.woff2") format("woff2"), url("fonts/Montserrat-Variable-latin.ttf") format("truetype");
   font-weight: 100 900;
   font-display: swap;
 }
@@ -500,7 +500,7 @@ select.input option { color: #071A33; background: #F5F8FC; }
 .doc ul { margin-top: 14px; display: grid; gap: 10px; }
 .doc li { padding-left: 22px; position: relative; }
 .doc li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 12px; height: 2px; background: var(--aqua); border-radius: 2px; }
-.doc a { color: var(--aqua-hi); font-weight: 600; }
+.doc a:not(.btn) { color: var(--aqua-hi); font-weight: 600; }
 .doc-card { margin-top: 32px; padding: 22px; border-radius: var(--radius); background: var(--navy-2); box-shadow: inset 0 0 0 1px var(--navy-3); }
 .doc-card dl { display: grid; gap: 8px; }
 .doc-card div { display: flex; flex-wrap: wrap; gap: 4px 14px; }
