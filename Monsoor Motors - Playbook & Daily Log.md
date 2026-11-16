@@ -150,6 +150,12 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Set up the private GitHub repo `Arfan-Zaman/Monsoor-Motors-Aureus-Detailing` as memory and history. Not uploaded: HR, videos, audio stems, files over 100 MB, third-party tool repos. Added `CLAUDE.md` (auto-loaded project memory), the `save-progress` skill and `Tools/docx_to_pdf.sh`.
 - To-do next: Director to check super (12% likely payable, Payday Super) with an accountant; verify both ABNs on ABN Lookup; sign the letter; update the letterhead and invoice template with the new email and ABN.
 
+### 17 Nov 2026 (Aureus launch reel 1)
+- What we made / changed: Launch reel 1, "We come to you. Gold detail, $199" (22 s, 9:16, 1080×1920): van arrives, the master detailer speaks to camera, polish, interior, wheels, end card with the launch offer. 38 Higgsfield credits (cap 45).
+- Files: `Aureus Detailing/08 Social Media/Launch Reels/reel-1/` → `Aureus-Reel-1-Gold-Mobile-Detail.mp4` (voice + soft whooshes, leave room for music) and `…-CLEAN.mp4` (voice only, for ads); `make_reel.py` rebuilds both from `stills/` and `speaking-raw.mp4` at no cost. Videos stay local (not in git). Plan: `Launch Reels/REEL-1-PLAN.md`. Jobs: generation log.
+- Decisions / feedback: mobile detailing, hyper-realistic, consistent logo; trending music is added in the app when posting (about 10–15% volume), never baked in. Captions are burned in for viewers watching muted.
+- To-do next: owner to watch with sound on and approve voice and lip-sync; confirm the trainer is fine with an AI voice; turn on the "AI-generated" label when posting; then plan reel 2 (brand launch).
+
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
 - What we made / changed:
