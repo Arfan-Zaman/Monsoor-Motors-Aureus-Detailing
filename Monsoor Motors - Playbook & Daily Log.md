@@ -99,6 +99,8 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 
 ---
 
+- `Tools/publish_aureus_public.sh`: publishes a clean public copy of the Aureus Detailing folder to github.com/Arfan-Zaman/Aureus-Detailing (fresh single commit, private items left out).
+
 ## 6. Platform guidelines we follow
 
 **Facebook cover (2026)**
@@ -155,6 +157,14 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Files: `Aureus Detailing/08 Social Media/Launch Reels/reel-1/` → `Aureus-Reel-1-Gold-Mobile-Detail.mp4` (voice + soft whooshes, leave room for music) and `…-CLEAN.mp4` (voice only, for ads); `make_reel.py` rebuilds both from `stills/` and `speaking-raw.mp4` at no cost. Videos stay local (not in git). Plan: `Launch Reels/REEL-1-PLAN.md`. Jobs: generation log.
 - Decisions / feedback: mobile detailing, hyper-realistic, consistent logo; trending music is added in the app when posting (about 10–15% volume), never baked in. Captions are burned in for viewers watching muted.
 - To-do next: owner to watch with sound on and approve voice and lip-sync; confirm the trainer is fine with an AI voice; turn on the "AI-generated" label when posting; then plan reel 2 (brand launch).
+
+### 17 Nov 2026 (Aureus cinematic ad, public repo, tunnel)
+- What we made / changed: Cinematic ad "The shine comes to you" (31.8 s, 9:16): swirl-mark hook → van arrives → the detailer speaks → polish, steam, wheels with animated explanations → flawless-paint close-up → wide reveal → offer. He narrates the whole ad in his own (AI) voice; original music; glass-style graphics in brand colours; cover image. 126.7 Higgsfield credits.
+- Files: `Aureus Detailing/08 Social Media/Launch Reels/ad/` → `Aureus-Cinematic-Ad.mp4`, `Aureus-Cinematic-Ad-NO-MUSIC.mp4` (for adding a trending track in the app), `Aureus-Ad-Cover.png`, `make_ad.py` (rebuilds everything free), `fetch.py` (downloads Higgsfield jobs). Plan: `Launch Reels/CINEMATIC-AD-PLAN.md`.
+- Public GitHub copy of the Aureus folder only: github.com/Arfan-Zaman/Aureus-Detailing (made by `Tools/publish_aureus_public.sh`; leaves out the trainer's real photos, third-party references and account set-up notes). The main repo stays private.
+- Temporary website link: Cloudflare quick tunnel (`cloudflared tunnel --url http://localhost:4173`); the address changes each time and only works while the Mac is awake.
+- Decisions / feedback: owner wants Hollywood-style direction, the detailer talking about the solution, a dramatic finished-paint close-up, and transparent brand-colour graphics.
+- To-do next: owner to watch with sound on and approve voice; AI label when posting; Higgsfield Ads Studio "micro drama" film is a separate job needing its own budget.
 
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)

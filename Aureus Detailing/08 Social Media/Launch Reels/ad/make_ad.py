@@ -11,8 +11,8 @@ LOGO_BUG = os.path.join(AUREUS, "02 Logo", "PNG", "aureus-horizontal-flat-white.
 WORK = os.path.join(HERE, "build"); os.makedirs(WORK, exist_ok=True)
 W, H, FPS = 1080, 1920, 24
 NAVY, AQUA, GLOW, PINK, WHITE = (7, 26, 51), (0, 168, 168), (95, 240, 230), (255, 77, 141), (245, 248, 252)
-# cut points in frames, on the 100 bpm beat grid (0.6 s): hook, van, he speaks, polish, steam, wheel, reveal, end card
-CUTS = [0, 72, 144, 288, 389, 475, 547, 634, 734]; TOTAL = CUTS[-1]; DUR = TOTAL / FPS
+# cut points in frames, on the 100 bpm beat grid (0.6 s): hook, van, he speaks, polish, steam, wheel, paint close-up, wide reveal, end card
+CUTS = [0, 72, 144, 288, 389, 475, 547, 605, 662, 763]; TOTAL = CUTS[-1]; DUR = TOTAL / FPS
 
 def run(cmd, **kw):
     r = subprocess.run(cmd, capture_output=True, text=True, **kw)
@@ -28,7 +28,7 @@ def still(src, n, out, z0=1.0, z1=1.07, fx=0.5, fy=0.6):
           f"zoompan=z='{z0}+({z1}-{z0})*on/{n}':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}':d={n}:s={W}x{H}:fps={FPS},format=yuv420p")
     run(["ffmpeg", "-y", "-v", "error", "-i", src, "-vf", vf, "-frames:v", str(n), "-c:v", "libx264", "-crf", "12", "-preset", "medium", out])
 SRC = [("clips/hook.mp4", clip), ("clips/van.mp4", clip), (os.path.join(R1, "speaking-raw.mp4"), clip), ("clips/polish.mp4", clip),
-       ("clips/steam.mp4", clip), ("clips/wheel.mp4", clip), ("clips/reveal.mp4", clip), (os.path.join(R1, "stills", "s6-finish.png"), still)]
+       ("clips/steam.mp4", clip), ("clips/wheel.mp4", clip), ("clips/macro.mp4", clip), ("clips/reveal.mp4", clip), (os.path.join(R1, "stills", "s6-finish.png"), still)]
 base = os.path.join(WORK, "base.mp4")
 if not os.path.exists(base) or "--rebase" in sys.argv:
     segs = []
@@ -69,7 +69,8 @@ def gradient(y0, y1, a0, a1):
     g = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(g)
     for y in range(min(y0, y1), max(y0, y1)): d.line([(0, y), (W, y)], fill=NAVY + (int(a0 + (a1 - a0) * (y - y0) / (y1 - y0)),))
     return g
-G_TOP, G_BOT = gradient(0, 720, 205, 0), gradient(1040, 1920, 0, 235)
+G_TOP, G_BOT = gradient(0, 720, 150, 0), gradient(1040, 1920, 0, 175)
+FROST = (206, 224, 245)   # website glass: see-through navy with a frost edge
 def fade_layer(fr, layer, a):
     if a <= 0: return
     if a < 1: layer = layer.copy(); layer.putalpha(layer.getchannel("A").point(lambda v: int(v * a)))
@@ -84,7 +85,7 @@ def chip(fr, text, x, y, t, at, tick=True):                                     
     if p <= 0: return
     f = font(40, "SemiBold"); tw = int(f.getlength(text)); w, h = tw + (96 if tick else 56), 72
     im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-    d.rounded_rectangle([0, 0, w - 1, h - 1], radius=36, fill=NAVY + (225,), outline=AQUA + (255,), width=2)
+    d.rounded_rectangle([0, 0, w - 1, h - 1], radius=36, fill=NAVY + (120,), outline=FROST + (150,), width=2)
     if tick:
         q = ease(prog(t, at + 0.15, 0.3)); pts = [(26, 37), (38, 49), (58, 25)]
         if q > 0:
@@ -133,41 +134,50 @@ def sc_speak(fr, d, t, n):
         chip(fr, txt, 56, 300 + i * 88, t, at)
     p = prog(t, 5.06, 0.3)
     if p > 0:                                                                     # price badge punches in
-        im = Image.new("RGBA", (330, 330), (0, 0, 0, 0)); dd = ImageDraw.Draw(im); dd.ellipse([0, 0, 329, 329], fill=PINK + (255,))
+        im = Image.new("RGBA", (330, 330), (0, 0, 0, 0)); dd = ImageDraw.Draw(im); dd.ellipse([0, 0, 329, 329], fill=PINK + (215,), outline=WHITE + (160,), width=3)
         dd.text((165, 118), "GOLD", font=font(46, "Bold"), fill=NAVY, anchor="mm"); dd.text((165, 196), "$199", font=font(104, "ExtraBold"), fill=NAVY, anchor="mm")
         put(fr, im.rotate(-8, Image.BICUBIC, expand=True), 850, 470, back(p), ease(p * 2))
     for a, b, txt in SUBS:                                                        # word captions, for viewers watching muted
         if a <= t < b:
             f = font(58, "Bold"); tw = f.getlength(txt); w = tw + 68; x = (W - w) / 2; s = 0.9 + 0.1 * ease(prog(t, a, 0.12))
-            im = Image.new("RGBA", (int(w), 98), (0, 0, 0, 0)); dd = ImageDraw.Draw(im); dd.rounded_rectangle([0, 0, int(w) - 1, 97], radius=49, fill=NAVY + (228,))
+            im = Image.new("RGBA", (int(w), 98), (0, 0, 0, 0)); dd = ImageDraw.Draw(im); dd.rounded_rectangle([0, 0, int(w) - 1, 97], radius=49, fill=NAVY + (135,), outline=FROST + (120,), width=2)
             dd.text((w / 2, 46), txt, font=f, fill=PINK if "$" in txt else WHITE, anchor="mm"); put(fr, im, W / 2, 1472, s)
 def sc_polish(fr, d, t, n):
     step(fr, d, t, 1, "Machine polish + wax seal")
-    for i, (lab, col) in enumerate([("Wax sealant", GLOW), ("Polished clear coat", (160, 205, 245)), ("Paint", (150, 40, 60))]):   # layer diagram builds bottom-up
+    g = ease(prog(t, 0.8, 0.4))
+    if g > 0: d.rounded_rectangle([44, 536, 44 + 700, 536 + 258], radius=28, fill=NAVY + (int(105 * g),), outline=FROST + (int(120 * g),), width=2)   # glass panel behind the diagram
+    for i, (lab, col) in enumerate([("Wax sealant", GLOW + (190,)), ("Polished clear coat", FROST + (130,)), ("Paint", AQUA + (150,))]):   # layer diagram builds bottom-up
         p = ease(prog(t, 1.0 + (2 - i) * 0.45, 0.45))
         if p > 0:
-            y = 560 + i * 74; d.rounded_rectangle([70, y, 70 + 250 * p, y + 58], radius=12, fill=col + (235,))
+            y = 560 + i * 74; d.rounded_rectangle([70, y, 70 + 250 * p, y + 58], radius=12, fill=col, outline=FROST + (170,), width=2)
             rise(fr, lab, 36, 344, y + 29, t, 1.15 + (2 - i) * 0.45, "SemiBold", WHITE, "l")
     p = prog(t, 2.6, 1.2)
     if 0 < p < 1:                                                                 # one light sweep across the paint
         sw = Image.new("RGBA", (W, H), (0, 0, 0, 0)); x = -300 + 1700 * p
         ImageDraw.Draw(sw).polygon([(x, 700), (x + 150, 700), (x - 250, 1300), (x - 400, 1300)], fill=(255, 255, 255, 60)); fr.alpha_composite(sw.filter(ImageFilter.GaussianBlur(28)))
 def sc_steam(fr, d, t, n):
-    step(fr, d, t, 2, "Interior steam clean"); callout(fr, d, t, 0.9, (590, 1130), (330, 640), "Steam lifts the dirt", "Leather cleaned and conditioned")
+    step(fr, d, t, 2, "Interior steam clean"); callout(fr, d, t, 0.9, (590, 1130), (120, 560), "Steam lifts the dirt", "Leather cleaned and conditioned")
 def sc_wheel(fr, d, t, n):
-    step(fr, d, t, 3, "Wheels + vents, deep cleaned"); callout(fr, d, t, 0.6, (560, 1080), (300, 640), "Every spoke, by hand", "Brake dust gone")
-def sc_reveal(fr, d, t, n):
-    fade_layer(fr, G_TOP, 0.9); fade_layer(fr, G_BOT, 0.9); p = prog(t, 0.0, 0.25)
-    if p < 1: fr.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(200 * (1 - p)))))            # flash on the cut
-    slam(fr, "LIKE NEW.", 128, W / 2, 330, t, 0.35)
-    q = ease(prog(t, 0.9, 1.1)); bx0, bx1 = 160, 920                                                         # time bar fills to 2 h 30
+    step(fr, d, t, 3, "Wheels + vents, deep cleaned"); callout(fr, d, t, 0.6, (560, 1080), (120, 560), "Every spoke, by hand", "Brake dust gone")
+def sc_macro(fr, d, t, n):                                                     # the same close-up as the hook, now flawless
+    fade_layer(fr, G_BOT, 1); p = prog(t, 0.0, 0.3)
+    if p < 1: fr.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(210 * (1 - p)))))            # flash on the cut
+    slam(fr, "NOW IT'S", 104, W / 2, 1240, t, 0.30); slam(fr, "LIKE NEW.", 132, W / 2, 1380, t, 0.70, fill=GLOW)
+    q = ease(prog(t, 1.0, 0.6))
     if q > 0:
-        d.rounded_rectangle([bx0, 470, bx1, 486], radius=8, fill=(245, 248, 252, 70)); d.rounded_rectangle([bx0, 470, bx0 + (bx1 - bx0) * q, 486], radius=8, fill=GLOW + (255,))
-        mins = int(150 * q); put(fr, sprite(f"{mins // 60} h {mins % 60:02d}", 52, "Bold"), W / 2, 540, 1, min(1, q * 3))
-    c = ease(prog(t, 1.5, 1.0))
+        d.arc([560 - 210, 880 - 210, 560 + 210, 880 + 210], -90, -90 + 360 * q, fill=GLOW + (230,), width=5)
+        rise(fr, "Sealed: water beads and rolls off", 42, W / 2, 1130, t, 1.35, "SemiBold", GLOW)
+def sc_reveal(fr, d, t, n):
+    fade_layer(fr, G_TOP, 0.9); fade_layer(fr, G_BOT, 0.9)
+    q = ease(prog(t, 0.2, 1.0)); bx0, bx1 = 160, 920                                                         # time bar fills to 2 h 30
+    if q > 0:
+        rise(fr, "Done in", 44, W / 2, 310, t, 0.2, "SemiBold")
+        mins = int(150 * q); put(fr, sprite(f"{mins // 60} h {mins % 60:02d}", 110, "ExtraBold"), W / 2, 410, 1, min(1, q * 3))
+        d.rounded_rectangle([bx0, 492, bx1, 504], radius=6, fill=(206, 224, 245, 70)); d.rounded_rectangle([bx0, 492, bx0 + (bx1 - bx0) * q, 504], radius=6, fill=GLOW + (255,))
+    c = ease(prog(t, 0.9, 0.9))
     if c > 0:                                                                                                # price counts up
-        rise(fr, "Gold detail", 56, W / 2, 1300, t, 1.5, "SemiBold"); put(fr, sprite(f"${int(199 * c)}", 170, "ExtraBold", PINK), W / 2, 1420, 0.85 + 0.15 * c, min(1, c * 3))
-END_BG = Image.new("RGBA", (W, H), NAVY + (150,)); END_BG.alpha_composite(gradient(0, 1100, 150, 0)); END_BG.alpha_composite(gradient(900, 1920, 0, 200))
+        rise(fr, "Gold detail", 56, W / 2, 1300, t, 0.9, "SemiBold"); put(fr, sprite(f"${int(199 * c)}", 170, "ExtraBold", PINK), W / 2, 1420, 0.85 + 0.15 * c, min(1, c * 3))
+END_BG = Image.new("RGBA", (W, H), NAVY + (125,)); END_BG.alpha_composite(gradient(0, 1100, 150, 0)); END_BG.alpha_composite(gradient(900, 1920, 0, 200))
 def sc_end(fr, d, t, n):
     fade_layer(fr, END_BG, ease(prog(t, 0, 0.5))); lg = logo(LOGO_END, 430); p = prog(t, 0.15, 0.6); put(fr, lg, W / 2, 270 + lg.height / 2, 0.8 + 0.2 * back(p), ease(p * 1.5))
     y = 270 + lg.height + 86
@@ -177,16 +187,16 @@ def sc_end(fr, d, t, n):
     p = prog(t, 1.35, 0.4)
     if p > 0:
         f = font(46, "Bold"); l1, l2 = "Launch offer: $25 off", "for our first 100 customers"; bw = int(max(f.getlength(l1), f.getlength(l2)) + 96)
-        im = Image.new("RGBA", (bw, 160), (0, 0, 0, 0)); dd = ImageDraw.Draw(im); dd.rounded_rectangle([0, 0, bw - 1, 159], radius=36, fill=PINK + (255,))
+        im = Image.new("RGBA", (bw, 160), (0, 0, 0, 0)); dd = ImageDraw.Draw(im); dd.rounded_rectangle([0, 0, bw - 1, 159], radius=36, fill=PINK + (225,), outline=WHITE + (150,), width=2)
         dd.text((bw / 2, 52), l1, font=f, fill=NAVY, anchor="mm"); dd.text((bw / 2, 110), l2, font=f, fill=NAVY, anchor="mm"); put(fr, im, W / 2, y + 270, back(p), ease(p * 2))
     rise(fr, "Mobile within 20 km of Victoria Park", 44, W / 2, y + 420, t, 1.8, "Medium")
     pulse = 1 + 0.06 * math.sin(max(0, t - 2.6) * 6) * (1 if t > 2.6 else 0); p = ease(prog(t, 2.1, 0.4))
     if p > 0: put(fr, sprite("Book: link in bio", 62, "Bold", GLOW), W / 2, y + 500 + 34 * (1 - p), pulse, p)
-SCENES = [sc_hook, sc_van, sc_speak, sc_polish, sc_steam, sc_wheel, sc_reveal, sc_end]
+SCENES = [sc_hook, sc_van, sc_speak, sc_polish, sc_steam, sc_wheel, sc_macro, sc_reveal, sc_end]
 
 def frame(i):
     fr = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(fr)
-    s = max(k for k in range(8) if CUTS[k] <= i); SCENES[s](fr, d, (i - CUTS[s]) / FPS, CUTS[s + 1] - CUTS[s])
+    s = max(k for k in range(len(SCENES)) if CUTS[k] <= i); SCENES[s](fr, d, (i - CUTS[s]) / FPS, CUTS[s + 1] - CUTS[s])
     return fr
 
 if "--frames" in sys.argv:                                                        # quick look: save a few composited stills and stop
@@ -195,9 +205,22 @@ if "--frames" in sys.argv:                                                      
         run(["ffmpeg", "-y", "-v", "error", "-ss", f"{i / FPS:.3f}", "-i", base, "-i", os.path.join(WORK, "ov.png"), "-filter_complex", "[0][1]overlay,scale=432:768", "-frames:v", "1", p])
     sys.exit()
 
+# ---------------- cover image ----------------
+bg = Image.open(os.path.join(R1, "stills", "s2-speaking.png")).convert("RGBA"); s = max(W / bg.width, H / bg.height)
+bg = bg.resize((int(bg.width * s) + 1, int(bg.height * s) + 1), Image.LANCZOS); bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width - W) // 2 + W, (bg.height - H) // 2 + H))
+bg.alpha_composite(gradient(0, 900, 235, 0)); bg.alpha_composite(gradient(1250, 1920, 0, 240)); d = ImageDraw.Draw(bg)
+put(bg, sprite("WE COME", 150, "ExtraBold"), W / 2, 340); put(bg, sprite("TO YOU.", 150, "ExtraBold", GLOW), W / 2, 500)
+im = Image.new("RGBA", (360, 360), (0, 0, 0, 0)); dd = ImageDraw.Draw(im); dd.ellipse([0, 0, 359, 359], fill=PINK + (255,))
+dd.text((180, 104), "GOLD DETAIL", font=font(38, "Bold"), fill=NAVY, anchor="mm"); dd.text((180, 192), "$199", font=font(118, "ExtraBold"), fill=NAVY, anchor="mm"); dd.text((180, 276), "at your place", font=font(34, "SemiBold"), fill=NAVY, anchor="mm")
+put(bg, im.rotate(-8, Image.BICUBIC, expand=True), 850, 1010)
+put(bg, sprite("Mobile car detailing · Perth", 54, "SemiBold"), W / 2, 1490)
+bg.convert("RGB").save(os.path.join(HERE, "Aureus-Ad-Cover.png")); print("cover done")
+if "--cover" in sys.argv: sys.exit()
+
+
 # ---------------- sound ----------------
 wav = lambda n: os.path.join(WORK, n)
-VO_AT = [0.30, 3.30, 12.25, 16.45, 20.05, 23.15, 26.85]                           # when each of his lines starts
+VO_AT = [0.30, 3.30, 12.25, 16.45, 20.05, 23.10, 28.05]                           # when each of his lines starts
 ins, fc, lab = [], "", []
 for k, at in enumerate(VO_AT):
     ins += ["-i", os.path.join(HERE, "audio", f"vo{k + 1}.wav")]
@@ -207,7 +230,7 @@ fc += f"[7:a]loudnorm=I=-15:TP=-1.5:LRA=7,aresample=48000,aformat=channel_layout
 run(["ffmpeg", "-y", "-v", "error"] + ins + ["-filter_complex", fc + "".join(lab) + f"amix=inputs=8:normalize=0:duration=longest,apad=whole_dur={DUR}[a]", "-map", "[a]", "-t", str(DUR), "-ar", "48000", "-ac", "2", wav("voice.wav")])
 cuts = [c / FPS for c in CUTS[1:-1]]
 fx = "".join(f"anoisesrc=d=0.45:c=pink:r=48000:a=0.5,bandpass=f=900:width_type=h:w=1400,afade=in:d=0.28:curve=qsin,afade=out:st=0.28:d=0.17,aformat=channel_layouts=stereo,adelay={int((c - 0.28) * 1000)}:all=1[w{i}];" for i, c in enumerate(cuts))
-hits = [0.0, CUTS[6] / FPS, CUTS[7] / FPS]
+hits = [0.0, CUTS[6] / FPS, CUTS[8] / FPS]
 fx += "".join(f"sine=f=52:d=0.9:r=48000,afade=out:st=0.05:d=0.85,aformat=channel_layouts=stereo,volume=1.6,adelay={int(h * 1000)}:all=1[h{i}];" for i, h in enumerate(hits))
 fx += "".join(f"[w{i}]" for i in range(len(cuts))) + "".join(f"[h{i}]" for i in range(len(hits))) + f"amix=inputs={len(cuts) + len(hits)}:normalize=0:duration=longest,volume=0.5,apad=whole_dur={DUR}[fx]"
 run(["ffmpeg", "-y", "-v", "error", "-filter_complex", fx, "-map", "[fx]", "-t", str(DUR), "-ar", "48000", "-ac", "2", wav("fx.wav")])
@@ -227,13 +250,4 @@ enc = ["-c:v", "libx264", "-crf", "17", "-preset", "slow", "-pix_fmt", "yuv420p"
 for out, snd in (("Aureus-Cinematic-Ad.mp4", "full.wav"), ("Aureus-Cinematic-Ad-NO-MUSIC.mp4", "nomusic.wav")):
     run(["ffmpeg", "-y", "-v", "error", "-i", silent, "-i", wav(snd), "-map", "0:v", "-map", "1:a"] + enc + [os.path.join(HERE, out)])
 
-# ---------------- cover image ----------------
-bg = Image.open(os.path.join(R1, "stills", "s2-speaking.png")).convert("RGBA"); s = max(W / bg.width, H / bg.height)
-bg = bg.resize((int(bg.width * s) + 1, int(bg.height * s) + 1), Image.LANCZOS); bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width - W) // 2 + W, (bg.height - H) // 2 + H))
-bg.alpha_composite(gradient(0, 900, 235, 0)); bg.alpha_composite(gradient(1250, 1920, 0, 240)); d = ImageDraw.Draw(bg)
-put(bg, sprite("WE COME", 150, "ExtraBold"), W / 2, 470); put(bg, sprite("TO YOU.", 150, "ExtraBold", GLOW), W / 2, 630)
-im = Image.new("RGBA", (360, 360), (0, 0, 0, 0)); dd = ImageDraw.Draw(im); dd.ellipse([0, 0, 359, 359], fill=PINK + (255,))
-dd.text((180, 104), "GOLD DETAIL", font=font(38, "Bold"), fill=NAVY, anchor="mm"); dd.text((180, 192), "$199", font=font(118, "ExtraBold"), fill=NAVY, anchor="mm"); dd.text((180, 276), "at your place", font=font(34, "SemiBold"), fill=NAVY, anchor="mm")
-put(bg, im.rotate(-8, Image.BICUBIC, expand=True), 850, 1010)
-put(bg, sprite("Mobile car detailing · Perth", 50, "SemiBold"), W / 2, 1500); put(bg, logo(LOGO_BUG, 360), W / 2, 1420)
-bg.convert("RGB").save(os.path.join(HERE, "Aureus-Ad-Cover.png")); print("done")
+print("done")

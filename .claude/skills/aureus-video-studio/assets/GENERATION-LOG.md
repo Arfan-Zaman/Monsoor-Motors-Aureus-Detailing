@@ -25,3 +25,18 @@ One line per Higgsfield generation. Reuse the prompt, seed and references of kee
 | 2026-11-17 | Reel 1 speaking clip 6 s, native voice | veo3_1 high 9:16 1080p, audio on | Launch Reels/REEL-1-PLAN.md | - | start S2 (ae5f3c17) | 24 | job 13fc3607 | Keep: first take. Words checked by transcript, exact: "We come to you. Gold detail: polish, wax sealant, interior steam clean, leather care. One ninety-nine." (speaking-raw.mp4) |
 
 **Reel 1 total: 38 credits** (cap was 45). Edit, captions and sound were done locally with `Launch Reels/reel-1/make_reel.py` (0 credits).
+
+| 2026-11-17 | Ad still: swirl-mark macro (hook) | nano_banana_pro 9:16 2k | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | ref S1 9ca97542 | 2 | job a00d9da5 | Keep (stills/hook-still.png) |
+| 2026-11-17 | Ad still: finished M3, mirror bonnet (reveal) | nano_banana_pro 9:16 2k | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | ref S6 ddd4cc29 | 2 | job 45703c8c | Keep (stills/reveal-still.png) |
+| 2026-11-17 | Ad still: flawless paint macro with water beads | nano_banana_pro 9:16 2k | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | refs a00d9da5 + 45703c8c | 2 | job 67ab5db0 | Keep: mirrors the hook framing, now like new (stills/macro-still.png) |
+| 2026-11-17 | Ad shot: van arrives 5 s | kling4_0 i2v 1080p 9:16 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | start S1 | 16.25 | job 8a5b959e | Keep (first submit failed with an API error, not charged) |
+| 2026-11-17 | Ad shot: polisher pass 5 s | kling4_0 i2v 1080p 9:16 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | start S3 | 16.25 | job 179ab4c7 | Keep |
+| 2026-11-17 | Ad shot: interior steam 5 s | kling4_0 i2v 1080p 9:16 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | start S4 v2 | 16.25 | job 13708277 | Keep |
+| 2026-11-17 | Ad shot: wheel brush 5 s | kling4_0 i2v 1080p 9:16 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | start S5 | 16.25 | job 2b8f0b0d | Keep |
+| 2026-11-17 | Ad shot: swirl macro 5 s | kling4_0 i2v 1080p 9:16 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | start a00d9da5 | 16.25 | job dee031de | Keep |
+| 2026-11-17 | Ad shot: wide reveal arc 5 s | kling4_0 i2v 1080p 9:16 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | start 45703c8c | 16.25 | job 796de9ec | Keep |
+| 2026-11-17 | Ad shot: flawless paint macro 5 s | kling4_0 i2v 1080p 9:16 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | start 67ab5db0 | 16.25 | job e8921fc1 | Keep (added at owner's request) |
+| 2026-11-17 | Ad voice: 7 lines in the detailer's voice | seed_audio, cloned from the Veo clip's audio (audio/his-voice-ref.wav) | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | audio ref | 2.8 | job 4183165c, ef14f908, 027b2366, 845d7973, 7d9344d1, d11901a1, 24b70358 | Keep: words checked by transcript. This voice is AI-made (from the Veo clip), not the real trainer's voice |
+| 2026-11-17 | Ad music: 32 s instrumental, 100 bpm | elevenlabs_music_v2_5 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | - | 4.36 | job 4ffeabd7 | Keep: original track, safe for paid ads (audio/music.mp3) |
+
+**Cinematic ad total: 126.7 credits** (balance 905.75 → 779.04). Edit, animated graphics, sound mix and cover done locally with `Launch Reels/ad/make_ad.py` (0 credits).
