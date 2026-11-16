@@ -21,3 +21,17 @@ Useful commands (run from `.claude/skills/higgsfield-prompt-suite/scripts/`):
 Also available: the Higgsfield connection already in Claude (tools named `higgsfield`) provides generation, presets, character sheets and reference elements.
 
 To update a pack later, ask Claude to re-download it, re-scan it and copy the markdown again.
+
+## Design and motion skills (17 Nov 2026)
+
+Markdown only (SKILL.md plus reference files). No scripts, hooks, settings or installers were copied or run. Each SKILL.md was read and scanned for remote-code, credential and settings instructions; none found.
+
+| Folder in `.claude/skills/` | Source | Commit | Licence | Notes |
+|---|---|---|---|---|
+| `motion-design/` | github.com/lottiefiles/motion-design-skill (`skills/motion-design`) | f9a8a04 | MIT | LottieFiles motion principles: timing, easing, choreography, Disney principles |
+| `awwwards-animations/` | github.com/devmartinese/awwwards-animations-skill | c92d00b | MIT (stated in README, no LICENSE file) | GSAP, Motion, Anime.js, Lenis patterns for React |
+| `software-ui-ux-design/` | Original github.com/vasilyu1983/AI-Agents-public is no longer reachable; copied from the mirror github.com/gabrielmoreira/agent-skills-mirror (`mirrors/repos/vasilyu1983@AI-Agents-public/skills/universal/software-ui-ux-design`) | c51f7a2 (mirror commit) | **Original licence unknown** (mirror repo is MIT): private use only | `scripts/` (Python), `data/` (CSV database, same one as `ui-ux-pro-max`) and `agents/` left out, so the `python3 scripts/...` commands in its SKILL.md will not work here; use `ui-ux-pro-max` for that search |
+| `design-better/` | github.com/buildgreatproducts/builder-os (`skills/design-better`) | fb74cac | MIT | Single SKILL.md of UI quality heuristics |
+| `frontend-design-ui-ux/` | github.com/ulpi-io/skills (`frontend-design-ui-ux`) | b3e5e33 | **None stated**: private use only | Design-spec skill; writes its spec to `.ulpi/design/` and can call a `browse` skill that is not installed |
+| `motion-design-web/` | github.com/curiositech/windags-skills (`skills/motion-design-web`), origin of claudskills.com/skills/motion-design-web | 6992af5 | SKILL.md says Apache-2.0, but the repo LICENSE is Business Source License 1.1 (non-commercial and personal use; commercial needs a licence): check before relying on it for client work | Single SKILL.md |
+| `gsap-framer-scroll-animation/` | github.com/github/awesome-copilot (`skills/gsap-framer-scroll-animation`), origin of claudskills.com/skills/gsap-framer-scroll-animation | dc0083d | MIT | GSAP ScrollTrigger and Framer Motion scroll recipes |
