@@ -318,7 +318,7 @@ html.motion .v4 .chapters { position: absolute; left: 50%; bottom: 18px; width: 
 }
 /* before the HUD arrives (M03): only the logo tile, the Book pill and the loader line are on screen */
 html.pre .v4 .nav-links, html.pre .v4 .nav-call, html.pre .v4 .beat-1 > :not(h1), html.pre .v4 .hud-right, html.pre .v4 .ch-btns, html.pre .v4 .ch-count { opacity: 0; }
-html.pre .v4 .beat-1 .ln > span { transform: translateY(110%); }
+html.pre .v4 .beat-1 .ln > span { transform: translateY(135%); }   /* 110% leaves the tall Cormorant ascenders peeking over the mask */
 html.motion:not(.hud-in) .v4 .scroll-cue, html.motion:not(.hud-in) .v4 .skip-film { opacity: 0; }
 
 /* ---------- hero: phone layout ---------- */
@@ -362,6 +362,8 @@ html.motion:not(.hud-in) .v4 .scroll-cue, html.motion:not(.hud-in) .v4 .skip-fil
   .v4 .ch-num b { font-size: 1.125rem; }
   .v4 .skip-film { left: 16px; right: auto; top: calc(46svh - 76px); bottom: auto; padding: 4px 0; text-shadow: 0 1px 8px var(--ink); }
 }
+/* phones: the fixed #bar (Call, Book now) carries beat 03's actions, which would otherwise sit under it */
+@media (max-width: 860px) { html.motion .v4 .beat-3 .beat-actions { display: none; } }
 @media (max-width: 860px) and (max-height: 739px) { .v4 .hero-facts, html.motion .v4 .beat-tags { display: none; } }
 @media (max-width: 860px) and (max-height: 639px) { html.motion .v4 .beat-3 .beat-body { display: none; } }
 
@@ -497,7 +499,7 @@ html.motion .v4 .roll-down { animation: roll-down .32s var(--ease-out); }
 .v4 .slot { min-height: 46px; font-size: .8125rem; background: rgba(3, 11, 23, .55); box-shadow: inset 0 0 0 1px var(--line-strong); color: var(--ice); }
 .v4 .slot:hover:not([disabled]) { box-shadow: inset 0 0 0 1px var(--aqua-hi); }
 .v4 .slot[disabled] { color: #6F8AAE; }
-.v4 .fields { gap: 14px; }
+.v4 .fields { gap: 14px; align-items: start; }
 .v4 .field label { font-size: .875rem; }
 .v4 .input { min-height: 48px; background: rgba(3, 11, 23, .55); color: var(--ice); box-shadow: inset 0 0 0 1px var(--line-strong); }
 .v4 .input:hover { box-shadow: inset 0 0 0 1px var(--aqua); }
@@ -638,12 +640,12 @@ html.motion .v4 .logo3d.sweep .l3-sheen::after { animation: l3-sweep 1.6s var(--
 .v4 .foot-line { margin-top: 14px; max-width: 34ch; }
 .v4 .foot-base { margin-top: 36px; border-top-color: var(--line); font-size: .8125rem; color: var(--ice-3); }
 .v4 .foot-note { font-size: .75rem; line-height: 1.5; max-width: 96ch; }
-@media (max-width: 760px) { .v4 .foot { padding-bottom: 104px; } }
+@media (max-width: 760px) { .v4 .foot { padding-bottom: 100px; } }
 
 /* ---------- reveal states: only when motion is on, and only until the section has entered ---------- */
 html.motion .v4 .lightline:not(.in) { transform: scaleX(0); }
 html.motion .v4 .lightline.in { transition: transform .9s var(--ease-out); }
-html.motion .v4 :is(.h2, .closing-h):not(.in) .ln > span { transform: translateY(105%); }
+html.motion .v4 :is(.h2, .closing-h):not(.in) .ln > span { transform: translateY(130%); }
 html.motion .v4 :is(.h2, .closing-h).in .ln > span { transition: transform .8s var(--ease-out); }
 html.motion .v4 :is(.h2, .closing-h).in .ln:nth-child(2) > span { transition-delay: 80ms; }
 html.motion .v4 .h2:not(.in) + .lede { opacity: 0; transform: translateY(12px); }
@@ -702,19 +704,29 @@ html.motion .v4 .closing.settled .boxbtn { transition: transform var(--t-micro) 
   .v4 .book .wrap > .lightline, .v4 .info .lightline { margin-bottom: 20px; }
   .v4 .facts li { padding-block: 14px; gap: 6px; }
   .v4 .facts b { font-size: 1.75rem; }
-  .v4 .shop-facts > div { grid-template-columns: 58px minmax(0, 1fr); gap: 10px; }
+  .v4 .shop-facts > div { grid-template-columns: 64px minmax(0, 1fr); gap: 10px; }
+  .v4 .shop-facts dt { letter-spacing: .08em; font-size: .625rem; }
   .v4 .shop-facts dd small { overflow-wrap: normal; font-size: .75rem; }
   .v4 .shop-actions { flex-wrap: nowrap; gap: 8px; }
   .v4 .shop-actions .btn { flex: 1 1 0; min-width: 0; padding: 0 12px; font-size: .875rem; }
   .v4 .faq summary { padding: 13px 0; }
   .v4 .quote-form .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .v4 .closing-copy { padding-block: 20px 36px; }
+  .v4 .closing-copy { padding-block: 16px 28px; }
   .v4 .logo3d { width: 104px; }
-  .v4 .foot { padding-top: 36px; }
-  .v4 .foot-grid { gap: 24px 20px; }
+  .v4 .foot { padding-top: 32px; }
+  .v4 .foot-grid { gap: 20px; }
+  .v4 .foot-line { margin-top: 10px; }
   .v4 .foot-grid > :last-child { grid-column: 1 / -1; }
   .v4 .foot-grid > :last-child ul { display: flex; flex-wrap: wrap; gap: 6px 20px; }
   .v4 .foot-base { margin-top: 24px; }
+  .v4 .fs { padding: 16px; }
+  .v4 .cal { padding: 10px; }
+  .v4 .day { aspect-ratio: auto; height: 38px; }
+  .v4 .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .v4 .slot { min-height: 44px; padding: 0 6px; font-size: .75rem; }
+  .v4 .sum { padding: 18px; }
+  .v4 .map, .v4 .map iframe { min-height: 220px; }
+  .v4 .cell.map, .v4 .cell.reel { padding: 0; }
 }
 @media (max-width: 560px) {
   .v4 .book-details .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }

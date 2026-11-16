@@ -245,7 +245,7 @@
     hudTl = gsap.timeline({ defaults: { ease: E_OUT }, onComplete: function () { hudTl = null; } });
     if (!compact) hudTl.fromTo(navTiles.concat(navCall), { y: -28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.05, clearProps: 'opacity,transform' }, 0);
     hudTl.fromTo($('.eyebrow', b1), { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'none', clearProps: 'opacity' }, 0)
-      .fromTo($$('h1 .ln > span', b1), { yPercent: 110 }, { yPercent: 0, duration: 0.9, stagger: 0.09, clearProps: 'transform' }, 0)
+      .fromTo($$('h1 .ln > span', b1), { yPercent: 135 }, { yPercent: 0, duration: 0.9, stagger: 0.09, clearProps: 'transform' }, 0)
       .fromTo($$('.beat-body, .beat-actions, .hero-facts', b1), { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, stagger: 0.07, clearProps: 'opacity,transform' }, 0.25)
       .fromTo(tiles, { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, stagger: 0.09 }, 0.15)
       .fromTo([$('.ch-btns', chapters), $('.ch-count', chapters)], { y: 32, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: E_INOUT, clearProps: 'opacity,transform' }, 0.3)
@@ -436,6 +436,7 @@
 
     // S11: the stage leaves slower than the page and dims
     gsap.fromTo(media, { yPercent: 0 }, { yPercent: 10, ease: 'none', scrollTrigger: { trigger: hero, start: 'bottom bottom', end: 'bottom top', scrub: true } });
+    gsap.fromTo($('.hotspots', hero), { y: 0 }, { y: function () { return media.offsetHeight * 0.1; }, ease: 'none', scrollTrigger: { trigger: hero, start: 'bottom bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true } });   // the dots ride with the film
     gsap.fromTo($('.scrim-dim', hero), { opacity: 0 }, { opacity: 0.4, ease: 'none', scrollTrigger: { trigger: hero, start: 'bottom bottom', end: 'bottom top', scrub: true } });
 
     if (phone) { compact = true; nav.dataset.compact = 'true'; }

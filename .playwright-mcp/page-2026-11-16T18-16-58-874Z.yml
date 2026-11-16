@@ -1,0 +1,540 @@
+- generic [active] [ref=f39e1]:
+  - link "Skip to content" [ref=f39e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner:
+    - link "Aureus Detailing, home" [ref=f39e3] [cursor=pointer]:
+      - /url: "#top"
+      - img "Aureus Detailing" [ref=f39e4]
+    - navigation "Main" [ref=f39e5]:
+      - link "Packages" [ref=f39e6] [cursor=pointer]:
+        - /url: "#packages"
+      - link "Booking" [ref=f39e7] [cursor=pointer]:
+        - /url: "#booking"
+      - link "Workshop" [ref=f39e8] [cursor=pointer]:
+        - /url: "#workshop"
+      - link "Questions" [ref=f39e9] [cursor=pointer]:
+        - /url: "#faq"
+    - generic [ref=f39e10]:
+      - link "Open seven days 0434 13 73 93" [ref=f39e11] [cursor=pointer]:
+        - /url: tel:0434137393
+        - generic [ref=f39e12]:
+          - generic [ref=f39e13]: Open seven days
+          - generic [ref=f39e14]: 0434 13 73 93
+      - link "Book now" [ref=f39e18] [cursor=pointer]:
+        - /url: "#booking"
+  - main [ref=f39e19]:
+    - region "Detailing, perfected." [ref=f39e20]:
+      - generic [ref=f39e23]:
+        - article [ref=f39e24]:
+          - paragraph [ref=f39e25]: By Monsoor Motors · Victoria Park, Perth
+          - heading "Detailing, perfected." [level=1] [ref=f39e26]:
+            - generic [ref=f39e27]: Detailing,
+            - emphasis [ref=f39e31]: perfected.
+          - paragraph [ref=f39e32]: Mobile and workshop car detailing. We come to you within 20 km of Victoria Park, or you drop the car at our workshop on Albany Highway.
+          - generic [ref=f39e33]:
+            - link "Book a detail" [ref=f39e34] [cursor=pointer]:
+              - /url: "#booking"
+            - link "See packages" [ref=f39e35] [cursor=pointer]:
+              - /url: "#packages"
+          - list [ref=f39e36]:
+            - listitem [ref=f39e37]: From $149
+            - listitem [ref=f39e38]: No deposit
+            - listitem [ref=f39e39]: Open 8:30 to 6:00, seven days
+        - article:
+          - generic:
+            - paragraph: Phase 02 · Polish
+            - heading "Polished to a mirror." [level=2]:
+              - generic: Polished
+              - generic: to a mirror.
+            - paragraph: Clay bar decontamination lifts what a wash leaves behind. A high-gloss machine polish follows, one panel at a time, until the light runs clean along the paint.
+            - list:
+              - listitem:
+                - generic: From $199
+                - generic: "Gold: polish and wax sealant"
+              - listitem:
+                - generic: From $299
+                - generic: "Aureus: clay bar and machine polish"
+        - article:
+          - generic:
+            - paragraph: Phase 03 · Protect
+            - heading "Sealed. Water rolls off." [level=2]:
+              - generic: Sealed.
+              - generic: Water rolls off.
+            - paragraph: The Aureus package finishes with a hydrophobic ceramic shield, so water beads and runs off instead of sitting on the paint.
+            - list:
+              - listitem:
+                - generic: 6 months
+                - generic: Ceramic shield in the Aureus package
+              - listitem:
+                - generic: From $699
+                - generic: Full ceramic coating, quoted per car
+            - generic:
+              - link "Book your detail":
+                - /url: "#booking"
+              - link "See packages":
+                - /url: "#packages"
+        - complementary "Price and range" [ref=f39e40]:
+          - form "Instant price" [ref=f39e41]:
+            - paragraph [ref=f39e42]: Instant price
+            - group "Package" [ref=f39e43]:
+              - generic [ref=f39e45]:
+                - generic [ref=f39e46] [cursor=pointer]:
+                  - radio "Silver" [ref=f39e47]
+                  - generic [ref=f39e48]: Silver
+                - generic [ref=f39e49] [cursor=pointer]:
+                  - radio "Gold" [checked] [ref=f39e50]
+                  - generic [ref=f39e51]: Gold
+                - generic [ref=f39e52] [cursor=pointer]:
+                  - radio "Aureus" [ref=f39e53]
+                  - generic [ref=f39e54]: Aureus
+            - group "Your vehicle" [ref=f39e55]:
+              - generic [ref=f39e57]:
+                - generic [ref=f39e58] [cursor=pointer]:
+                  - radio "Sedan" [checked] [ref=f39e59]
+                  - generic [ref=f39e60]: Sedan
+                - generic [ref=f39e61] [cursor=pointer]:
+                  - radio "SUV / Ute +$20" [ref=f39e62]
+                  - generic [ref=f39e63]:
+                    - text: SUV / Ute
+                    - generic [ref=f39e64]: +$20
+                - generic [ref=f39e65] [cursor=pointer]:
+                  - radio "Van +$40" [ref=f39e66]
+                  - generic [ref=f39e67]:
+                    - text: Van
+                    - generic [ref=f39e68]: +$40
+            - paragraph [ref=f39e74]:
+              - generic [ref=f39e75]: $199
+              - generic [ref=f39e76]: 2 h 30 min
+            - link "Book this" [ref=f39e77] [cursor=pointer]:
+              - /url: "#booking"
+          - generic [ref=f39e78]:
+            - paragraph [ref=f39e79]: Mobile range
+            - generic [ref=f39e80]:
+              - paragraph [ref=f39e81]:
+                - generic [ref=f39e82]: "20"
+                - generic [ref=f39e83]: km
+              - paragraph [ref=f39e84]: From Victoria Park. Further out? We'll phone first to agree a travel fee.
+        - list [aria-hidden]:
+          - generic: Hydrophobic ceramic shield
+          - generic: Wheel and rim deep clean
+        - navigation "Film chapters" [ref=f39e85]:
+          - paragraph [aria-hidden] [ref=f39e89]:
+            - generic [ref=f39e90]: "01"
+            - generic [ref=f39e92]: / 03
+          - generic [ref=f39e93]:
+            - button "01 Reveal" [ref=f39e94] [cursor=pointer]
+            - button "02 Polish" [ref=f39e95] [cursor=pointer]
+            - button "03 Protect" [ref=f39e96] [cursor=pointer]
+        - paragraph [aria-hidden] [ref=f39e97]: Scroll
+        - link "Skip the film" [ref=f39e99] [cursor=pointer]:
+          - /url: "#packages"
+    - region "Three packages. Three layers deep." [ref=f39e100]:
+      - generic [ref=f39e101]:
+        - list [ref=f39e102]:
+          - listitem [ref=f39e103]:
+            - generic [ref=f39e104]: $149
+            - generic [ref=f39e106]: Packages from
+          - listitem [ref=f39e107]:
+            - generic [ref=f39e108]: 20 km
+            - generic [ref=f39e110]: Mobile range from Victoria Park
+          - listitem [ref=f39e111]:
+            - generic [ref=f39e112]: 7 days
+            - generic [ref=f39e114]: Open 8:30 am to 6:00 pm
+          - listitem [ref=f39e115]:
+            - generic [ref=f39e116]: $0 deposit
+            - generic [ref=f39e118]: Pay when the job is done
+        - generic [ref=f39e119]:
+          - generic [ref=f39e120]:
+            - paragraph [ref=f39e121]: Packages
+            - heading "Three packages. Three layers deep." [level=2] [ref=f39e122]:
+              - generic [ref=f39e123]: Three packages.
+              - generic [ref=f39e125]: Three layers deep.
+          - generic [ref=f39e127]:
+            - paragraph [ref=f39e128]: Silver cleans the surface, Gold polishes into the clear coat, Aureus seals it under a ceramic shield. Prices update with your vehicle size, same at your place or ours.
+            - group "Vehicle size" [ref=f39e129]:
+              - generic [ref=f39e131]:
+                - generic [ref=f39e132] [cursor=pointer]:
+                  - radio "Sedan / Hatch" [checked] [ref=f39e133]
+                  - generic [ref=f39e134]: Sedan / Hatch
+                - generic [ref=f39e135] [cursor=pointer]:
+                  - radio "SUV / 4WD / Ute +$20" [ref=f39e136]
+                  - generic [ref=f39e137]: SUV / 4WD / Ute +$20
+                - generic [ref=f39e138] [cursor=pointer]:
+                  - radio "Van / Commercial +$40" [ref=f39e139]
+                  - generic [ref=f39e140]: Van / Commercial +$40
+        - generic [ref=f39e141]:
+          - generic [ref=f39e142]:
+            - article [ref=f39e143]:
+              - button "Select Silver package" [ref=f39e144] [cursor=pointer]
+              - generic [ref=f39e145]:
+                - heading "Silver" [level=3] [ref=f39e146]
+                - generic [ref=f39e147]: Fast and clean
+              - paragraph [ref=f39e148]:
+                - generic [ref=f39e149]: $149
+                - generic [ref=f39e150]: 1 h 30 min
+              - generic [ref=f39e152]:
+                - list [ref=f39e153]:
+                  - listitem [ref=f39e154]:
+                    - generic [ref=f39e157]: Exterior snow foam hand wash
+                  - listitem [ref=f39e158]:
+                    - generic [ref=f39e161]: Wheel and rim deep clean
+                  - listitem [ref=f39e162]:
+                    - generic [ref=f39e165]: Tyre dressing and gloss shine
+                  - listitem [ref=f39e166]:
+                    - generic [ref=f39e169]: Exterior windows and mirrors
+                  - listitem [ref=f39e170]:
+                    - generic [ref=f39e173]: "Cabin vacuum: seats, carpet and boot"
+                  - listitem [ref=f39e174]:
+                    - generic [ref=f39e177]: Dashboard, console and trim wipe
+                  - listitem [ref=f39e178]:
+                    - generic [ref=f39e181]: Door jambs wiped
+                - button "Add extras" [ref=f39e183] [cursor=pointer]
+                - link "Book Silver" [ref=f39e187] [cursor=pointer]:
+                  - /url: "#booking"
+            - article [ref=f39e190]:
+              - button "Select Gold package" [pressed] [ref=f39e191] [cursor=pointer]
+              - generic [ref=f39e192]:
+                - heading "Gold" [level=3] [ref=f39e193]
+                - generic [ref=f39e194]: Most popular
+              - paragraph [ref=f39e195]:
+                - generic [ref=f39e196]: $199
+                - generic [ref=f39e197]: 2 h 30 min
+              - generic [ref=f39e199]:
+                - list [ref=f39e200]:
+                  - listitem [ref=f39e201]:
+                    - generic [ref=f39e204]: Everything in Silver, plus polish
+                  - listitem [ref=f39e205]:
+                    - generic [ref=f39e208]: Wax paint sealant
+                  - listitem [ref=f39e209]:
+                    - generic [ref=f39e212]: Deep interior antibacterial steam clean
+                  - listitem [ref=f39e213]:
+                    - generic [ref=f39e216]: Full leather clean and condition
+                  - listitem [ref=f39e217]:
+                    - generic [ref=f39e220]: Air vent disinfection and deodoriser
+                  - listitem [ref=f39e221]:
+                    - generic [ref=f39e224]: AC vent brush detailing
+                - button "Add extras" [ref=f39e226] [cursor=pointer]
+                - link "Book Gold" [ref=f39e230] [cursor=pointer]:
+                  - /url: "#booking"
+            - article [ref=f39e233]:
+              - button "Select Aureus package" [ref=f39e234] [cursor=pointer]
+              - generic [ref=f39e235]:
+                - heading "Aureus" [level=3] [ref=f39e236]
+                - generic [ref=f39e237]: Showroom finish
+              - paragraph [ref=f39e238]:
+                - generic [ref=f39e239]: $299
+                - generic [ref=f39e240]: 4 hours
+              - generic [ref=f39e242]:
+                - list [ref=f39e243]:
+                  - listitem [ref=f39e244]:
+                    - generic [ref=f39e247]: Everything in Gold, plus ceramic sealant
+                  - listitem [ref=f39e248]:
+                    - generic [ref=f39e251]: Clay bar paint decontamination
+                  - listitem [ref=f39e252]:
+                    - generic [ref=f39e255]: Hydrophobic 6-month ceramic shield
+                  - listitem [ref=f39e256]:
+                    - generic [ref=f39e259]: Deep leather protection treatment
+                  - listitem [ref=f39e260]:
+                    - generic [ref=f39e263]: "Hot water extraction shampoo: seats and mats"
+                  - listitem [ref=f39e264]:
+                    - generic [ref=f39e267]: Headlight restoration and UV coat
+                  - listitem [ref=f39e268]:
+                    - generic [ref=f39e271]: High-gloss machine polish
+                  - listitem [ref=f39e272]:
+                    - generic [ref=f39e275]: Iron and tar removal
+                - button "Add extras" [ref=f39e277] [cursor=pointer]
+                - link "Book Aureus" [ref=f39e281] [cursor=pointer]:
+                  - /url: "#booking"
+          - complementary [ref=f39e284]:
+            - generic [ref=f39e285]:
+              - heading "Not sure which one?" [level=3] [ref=f39e286]
+              - paragraph [ref=f39e287]:
+                - link "Talk to us" [ref=f39e288] [cursor=pointer]:
+                  - /url: tel:0434137393
+                - generic [ref=f39e291]: Open 8:30 am to 6:00 pm, seven days
+            - generic [ref=f39e292]:
+              - paragraph [ref=f39e293]: Extras can be added to any package. Ceramic coating starts from $699 and is priced per car after we inspect it.
+              - link "Get a quote" [ref=f39e294] [cursor=pointer]:
+                - /url: "#quote"
+    - region "Book your detail." [ref=f39e297]:
+      - generic [ref=f39e298]:
+        - paragraph [ref=f39e299]: Booking
+        - heading "Book your detail." [level=2] [ref=f39e300]
+        - paragraph [ref=f39e303]: No deposit. Pay when the job is done, by card, EFTPOS or cash.
+        - generic [ref=f39e304]:
+          - group "Date and time" [ref=f39e305]:
+            - generic [ref=f39e307]:
+              - generic [ref=f39e308]:
+                - button "Previous month" [disabled] [ref=f39e309]
+                - generic [ref=f39e312]: November 2026
+                - button "Next month" [ref=f39e313] [cursor=pointer]
+              - generic [ref=f39e316]:
+                - generic [aria-hidden] [ref=f39e317]: Su
+                - generic [aria-hidden] [ref=f39e318]: Mo
+                - generic [aria-hidden] [ref=f39e319]: Tu
+                - generic [aria-hidden] [ref=f39e320]: We
+                - generic [aria-hidden] [ref=f39e321]: Th
+                - generic [aria-hidden] [ref=f39e322]: Fr
+                - generic [aria-hidden] [ref=f39e323]: Sa
+                - button "Sun, 1 Nov 2026, past date" [disabled] [ref=f39e324]: "1"
+                - button "Mon, 2 Nov 2026, past date" [disabled] [ref=f39e325]: "2"
+                - button "Tue, 3 Nov 2026, past date" [disabled] [ref=f39e326]: "3"
+                - button "Wed, 4 Nov 2026, past date" [disabled] [ref=f39e327]: "4"
+                - button "Thu, 5 Nov 2026, past date" [disabled] [ref=f39e328]: "5"
+                - button "Fri, 6 Nov 2026, past date" [disabled] [ref=f39e329]: "6"
+                - button "Sat, 7 Nov 2026, past date" [disabled] [ref=f39e330]: "7"
+                - button "Sun, 8 Nov 2026, past date" [disabled] [ref=f39e331]: "8"
+                - button "Mon, 9 Nov 2026, past date" [disabled] [ref=f39e332]: "9"
+                - button "Tue, 10 Nov 2026, past date" [disabled] [ref=f39e333]: "10"
+                - button "Wed, 11 Nov 2026, past date" [disabled] [ref=f39e334]: "11"
+                - button "Thu, 12 Nov 2026, past date" [disabled] [ref=f39e335]: "12"
+                - button "Fri, 13 Nov 2026, past date" [disabled] [ref=f39e336]: "13"
+                - button "Sat, 14 Nov 2026, past date" [disabled] [ref=f39e337]: "14"
+                - button "Sun, 15 Nov 2026, past date" [disabled] [ref=f39e338]: "15"
+                - button "Mon, 16 Nov 2026, past date" [disabled] [ref=f39e339]: "16"
+                - button "Tue, 17 Nov 2026" [pressed] [ref=f39e340] [cursor=pointer]: "17"
+                - button "Wed, 18 Nov 2026" [ref=f39e341] [cursor=pointer]: "18"
+                - button "Thu, 19 Nov 2026" [ref=f39e342] [cursor=pointer]: "19"
+                - button "Fri, 20 Nov 2026" [ref=f39e343] [cursor=pointer]: "20"
+                - button "Sat, 21 Nov 2026" [ref=f39e344] [cursor=pointer]: "21"
+                - button "Sun, 22 Nov 2026" [ref=f39e345] [cursor=pointer]: "22"
+                - button "Mon, 23 Nov 2026" [ref=f39e346] [cursor=pointer]: "23"
+                - button "Tue, 24 Nov 2026" [ref=f39e347] [cursor=pointer]: "24"
+                - button "Wed, 25 Nov 2026" [ref=f39e348] [cursor=pointer]: "25"
+                - button "Thu, 26 Nov 2026" [ref=f39e349] [cursor=pointer]: "26"
+                - button "Fri, 27 Nov 2026" [ref=f39e350] [cursor=pointer]: "27"
+                - button "Sat, 28 Nov 2026" [ref=f39e351] [cursor=pointer]: "28"
+                - button "Sun, 29 Nov 2026" [ref=f39e352] [cursor=pointer]: "29"
+                - button "Mon, 30 Nov 2026" [ref=f39e353] [cursor=pointer]: "30"
+            - paragraph [ref=f39e354]: Time windows on Tue, 17 Nov 2026
+            - group "Time windows on Tue, 17 Nov 2026" [ref=f39e355]:
+              - button "8:30 am to 11:00 am" [pressed] [ref=f39e356] [cursor=pointer]
+              - button "11:00 am to 1:30 pm" [ref=f39e357] [cursor=pointer]
+              - button "1:30 pm to 4:00 pm" [ref=f39e358] [cursor=pointer]
+              - button "4:00 pm to 6:30 pm" [ref=f39e359] [cursor=pointer]
+          - group "Vehicle and contact details" [ref=f39e360]:
+            - generic [ref=f39e362]:
+              - generic [ref=f39e363]:
+                - generic [ref=f39e364]: Package
+                - combobox "Package" [ref=f39e365] [cursor=pointer]:
+                  - option "Silver · $149 · 1 h 30 min"
+                  - option "Gold · $199 · 2 h 30 min" [selected]
+                  - option "Aureus · $299 · 4 hours"
+              - generic [ref=f39e366]:
+                - generic [ref=f39e367]: Vehicle category
+                - combobox "Vehicle category" [ref=f39e368] [cursor=pointer]:
+                  - option "Sedan / Hatch" [selected]
+                  - option "SUV / 4WD / Ute (+$20)"
+                  - option "Van / Commercial (+$40)"
+              - generic [ref=f39e369]:
+                - generic [ref=f39e370]: Make, model and year
+                - textbox "Make, model and year" [ref=f39e371]:
+                  - /placeholder: e.g. Toyota Hilux 2023
+              - generic [ref=f39e372]:
+                - generic [ref=f39e373]: Registration (optional)
+                - textbox "Registration (optional)" [ref=f39e374]:
+                  - /placeholder: e.g. 1ABC 234
+              - button "Add extras" [ref=f39e377] [cursor=pointer]
+              - generic [ref=f39e381]:
+                - generic [ref=f39e382]: Full name
+                - textbox "Full name" [ref=f39e383]:
+                  - /placeholder: e.g. John Smith
+              - generic [ref=f39e384]:
+                - generic [ref=f39e385]: Phone
+                - textbox "Phone" [ref=f39e386]:
+                  - /placeholder: e.g. 0412 345 678
+              - generic [ref=f39e387]:
+                - generic [ref=f39e388]: Email
+                - textbox "Email" [ref=f39e389]:
+                  - /placeholder: e.g. john.smith@gmail.com
+              - generic [ref=f39e390]:
+                - generic [ref=f39e391]: Where should we do it?
+                - radiogroup "Where should we do it?" [ref=f39e392]:
+                  - generic [ref=f39e393] [cursor=pointer]:
+                    - radio "Workshop drop-off 530 Albany Hwy, Victoria Park WA 6100" [checked] [ref=f39e394]
+                    - generic [ref=f39e395]:
+                      - generic [ref=f39e396]: Workshop drop-off
+                      - generic [ref=f39e397]: 530 Albany Hwy, Victoria Park WA 6100
+                  - generic [ref=f39e398] [cursor=pointer]:
+                    - radio "We come to you Home or work, within 20 km of Victoria Park" [ref=f39e399]
+                    - generic [ref=f39e400]:
+                      - generic [ref=f39e401]: We come to you
+                      - generic [ref=f39e402]: Home or work, within 20 km of Victoria Park
+              - generic [ref=f39e403]:
+                - generic [ref=f39e404]: Parking or access notes (optional)
+                - textbox "Parking or access notes (optional)" [ref=f39e405]:
+                  - /placeholder: e.g. Park in visitor bay 3, tap available
+              - generic [aria-hidden] [ref=f39e406]:
+                - text: Leave this empty
+                - textbox [ref=f39e407]
+          - complementary "Your booking" [ref=f39e408]:
+            - heading "Your booking" [level=3] [ref=f39e409]
+            - generic [ref=f39e410]:
+              - generic [ref=f39e411]:
+                - term [ref=f39e412]: Package
+                - definition [ref=f39e413]: Gold · 2 h 30 min
+              - generic [ref=f39e414]:
+                - term [ref=f39e415]: Vehicle
+                - definition [ref=f39e416]: Sedan / Hatch
+              - generic [ref=f39e417]:
+                - term [ref=f39e418]: Where
+                - definition [ref=f39e419]: Workshop drop-off
+              - generic [ref=f39e420]:
+                - term [ref=f39e421]: When
+                - definition [ref=f39e422]: Tue, 17 Nov 2026, 8:30 am to 11:00 am
+            - generic [ref=f39e423]:
+              - generic [ref=f39e424]: Total
+              - generic [ref=f39e425]: $199
+            - button "Send booking request" [ref=f39e426] [cursor=pointer]
+            - paragraph [ref=f39e427]: Pay on completion. Need to move it? Give us 12 hours' notice and we'll reschedule free.
+    - region "Workshop, questions and quotes" [ref=f39e428]:
+      - generic [ref=f39e429]:
+        - generic [ref=f39e430]:
+          - article [ref=f39e431]:
+            - paragraph [ref=f39e432]: Workshop
+            - heading "Prefer to drop the car off?" [level=2] [ref=f39e433]:
+              - generic [ref=f39e434]: Prefer to drop
+              - generic [ref=f39e436]: the car off?
+            - generic [ref=f39e438]:
+              - generic [ref=f39e439]:
+                - term [ref=f39e440]: Address
+                - definition [ref=f39e441]: 530 Albany Hwy, Victoria Park WA 6100
+              - generic [ref=f39e442]:
+                - term [ref=f39e443]: Open
+                - definition [ref=f39e444]:
+                  - text: 8:30 am to 6:00 pm
+                  - generic [ref=f39e445]: Monday to Sunday
+              - generic [ref=f39e446]:
+                - term [ref=f39e447]: Call
+                - definition [ref=f39e448]:
+                  - link "0434 13 73 93" [ref=f39e449] [cursor=pointer]:
+                    - /url: tel:0434137393
+                  - link "carwashandpolish.wa@gmail.com" [ref=f39e451] [cursor=pointer]:
+                    - /url: mailto:carwashandpolish.wa@gmail.com
+            - list [ref=f39e452]:
+              - listitem [ref=f39e453]: On-site parking
+              - listitem [ref=f39e454]: Undercover bays
+              - listitem [ref=f39e455]: Quick key drop
+              - listitem [ref=f39e456]: Inspection with you at handover
+            - generic [ref=f39e457]:
+              - link "Get directions" [ref=f39e458] [cursor=pointer]:
+                - /url: https://maps.google.com/?q=530+Albany+Hwy,+Victoria+Park+WA+6100
+              - button "Copy address" [ref=f39e461] [cursor=pointer]
+          - iframe [ref=f39e465]
+          - figure "Our team at the workshop 01 Machine polish" [ref=f39e466]:
+            - generic [ref=f39e471]:
+              - generic [ref=f39e472]: Our team at the workshop
+              - generic [ref=f39e473]:
+                - generic [ref=f39e474]: "01"
+                - generic [ref=f39e475]: Machine polish
+            - generic [ref=f39e476]:
+              - list [aria-hidden] [ref=f39e477]:
+                - listitem [ref=f39e478]
+                - listitem [ref=f39e479]
+                - listitem [ref=f39e480]
+                - listitem [ref=f39e481]
+              - button "Pause team footage" [ref=f39e482] [cursor=pointer]
+        - generic [ref=f39e485]:
+          - article [ref=f39e486]:
+            - generic [ref=f39e487]:
+              - paragraph [ref=f39e488]: Questions
+              - heading "Before you book." [level=2] [ref=f39e489]
+              - paragraph [ref=f39e492]:
+                - text: The short answers. The full detail is in our
+                - link "terms" [ref=f39e493] [cursor=pointer]:
+                  - /url: terms.html
+                - text: .
+            - generic [ref=f39e494]:
+              - group [ref=f39e495]:
+                - generic "What do you need from me for a mobile detail?" [ref=f39e496] [cursor=pointer]
+              - group [ref=f39e499]:
+                - generic "How and when do I pay?" [ref=f39e500] [cursor=pointer]
+              - group [ref=f39e503]:
+                - generic "Can I change or cancel my booking?" [ref=f39e504] [cursor=pointer]
+              - group [ref=f39e507]:
+                - generic "Could the price change on the day?" [ref=f39e508] [cursor=pointer]
+              - group [ref=f39e511]:
+                - generic "What if I'm not happy with the result?" [ref=f39e512] [cursor=pointer]
+              - group [ref=f39e515]:
+                - generic "Should I take anything out of the car?" [ref=f39e516] [cursor=pointer]
+          - article [ref=f39e519]:
+            - paragraph [ref=f39e520]: Quotes
+            - heading "A fleet, a van, or ceramic coating?" [level=2] [ref=f39e521]:
+              - generic [ref=f39e522]: A fleet, a van, or
+              - generic [ref=f39e524]: ceramic coating?
+            - paragraph [ref=f39e526]: Tell us what you have and we'll come back with a price.
+            - generic [ref=f39e527]:
+              - generic [ref=f39e528]:
+                - generic [ref=f39e529]:
+                  - generic [ref=f39e530]: Name
+                  - textbox "Name" [ref=f39e531]
+                - generic [ref=f39e532]:
+                  - generic [ref=f39e533]: Phone (optional)
+                  - textbox "Phone (optional)" [ref=f39e534]:
+                    - /placeholder: e.g. 0412 345 678
+              - generic [ref=f39e535]:
+                - generic [ref=f39e536]: Email
+                - textbox "Email" [ref=f39e537]
+              - generic [ref=f39e538]:
+                - generic [ref=f39e539]: What do you need?
+                - textbox "What do you need?" [ref=f39e540]:
+                  - /placeholder: Number of vehicles, type, and the finish you're after
+              - generic [aria-hidden] [ref=f39e541]:
+                - text: Leave this empty
+                - textbox [ref=f39e542]
+              - button "Request a quote" [ref=f39e544] [cursor=pointer]
+    - region "Now picture yours." [ref=f39e547]:
+      - generic [ref=f39e549]:
+        - heading "Now picture yours." [level=2] [ref=f39e562]:
+          - generic [ref=f39e563]: Now picture
+          - generic [ref=f39e565]: yours.
+        - generic [ref=f39e567]:
+          - link "Book a detail No deposit · Pay on completion" [ref=f39e568] [cursor=pointer]:
+            - /url: "#booking"
+            - generic [ref=f39e569]: Book a detail
+            - generic [ref=f39e570]: No deposit · Pay on completion
+          - link "Call 0434 13 73 93 8:30 am to 6:00 pm · Seven days" [ref=f39e571] [cursor=pointer]:
+            - /url: tel:0434137393
+            - generic [ref=f39e572]: Call 0434 13 73 93
+            - generic [ref=f39e573]: 8:30 am to 6:00 pm · Seven days
+  - contentinfo [ref=f39e574]:
+    - generic [ref=f39e575]:
+      - generic [ref=f39e576]:
+        - generic [ref=f39e577]:
+          - img "Aureus Detailing" [ref=f39e578]
+          - paragraph [ref=f39e579]: Mobile and workshop car detailing in Perth, by the Monsoor Motors team.
+        - generic [ref=f39e580]:
+          - heading "Visit" [level=2] [ref=f39e581]
+          - list [ref=f39e582]:
+            - listitem [ref=f39e583]: 530 Albany Hwy
+            - listitem [ref=f39e584]: Victoria Park WA 6100
+            - listitem [ref=f39e585]: 8:30 am to 6:00 pm, seven days
+        - generic [ref=f39e586]:
+          - heading "Contact" [level=2] [ref=f39e587]
+          - list [ref=f39e588]:
+            - listitem [ref=f39e589]:
+              - link "0434 13 73 93" [ref=f39e590] [cursor=pointer]:
+                - /url: tel:0434137393
+            - listitem [ref=f39e591]:
+              - link "carwashandpolish.wa@gmail.com" [ref=f39e592] [cursor=pointer]:
+                - /url: mailto:carwashandpolish.wa@gmail.com
+        - generic [ref=f39e593]:
+          - heading "Site" [level=2] [ref=f39e594]
+          - list [ref=f39e595]:
+            - listitem [ref=f39e596]:
+              - link "Packages" [ref=f39e597] [cursor=pointer]:
+                - /url: "#packages"
+            - listitem [ref=f39e598]:
+              - link "Book online" [ref=f39e599] [cursor=pointer]:
+                - /url: "#booking"
+            - listitem [ref=f39e600]:
+              - link "Privacy" [ref=f39e601] [cursor=pointer]:
+                - /url: privacy.html
+            - listitem [ref=f39e602]:
+              - link "Terms" [ref=f39e603] [cursor=pointer]:
+                - /url: terms.html
+      - generic [ref=f39e604]:
+        - generic [ref=f39e605]: © 2026 Aureus Detailing by Monsoor Motors
+        - generic [ref=f39e606]: Prices in AUD, GST included
+      - paragraph [ref=f39e607]: The car shown in the film and photographs on this page is a digital illustration, not a customer vehicle. Aureus Detailing is not affiliated with, sponsored by or endorsed by Ferrari.
+  - status
