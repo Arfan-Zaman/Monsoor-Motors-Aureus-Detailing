@@ -15,11 +15,10 @@
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png">
 <link rel="preload" href="assets/fonts/Montserrat-Variable-latin.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="assets/fonts/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="assets/img/hero-clean-1920.webp" media="(min-width: 981px)">
-<link rel="preload" as="image" href="assets/img/hero-clean-1120.webp" media="(max-width: 980px)">
+<link rel="preload" as="image" href="assets/film/aureus-film-poster.jpg">
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="stylesheet" href="assets/v3.css">
-<noscript><style>.lens,.hero-hint,#dive-btn{display:none!important}</style></noscript>
+
 </head>
 <body class="v3">
 <a class="skip" href="#main">Skip to content</a>
@@ -52,7 +51,6 @@
     </button>
   </div>
   <nav class="nav-links" id="nav-links" aria-label="Main">
-    <a href="#work">Our work</a>
     <a href="#packages">Packages</a>
     <a href="#booking">Booking</a>
     <a href="#workshop">Workshop</a>
@@ -64,34 +62,28 @@
 <main id="main">
 <span id="top"></span>
 
-<section class="hero" id="hero" aria-labelledby="hero-h" data-stage="car">
-  <div class="stage" id="stage" aria-hidden="true">
-    <canvas class="paint" id="paint"></canvas>
-    <div class="car" id="car">
-      <picture>
-        <source media="(max-width: 980px)" srcset="assets/img/hero-clean-1120.webp">
-        <img src="assets/img/hero-clean-1920.webp" alt="" width="1920" height="1084" fetchpriority="high">
-      </picture>
-    </div>
-    <div class="lens" id="lens"><canvas id="lens-cv"></canvas><i class="lens-rim"></i></div>
+<section class="film" id="hero" aria-labelledby="hero-h">
+  <div class="film-stage" aria-hidden="true">
+    <img class="film-poster" src="assets/film/aureus-film-poster.jpg" alt="" width="1920" height="1080" fetchpriority="high">
+    <video class="film-video" muted playsinline preload="none" data-src="assets/film/aureus-film.mp4" data-src-mobile="assets/film/aureus-film-mobile.mp4"></video>
+    <div class="film-shade"></div>
   </div>
 
-  <div class="hero-inner">
-    <div class="hero-copy">
+  <div class="film-chapters">
+    <article class="chapter ch-1">
       <h1 id="hero-h">Detailing, perfected.</h1>
-      <p class="hero-sub" id="hero-sub" aria-live="polite">See what we do to your paint.</p>
-      <div class="hero-actions">
-        <button class="btn btn-glass" type="button" id="dive-btn" aria-controls="stage">Look closer</button>
-      </div>
-      <p class="hero-hint" id="hero-hint">Move the lens across the bonnet.</p>
-      <ul class="hero-facts">
-        <li>From $149</li>
-        <li>Mobile within 20 km</li>
-        <li>Open 8:30 to 6:00, seven days</li>
-      </ul>
-    </div>
-
-    <form class="dock glass beads" id="dock" aria-label="Instant price" novalidate>
+      <p class="ch-text">Mobile and workshop car detailing in Victoria Park, Perth. Scroll to see what we do to your paint.</p>
+      <div class="ch-actions"><a class="btn btn-pink" href="#booking">Book a detail</a><a class="btn btn-glass" href="#packages">See packages</a></div>
+      <ul class="hero-facts"><li>From $149</li><li>Mobile within 20 km</li><li>Open 8:30 to 6:00, seven days</li></ul>
+    </article>
+    <article class="chapter ch-2">
+      <h2 class="ch-h">Every scratch, seen.</h2>
+      <p class="ch-text">Under the light, swirl marks and haze show up like scratches on glass. We inspect your paint with you before we start.</p>
+    </article>
+    <article class="chapter ch-3">
+      <h2 class="ch-h">Polished to a mirror.</h2>
+      <p class="ch-text">A dual-action machine polish lifts the swirls one panel at a time. Pick your vehicle and package to see the price.</p>
+      <form class="dock glass beads" id="dock" aria-label="Instant price" novalidate>
       <fieldset class="dock-group">
         <legend>Your vehicle</legend>
         <div class="seg seg-glass" id="dock-veh"></div>
@@ -103,28 +95,20 @@
       <p class="dock-price" aria-live="polite"><b id="dock-price">$199</b><span id="dock-time">2 h 30 min</span></p>
       <a class="btn btn-pink" href="#booking" id="dock-book">Book this <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </form>
-  </div>
-</section>
-
-<section class="section work" id="work" aria-labelledby="work-h">
-  <div class="wrap work-grid">
-    <div class="work-text">
-      <h2 class="h2" id="work-h">This is our work, filmed at our workshop.</h2>
-      <p class="lede">No stock footage. Our own team taking a car from dull to ready.</p>
-      <div class="work-tabs" role="tablist" aria-label="Stages of a detail" id="work-tabs">
-        <button class="work-tab" role="tab" type="button" id="wt-1" aria-selected="true" aria-controls="work-panel"><b>Machine polish</b><span>A dual-action polisher lifts haze and light swirls, one panel at a time.</span></button>
-        <button class="work-tab" role="tab" type="button" id="wt-2" aria-selected="false" aria-controls="work-panel" tabindex="-1"><b>Hand finish</b><span>Residue comes off by hand with clean microfibre, so nothing dries on the paint.</span></button>
-        <button class="work-tab" role="tab" type="button" id="wt-3" aria-selected="false" aria-controls="work-panel" tabindex="-1"><b>Wheels and tyres</b><span>Rims deep cleaned, tyres dressed to a clean satin black.</span></button>
-        <button class="work-tab" role="tab" type="button" id="wt-4" aria-selected="false" aria-controls="work-panel" tabindex="-1"><b>Ready to hand back</b><span>We walk around the car with you before you pay.</span></button>
-      </div>
-      <p class="work-desc" id="work-desc" aria-hidden="true"></p>
-    </div>
-    <figure class="work-frame" id="work-panel" role="tabpanel" aria-labelledby="wt-1">
-      <video id="work-video" muted playsinline preload="metadata" poster="assets/video/work-1.jpg" src="assets/video/work-1.mp4" aria-label="Footage of the Aureus team detailing a white SUV"></video>
-      <figcaption class="work-credit">Our team, Victoria Park</figcaption>
-      <button class="work-play" type="button" id="work-play" aria-label="Pause footage" data-playing="true"><svg class="ic-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="ic-play" aria-hidden="true"><use href="#i-play"/></svg></button>
-      <div class="work-cue" aria-hidden="true"><i id="work-cue"></i></div>
-    </figure>
+    </article>
+    <article class="chapter ch-4">
+      <h2 class="ch-h">Three packages. Three layers deep.</h2>
+      <ul class="ch-layers">
+        <li><b>Silver $149</b><span>The surface: wash, wheels, glass, interior</span></li>
+        <li><b>Gold $199</b><span>The clear coat: polish, wax sealant, steam clean</span></li>
+        <li><b>Aureus $299</b><span>The ceramic shield: clay bar, machine polish, ceramic</span></li>
+      </ul>
+    </article>
+    <article class="chapter ch-5">
+      <h2 class="ch-h">Sealed under ceramic.</h2>
+      <p class="ch-text">Water beads and rolls off. No deposit, pay when the job is done.</p>
+      <div class="ch-actions"><a class="btn btn-pink" href="#booking">Book your detail</a><a class="btn btn-glass" href="tel:0434137393">Call 0434 13 73 93</a></div>
+    </article>
   </div>
 </section>
 
@@ -139,12 +123,6 @@
         <legend class="sr-only">Vehicle size</legend>
         <div class="seg" id="veh-seg"></div>
       </fieldset>
-    </div>
-    <div class="strata" id="strata" aria-hidden="true">
-      <div class="layer l-ceramic" data-pack="aureus"><span>Ceramic shield</span><em>Aureus</em></div>
-      <div class="layer l-clear" data-pack="gold"><span>Clear coat</span><em>Gold</em></div>
-      <div class="layer l-surface" data-pack="silver"><span>Surface</span><em>Silver</em></div>
-      <div class="layer l-base"><span>Base coat and metallic flake</span></div>
     </div>
     <div class="packs" id="packs"></div>
     <noscript><p class="lede">Silver $149, Gold $199, Aureus $299. Add $20 for SUV, 4WD or ute, and $40 for vans. Call 0434 13 73 93 to book.</p></noscript>
@@ -345,7 +323,7 @@
       <div><h2>Site</h2><ul><li><a href="#packages">Packages</a></li><li><a href="#booking">Book online</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
     </div>
     <div class="foot-base"><span>© 2026 Aureus Detailing by Monsoor Motors</span><span>Prices in AUD, GST included</span></div>
-    <p class="foot-note">The car in the opening image is a digital illustration, not a customer vehicle. Aureus Detailing is not affiliated with Porsche.</p>
+    <p class="foot-note">The car in the opening film is a digital illustration, not a customer vehicle. Aureus Detailing is not affiliated with any car maker.</p>
   </div>
 </footer>
 
@@ -356,6 +334,6 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="assets/app.js" defer></script>
-<script src="assets/paint.js" defer></script>
+<script src="assets/scrub.js" defer></script>
 </body>
 </html>
