@@ -107,7 +107,8 @@ Covers are in `Highlight Covers/`. Create these highlights in this order:
   Open 7 days 8:30–6
   ```
 - [x] Instagram profile picture uploaded (16 Nov 2026).
-- [ ] Instagram, **phone app only**: contact options (email, phone, address), booking link and Book now button, two-factor authentication. Instagram's website doesn't offer these for business accounts.
+- [x] Instagram contact details set through **Meta Business Suite** (business.facebook.com, portfolio "Aureus Detailing"): email info@monsoormotors.com.au, phone +61 434 137 393, address 530 Albany Highway, Perth WA 6100 (Facebook's city list has no Victoria Park). Category shows as "Vehicle service".
+- [ ] Instagram booking link (Business Suite → Edit Instagram profile → Links) and two-factor authentication (Accounts Centre).
 - [ ] The Aureus website lists carwashandpolish.wa@gmail.com, but Instagram uses info@monsoormotors.com.au. Pick one for all customer-facing places.
 - [ ] Create TikTok (section 7) and send Claude the link. Claude will then add both links to the website footer and the playbook.
 - [ ] Register the business name **"Aureus Detailing"** with ASIC to Monsoor Motors Pty Ltd. ABN Lookup shows it isn't registered yet, and a Sydney detailer uses the name on TikTok.
