@@ -120,12 +120,12 @@ for k, (src, st, ln, sfx, _l, _c) in enumerate(EDIT):                           
 add(A("v4/h5.wav"), T("w1") + 0.15, -14, ",silenceremove=start_periods=1:start_threshold=-42dB")
 add(A("v4/h3.wav"), T("macro") + 0.2, -16, ",silenceremove=start_periods=1:start_threshold=-42dB")
 add(C("speak3.mp4"), SP, -16, trim=6.0)
-add(A("v4/h4.wav"), OFFER + 0.05, -16, ",silenceremove=start_periods=1:start_threshold=-42dB")
+add(A("v4/h4.wav"), OFFER + 0.4, -15, ",silenceremove=start_periods=1:start_threshold=-42dB")
 add(A("asmr/amb.mp3"), 0, -33, f",afade=out:st={DUR - 1}:d=1", trim=DUR)
 # bell: one bright strike when his finger hits the bell in link 8
 BELL = T("bell") + float(os.environ.get("BELL_AT", "1.1"))   # his finger lands on the bell late in link 7
 ding = os.path.join(WORK, "ding.wav")
-run(["ffmpeg", "-y", "-v", "error", "-filter_complex", "".join(f"sine=f={f}:d=1.8:r=48000,volume={v},afade=out:st=0.004:d=1.75:curve=exp[d{i}];" for i, (f, v) in enumerate([(2793, 0.5), (4610, 0.2), (6720, 0.1), (1396, 0.08)])) + "[d0][d1][d2][d3]amix=inputs=4:normalize=0[o]", "-map", "[o]", ding])
+run(["ffmpeg", "-y", "-v", "error", "-filter_complex", "".join(f"sine=f={f}:d=1.8:r=48000,volume={v},afade=out:st=0.004:d=0.85:curve=exp[d{i}];" for i, (f, v) in enumerate([(2793, 0.5), (4610, 0.2), (6720, 0.1), (1396, 0.08)])) + "[d0][d1][d2][d3]amix=inputs=4:normalize=0[o]", "-map", "[o]", ding])
 k = len(ins) // 2; ins.extend(["-i", ding]); fc += f"[{k}:a]aformat=channel_layouts=stereo,volume=0.9,adelay={int(BELL * 1000)}:all=1[a{k}];"; parts.append(f"[a{k}]")
 mix_nm = os.path.join(WORK, "nomusic.wav")
 run(["ffmpeg", "-y", "-v", "error"] + ins + ["-filter_complex", fc + "".join(parts) + f"amix=inputs={len(parts)}:normalize=0:duration=longest,apad=whole_dur={DUR},alimiter=limit=0.9[m]", "-map", "[m]", "-t", str(DUR), "-ar", "48000", mix_nm])
