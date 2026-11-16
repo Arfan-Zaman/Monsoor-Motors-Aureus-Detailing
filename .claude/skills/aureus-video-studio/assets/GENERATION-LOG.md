@@ -40,3 +40,12 @@ One line per Higgsfield generation. Reuse the prompt, seed and references of kee
 | 2026-11-17 | Ad music: 32 s instrumental, 100 bpm | elevenlabs_music_v2_5 | Launch Reels/CINEMATIC-AD-PLAN.md + ad/make_ad.py | - | - | 4.36 | job 4ffeabd7 | Keep: original track, safe for paid ads (audio/music.mp3) |
 
 **Cinematic ad total: 126.7 credits** (balance 905.75 → 779.04). Edit, animated graphics, sound mix and cover done locally with `Launch Reels/ad/make_ad.py` (0 credits).
+
+| 2026-11-17 | Ad v2 stills: detailer in every service (p1 polisher, p2 wax by hand, i1 steam, i2 vents, w1 wheel brush, w2 pressure rinse, hero) | nano_banana_pro 9:16 2k | ad/AD-V2-DIRECTOR-BRIEF.md | - | character board + trainer-01 + scene still | 14 | job dde7f2f7, adb2e145, 7dad9467, c766ae4d, e9c4bd9a, 510fb876, 3698b3b6 | Keep: face consistent; two angles and techniques per service |
+| 2026-11-17 | Ad v2 shots, 3 s real speed (p1, p2, i1, i2, w1, w2) | kling4_0 i2v 1080p 9:16 | ad/AD-V2-DIRECTOR-BRIEF.md | - | the stills above | 58.5 | job dedcc32d, eaa83be6, 4cd1cdde, 7aa943b7, 317f2299, 6a6ab861 | Keep |
+| 2026-11-17 | Ad v2 hero shot (wipe + smile) | kling4_0 i2v 3 s | ad/AD-V2-DIRECTOR-BRIEF.md | - | 3698b3b6 | 9.75 | job (heroclip.id) | Not used: replaced by the bell shot |
+| 2026-11-17 | Casual Aussie speaking take | veo3_1 high 6 s | ad/AD-V2-DIRECTOR-BRIEF.md | - | S2 | 24 | job 109f9b19 | Not used: superseded by the persona take |
+| 2026-11-17 | Persona speaking take: 'We come to you. Gold detail, 199. Done properly, or it's not done.' | veo3_1 high 6 s | ad/AD-V2-DIRECTOR-BRIEF.md | - | S2 | 24 | job 54c8fdba | Keep: words checked by transcript |
+| 2026-11-17 | Persona voice lines g1-g6 (gruff, few words) | seed_audio cloned voice | ad/AD-V2-DIRECTOR-BRIEF.md | - | his-voice-ref.wav | 2.4 | job f9bb7263, d2740eda, 4784abef, eacc64ee, 0464ac0c, a8dbbe51 | Keep (audio/v3/) |
+| 2026-11-17 | Casual voice lines c1-c6 | seed_audio | ad/AD-V2-DIRECTOR-BRIEF.md | - | his-voice-ref.wav | 2.4 | job jobs5.txt | Not used: persona chosen instead |
+| 2026-11-17 | Bell still + bell shot (taps chrome service bell) | nano_banana_pro 2k + kling4_0 3 s | ad/AD-V2-DIRECTOR-BRIEF.md | - | character board + hero | 11.75 | job 2b5c33db, 58a0ebb2 | Keep: tap lands at 1.5 s into the shot |

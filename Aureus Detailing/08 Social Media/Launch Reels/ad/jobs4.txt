@@ -1,0 +1,7 @@
+p1=dedcc32d-6817-464b-bd7f-b70f7bb6271a
+p2=eaa83be6-51e0-4c80-8637-00a39a0d3001
+i1=4cd1cdde-c7db-430a-907d-bd85a02be0e8
+i2=7aa943b7-61c0-4b0a-bb69-e9a20fe624ce
+w1=317f2299-13bc-49fe-a076-4857338cf436
+w2=6a6ab861-5e4d-48c7-b27c-dc82cf2cca41
+hero ERR Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":6,"error_type":"rate_limit_reached","job_set_type":"kling4_0","plan_type":"plus","use_unlim":false,"works
