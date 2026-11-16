@@ -99,7 +99,16 @@ Covers are in `Highlight Covers/`. Create these highlights in this order:
 6. *Security* → turn on **2-step verification**.
 
 ## 8. To do next
-- [ ] Create both accounts (section 7) and send Claude the links. Claude will then add them to the website footer and the playbook.
+- [x] **Instagram created 16 Nov 2026:** https://www.instagram.com/aureusdetailing.com.au/ (Business account, category *Automotive Service*, bio set). Live bio:
+  ```
+  Car detailing · paint correction · ceramic coating
+  Mobile or workshop, Victoria Park, Perth
+  Silver $149 · Gold $199 · Aureus $299
+  Open 7 days 8:30–6
+  ```
+- [ ] Instagram: upload the profile picture; add contact buttons (the website returned "try again later") and the booking link in the phone app; turn on 2-factor authentication.
+- [ ] The Aureus website lists carwashandpolish.wa@gmail.com, but Instagram uses info@monsoormotors.com.au. Pick one for all customer-facing places.
+- [ ] Create TikTok (section 7) and send Claude the link. Claude will then add both links to the website footer and the playbook.
 - [ ] Register the business name **"Aureus Detailing"** with ASIC to Monsoor Motors Pty Ltd. ABN Lookup shows it isn't registered yet, and a Sydney detailer uses the name on TikTok.
 - [ ] Do an IP Australia trademark search for "Aureus" in class 37 (vehicle cleaning).
 - [ ] Register **aureusdetailing.com.au** (free on 16 Nov 2026) so the domain matches the handle.
