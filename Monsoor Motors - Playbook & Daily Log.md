@@ -177,6 +177,12 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Files: `Aureus Detailing/08 Social Media/Launch Reels/ad/Aureus-Ad-v4.mp4`, `Aureus-Ad-v4-NO-MUSIC.mp4`, `make_ad_v4.py`.
 - To-do next: owner listens and approves; Higgsfield Ads Studio only if he wants a different concept.
 
+### 17 Nov 2026 (Aureus ad v5: he narrates throughout)
+- What we made / changed: Ad v5, 36.7 s. He speaks the whole way in one voice with a rewritten script; separate real-looking shots joined by short dissolves; muted glass visuals (damage reticle, service rail, paint layers, 2 h 30 clock, price, offer card); logo bottom centre; full sound mix mastered to about -14 LUFS.
+- Script: "Your car looks fine... until the sun hits it." / on camera: "We come to you. Gold detail, 199. Done properly, or it's not done." / "First, snow foam. It lifts the dirt before I touch the paint." / "Then a machine polish. And wax, sealed in by hand." / "Inside, steam cleans the leather. Every vent gets brushed." / "Wheels, scrubbed by hand. Every spoke." / "Two and a half hours later... that's your car." / "Aureus Detailing. Twenty years of experience. Book online, today."
+- Files: `Aureus Detailing/08 Social Media/Launch Reels/ad/Aureus-Ad-v5.mp4`, `Aureus-Ad-v5-NO-MUSIC.mp4`, `make_ad_v5.py`.
+- To-do next: owner listens and approves the voice; if he wants a different voice, pick one from Higgsfield's presets by ear (they have no accent labels) and re-voice the on-camera line with voice change.
+
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
 - What we made / changed:

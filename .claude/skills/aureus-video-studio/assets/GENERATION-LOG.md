@@ -57,3 +57,5 @@ One line per Higgsfield generation. Reuse the prompt, seed and references of kee
 | 2026-11-17 | Persona voice lines h1-h5, cloned from the on-camera take so the voice matches | seed_audio | ad/make_ad_v3.py | - | audio/v4/persona-voice-ref.wav | 2 | job ad/jobs8.txt, jobs10.txt | Keep h3 'Yeah. That'll do.' and h5 'Every spoke... by hand.'; h2 replaced (unclear) |
 
 **Ad v4 (17 Nov 2026): 0 credits.** Owner rejected the connected one-take look; v4 is a cut edit from existing shots (`ad/make_ad_v4.py`). Links L1-L7, LC, LD are unused; LA, LB and L8 are used only for their clean opening seconds.
+
+**Ad v5 (17 Nov 2026): about 8 credits**, all voice lines (`seed_audio`, cloned from `ad/audio/v4/persona-voice-ref.wav`): four short lines not used, the seven-part full script recorded twice (first wording was unclear), closing line recorded three times. Picture uses only existing shots (`ad/make_ad_v5.py`). Lesson: check every download decodes fully (`i1.mp4` and `w2.mp4` were truncated) and never submit more than 6 jobs at once.
