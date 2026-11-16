@@ -7,7 +7,8 @@ Written 16 Nov 2026 (replaces the foam version; the old one is in git history).
 ## How to keep the 4 images consistent
 1. **Make keyframe 2 first** (the master hero). Pick the best result.
 2. Attach **that image and the logo** (`Aureus Detailing/02 Logo/Icons/social-profile-1080.png`) as references for keyframes 1, 3 and 4.
-3. Same settings every time: **GPT Image 2.6, 16:9 (desktop, 1920×1080 or larger), highest quality**. Reuse the master's seed if shown.
+3. Same settings every time: **Nano Banana Pro, 16:9, 2K** (about 2 credits per image; 4K for finals). It's photoreal, renders text well and holds up to 14 reference images, which keeps all four frames consistent. Backup if text comes out garbled: **GPT Image 2.6, quality high, 2K, 16:9** (about 2.75 credits). Use the same model for all four. Reuse the master's seed if shown.
+   Video later: **Seedance 2.5**, mode omni_reference, each clip given a start image and an end image (two keyframes).
 4. Never change the look block. Only the scene changes.
 5. Save as `kf1-lens.png`, `kf2-polish.png`, `kf3-layers.png`, `kf4-ceramic.png` in this folder.
 
