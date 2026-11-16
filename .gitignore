@@ -1,0 +1,30 @@
+# macOS / Office junk
+.DS_Store
+~$*
+__pycache__/
+*.pyc
+
+# Files over GitHub's 100 MB limit (kept on this Mac only)
+Car wash/Raw Footage/Content for car wash and polish-20261114T105619Z-1-001.zip
+Car wash/Raw Footage/Content for car wash and polish/Introduction /20261112_104950.mp4
+Car wash/Raw Footage/Content for car wash and polish/Introduction /20261112_110147.mp4
+
+# Third-party tools cloned from other GitHub repos (have their own git history)
+Tools/logo-design-skill/
+Tools/rea-video/
+Tools/website-skills/
+Tools/vibe-skills/
+
+# Private: HR documents (appointment letters, personal details) - never upload
+HR/
+
+# Videos and video audio stems (kept on this Mac only)
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.m4v
+*.avi
+*.webm
+*.mkv
+Car wash/Reference/breakdown/stems/

@@ -1,0 +1,665 @@
+{
+  "video": "/Users/mdarfanuzzaman/Documents/Monsoor Motors/Car wash/Reference/Video by aga_service_baku [DRVN7u-jc1x].mp4",
+  "every": 0.25,
+  "track_format": "t cx cy spread cover",
+  "scenes": [
+    {
+      "id": "scene_01",
+      "shot": 1,
+      "start": 0.0,
+      "end": 1.6,
+      "frames": {
+        "start": "frames/scene_01_start.jpg",
+        "mid": "frames/scene_01_mid.jpg",
+        "end": "frames/scene_01_end.jpg",
+        "layer": "frames/scene_01_layer.png"
+      },
+      "measure": {
+        "ground": "#1b1c1b",
+        "glow": {
+          "colour": "#767973",
+          "centre": [
+            0.732,
+            0.079
+          ],
+          "radius": 0.158
+        },
+        "cover": 0.1072,
+        "colours": [
+          {
+            "hex": "#55504d",
+            "share": 0.45
+          },
+          {
+            "hex": "#a88c79",
+            "share": 0.35
+          },
+          {
+            "hex": "#e3e3de",
+            "share": 0.2
+          }
+        ],
+        "box": [
+          0.015,
+          0.011,
+          0.988,
+          0.948
+        ],
+        "centre": [
+          0.541,
+          0.498
+        ],
+        "pieces": 772,
+        "piece_area": 7e-06
+      },
+      "points": "frames/points/scene_01.json",
+      "track": [
+        [
+          0.0,
+          0.538,
+          0.474,
+          0.3,
+          0.1118
+        ],
+        [
+          0.25,
+          0.539,
+          0.48,
+          0.298,
+          0.1121
+        ],
+        [
+          0.5,
+          0.543,
+          0.484,
+          0.296,
+          0.1138
+        ],
+        [
+          0.75,
+          0.549,
+          0.49,
+          0.293,
+          0.1145
+        ],
+        [
+          1.0,
+          0.55,
+          0.492,
+          0.291,
+          0.1153
+        ],
+        [
+          1.25,
+          0.536,
+          0.505,
+          0.282,
+          0.1097
+        ]
+      ]
+    },
+    {
+      "id": "scene_02",
+      "shot": 14,
+      "start": 19.57,
+      "end": 21.0,
+      "frames": {
+        "start": "frames/scene_02_start.jpg",
+        "mid": "frames/scene_02_mid.jpg",
+        "end": "frames/scene_02_end.jpg",
+        "layer": "frames/scene_02_layer.png"
+      },
+      "measure": {
+        "ground": "#232323",
+        "glow": {
+          "colour": "#62635d",
+          "centre": [
+            0.528,
+            0.226
+          ],
+          "radius": 0.466
+        },
+        "cover": 0.158,
+        "colours": [
+          {
+            "hex": "#d2d4cd",
+            "share": 0.45
+          },
+          {
+            "hex": "#7c7d77",
+            "share": 0.35
+          },
+          {
+            "hex": "#241f1a",
+            "share": 0.2
+          }
+        ],
+        "box": [
+          0.027,
+          0.026,
+          0.994,
+          0.96
+        ],
+        "centre": [
+          0.512,
+          0.416
+        ],
+        "pieces": 873,
+        "piece_area": 7e-06
+      },
+      "points": "frames/points/scene_02.json",
+      "track": [
+        [
+          19.57,
+          0.52,
+          0.413,
+          0.29,
+          0.1593
+        ],
+        [
+          19.82,
+          0.518,
+          0.413,
+          0.289,
+          0.1586
+        ],
+        [
+          20.07,
+          0.553,
+          0.369,
+          0.285,
+          0.1877
+        ],
+        [
+          20.32,
+          0.551,
+          0.368,
+          0.286,
+          0.1847
+        ],
+        [
+          20.57,
+          0.552,
+          0.365,
+          0.286,
+          0.1834
+        ],
+        [
+          20.82,
+          0.553,
+          0.365,
+          0.287,
+          0.1836
+        ]
+      ]
+    },
+    {
+      "id": "scene_03",
+      "shot": 15,
+      "start": 21.0,
+      "end": 22.43,
+      "frames": {
+        "start": "frames/scene_03_start.jpg",
+        "mid": "frames/scene_03_mid.jpg",
+        "end": "frames/scene_03_end.jpg",
+        "layer": "frames/scene_03_layer.png"
+      },
+      "measure": {
+        "ground": "#232322",
+        "glow": {
+          "colour": "#656562",
+          "centre": [
+            0.49,
+            0.198
+          ],
+          "radius": 0.429
+        },
+        "cover": 0.1674,
+        "colours": [
+          {
+            "hex": "#d8d8d4",
+            "share": 0.45
+          },
+          {
+            "hex": "#878683",
+            "share": 0.33
+          },
+          {
+            "hex": "#322922",
+            "share": 0.22
+          }
+        ],
+        "box": [
+          0.027,
+          0.015,
+          0.969,
+          0.965
+        ],
+        "centre": [
+          0.472,
+          0.361
+        ],
+        "pieces": 977,
+        "piece_area": 7e-06
+      },
+      "points": "frames/points/scene_03.json",
+      "track": [
+        [
+          21.0,
+          0.475,
+          0.356,
+          0.273,
+          0.1618
+        ],
+        [
+          21.25,
+          0.472,
+          0.356,
+          0.273,
+          0.1626
+        ],
+        [
+          21.5,
+          0.466,
+          0.36,
+          0.272,
+          0.1671
+        ],
+        [
+          21.75,
+          0.467,
+          0.361,
+          0.273,
+          0.1667
+        ],
+        [
+          22.0,
+          0.467,
+          0.361,
+          0.273,
+          0.166
+        ],
+        [
+          22.25,
+          0.468,
+          0.36,
+          0.274,
+          0.1651
+        ]
+      ]
+    },
+    {
+      "id": "scene_04",
+      "shot": 16,
+      "start": 22.43,
+      "end": 23.87,
+      "frames": {
+        "start": "frames/scene_04_start.jpg",
+        "mid": "frames/scene_04_mid.jpg",
+        "end": "frames/scene_04_end.jpg",
+        "layer": "frames/scene_04_layer.png"
+      },
+      "measure": {
+        "ground": "#0e0e0d",
+        "glow": {
+          "colour": "#888880",
+          "centre": [
+            0.778,
+            0.138
+          ],
+          "radius": 0.246
+        },
+        "cover": 0.1227,
+        "colours": [
+          {
+            "hex": "#989d95",
+            "share": 0.36
+          },
+          {
+            "hex": "#e7eae5",
+            "share": 0.33
+          },
+          {
+            "hex": "#555755",
+            "share": 0.31
+          }
+        ],
+        "box": [
+          0.138,
+          0.006,
+          0.985,
+          0.955
+        ],
+        "centre": [
+          0.645,
+          0.347
+        ],
+        "pieces": 383,
+        "piece_area": 1e-05
+      },
+      "points": "frames/points/scene_04.json",
+      "track": [
+        [
+          22.68,
+          0.652,
+          0.36,
+          0.25,
+          0.1222
+        ],
+        [
+          22.93,
+          0.655,
+          0.355,
+          0.245,
+          0.1278
+        ],
+        [
+          23.18,
+          0.651,
+          0.348,
+          0.243,
+          0.1286
+        ],
+        [
+          23.43,
+          0.647,
+          0.337,
+          0.242,
+          0.1309
+        ],
+        [
+          23.68,
+          0.651,
+          0.332,
+          0.24,
+          0.1316
+        ]
+      ]
+    },
+    {
+      "id": "scene_05",
+      "shot": 17,
+      "start": 23.87,
+      "end": 25.3,
+      "frames": {
+        "start": "frames/scene_05_start.jpg",
+        "mid": "frames/scene_05_mid.jpg",
+        "end": "frames/scene_05_end.jpg",
+        "layer": "frames/scene_05_layer.png"
+      },
+      "measure": {
+        "ground": "#2a2926",
+        "glow": {
+          "colour": "#8e908d",
+          "centre": [
+            0.536,
+            0.073
+          ],
+          "radius": 0.297
+        },
+        "cover": 0.2059,
+        "colours": [
+          {
+            "hex": "#d2d4d1",
+            "share": 0.37
+          },
+          {
+            "hex": "#837266",
+            "share": 0.36
+          },
+          {
+            "hex": "#0a0809",
+            "share": 0.27
+          }
+        ],
+        "box": [
+          0.013,
+          0.007,
+          0.975,
+          0.971
+        ],
+        "centre": [
+          0.445,
+          0.326
+        ],
+        "pieces": 919,
+        "piece_area": 7e-06
+      },
+      "points": "frames/points/scene_05.json",
+      "track": [
+        [
+          23.87,
+          0.447,
+          0.33,
+          0.302,
+          0.2022
+        ],
+        [
+          24.12,
+          0.442,
+          0.326,
+          0.302,
+          0.2099
+        ],
+        [
+          24.37,
+          0.446,
+          0.322,
+          0.302,
+          0.2023
+        ],
+        [
+          24.62,
+          0.445,
+          0.327,
+          0.302,
+          0.1994
+        ],
+        [
+          24.87,
+          0.454,
+          0.325,
+          0.303,
+          0.1858
+        ],
+        [
+          25.12,
+          0.448,
+          0.332,
+          0.303,
+          0.1897
+        ]
+      ]
+    },
+    {
+      "id": "scene_06",
+      "shot": 18,
+      "start": 25.3,
+      "end": 26.73,
+      "frames": {
+        "start": "frames/scene_06_start.jpg",
+        "mid": "frames/scene_06_mid.jpg",
+        "end": "frames/scene_06_end.jpg",
+        "layer": "frames/scene_06_layer.png"
+      },
+      "measure": {
+        "ground": "#151515",
+        "glow": {
+          "colour": "#726b65",
+          "centre": [
+            0.49,
+            0.079
+          ],
+          "radius": 0.309
+        },
+        "cover": 0.1427,
+        "colours": [
+          {
+            "hex": "#555555",
+            "share": 0.42
+          },
+          {
+            "hex": "#9b9b98",
+            "share": 0.31
+          },
+          {
+            "hex": "#eaeae7",
+            "share": 0.27
+          }
+        ],
+        "box": [
+          0.017,
+          0.007,
+          0.977,
+          0.921
+        ],
+        "centre": [
+          0.444,
+          0.335
+        ],
+        "pieces": 681,
+        "piece_area": 1e-05
+      },
+      "points": "frames/points/scene_06.json",
+      "track": [
+        [
+          25.3,
+          0.462,
+          0.344,
+          0.293,
+          0.1474
+        ],
+        [
+          25.55,
+          0.46,
+          0.342,
+          0.293,
+          0.146
+        ],
+        [
+          25.8,
+          0.449,
+          0.335,
+          0.291,
+          0.1412
+        ],
+        [
+          26.05,
+          0.444,
+          0.332,
+          0.292,
+          0.1418
+        ],
+        [
+          26.3,
+          0.438,
+          0.328,
+          0.292,
+          0.1432
+        ],
+        [
+          26.55,
+          0.435,
+          0.325,
+          0.291,
+          0.1438
+        ]
+      ]
+    },
+    {
+      "id": "scene_07",
+      "shot": 20,
+      "start": 28.33,
+      "end": 30.13,
+      "frames": {
+        "start": "frames/scene_07_start.jpg",
+        "mid": "frames/scene_07_mid.jpg",
+        "end": "frames/scene_07_end.jpg",
+        "layer": "frames/scene_07_layer.png"
+      },
+      "measure": {
+        "ground": "#161616",
+        "glow": {
+          "colour": "#6a5b5b",
+          "centre": [
+            0.551,
+            0.421
+          ],
+          "radius": 0.272
+        },
+        "cover": 0.0252,
+        "colours": [
+          {
+            "hex": "#5d524f",
+            "share": 0.41
+          },
+          {
+            "hex": "#7a7c71",
+            "share": 0.33
+          },
+          {
+            "hex": "#d3d8d0",
+            "share": 0.26
+          }
+        ],
+        "box": [
+          0.046,
+          0.0,
+          0.975,
+          0.586
+        ],
+        "centre": [
+          0.523,
+          0.166
+        ],
+        "pieces": 38,
+        "piece_area": 1e-05
+      },
+      "points": "frames/points/scene_07.json",
+      "track": [
+        [
+          28.58,
+          0.576,
+          0.16,
+          0.269,
+          0.0244
+        ],
+        [
+          28.83,
+          0.553,
+          0.157,
+          0.266,
+          0.0244
+        ],
+        [
+          29.08,
+          0.53,
+          0.161,
+          0.267,
+          0.0247
+        ],
+        [
+          29.33,
+          0.51,
+          0.166,
+          0.264,
+          0.0248
+        ],
+        [
+          29.58,
+          0.495,
+          0.168,
+          0.258,
+          0.0252
+        ],
+        [
+          29.83,
+          0.418,
+          0.19,
+          0.233,
+          0.0222
+        ]
+      ]
+    }
+  ]
+}

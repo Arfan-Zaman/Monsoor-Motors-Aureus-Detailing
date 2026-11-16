@@ -1,0 +1,58 @@
+MONSOOR MOTORS - FACEBOOK COVER: DESCRIPTION + PAGE SETUP
+==========================================================
+
+Facebook no longer allows video covers for business Pages (removed in 2021).
+The "interactive" part of a cover is:
+  1. the cover photo DESCRIPTION (people tap the cover and see this text, with clickable links and number)
+  2. the Page ACTION BUTTON next to the cover (Call now / Send message / Get directions)
+  3. a PINNED post that explains the offer in detail
+
+
+1) COVER PHOTO DESCRIPTION  (paste this after uploading the cover)
+----------------------------------------------------------------
+Import · Buy · Sell - all under one roof on Albany Highway.
+
+🚗 IMPORT - We hand-pick cars at Japanese auctions and bring them to Perth. Tell us what you're after and your budget, and we'll find it.
+🔑 BUY - Quality used cars with real drive-away prices, and flexible finance options to suit your budget. We show you everything we know about every car.
+💰 SELL - Thinking of selling or upgrading? Get a fair offer for your car.
+
+📞 Call: 0434 137 393
+✉️ Email: monsoormotors@gmail.com
+🌐 Web: monsoormotors.com.au
+📍 Visit: 530 Albany Hwy, Victoria Park WA 6100
+
+Built on trust. Driven by community!
+WA Dealer Licence MD32748
+
+#MonsoorMotors #PerthCars #VictoriaPark #JapaneseImports #UsedCarsPerth
+
+
+2) ACTION BUTTON (Page > Edit action button)
+--------------------------------------------
+Recommended: "Call now" -> 0434 137 393
+Alternatives: "Send message" (if someone answers Messenger quickly) or "Get directions" for walk-ins.
+
+
+3) PAGE CONTACT INFO (Page > Edit details) - fill every field so Facebook shows them as tappable
+--------------------------------------------------------------------------------------------
+Phone:    0434 137 393
+Email:    monsoormotors@gmail.com
+Website:  monsoormotors.com.au
+Address:  530 Albany Hwy, Victoria Park WA 6100   (turn on the map)
+Category: Used Car Dealer
+Hours:    add your opening hours
+
+
+4) PINNED POST (suggested)
+--------------------------
+"Looking for a specific car? We import to order from Japanese auctions.
+Send us the make, model and budget and we'll tell you honestly what's available.
+📞 0434 137 393 · 📍 530 Albany Hwy, Victoria Park"
+
+
+UPLOAD NOTES
+------------
+- Upload: Facebook-Cover-1640x720.png (best quality). JPG version is smaller if the upload is slow.
+- Desktop shows the middle band; phones show the middle section. All text is inside both.
+- _safe-zone-check.jpg shows what gets cropped (red = hidden on desktop, blue = hidden on phones,
+  circle = profile picture). Don't upload that one.

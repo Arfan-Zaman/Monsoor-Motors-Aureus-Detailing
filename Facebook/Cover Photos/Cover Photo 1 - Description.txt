@@ -1,0 +1,46 @@
+MONSOOR MOTORS - FACEBOOK COVER: DESCRIPTION + PAGE SETUP
+==========================================================
+
+Facebook no longer allows video covers for business Pages (removed in 2021).
+The "interactive" part of a cover is:
+  1. the cover photo DESCRIPTION (people tap the cover and see this text, with clickable links and number)
+  2. the Page ACTION BUTTON next to the cover (Call now / Send message / Get directions)
+  3. a PINNED post that explains the offer in detail
+
+
+1) COVER PHOTO CAPTION  (paste this after uploading the cover)
+-------------------------------------------------------------
+Built on trust. Driven by community. 🧡
+
+Perth, you’ve helped us grow, so we’ve given things a little refresh. Same faces, same fair deals, a few new things on the way.
+
+Whether you’re importing from Japan, buying your next car or selling your current one, we’re here. Finance available.
+
+
+2) ACTION BUTTON (Page > Edit action button)
+--------------------------------------------
+Recommended: "Call now" -> 0434 137 393
+Alternatives: "Send message" (if someone answers Messenger quickly) or "Get directions" for walk-ins.
+
+
+3) PAGE CONTACT INFO (Page > Edit details) - fill every field so Facebook shows them as tappable
+--------------------------------------------------------------------------------------------
+Phone:    0434 137 393
+Email:    monsoormotors@gmail.com
+Website:  monsoormotors.com.au
+Address:  530 Albany Hwy, Victoria Park WA 6100   (turn on the map)
+Category: Used Car Dealer
+Hours:    add your opening hours
+
+
+4) PINNED POST (suggested)
+--------------------------
+"Looking for a specific car? We import to order from Japanese auctions.
+Send us the make, model and budget and we'll tell you honestly what's available.
+📞 0434 137 393 · 📍 530 Albany Hwy, Victoria Park"
+
+
+UPLOAD NOTES
+------------
+- Upload: Cover Photo 1.png (high resolution, best quality).
+- Desktop shows the middle band; phones show the middle section. All text is inside both.
