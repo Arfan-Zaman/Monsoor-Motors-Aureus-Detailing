@@ -1,5 +1,7 @@
 # Aureus Detailing website, version 3: design brief
 
+> **Update 17 Nov 2026 (2):** the lens and manual polishing were removed ("like a toy"). The hero is now a **scroll-scrubbed film** (Higgsfield's official scroll-scrub method): `assets/scrub.js` plus `assets/film/` (one 15 s Kling 3.0 Turbo film, 32 credits in total). Five short chapters over the film, the "Our work" section removed, and the packages layer graphic removed (the film shows it). The film MP4s are excluded from git by `.gitignore`; their source job is in the generation log.
+
 > **Update 17 Nov 2026:** the owner rejected the foam / wash-bay concept. Version 3 was built on **"Into the Paint"** instead. Sources: the keyframes and film in `storyboard/` (STORYBOARD-4-KEYFRAMES.md, VIDEO-PLAN.md, clips/Aureus-Website-Film-draft.mp4).
 > What was built:
 > - `assets/paint.js`: a glass lens over the bonnet showing micro-paint; "Look closer" dives into the paint; an aqua polishing arc sweeps the scratches flat; the pointer polishes; flakes twinkle; the price rolls like an odometer; headings get a polish sweep.
