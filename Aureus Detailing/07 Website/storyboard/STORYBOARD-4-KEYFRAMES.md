@@ -1,0 +1,44 @@
+# Aureus website: 4 keyframes for a cinematic walkthrough video
+
+Written 16 Nov 2026. Replaces the 13-image plan. These 4 images are the **keyframes** of the website video. Each one is a moment the video passes through, and the video animates between them. Then the website gets built to match the video.
+
+## How to keep the 4 images consistent
+1. **Make keyframe 2 first** (the master: the clean hero). Pick the best result.
+2. Attach **that image and the logo** (`Aureus Detailing/02 Logo/Icons/social-profile-1080.png`) as references for keyframes 1, 3 and 4.
+3. Same settings every time: **GPT Image 2.6, 16:9, highest quality**. Reuse the master's seed if one is shown.
+4. Never change the look block. Only the scene changes.
+5. Save them here as `kf1-foam.png`, `kf2-hero.png`, `kf3-packages.png`, `kf4-booking.png`.
+
+## Video plan (after the 4 images exist)
+Three clips, each from one keyframe to the next (start frame → end frame), then joined into one film of about 18–24 seconds:
+- **Clip A, kf1 → kf2:** lights flicker on, then a pressure-wash nozzle rinses the foam off and the price panel slides in.
+- **Clip B, kf2 → kf3:** the camera scrolls down through the glass, a squeegee wipes the packages into view, and Gold gets chosen.
+- **Clip C, kf3 → kf4:** Gold flows into the booking panel, a time slot fills like water, and the confirm tick fills.
+
+The video prompts get written when we get to that step.
+
+---
+
+### Keyframe 1: Foam reveal (opening shot)
+```
+Photorealistic website screen design for "Aureus Detailing", a premium car detailing brand in Perth. Setting: a dark luxury wash bay at night, deep navy (#071A33) walls, thin aqua (#00A8A8) LED light bars overhead, a mirror-wet black floor with reflections. Car: one sleek deep-navy metallic luxury electric SUV, no badges, no number plate text. Interface: frosted wet-glass panels with real water droplets, a 3D polished chrome letter "A" logo with a small hot-pink cap beside the word "AUREUS" in a frosted-glass header, large elegant Roman-inscription serif headlines in ice white, clean sans-serif body text, hot-pink (#FF4D8D) buttons. Palette only navy, aqua, ice white and small touches of hot pink. Cinematic soft volumetric light, calm and expensive mood, crisp readable text. Avoid: car brand logos, real number plates, gold or yellow, people, extra or misspelled text, watermarks.
+Scene: the homepage the moment it loads. The aqua LED bars have just switched on, still glowing brighter at their ends. The SUV, right two-thirds of the frame, three-quarter front view, is completely covered in thick white snow foam sliding down the doors and wheels. On the left, the headline "Detailing, perfected." is condensing onto the glass like breath, misty at the edges, with a frosted-glass button with a water-drop icon reading "Rinse the car". Header with the chrome A logo and a hot-pink "Book now" button. No price panel yet. 16:9.
+```
+
+### Keyframe 2: Clean hero with price panel (MASTER, make first)
+```
+Photorealistic website screen design for "Aureus Detailing", a premium car detailing brand in Perth. Setting: a dark luxury wash bay at night, deep navy (#071A33) walls, thin aqua (#00A8A8) LED light bars overhead, a mirror-wet black floor with reflections. Car: one sleek deep-navy metallic luxury electric SUV, no badges, no number plate text. Interface: frosted wet-glass panels with real water droplets, a 3D polished chrome letter "A" logo with a small hot-pink cap beside the word "AUREUS" in a frosted-glass header, large elegant Roman-inscription serif headlines in ice white, clean sans-serif body text, hot-pink (#FF4D8D) buttons. Palette only navy, aqua, ice white and small touches of hot pink. Cinematic soft volumetric light, calm and expensive mood, crisp readable text. Avoid: car brand logos, real number plates, gold or yellow, people, extra or misspelled text, watermarks.
+Scene: the finished homepage hero, just rinsed. The SUV, right two-thirds, same angle, is fully clean: mirror gloss, beading water drops, the last streaks of water running off, aqua light bars reflected along the body, fine mist in the air. A faint trail of ripples across the glass shows where the rinse passed. Left: headline "Detailing, perfected.", the line "Mobile and workshop car detailing, Victoria Park, Perth", and three small facts "From $149", "Mobile within 20 km", "Open 7 days". Bottom-right: a floating frosted-glass price panel covered in water beads with segmented choices "Sedan / SUV / Van" and "Silver / Gold / Aureus" (Gold selected), the price "$199", "2 h 30 min" and a hot-pink "Book this" button. 16:9.
+```
+
+### Keyframe 3: Packages, Gold chosen
+```
+Photorealistic website screen design for "Aureus Detailing", a premium car detailing brand in Perth. Setting: a dark luxury wash bay at night, deep navy (#071A33) walls, thin aqua (#00A8A8) LED light bars overhead, a mirror-wet black floor with reflections. Car: one sleek deep-navy metallic luxury electric SUV, no badges, no number plate text. Interface: frosted wet-glass panels with real water droplets, a 3D polished chrome letter "A" logo with a small hot-pink cap beside the word "AUREUS" in a frosted-glass header, large elegant Roman-inscription serif headlines in ice white, clean sans-serif body text, hot-pink (#FF4D8D) buttons. Palette only navy, aqua, ice white and small touches of hot pink. Cinematic soft volumetric light, calm and expensive mood, crisp readable text. Avoid: car brand logos, real number plates, gold or yellow, people, extra or misspelled text, watermarks.
+Scene: the packages section further down the page; the clean SUV's glossy bonnet is just visible, softly blurred, at the top edge. Heading "Three packages. Prices up front." with a vehicle switch "Sedan / SUV / Van". Three tall frosted-glass cards side by side like three wash bays, each lit from above by its own aqua LED bar: "Silver $149", "Gold $199" (centre, raised and brighter, a small "Most popular" tag), "Aureus $299". A squeegee blade has just wiped the Gold card clean, leaving a sharp clear stripe with a thin line of water at its edge, revealing "Everything in Silver, plus polish", "Wax paint sealant", "Deep interior steam clean", "Leather clean and condition", and a ticked add-on "Headlight restoration $60" with tiny water droplets splashing off the tick. The Silver and Aureus cards stay slightly misty. 16:9.
+```
+
+### Keyframe 4: Booking confirmed (final shot)
+```
+Photorealistic website screen design for "Aureus Detailing", a premium car detailing brand in Perth. Setting: a dark luxury wash bay at night, deep navy (#071A33) walls, thin aqua (#00A8A8) LED light bars overhead, a mirror-wet black floor with reflections. Car: one sleek deep-navy metallic luxury electric SUV, no badges, no number plate text. Interface: frosted wet-glass panels with real water droplets, a 3D polished chrome letter "A" logo with a small hot-pink cap beside the word "AUREUS" in a frosted-glass header, large elegant Roman-inscription serif headlines in ice white, clean sans-serif body text, hot-pink (#FF4D8D) buttons. Palette only navy, aqua, ice white and small touches of hot pink. Cinematic soft volumetric light, calm and expensive mood, crisp readable text. Avoid: car brand logos, real number plates, gold or yellow, people, extra or misspelled text, watermarks.
+Scene: the booking section, completed. Heading "Book your detail." Left: a frosted-glass calendar for the month, Sunday to Saturday, the chosen Saturday marked with a soft aqua ripple; below it time-window glass pills "8:30 AM - 11:00 AM" (selected, filled with aqua like water in a glass), "11:00 AM - 1:30 PM", "1:30 PM - 4:00 PM". Right: a large frosted-glass confirmation card: a circle filled with aqua water forming a crisp white tick, droplets settling around it, heading "Booking request received.", summary "Gold, SUV, Saturday 8:30 AM, Workshop drop-off, $279", the line "No deposit. Pay when the job is done.", and buttons "Print invoice" and "Book another car". Bottom strip: "530 Albany Hwy, Victoria Park WA 6100" with a small water-drop map pin, and the chrome A logo. 16:9.
+```
