@@ -90,6 +90,7 @@ html:not(.motion) .v4 .btn:hover, html:not(.motion) .v4 .btn:active { transform:
   pointer-events: none; transition: none;
 }
 .v4 .nav > * { pointer-events: auto; }
+.v4 .nav-logo { grid-column: 1; grid-row: 1; } .v4 .nav-links { grid-column: 2; grid-row: 1; } .v4 .nav-right { grid-column: 3; grid-row: 1; }
 .v4 .nav .tile { position: relative; display: inline-flex; align-items: center; height: 44px; padding: 0 18px; font: 600 .875rem/1 var(--sans); color: var(--ice-2); text-decoration: none; white-space: nowrap; transition: background-color .2s, box-shadow .2s, color .2s; }
 .v4 .nav .tile:hover { background-image: linear-gradient(var(--glass-hi), var(--glass-hi)); color: var(--ice); }
 .v4 .nav-logo.tile { justify-self: start; margin: 0; width: 146px; height: 48px; padding: 0 14px; overflow: hidden; transition: width .24s var(--ease-inout), background-color .2s; }
@@ -120,7 +121,7 @@ html:not(.motion) .v4 .btn:hover, html:not(.motion) .v4 .btn:active { transform:
 .v4 .nav[data-compact="true"] .nav-logo.tile { width: 48px; }
 .v4 .nav[data-compact="true"] .logo-full { opacity: 0; }
 .v4 .nav[data-compact="true"] .logo-mark { opacity: 1; }
-.v4 .nav[data-compact="true"] .nav-call { visibility: hidden; }
+.v4 .nav[data-compact="true"] .nav-call { display: none; }
 .v4 .nav[data-compact="true"] .nav-right { transform: none; }
 .v4 .nav[data-compact="true"] .nav-toggle { opacity: 1; visibility: visible; transform: none; transition: opacity .3s var(--ease-pop), transform .3s var(--ease-pop), visibility 0s; }
 .v4 .nav[data-compact="true"] .nav-links {
@@ -191,6 +192,7 @@ html.motion:not(.seen) .v4 .hero:not(.film-failed) .stage-still { display: none;
 html.motion.scrolled .v4 .accent { color: var(--aqua-hi); text-shadow: 0 0 32px rgba(95, 240, 230, .35); }
 .v4 .beat-h { font: 500 clamp(2.5rem, 5vw, 4.75rem)/.95 var(--serif); letter-spacing: -.015em; text-shadow: var(--sh-text); }
 .v4 .beat-body { font-size: clamp(1.0625rem, 1.25vw, 1.1875rem); line-height: 1.55; font-weight: 400; color: var(--ice-2); max-width: 36ch; margin-top: 20px; text-shadow: 0 1px 14px rgba(2, 6, 14, .8); }
+.v4 .beat-1 h1 + .beat-body { margin-top: 30px; }
 .v4 .beat-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .v4 .hero-facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 24px; font: 600 .8125rem/1.3 var(--sans); color: var(--ice-2); }
 .v4 .hero-facts li { display: flex; align-items: center; gap: 18px; }

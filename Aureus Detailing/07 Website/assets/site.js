@@ -414,7 +414,7 @@
     beatIn(b2, 0.20);
     tl.to(b2, { opacity: 0, duration: 0.08 }, 0.50);
     beatIn(b3, 0.62);
-    tl.fromTo($('.beat-actions', b3), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.06 }, 0.88);   // S08
+    tl.fromTo($('.beat-actions', b3), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.05 }, 0.86);   // S08 (ends before the Protect chapter stop at p 0.92)
 
     // S07: hotspots on the final hold
     [[0.72, 0.74, 0.78], [0.80, 0.82, 0.86]].forEach(function (at, i) {
