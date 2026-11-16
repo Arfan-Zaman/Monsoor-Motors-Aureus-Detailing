@@ -14,12 +14,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png">
 <link rel="preload" href="assets/fonts/Montserrat-Variable-latin.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="preload" as="image" href="assets/img/hero-foam-1920.webp" media="(min-width: 981px)">
-<link rel="preload" as="image" href="assets/img/hero-foam-1120.webp" media="(max-width: 980px)">
+<link rel="preload" href="assets/fonts/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/hero-clean-1920.webp" media="(min-width: 981px)">
+<link rel="preload" as="image" href="assets/img/hero-clean-1120.webp" media="(max-width: 980px)">
 <link rel="stylesheet" href="assets/styles.css">
-<noscript><style>.wash-foam,.rinse{display:none!important}</style></noscript>
+<link rel="stylesheet" href="assets/v3.css">
+<noscript><style>.lens,.hero-hint,#dive-btn{display:none!important}</style></noscript>
 </head>
-<body>
+<body class="v3">
 <a class="skip" href="#main">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -62,32 +64,26 @@
 <main id="main">
 <span id="top"></span>
 
-<section class="hero" id="hero" aria-labelledby="hero-h">
-  <div class="wash" id="wash">
-    <picture>
-      <source media="(max-width: 980px)" srcset="assets/img/hero-clean-1120.webp">
-      <img class="wash-img" src="assets/img/hero-clean-1920.webp" alt="A deep navy SUV, freshly rinsed, under aqua lights in a wash bay" width="1920" height="1084" fetchpriority="high">
-    </picture>
-    <picture>
-      <source media="(max-width: 980px)" srcset="assets/img/hero-foam-1120.webp">
-      <img class="wash-img wash-foam" id="foam-img" src="assets/img/hero-foam-1920.webp" alt="" width="1920" height="1084" aria-hidden="true">
-    </picture>
-    <canvas class="wash-layer" id="foam" aria-hidden="true"></canvas>
-    <canvas class="wash-layer" id="spray" aria-hidden="true"></canvas>
+<section class="hero" id="hero" aria-labelledby="hero-h" data-stage="car">
+  <div class="stage" id="stage" aria-hidden="true">
+    <canvas class="paint" id="paint"></canvas>
+    <div class="car" id="car">
+      <picture>
+        <source media="(max-width: 980px)" srcset="assets/img/hero-clean-1120.webp">
+        <img src="assets/img/hero-clean-1920.webp" alt="" width="1920" height="1084" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="lens" id="lens"><canvas id="lens-cv"></canvas><i class="lens-rim"></i></div>
   </div>
 
   <div class="hero-inner">
     <div class="hero-copy">
       <h1 id="hero-h">Detailing, perfected.</h1>
-      <p class="hero-sub">We come to you across Perth, or you drop in at our Victoria Park workshop.</p>
-      <div class="rinse" id="rinse" data-state="foam">
-        <button class="rinse-btn glass" type="button" id="rinse-btn">
-          <svg class="ic-drop" aria-hidden="true"><use href="#i-drop"/></svg><svg class="ic-again" aria-hidden="true"><use href="#i-again"/></svg>
-          <span id="rinse-label">Rinse the car</span>
-        </button>
-        <p class="rinse-hint"><span class="hint-mouse">or sweep across it</span><span class="hint-touch">or swipe across it</span><span class="hint-done">Clean. Now pick your package.</span></p>
-        <div class="rinse-meter" aria-hidden="true"><i id="rinse-bar"></i></div>
+      <p class="hero-sub" id="hero-sub" aria-live="polite">See what we do to your paint.</p>
+      <div class="hero-actions">
+        <button class="btn btn-glass" type="button" id="dive-btn" aria-controls="stage">Look closer</button>
       </div>
+      <p class="hero-hint" id="hero-hint">Move the lens across the bonnet.</p>
       <ul class="hero-facts">
         <li>From $149</li>
         <li>Mobile within 20 km</li>
@@ -107,7 +103,6 @@
       <p class="dock-price" aria-live="polite"><b id="dock-price">$199</b><span id="dock-time">2 h 30 min</span></p>
       <a class="btn btn-pink" href="#booking" id="dock-book">Book this <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </form>
-    <p class="hero-offer">Launch offer: $25 off for our first 100 customers, plus a $50 voucher for your next wash. <a href="#booking">Book to claim</a></p>
   </div>
 </section>
 
@@ -133,17 +128,23 @@
   </div>
 </section>
 
-<section class="section on-ice" id="packages" aria-labelledby="pk-h">
+<section class="section layers-sec" id="packages" aria-labelledby="pk-h">
   <div class="wrap">
     <div class="pk-head">
       <div>
-        <h2 class="h2" id="pk-h">Three packages. Prices up front.</h2>
-        <p class="lede">Pick your vehicle size and the prices update. Same price at your place or ours.</p>
+        <h2 class="h2" id="pk-h">Three packages. Three layers deep.</h2>
+        <p class="lede">Silver cleans the surface, Gold polishes into the clear coat, Aureus seals it under a ceramic shield. Prices update with your vehicle size, same at your place or ours.</p>
       </div>
       <fieldset>
         <legend class="sr-only">Vehicle size</legend>
         <div class="seg" id="veh-seg"></div>
       </fieldset>
+    </div>
+    <div class="strata" id="strata" aria-hidden="true">
+      <div class="layer l-ceramic" data-pack="aureus"><span>Ceramic shield</span><em>Aureus</em></div>
+      <div class="layer l-clear" data-pack="gold"><span>Clear coat</span><em>Gold</em></div>
+      <div class="layer l-surface" data-pack="silver"><span>Surface</span><em>Silver</em></div>
+      <div class="layer l-base"><span>Base coat and metallic flake</span></div>
     </div>
     <div class="packs" id="packs"></div>
     <noscript><p class="lede">Silver $149, Gold $199, Aureus $299. Add $20 for SUV, 4WD or ute, and $40 for vans. Call 0434 13 73 93 to book.</p></noscript>
@@ -251,6 +252,7 @@
     </form>
 
     <div class="done" id="bk-done" hidden tabindex="-1">
+      <svg class="crystal-tick" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="ct-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5F8FC"/><stop offset=".5" stop-color="#5FF0E6"/><stop offset="1" stop-color="#00A8A8"/></linearGradient></defs><circle class="ct-ring" cx="32" cy="32" r="29"/><path class="ct-path" d="M18 33.5l9.5 9.5L46.5 22"/></svg>
       <h3 id="done-h">Booking request received.</h3>
       <p class="lede" id="done-p"></p>
       <span class="done-ref" id="done-ref"></span>
@@ -264,7 +266,7 @@
   </div>
 </section>
 
-<section class="section on-ice" id="workshop" aria-labelledby="ws-h">
+<section class="section" id="workshop" aria-labelledby="ws-h">
   <div class="wrap">
     <h2 class="h2" id="ws-h">Prefer to drop the car off?</h2>
     <p class="lede">Our workshop is on Albany Highway in Victoria Park, with undercover bays and parking on site.</p>
@@ -288,7 +290,7 @@
   </div>
 </section>
 
-<section class="section on-aqua" id="quote" aria-labelledby="qt-h">
+<section class="section quote-sec" id="quote" aria-labelledby="qt-h">
   <div class="wrap quote-grid">
     <div>
       <h2 class="h2" id="qt-h">A fleet, a van, or ceramic coating?</h2>
@@ -354,5 +356,6 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="assets/app.js" defer></script>
+<script src="assets/paint.js" defer></script>
 </body>
 </html>

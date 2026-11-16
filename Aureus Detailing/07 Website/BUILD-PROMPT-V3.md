@@ -1,5 +1,13 @@
 # Aureus Detailing website, version 3: design brief
 
+> **Update 17 Nov 2026:** the owner rejected the foam / wash-bay concept. Version 3 was built on **"Into the Paint"** instead. Sources: the keyframes and film in `storyboard/` (STORYBOARD-4-KEYFRAMES.md, VIDEO-PLAN.md, clips/Aureus-Website-Film-draft.mp4).
+> What was built:
+> - `assets/paint.js`: a glass lens over the bonnet showing micro-paint; "Look closer" dives into the paint; an aqua polishing arc sweeps the scratches flat; the pointer polishes; flakes twinkle; the price rolls like an odometer; headings get a polish sweep.
+> - `assets/v3.css`: dark bay throughout, Cormorant Garamond headlines, frosted glass, packages as glowing paint layers (Silver = surface, Gold = clear coat, Aureus = ceramic shield) that light up with the chosen package, and a crystal tick on booking confirmed.
+> - `index.html`: new hero markup, layers block, tick. The booking engine (`app.js`) is untouched.
+> Below is the original foam brief, kept for history.
+
+
 Written 16 November 2026, for approval before building. Builds on version 2: the booking engine, section order and content stay; the look and motion are rebuilt.
 
 ## The idea: "the wash bay at night"
