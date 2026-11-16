@@ -376,7 +376,12 @@ html.motion:not(.hud-in) .v4 .scroll-cue, html.motion:not(.hud-in) .v4 .skip-fil
 .v4 .facts .mask { display: block; overflow: hidden; padding-bottom: .14em; margin-bottom: -.14em; }
 .v4 .facts b { display: block; font: 500 clamp(2rem, 3vw, 2.75rem)/1 var(--serif); letter-spacing: -.01em; font-variant-numeric: lining-nums tabular-nums; }
 .v4 .pk-head { margin-top: var(--space-section); gap: 20px 40px; }
-.v4 .pk-head > div { max-width: 720px; }
+.v4 .pk-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 600px); align-items: end; }
+.v4 .pk-side { display: grid; gap: 20px; justify-items: start; }
+.v4 .pk-side .lede { margin-top: 0; font-size: 1rem; line-height: 1.55; color: var(--ice-2); }
+html.motion .v4 .pk-head:not(:has(.h2.in)) .pk-side .lede { opacity: 0; transform: translateY(12px); }
+html.motion .v4 .pk-head:has(.h2.in) .pk-side .lede { transition: opacity .6s var(--ease-out) .15s, transform .6s var(--ease-out) .15s; }
+@media (max-width: 900px) { .v4 .pk-head { grid-template-columns: minmax(0, 1fr); } }
 
 /* dark segment controls */
 .v4 .seg:not(.seg-glass) { background: rgba(3, 11, 23, .55); box-shadow: inset 0 0 0 1px var(--line-strong); }
@@ -393,6 +398,7 @@ html.motion:not(.hud-in) .v4 .scroll-cue, html.motion:not(.hud-in) .v4 .skip-fil
   transition: background-color .24s var(--ease-out), transform .18s var(--ease-out);
 }
 .v4 .pack + .pack { border-left: 1px solid var(--line); }
+.v4 .pack > *, .v4 .pack::before { grid-column: 1; }
 .v4 .pack::before { content: counter(pk, decimal-leading-zero); grid-row: 1; font: 600 .75rem/1.2 var(--sans); letter-spacing: .18em; color: var(--ice-3); }
 .v4 .pack::after { content: ""; position: absolute; inset: 0 0 auto; height: 1px; background: var(--lightline); box-shadow: 0 0 12px rgba(95, 240, 230, .7); transform: scaleX(0); transform-origin: left; transition: transform .18s var(--ease-in); pointer-events: none; }
 .v4 .pack-head { grid-row: 2; margin-top: 14px; align-items: center; flex-wrap: nowrap; }
@@ -405,7 +411,7 @@ html.motion:not(.hud-in) .v4 .scroll-cue, html.motion:not(.hud-in) .v4 .skip-fil
 .v4 .pack-body { grid-row: 4; display: grid; grid-template-columns: minmax(0, 1fr); margin-top: 20px; min-height: 0; }
 .v4 .pack-body > div { display: flex; flex-direction: column; gap: 16px; min-height: 0; }
 .v4 .pack > .pack-list, .v4 .pack > .pack-extras, .v4 .pack > .btn { margin-top: 16px; }
-.v4 .pack-list { gap: 9px; }
+.v4 .pack-list { gap: 7px; }
 .v4 .pack-list li { font-size: .875rem; line-height: 1.45; font-weight: 500; color: var(--ice-2); }
 .v4 .pack-list svg, .v4 .pack[data-selected="true"] .pack-list svg { width: 16px; height: 16px; margin-top: 2px; color: var(--aqua-hi); }
 .v4 .pack-extras, .v4 .pack[data-selected="true"] .pack-extras { margin-top: auto; border-top: 1px solid var(--line); padding-top: 2px; }
@@ -528,14 +534,14 @@ html.motion .v4 .info { --sag: 72px; }
 .v4 .cell .lede { font-size: 1rem; margin-top: 12px; }
 .v4 .shop { grid-column: 1 / 6; display: flex; flex-direction: column; }
 .v4 .shop-facts { margin-top: 18px; gap: 0; }
-.v4 .shop-facts > div { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 11px 0; border-top: 1px solid var(--line); }
+.v4 .shop-facts > div { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 9px 0; border-top: 1px solid var(--line); }
 .v4 .shop-facts dt { font: 600 .6875rem/1.2 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--ice-3); }
 .v4 .shop-facts dd { margin: 0; font-size: .9375rem; font-weight: 600; letter-spacing: 0; line-height: 1.4; }
 .v4 .shop-facts dd small { font-size: .8125rem; font-weight: 500; color: var(--ice-3); overflow-wrap: anywhere; }
 .v4 .shop-facts a { text-decoration: none; } .v4 .shop-facts a:hover { color: var(--aqua-hi); }
-.v4 .shop-tags { margin-top: 6px; gap: 6px; padding-top: 14px; border-top: 1px solid var(--line); }
-.v4 .shop-tags li { padding: 6px 11px; font-size: .75rem; font-weight: 600; background: none; box-shadow: inset 0 0 0 1px var(--line-strong); color: var(--ice-2); }
-.v4 .shop-actions { margin-top: auto; padding-top: 18px; }
+.v4 .shop-tags { margin-top: 4px; gap: 6px; padding-top: 12px; border-top: 1px solid var(--line); }
+.v4 .shop-tags li { padding: 5px 10px; font-size: .6875rem; font-weight: 600; background: none; box-shadow: inset 0 0 0 1px var(--line-strong); color: var(--ice-2); }
+.v4 .shop-actions { margin-top: auto; padding-top: 14px; }
 .v4 .shop-actions .btn { min-height: 46px; padding: 0 20px; }
 .v4 .map { grid-column: 6 / 10; padding: 0; overflow: hidden; min-height: 320px; background: var(--navy-2); }
 .v4 .map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; filter: invert(.92) hue-rotate(180deg) saturate(.6) brightness(.9); }
@@ -555,16 +561,24 @@ html.motion .v4 .info { --sag: 72px; }
 .v4 .reel-toggle:hover { background: rgba(0, 168, 168, .4); }
 .v4 .reel-toggle svg { width: 16px; height: 16px; }
 .v4 .reel[data-playing="true"] .ic-play, .v4 .reel[data-playing="false"] .ic-pause { display: none; }
-.v4 .cell.faq { grid-column: 1 / 8; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 24px 36px; align-items: start; }
+.v4 .cell.faq { grid-column: 1 / 7; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-content: start; }
+.v4 .faq-head .lede { margin-top: 8px; }
 .v4 .faq details, .v4 .faq details:last-child { border-color: var(--line); }
 .v4 .faq summary { padding: 15px 0; font: 600 .9375rem/1.35 var(--sans); letter-spacing: 0; gap: 16px; }
 .v4 .faq summary svg { width: 18px; height: 18px; transition: rotate .32s var(--ease-inout); }
 .v4 .faq details p { padding: 0 0 18px; font-size: .875rem; line-height: 1.55; color: var(--ice-2); max-width: 62ch; }
 html.motion .v4 .faq details::details-content { height: 0; overflow: clip; transition: height .32s var(--ease-inout), content-visibility .32s allow-discrete; }
 html.motion .v4 .faq details[open]::details-content { height: auto; }
-.v4 .cell.quote { grid-column: 8 / 13; }
+.v4 .cell.quote { grid-column: 7 / 13; }
 .v4 .quote-form { margin-top: 20px; gap: 12px; }
 .v4 .quote-form .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 1101px) {
+  .v4 .quote-form { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 12px; }
+  .v4 .quote-form .fields { display: contents; }
+  .v4 .quote-form > :not(.field):not(.fields) { grid-column: 1 / -1; }
+  .v4 .quote-form > .field:has(textarea) { grid-column: 1 / -1; }
+}
+.v4 .quote-form > #cf-turnstile-quote:empty { display: none; }
 .v4 .quote-form .field { gap: 5px; }
 .v4 .quote-form .input { min-height: 44px; padding-block: 10px; }
 .v4 .quote-form textarea.input { resize: vertical; }
@@ -589,7 +603,7 @@ html.motion .v4 .faq details[open]::details-content { height: auto; }
 .v4 .closing-media { position: absolute; inset: 0; overflow: hidden; }
 .v4 .closing-media img { position: absolute; left: 0; top: -8%; width: 100%; height: 116%; max-width: none; object-fit: cover; object-position: 62% 45%; }
 .v4 .closing-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--scrim), rgba(2, 6, 14, .62) 30%, rgba(2, 6, 14, 0) 62%), linear-gradient(to top, var(--navy-deep), rgba(4, 16, 31, 0) 42%); }
-.v4 .closing-copy { position: relative; padding-block: 44px 60px; }
+.v4 .closing-copy { position: relative; padding-block: 28px 56px; }
 .v4 .closing-h { font: 500 clamp(2.5rem, 5vw, 4.75rem)/.95 var(--serif); letter-spacing: -.015em; text-shadow: var(--sh-text); margin-top: -18px; position: relative; }
 .v4 .closing-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .v4 .boxbtn { display: grid; align-content: center; gap: 7px; min-width: 248px; height: 64px; padding: 0 22px; border-radius: var(--r-tile); text-decoration: none; color: var(--ice); background: rgba(7, 26, 51, .5); box-shadow: inset 0 0 0 1px var(--line-strong); transition: transform var(--t-micro) var(--ease-out), background-color .2s, box-shadow .2s; }
@@ -603,7 +617,7 @@ html.motion .v4 .boxbtn:hover { transform: translateY(-2px); }
 html.motion .v4 .boxbtn:active { transform: scale(.98); transition-duration: 80ms; }
 
 /* 3D logo: layered CSS extrusion of the chrome A */
-.v4 .logo3d { width: 168px; perspective: 900px; }
+.v4 .logo3d { width: 140px; perspective: 900px; }
 .v4 .l3-rot { position: relative; display: grid; transform-style: preserve-3d; transform: rotateY(-8deg); }
 html.motion .v4 .l3-rot { transform: rotateX(var(--rx, 0deg)) rotateY(calc(var(--ry, -8deg) + var(--sway))); }
 html.motion .v4 .logo3d.live .l3-rot { animation: l3-sway 8s var(--ease-inout) infinite alternate; }
@@ -680,4 +694,29 @@ html.motion .v4 .closing.settled .boxbtn { transition: transform var(--t-micro) 
   .v4 .logo3d { width: 120px; }
   .v4 .closing-actions { flex-direction: column; }
   .v4 .boxbtn { min-width: 0; width: 100%; }
+}
+
+/* ---------- phone density: keeps the whole page within about 11 screens at 375 x 812 ---------- */
+@media (max-width: 860px) {
+  .v4 { --space-section: 40px; }
+  .v4 .book .wrap > .lightline, .v4 .info .lightline { margin-bottom: 20px; }
+  .v4 .facts li { padding-block: 14px; gap: 6px; }
+  .v4 .facts b { font-size: 1.75rem; }
+  .v4 .shop-facts > div { grid-template-columns: 58px minmax(0, 1fr); gap: 10px; }
+  .v4 .shop-facts dd small { overflow-wrap: normal; font-size: .75rem; }
+  .v4 .shop-actions { flex-wrap: nowrap; gap: 8px; }
+  .v4 .shop-actions .btn { flex: 1 1 0; min-width: 0; padding: 0 12px; font-size: .875rem; }
+  .v4 .faq summary { padding: 13px 0; }
+  .v4 .quote-form .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .v4 .closing-copy { padding-block: 20px 36px; }
+  .v4 .logo3d { width: 104px; }
+  .v4 .foot { padding-top: 36px; }
+  .v4 .foot-grid { gap: 24px 20px; }
+  .v4 .foot-grid > :last-child { grid-column: 1 / -1; }
+  .v4 .foot-grid > :last-child ul { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+  .v4 .foot-base { margin-top: 24px; }
+}
+@media (max-width: 560px) {
+  .v4 .book-details .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }
+  .v4 .book-details .fields > :is(.full, .field:has(select), .field:has(#f-car), .field:has(#f-plate)) { grid-column: 1 / -1; }
 }
