@@ -14,6 +14,10 @@ Useful commands (run from `.claude/skills/higgsfield-prompt-suite/scripts/`):
 | `hf-video-01-…` to `hf-video-10-…` | github.com/rediumvex/ai-video-generator-claude | ffdad7d | MIT | 10 video prompt skills |
 | `ugc-factory/` | github.com/charlesdove977/UGC-Factory | ee59beb | MIT | Main skill only; its 15 style skills duplicate the AKCodez ones |
 
-Official alternative, not installed: the Higgsfield connection already in Claude (tools named `higgsfield`) provides generation, presets, character sheets and reference elements.
+**Official Higgsfield skills, installed 16 Nov 2026** with `npx skills add higgsfield-ai/skills` (github.com/higgsfield-ai/skills, MIT, tracked in `skills-lock.json`): higgsfield-brandkit, higgsfield-faceless-video, higgsfield-generate, higgsfield-marketplace-cards, higgsfield-product-photoshoot, higgsfield-soul-id, higgsfield-video-explainer, higgsfield-websites, higgsfield-youtube-thumbnail. Reviewed: their scripts are local media tools; the `curl … install.sh | sh` line only runs if the CLI is missing. Update with `npx skills update -p`.
+
+**Higgsfield CLI** `@higgsfield/cli` 1.2.2 installed globally (`npm i -g @higgsfield/cli`), signed in, workspace = Plus (1,179 credits on 16 Nov 2026).
+
+Also available: the Higgsfield connection already in Claude (tools named `higgsfield`) provides generation, presets, character sheets and reference elements.
 
 To update a pack later, ask Claude to re-download it, re-scan it and copy the markdown again.

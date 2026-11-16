@@ -7,7 +7,7 @@ Real copies (not links) so they work for anyone who clones this repo. Claude Cod
 | Website design and UX | `frontend-design`, `impeccable`, `ui-ux-pro-max`, `ux-designer`, `ux-cro-designer`, `web-design-guidelines`, `unslop`, `theme-factory`, `web-artifacts-builder`, `webapp-testing` |
 | Motion and animation | `animate`, `choreograph`, `design-motion-principles`, `emil-design-eng`, `animation-performance`, `animation-vocabulary`, `find-animation-opportunities`, `improve-animations`, `review-animations` |
 | Brand and graphics | `logo-design`, `canvas-design` |
-| Video (Higgsfield) | `aureus-video-studio` (start here), `higgsfield-prompt-suite`, `hf-*`, `hf-video-*`, `ugc-factory`, `rea-video` (sources: `aureus-video-studio/SOURCES.md`) |
+| Video (Higgsfield) | `aureus-video-studio` (start here), official `higgsfield-*` skills (generate, soul-id, product-photoshoot, brandkit, faceless-video, video-explainer, youtube-thumbnail, marketplace-cards, websites), `higgsfield-prompt-suite`, `hf-*`, `hf-video-*`, `ugc-factory`, `rea-video` (sources: `aureus-video-studio/SOURCES.md`) |
 | Ways of working | `brainstorming`, `writing-plans`, `executing-plans`, `systematic-debugging`, `verification-before-completion`, `karpathy-guidelines`, `caveman` |
 | This business | `save-progress` |
 

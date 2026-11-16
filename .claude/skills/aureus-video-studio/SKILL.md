@@ -10,12 +10,13 @@ The house workflow for making videos with Higgsfield. It sits on top of the offi
 ## 1. Before generating anything
 1. Read `Aureus Detailing/01 Brand Guidelines/Brand-Basics.md` (or the Monsoor brand rules in the playbook) and `assets/ASSET-REGISTER.md` in this folder.
 2. Check `assets/GENERATION-LOG.md`. If a similar shot was made before, reuse its prompt, seed and references instead of starting again. This saves credits and keeps the look the same.
-3. Check the credit balance (Higgsfield `balance`) and tell the owner the cost before a paid generation. Don't spend more than the agreed budget.
+3. Check the credit balance (`higgsfield account status`, or the paid connector's `balance`; the first Higgsfield connector is a separate free account with 0 credits) and tell the owner the cost before a paid generation. Don't spend more than the agreed budget.
 
 ## 2. Pick the right skill pack
 
 | Job | Use |
 |---|---|
+| **Generate an image or video (official)**: run it through the Higgsfield CLI (`higgsfield`, signed in to the Plus workspace) or the paid Higgsfield connector | `higgsfield-generate` (official). Also official: `higgsfield-soul-id` (consistent people), `higgsfield-product-photoshoot`, `higgsfield-brandkit`, `higgsfield-faceless-video`, `higgsfield-video-explainer`, `higgsfield-youtube-thumbnail`, `higgsfield-marketplace-cards`, `higgsfield-websites` |
 | Any prompt: structure, camera, lighting, model choice, fixing a failed generation | `higgsfield-prompt-suite` (router: it points to the right sub-skill, e.g. `skills/higgsfield-camera`, `higgsfield-seedance`, `higgsfield-troubleshoot`) |
 | Same person or character across many videos | `higgsfield-prompt-suite/skills/higgsfield-soul` + `higgsfield-character-design`, and section 3 below |
 | Car showcase / 360° turn | `hf-09-product-360`, `hf-01-cinematic` |
