@@ -15,12 +15,25 @@
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png">
 <link rel="preload" href="assets/fonts/Montserrat-Variable-latin.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="assets/fonts/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="assets/film/aureus-film-poster.jpg">
+<script>
+/* Decides motion or static before first paint. Every pre-hidden state in v4.css is scoped to html.motion,
+   so no JS, reduced motion, Save-Data or a failed site.js always leaves a complete page. */
+(function () {
+  var d = document.documentElement, c = navigator.connection || {};
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches || c.saveData || /2g/.test(c.effectiveType || '');
+  var seen = false; try { seen = sessionStorage.getItem('aureus-intro') === '1'; } catch (e) {}
+  d.className += still ? ' static' : (' motion pre' + (seen ? ' seen' : ''));
+  var l = document.createElement('link'); l.rel = 'preload'; l.as = 'image';
+  if (still || seen) { l.href = 'assets/img/roma-rest-1920.webp'; l.setAttribute('imagesrcset', 'assets/img/roma-rest-1120.webp 1120w, assets/img/roma-rest-1920.webp 1920w'); l.setAttribute('imagesizes', '100vw'); }
+  else l.href = 'assets/film/aureus-film-poster.jpg';
+  document.head.appendChild(l);
+  if (!still) setTimeout(function () { if (!window.__aureusReady) { d.classList.remove('motion', 'pre', 'seen'); d.classList.add('static'); } }, 3000);
+})();
+</script>
 <link rel="stylesheet" href="assets/styles.css">
-<link rel="stylesheet" href="assets/v3.css">
-
+<link rel="stylesheet" href="assets/v4.css">
 </head>
-<body class="v3">
+<body class="v4">
 <a class="skip" href="#main">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -35,88 +48,143 @@
     <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></symbol>
     <symbol id="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
-    <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.500s6 6.300 6 11a6 6 0 0 1-12 0c0-4.700 6-11 6-11z"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.500v13l11-6.500z"/></symbol>
     <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3.500v14H7zM13.500 5H17v14h-3.500z"/></symbol>
-    <symbol id="i-again" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.600-5.900M4 4.500v4h4"/></symbol>
   </defs>
 </svg>
 
-<header class="nav" id="nav" data-open="false">
-  <div class="nav-bar">
-    <a class="nav-logo" href="#top" aria-label="Aureus Detailing, home"><img src="assets/img/aureus-horizontal-3d.webp" alt="Aureus Detailing" width="161" height="44"></a>
+<header class="nav" id="nav" data-open="false" data-compact="false">
+  <a class="nav-logo tile" href="#top" aria-label="Aureus Detailing, home">
+    <img class="logo-full" src="assets/img/aureus-horizontal-3d.webp" alt="Aureus Detailing" width="146" height="40">
+    <img class="logo-mark" src="assets/img/aureus-3d.webp" alt="" width="40" height="40">
+  </a>
+  <nav class="nav-links" id="nav-links" aria-label="Main" data-lenis-prevent>
+    <a class="tile" href="#packages">Packages</a><a class="tile" href="#booking">Booking</a>
+    <a class="tile" href="#workshop">Workshop</a><a class="tile" href="#faq">Questions</a>
+  </nav>
+  <div class="nav-right">
+    <a class="nav-call tile" href="tel:0434137393"><span><small>Open seven days</small><b>0434 13 73 93</b></span><i aria-hidden="true"><svg><use href="#i-phone"/></svg></i></a>
     <a class="btn btn-pink btn-sm nav-cta" href="#booking">Book now</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-      <svg class="bars"><use href="#i-bars"/></svg><svg class="x"><use href="#i-x"/></svg>
-    </button>
+      <svg class="bars" aria-hidden="true"><use href="#i-bars"/></svg><svg class="x" aria-hidden="true"><use href="#i-x"/></svg></button>
   </div>
-  <nav class="nav-links" id="nav-links" aria-label="Main">
-    <a href="#packages">Packages</a>
-    <a href="#booking">Booking</a>
-    <a href="#workshop">Workshop</a>
-    <a href="#quote">Quotes</a>
-    <a href="#faq">Questions</a>
-  </nav>
 </header>
 
 <main id="main">
 <span id="top"></span>
 
-<section class="film" id="hero" aria-labelledby="hero-h">
-  <div class="film-stage" aria-hidden="true">
-    <img class="film-poster" src="assets/film/aureus-film-poster.jpg" alt="" width="1920" height="1080" fetchpriority="high">
-    <video class="film-video" muted playsinline preload="none" data-src="assets/film/aureus-film.mp4" data-src-mobile="assets/film/aureus-film-mobile.mp4"></video>
-    <div class="film-shade"></div>
-  </div>
+<section class="hero" id="hero" aria-labelledby="hero-h">
+  <div class="stage">
+    <div class="stage-media" aria-hidden="true">
+      <img class="stage-still" src="assets/img/roma-rest-1920.webp" srcset="assets/img/roma-rest-1120.webp 1120w, assets/img/roma-rest-1920.webp 1920w" sizes="100vw" width="1928" height="1072" alt="" loading="lazy" decoding="async">
+      <img class="stage-poster" src="assets/film/aureus-film-poster.jpg" width="1928" height="1072" alt="" loading="lazy" decoding="async">
+      <video class="stage-film" muted playsinline preload="none" disablepictureinpicture tabindex="-1"
+             data-src="assets/film/aureus-film.mp4" data-src-mobile="assets/film/aureus-film-mobile.mp4" data-reveal-end="4.9"></video>
+      <i class="scrim scrim-t"></i><i class="scrim scrim-l"></i><i class="scrim scrim-r"></i><i class="scrim scrim-b"></i><i class="scrim scrim-dim"></i>
+    </div>
+    <div class="hud">
+      <article class="beat beat-1" data-beat="1" data-p="0">
+        <p class="label eyebrow">By Monsoor Motors · Victoria Park, Perth</p>
+        <h1 id="hero-h"><span class="ln"><span>Detailing,</span></span><span class="ln"><span><em class="accent">perfected.</em></span></span></h1>
+        <p class="beat-body">Mobile and workshop car detailing. We come to you within 20 km of Victoria Park, or you drop the car at our workshop on Albany Highway.</p>
+        <div class="beat-actions"><a class="btn btn-pink" href="#booking">Book a detail</a><a class="btn btn-glass" href="#packages">See packages</a></div>
+        <ul class="hero-facts"><li>From $149</li><li>No deposit</li><li>Open 8:30 to 6:00, seven days</li></ul>
+      </article>
 
-  <div class="film-chapters">
-    <article class="chapter ch-1">
-      <h1 id="hero-h">Detailing, perfected.</h1>
-      <p class="ch-text">Mobile and workshop car detailing in Victoria Park, Perth. Scroll to see what we do to your paint.</p>
-      <div class="ch-actions"><a class="btn btn-pink" href="#booking">Book a detail</a><a class="btn btn-glass" href="#packages">See packages</a></div>
-      <ul class="hero-facts"><li>From $149</li><li>Mobile within 20 km</li><li>Open 8:30 to 6:00, seven days</li></ul>
-    </article>
-    <article class="chapter ch-2">
-      <h2 class="ch-h">Every scratch, seen.</h2>
-      <p class="ch-text">Under the light, swirl marks and haze show up like scratches on glass. We inspect your paint with you before we start.</p>
-    </article>
-    <article class="chapter ch-3">
-      <h2 class="ch-h">Polished to a mirror.</h2>
-      <p class="ch-text">A dual-action machine polish lifts the swirls one panel at a time. Pick your vehicle and package to see the price.</p>
-      <form class="dock glass beads" id="dock" aria-label="Instant price" novalidate>
-      <fieldset class="dock-group">
-        <legend>Your vehicle</legend>
-        <div class="seg seg-glass" id="dock-veh"></div>
-      </fieldset>
-      <fieldset class="dock-group">
-        <legend>Package</legend>
-        <div class="seg seg-glass" id="dock-pack"></div>
-      </fieldset>
-      <p class="dock-price" aria-live="polite"><b id="dock-price">$199</b><span id="dock-time">2 h 30 min</span></p>
-      <a class="btn btn-pink" href="#booking" id="dock-book">Book this <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </form>
-    </article>
-    <article class="chapter ch-4">
-      <h2 class="ch-h">Three packages. Three layers deep.</h2>
-      <ul class="ch-layers">
-        <li><b>Silver $149</b><span>The surface: wash, wheels, glass, interior</span></li>
-        <li><b>Gold $199</b><span>The clear coat: polish, wax sealant, steam clean</span></li>
-        <li><b>Aureus $299</b><span>The ceramic shield: clay bar, machine polish, ceramic</span></li>
-      </ul>
-    </article>
-    <article class="chapter ch-5">
-      <h2 class="ch-h">Sealed under ceramic.</h2>
-      <p class="ch-text">Water beads and rolls off. No deposit, pay when the job is done.</p>
-      <div class="ch-actions"><a class="btn btn-pink" href="#booking">Book your detail</a><a class="btn btn-glass" href="tel:0434137393">Call 0434 13 73 93</a></div>
-    </article>
+      <article class="beat beat-2" data-beat="2" data-p="0.38">
+        <img class="beat-still" src="assets/img/roma-flank-960.webp" width="960" height="534" alt="" loading="lazy" decoding="async">
+        <div class="beat-copy">
+          <p class="label eyebrow">Phase 02 · Polish</p>
+          <h2 class="beat-h"><span class="ln"><span>Polished</span></span><span class="ln"><span>to a mirror.</span></span></h2>
+          <p class="beat-body">Clay bar decontamination lifts what a wash leaves behind. A high-gloss machine polish follows, one panel at a time, until the light runs clean along the paint.</p>
+          <ul class="ministats">
+            <li><b>From $199</b><span class="label">Gold: polish and wax sealant</span></li>
+            <li><b>From $299</b><span class="label">Aureus: clay bar and machine polish</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="beat beat-3" data-beat="3" data-p="0.92">
+        <img class="beat-still" src="assets/img/roma-rear-960.webp" width="960" height="534" alt="" loading="lazy" decoding="async">
+        <div class="beat-copy">
+          <p class="label eyebrow">Phase 03 · Protect</p>
+          <h2 class="beat-h"><span class="ln"><span>Sealed.</span></span><span class="ln"><span>Water rolls off.</span></span></h2>
+          <p class="beat-body">The Aureus package finishes with a hydrophobic ceramic shield, so water beads and runs off instead of sitting on the paint.</p>
+          <ul class="ministats">
+            <li><b>6 months</b><span class="label">Ceramic shield in the Aureus package</span></li>
+            <li><b>From $699</b><span class="label">Full ceramic coating, quoted per car</span></li>
+          </ul>
+          <ul class="beat-tags"><li>Hydrophobic ceramic shield</li><li>Wheel and rim deep clean</li></ul>
+          <div class="beat-actions"><a class="btn btn-pink" href="#booking">Book your detail</a><a class="btn btn-glass" href="#packages">See packages</a></div>
+        </div>
+      </article>
+
+      <aside class="hud-right" aria-label="Price and range">
+        <form class="tile dock" id="dock" aria-label="Instant price" novalidate>
+          <p class="label">Instant price</p>
+          <fieldset class="dock-group">
+            <legend>Package</legend>
+            <div class="seg seg-glass" id="dock-pack"></div>
+          </fieldset>
+          <fieldset class="dock-group">
+            <legend>Your vehicle</legend>
+            <div class="seg seg-glass seg-stack" id="dock-veh"></div>
+          </fieldset>
+          <div class="dock-read">
+            <svg class="ring" viewBox="0 0 132 132" aria-hidden="true">
+              <circle class="arc arc-1" cx="66" cy="66" r="60" pathLength="360" transform="rotate(100 66 66)"/>
+              <circle class="arc arc-2" cx="66" cy="66" r="60" pathLength="360" transform="rotate(220 66 66)"/>
+              <circle class="arc arc-3" cx="66" cy="66" r="60" pathLength="360" transform="rotate(340 66 66)"/>
+            </svg>
+            <p class="dock-price" aria-live="polite"><b id="dock-price">$199</b><span id="dock-time">2 h 30 min</span></p>
+          </div>
+          <a class="btn btn-pink" href="#booking" id="dock-book">Book this</a>
+        </form>
+        <div class="tile range">
+          <p class="label">Mobile range</p>
+          <div class="range-row">
+            <p class="range-ring"><b>20</b><span>km</span></p>
+            <p class="range-text">From Victoria Park. Further out? We'll phone first to agree a travel fee.</p>
+          </div>
+        </div>
+      </aside>
+
+      <ol class="hotspots" aria-hidden="true">
+        <li class="hotspot" data-x="0.634" data-y="0.242" data-side="left"><i class="dot"></i><i class="leader"></i><span>Hydrophobic ceramic shield</span></li>
+        <li class="hotspot" data-x="0.670" data-y="0.669" data-side="right"><i class="dot"></i><i class="leader"></i><span>Wheel and rim deep clean</span></li>
+      </ol>
+
+      <nav class="chapters" aria-label="Film chapters">
+        <svg viewBox="0 0 1000 80" preserveAspectRatio="none" aria-hidden="true">
+          <path class="ch-base" d="M0,64 L1000,64"/>
+          <path class="ch-prog" pathLength="1" d="M0,64 L1000,64"/>
+        </svg>
+        <i class="ch-line" aria-hidden="true"><i></i></i>
+        <p class="ch-count" aria-hidden="true"><span class="ch-num"><b>01</b></span><span>/ 03</span></p>
+        <div class="ch-btns">
+          <button type="button" data-p="0" aria-current="true"><i>01</i> Reveal</button>
+          <button type="button" data-p="0.38"><i>02</i> Polish</button>
+          <button type="button" data-p="0.92"><i>03</i> Protect</button>
+        </div>
+      </nav>
+      <p class="scroll-cue label" aria-hidden="true"><i></i>Scroll</p>
+      <a class="skip-film label" href="#packages">Skip the film</a>
+    </div>
   </div>
 </section>
 
-<section class="section layers-sec" id="packages" aria-labelledby="pk-h">
+<section class="section packs-sec" id="packages" aria-labelledby="pk-h">
   <div class="wrap">
+    <ul class="facts">
+      <li><span class="mask"><b>$149</b></span><span class="label">Packages from</span></li>
+      <li><span class="mask"><b>20 km</b></span><span class="label">Mobile range from Victoria Park</span></li>
+      <li><span class="mask"><b>7 days</b></span><span class="label">Open 8:30 am to 6:00 pm</span></li>
+      <li><span class="mask"><b>$0 deposit</b></span><span class="label">Pay when the job is done</span></li>
+    </ul>
     <div class="pk-head">
       <div>
-        <h2 class="h2" id="pk-h">Three packages. Three layers deep.</h2>
+        <p class="label eyebrow">Packages</p>
+        <h2 class="h2" id="pk-h"><span class="ln"><span>Three packages.</span></span><span class="ln"><span>Three layers deep.</span></span></h2>
         <p class="lede">Silver cleans the surface, Gold polishes into the clear coat, Aureus seals it under a ceramic shield. Prices update with your vehicle size, same at your place or ours.</p>
       </div>
       <fieldset>
@@ -124,15 +192,28 @@
         <div class="seg" id="veh-seg"></div>
       </fieldset>
     </div>
-    <div class="packs" id="packs"></div>
+    <div class="bento">
+      <div class="packs" id="packs"></div>
+      <aside class="help">
+        <div class="help-ask">
+          <h3>Not sure which one?</h3>
+          <p><a class="text-link" href="tel:0434137393">Talk to us <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><span class="label">Open 8:30 am to 6:00 pm, seven days</span></p>
+        </div>
+        <div class="help-note">
+          <p>Extras can be added to any package. Ceramic coating starts from $699 and is priced per car after we inspect it.</p>
+          <a class="text-link" href="#quote">Get a quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </aside>
+    </div>
     <noscript><p class="lede">Silver $149, Gold $199, Aureus $299. Add $20 for SUV, 4WD or ute, and $40 for vans. Call 0434 13 73 93 to book.</p></noscript>
-    <p class="packs-note">Extras can be added to any package. Ceramic coating starts from $699 and is priced per car after we inspect it.</p>
   </div>
 </section>
 
 <section class="section book" id="booking" aria-labelledby="bk-h">
   <div class="wrap">
-    <h2 class="h2" id="bk-h">Book your detail.</h2>
+    <i class="lightline" aria-hidden="true"></i>
+    <p class="label eyebrow">Booking</p>
+    <h2 class="h2" id="bk-h"><span class="ln"><span>Book your detail.</span></span></h2>
     <p class="lede">No deposit. Pay when the job is done, by card, EFTPOS or cash.</p>
     <p class="form-alert" id="shop-closed" role="alert" hidden></p>
 
@@ -244,68 +325,104 @@
   </div>
 </section>
 
-<section class="section" id="workshop" aria-labelledby="ws-h">
+<section class="section info" aria-label="Workshop, questions and quotes">
   <div class="wrap">
-    <h2 class="h2" id="ws-h">Prefer to drop the car off?</h2>
-    <p class="lede">Our workshop is on Albany Highway in Victoria Park, with undercover bays and parking on site.</p>
-    <div class="shop-grid">
-      <dl class="shop-facts">
-        <div><dt>Address</dt><dd id="ws-addr">530 Albany Hwy, Victoria Park WA 6100</dd></div>
-        <div><dt>Open</dt><dd>8:30 am to 6:00 pm<small>Monday to Sunday</small></dd></div>
-        <div><dt>Call</dt><dd><a href="tel:0434137393">0434 13 73 93</a><small><a href="mailto:carwashandpolish.wa@gmail.com">carwashandpolish.wa@gmail.com</a></small></dd></div>
-        <div>
-          <ul class="shop-tags"><li>On-site parking</li><li>Undercover bays</li><li>Quick key drop</li><li>Inspection with you at handover</li></ul>
-        </div>
+    <i class="lightline" aria-hidden="true"></i>
+    <div class="info-row info-a">
+      <article class="cell shop" id="workshop" aria-labelledby="ws-h">
+        <p class="label eyebrow">Workshop</p>
+        <h2 class="h2" id="ws-h"><span class="ln"><span>Prefer to drop</span></span><span class="ln"><span>the car off?</span></span></h2>
+        <dl class="shop-facts">
+          <div><dt>Address</dt><dd id="ws-addr">530 Albany Hwy, Victoria Park WA 6100</dd></div>
+          <div><dt>Open</dt><dd>8:30 am to 6:00 pm<small>Monday to Sunday</small></dd></div>
+          <div><dt>Call</dt><dd><a href="tel:0434137393">0434 13 73 93</a><small><a href="mailto:carwashandpolish.wa@gmail.com">carwashandpolish.wa@gmail.com</a></small></dd></div>
+        </dl>
+        <ul class="shop-tags"><li>On-site parking</li><li>Undercover bays</li><li>Quick key drop</li><li>Inspection with you at handover</li></ul>
         <div class="shop-actions">
-          <a class="btn btn-navy" href="https://maps.google.com/?q=530+Albany+Hwy,+Victoria+Park+WA+6100" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg> Get directions</a>
-          <button class="btn btn-line" type="button" id="copy-addr"><svg><use href="#i-copy"/></svg> Copy address</button>
+          <a class="btn btn-navy" href="https://maps.google.com/?q=530+Albany+Hwy,+Victoria+Park+WA+6100" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg> Get directions</a>
+          <button class="btn btn-line" type="button" id="copy-addr"><svg aria-hidden="true"><use href="#i-copy"/></svg> Copy address</button>
         </div>
-      </dl>
-      <div class="map">
+      </article>
+      <div class="cell map">
         <iframe title="Map showing 530 Albany Hwy, Victoria Park" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=530+Albany+Hwy,+Victoria+Park+WA+6100&output=embed"></iframe>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section quote-sec" id="quote" aria-labelledby="qt-h">
-  <div class="wrap quote-grid">
-    <div>
-      <h2 class="h2" id="qt-h">A fleet, a van, or ceramic coating?</h2>
-      <p class="lede">Tell us what you have and we'll come back with a price. Multi-stage paint correction and ceramic coating are quoted per car.</p>
-      <p class="quote-contact"><a href="tel:0434137393">0434 13 73 93</a><a href="mailto:carwashandpolish.wa@gmail.com">carwashandpolish.wa@gmail.com</a></p>
-    </div>
-    <div>
-      <form class="quote-form" id="quote-form" novalidate>
-        <div class="fields">
-          <div class="field"><label for="q-name">Name</label><input class="input" id="q-name" name="name" autocomplete="name" aria-describedby="eq-name"><p class="err" id="eq-name" role="alert"></p></div>
-          <div class="field"><label for="q-phone">Phone <span class="opt-tag">(optional)</span></label><input class="input" id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 0412 345 678" aria-describedby="eq-phone"><p class="err" id="eq-phone" role="alert"></p></div>
+      <figure class="cell reel" id="reel" data-playing="false">
+        <div class="reel-clips">
+          <video class="on" muted playsinline preload="none" poster="assets/video/work-1.jpg" data-name="Machine polish" tabindex="-1"><source src="assets/video/work-1.mp4" type="video/mp4"></video>
+          <video muted playsinline preload="none" data-poster="assets/video/work-2.jpg" data-name="Panel by panel" tabindex="-1"><source src="assets/video/work-2.mp4" type="video/mp4"></video>
+          <video muted playsinline preload="none" data-poster="assets/video/work-3.jpg" data-name="Wheels and tyres" tabindex="-1"><source src="assets/video/work-3.mp4" type="video/mp4"></video>
+          <video muted playsinline preload="none" data-poster="assets/video/work-4.jpg" data-name="Ready for handover" tabindex="-1"><source src="assets/video/work-4.mp4" type="video/mp4"></video>
         </div>
-        <div class="field"><label for="q-email">Email</label><input class="input" id="q-email" name="email" type="email" autocomplete="email" aria-describedby="eq-email"><p class="err" id="eq-email" role="alert"></p></div>
-        <div class="field"><label for="q-msg">What do you need?</label><textarea class="input" id="q-msg" name="message" placeholder="Number of vehicles, type, and the finish you're after" aria-describedby="eq-msg"></textarea><p class="err" id="eq-msg" role="alert"></p></div>
-        <div class="hp" aria-hidden="true"><label for="q-hp">Leave this empty</label><input id="q-hp" name="_hp_company_website" tabindex="-1" autocomplete="off"></div>
-        <div id="cf-turnstile-quote"></div>
-        <p class="form-alert" id="qt-alert" role="alert"></p>
-        <div><button class="btn btn-navy" type="submit" id="qt-submit">Request a quote <svg><use href="#i-arrow"/></svg></button></div>
-      </form>
-      <div class="quote-ok" id="quote-ok" hidden tabindex="-1"><h3 id="quote-ok-h">Quote request ready.</h3><p id="quote-ok-p"></p></div>
+        <figcaption>
+          <span class="label">Our team at the workshop</span>
+          <b class="reel-name"><i id="reel-idx">01</i><span id="reel-name">Machine polish</span></b>
+        </figcaption>
+        <div class="reel-ui">
+          <ol class="reel-ticks" aria-hidden="true"><li><i></i></li><li><i></i></li><li><i></i></li><li><i></i></li></ol>
+          <button class="reel-toggle" type="button" aria-label="Play team footage"><svg class="ic-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic-pause" aria-hidden="true"><use href="#i-pause"/></svg></button>
+        </div>
+      </figure>
+    </div>
+
+    <div class="info-row info-b">
+      <article class="cell faq" id="faq" aria-labelledby="fq-h">
+        <div class="faq-head">
+          <p class="label eyebrow">Questions</p>
+          <h2 class="h2" id="fq-h"><span class="ln"><span>Before you book.</span></span></h2>
+          <p class="lede">The short answers. The full detail is in our <a href="terms.html">terms</a>.</p>
+        </div>
+        <div class="faq-list">
+          <details name="faq"><summary>What do you need from me for a mobile detail? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>A safe, level spot where our van can park next to your car, access to the car for the whole job, and an outdoor tap and a standard power point nearby. If you don't have water or power, tell us in the notes and we'll arrange a self-powered setup.</p></details>
+          <details name="faq"><summary>How and when do I pay? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>When the job is finished, by card, EFTPOS or cash. There's no deposit. Prices are in Australian dollars and include GST, and you get a tax invoice.</p></details>
+          <details name="faq"><summary>Can I change or cancel my booking? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. Give us at least 12 hours' notice and we'll move or cancel it at no charge, so the slot can go to someone else.</p></details>
+          <details name="faq"><summary>Could the price change on the day? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Only if the car is far dirtier than usual, for example heavy pet hair, mould or construction mud. We'll tell you the extra cost before we start, and nothing happens until you agree.</p></details>
+          <details name="faq"><summary>What if I'm not happy with the result? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Tell us at handover or within 24 hours. We'll inspect the area and redo it free. This sits alongside your rights under Australian Consumer Law.</p></details>
+          <details name="faq"><summary>Should I take anything out of the car? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Please remove valuables, cash and electronics. We check the car over with you before we start and note any existing scratches, chips or worn trim.</p></details>
+        </div>
+      </article>
+      <article class="cell quote" id="quote" aria-labelledby="qt-h">
+        <p class="label eyebrow">Quotes</p>
+        <h2 class="h2" id="qt-h"><span class="ln"><span>A fleet, a van, or</span></span><span class="ln"><span>ceramic coating?</span></span></h2>
+        <p class="lede">Tell us what you have and we'll come back with a price.</p>
+        <form class="quote-form" id="quote-form" novalidate>
+          <div class="fields">
+            <div class="field"><label for="q-name">Name</label><input class="input" id="q-name" name="name" autocomplete="name" aria-describedby="eq-name"><p class="err" id="eq-name" role="alert"></p></div>
+            <div class="field"><label for="q-phone">Phone <span class="opt-tag">(optional)</span></label><input class="input" id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 0412 345 678" aria-describedby="eq-phone"><p class="err" id="eq-phone" role="alert"></p></div>
+          </div>
+          <div class="field"><label for="q-email">Email</label><input class="input" id="q-email" name="email" type="email" autocomplete="email" aria-describedby="eq-email"><p class="err" id="eq-email" role="alert"></p></div>
+          <div class="field"><label for="q-msg">What do you need?</label><textarea class="input" id="q-msg" name="message" rows="3" placeholder="Number of vehicles, type, and the finish you're after" aria-describedby="eq-msg"></textarea><p class="err" id="eq-msg" role="alert"></p></div>
+          <div class="hp" aria-hidden="true"><label for="q-hp">Leave this empty</label><input id="q-hp" name="_hp_company_website" tabindex="-1" autocomplete="off"></div>
+          <div id="cf-turnstile-quote"></div>
+          <p class="form-alert" id="qt-alert" role="alert"></p>
+          <div><button class="btn btn-navy" type="submit" id="qt-submit">Request a quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+        </form>
+        <div class="quote-ok" id="quote-ok" hidden tabindex="-1"><h3 id="quote-ok-h">Quote request ready.</h3><p id="quote-ok-p"></p></div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section faq" id="faq" aria-labelledby="fq-h">
-  <div class="wrap faq-grid">
-    <div>
-      <h2 class="h2" id="fq-h">Before you book.</h2>
-      <p class="lede">The short answers. The full detail is in our <a href="terms.html">terms</a>.</p>
+<section class="closing" aria-labelledby="cl-h">
+  <div class="closing-media" aria-hidden="true">
+    <picture>
+      <source media="(max-width: 860px)" srcset="assets/img/roma-closing-m-900.webp">
+      <source srcset="assets/img/roma-closing-1280.webp 1280w, assets/img/roma-closing-2560.webp 2560w" sizes="100vw">
+      <img src="assets/img/roma-closing-1280.webp" width="2560" height="1429" alt="" loading="lazy" decoding="async">
+    </picture>
+  </div>
+  <div class="wrap closing-copy">
+    <div class="logo3d" aria-hidden="true">
+      <div class="l3-rot">
+        <i style="--i:10"></i><i style="--i:9"></i><i style="--i:8"></i><i style="--i:7"></i><i style="--i:6"></i><i style="--i:5"></i><i style="--i:4"></i><i style="--i:3"></i><i style="--i:2"></i><i style="--i:1"></i>
+        <img class="l3-face" src="assets/img/aureus-mark-3d.webp" width="724" height="652" alt="" loading="lazy" decoding="async">
+        <span class="l3-sheen"></span>
+        <img class="l3-refl" src="assets/img/aureus-mark-reflection.webp" width="724" height="317" alt="" loading="lazy" decoding="async">
+      </div>
     </div>
-    <div>
-      <details><summary>What do you need from me for a mobile detail? <svg><use href="#i-plus"/></svg></summary><p>A safe, level spot where our van can park next to your car, access to the car for the whole job, and an outdoor tap and a standard power point nearby. If you don't have water or power, tell us in the notes and we'll arrange a self-powered setup.</p></details>
-      <details><summary>How and when do I pay? <svg><use href="#i-plus"/></svg></summary><p>When the job is finished, by card, EFTPOS or cash. There's no deposit. Prices are in Australian dollars and include GST, and you get a tax invoice.</p></details>
-      <details><summary>Can I change or cancel my booking? <svg><use href="#i-plus"/></svg></summary><p>Yes. Give us at least 12 hours' notice and we'll move or cancel it at no charge, so the slot can go to someone else.</p></details>
-      <details><summary>Could the price change on the day? <svg><use href="#i-plus"/></svg></summary><p>Only if the car is far dirtier than usual, for example heavy pet hair, mould or construction mud. We'll tell you the extra cost before we start, and nothing happens until you agree.</p></details>
-      <details><summary>What if I'm not happy with the result? <svg><use href="#i-plus"/></svg></summary><p>Tell us at handover or within 24 hours. We'll inspect the area and redo it free. This sits alongside your rights under Australian Consumer Law.</p></details>
-      <details><summary>Should I take anything out of the car? <svg><use href="#i-plus"/></svg></summary><p>Please remove valuables, cash and electronics. We check the car over with you before we start and note any existing scratches, chips or worn trim.</p></details>
+    <h2 class="closing-h" id="cl-h"><span class="ln"><span>Now picture</span></span><span class="ln"><span>yours.</span></span></h2>
+    <div class="closing-actions">
+      <a class="boxbtn boxbtn-pink" href="#booking"><b>Book a detail</b><span class="label">No deposit · Pay on completion</span></a>
+      <a class="boxbtn" href="tel:0434137393"><b>Call 0434 13 73 93</b><span class="label">8:30 am to 6:00 pm · Seven days</span></a>
     </div>
   </div>
 </section>
@@ -316,24 +433,27 @@
     <div class="foot-grid">
       <div>
         <img src="assets/img/aureus-horizontal-3d.webp" alt="Aureus Detailing" width="176" height="48" loading="lazy">
-        <p style="margin-top:14px;max-width:34ch">Mobile and workshop car detailing in Perth, by the Monsoor Motors team.</p>
+        <p class="foot-line">Mobile and workshop car detailing in Perth, by the Monsoor Motors team.</p>
       </div>
       <div><h2>Visit</h2><ul><li>530 Albany Hwy</li><li>Victoria Park WA 6100</li><li>8:30 am to 6:00 pm, seven days</li></ul></div>
       <div><h2>Contact</h2><ul><li><a href="tel:0434137393">0434 13 73 93</a></li><li><a href="mailto:carwashandpolish.wa@gmail.com" style="overflow-wrap:anywhere">carwashandpolish.wa@gmail.com</a></li></ul></div>
       <div><h2>Site</h2><ul><li><a href="#packages">Packages</a></li><li><a href="#booking">Book online</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
     </div>
     <div class="foot-base"><span>© 2026 Aureus Detailing by Monsoor Motors</span><span>Prices in AUD, GST included</span></div>
-    <p class="foot-note">The car in the opening film is a digital illustration, not a customer vehicle. Aureus Detailing is not affiliated with any car maker.</p>
+    <p class="foot-note">The car shown in the film and photographs on this page is a digital illustration, not a customer vehicle. Aureus Detailing is not affiliated with, sponsored by or endorsed by Ferrari.</p>
   </div>
 </footer>
 
 <div class="bar" id="bar">
-  <a class="btn btn-line" href="tel:0434137393" aria-label="Call 0434 13 73 93"><svg><use href="#i-phone"/></svg> Call</a>
+  <a class="btn btn-line" href="tel:0434137393" aria-label="Call 0434 13 73 93"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
   <a class="btn btn-pink" href="#booking">Book now</a>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="assets/app.js" defer></script>
-<script src="assets/scrub.js" defer></script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
