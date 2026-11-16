@@ -28,7 +28,7 @@ Keep it short. Detailed facts live in the playbook (below), so Claude doesn't re
 ## Git rules (this folder is a private GitHub repo used as memory and history)
 - Remote: `Arfan-Zaman/Monsoor-Motors-Aureus-Detailing` (private), branch `main`.
 - **Never commit**: `HR/`, videos (`*.mp4`, `*.mov`…), audio stems, files over 100 MB, secrets/passwords/API keys. These are in `.gitignore`; don't force-add them.
-- Commit after each finished piece of work with a clear message (what changed and why). Use the `save-progress` skill.
+- **Auto-save is on:** a Stop hook (`.claude/settings.json` → `Tools/autosave.sh`) commits and pushes every change after each Claude turn. The user never has to say "save". At the end of a working session, still add the Daily Log entry to the playbook (the `save-progress` skill does this and writes a fuller commit message).
 - Before redoing anything, check the playbook and `git log` to see whether it was already made, so work isn't repeated.
 
 ## How we work (saves time and tokens)
