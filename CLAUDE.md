@@ -36,3 +36,8 @@ Keep it short. Detailed facts live in the playbook (below), so Claude doesn't re
 - Word documents: build on the templates in `Brand Kit/05 Documents/`. Export PDFs with `Tools/docx_to_pdf.sh` (uses Microsoft Word, so the Montserrat font renders correctly; LibreOffice does not).
 - Python: run scripts with `/opt/miniconda3/bin/python -I`. Use non-editable pip installs (editable installs break on this Mac).
 - Finished files go in the right folder above, never only in a temp folder.
+
+## Video and image generation (Higgsfield)
+- Load the **`aureus-video-studio`** skill before any Higgsfield work. It picks the right prompt pack, keeps characters, cars and brand consistent (reference elements, Soul ID), and logs every generation in `.claude/skills/aureus-video-studio/assets/`.
+- Installed prompt packs: `higgsfield-prompt-suite`, `hf-*`, `hf-video-*`, `ugc-factory` (sources and licences in `aureus-video-studio/SOURCES.md`).
+- Lint every Seedance prompt with `higgsfield-prompt-suite/scripts/seedance_lint.py` before spending credits.
