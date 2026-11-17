@@ -86,4 +86,4 @@ The owner prefers raw Higgsfield footage to edited versions. Build ads like this
 - **Sound:** Kling's own audio is unreliable (often music). Use `mirelo_text_to_audio` (0.75 credits per 3 s) for close-mic ASMR per activity; his voice only, cloned from `ad/audio/v4/persona-voice-ref.wav`; music about 13 dB under the sound.
 - **Text:** a few frosted-glass labels (footage blurred behind them), warm white, no brand colours pushed; watermark top left at about 55%.
 - **Lengths:** 30 s for paid ads with the offer on screen in the first 3 s; a longer full cut for organic.
-- **Edit free on this Mac:** `Launch Reels/ad/make_ad_v5.py` (he narrates throughout; 6-frame dissolves; muted glass visuals; logo bottom centre; master to -14 LUFS). Spend credits only on new shots, and file every job in the Higgsfield project folders (asset register).
+- **Edit free on this Mac:** `Launch Reels/ad/make_ad_v6.py` (standalone shots only) (he narrates throughout; 6-frame dissolves; muted glass visuals; logo bottom centre; master to -14 LUFS). Spend credits only on new shots, and file every job in the Higgsfield project folders (asset register).

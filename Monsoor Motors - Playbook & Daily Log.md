@@ -183,6 +183,11 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Files: `Aureus Detailing/08 Social Media/Launch Reels/ad/Aureus-Ad-v5.mp4`, `Aureus-Ad-v5-NO-MUSIC.mp4`, `make_ad_v5.py`.
 - To-do next: owner listens and approves the voice; if he wants a different voice, pick one from Higgsfield's presets by ear (they have no accent labels) and re-voice the on-camera line with voice change.
 
+### 17 Nov 2026 (Aureus ad v6: connected shots removed)
+- What we made / changed: owner asked to undo the first-frame/last-frame joins. Ad v6 is ad v5 with every part back on its original standalone shot: no connected footage at all (so the snow foam and rinse part is dropped, as it only existed as connected footage). Ends on the bell, then him wiping the bonnet and smiling. 32.6 s, he narrates throughout. 0 credits.
+- Files: `Aureus Detailing/08 Social Media/Launch Reels/ad/Aureus-Ad-v6.mp4`, `Aureus-Ad-v6-NO-MUSIC.mp4`, `make_ad_v6.py`. The connected shots stay on disk (`clips/links/`) and in the Higgsfield folder now named "Connected shots (not used)".
+- To-do next: owner listens and approves. If he wants foam and rinse back, they need two standalone 3 s shots from the existing foam and rinse stills (about 20 credits, on his say-so).
+
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
 - What we made / changed:
