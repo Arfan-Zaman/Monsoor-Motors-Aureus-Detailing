@@ -1,0 +1,197 @@
+<title>Aureus Launch Shoot</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap">
+<style>
+/* Layout: one narrow column for a phone on set; sticky reel switcher; each shot is a tappable row you tick off */
+:root{
+  --bg:#f4f7fa; --surface:#ffffff; --ink:#071a33; --muted:#53627a; --line:#d8e0ea;
+  --aqua:#00a8a8; --aqua-ink:#007f80; --done:#e6f5f5; --chip:#eaf0f6;
+  --display:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#06121f; --surface:#0c1f36; --ink:#eef4fa; --muted:#93a4ba; --line:#1d3350;
+  --aqua:#19c2c2; --aqua-ink:#5fd9d9; --done:#0d2b33; --chip:#132a45; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#06121f; --surface:#0c1f36; --ink:#eef4fa; --muted:#93a4ba; --line:#1d3350;
+  --aqua:#19c2c2; --aqua-ink:#5fd9d9; --done:#0d2b33; --chip:#132a45; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:640px;margin:0 auto}
+header{padding-block:28px 12px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua-ink)}
+h1{font-family:var(--display);font-weight:800;font-style:italic;font-size:30px;line-height:1.1;margin:6px 0 8px;text-wrap:balance}
+.lede{color:var(--muted);margin:0}
+.progress{display:flex;align-items:center;gap:12px;margin-top:16px}
+.bar{flex:1;height:8px;border-radius:4px;background:var(--chip);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--aqua);transition:width .25s}
+.count{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--muted);min-width:64px;text-align:right}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;display:flex;gap:8px;overflow-x:auto;border-bottom:1px solid var(--line)}
+nav button{font:600 13px var(--body);color:var(--ink);background:var(--chip);border:0;border-radius:999px;padding:8px 14px;white-space:nowrap;cursor:pointer}
+nav button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+nav button:focus-visible,.shot:focus-within{outline:2px solid var(--aqua);outline-offset:2px}
+section{padding-top:22px}
+h2{font-family:var(--display);font-weight:800;font-size:20px;margin:0 0 2px}
+.setup{color:var(--muted);font-size:14px;margin:0 0 12px}
+.shots{display:flex;flex-direction:column;gap:8px}
+.shot{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer}
+.shot input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--aqua);cursor:pointer}
+.shot.done{background:var(--done)}
+.shot.done .what{text-decoration:line-through;text-decoration-color:var(--muted)}
+.top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.code{font-weight:800;font-variant-numeric:tabular-nums;color:var(--aqua-ink)}
+.what{font-weight:600;min-width:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{font-size:12px;font-weight:600;background:var(--chip);border-radius:6px;padding:2px 8px;color:var(--muted)}
+.line{margin-top:8px;font-size:14px}
+.line b{font-weight:700}
+.say{display:inline-block;margin-top:2px;font-weight:700;color:var(--ink);border-left:3px solid var(--aqua);padding-left:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:10px}
+summary{font-weight:700;cursor:pointer}
+details ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.vo{margin-top:12px;background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+.vo ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.reset{margin-top:28px;font:600 13px var(--body);color:var(--muted);background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer}
+footer{margin-top:20px;font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Aureus Detailing · brand launch</div>
+  <h1>Launch reel shoot</h1>
+  <p class="lede">About 40 phone clips for three reels. Tap a shot when it's in the can.</p>
+  <div class="progress"><div class="bar"><i id="fill"></i></div><span class="count" id="count">0 / 0</span></div>
+  <details>
+    <summary>Before you start</summary>
+    <ul>
+      <li><b>Him:</b> navy Aureus polo with aqua tipping, charcoal trousers, black work shoes. Black gloves for wet work. No cap, no sunglasses.</li>
+      <li><b>Car:</b> not maroon. Pearl white, gloss black or a strong colour. Customer's written OK.</li>
+      <li><b>Kit in shot:</b> Aureus van (logo side), trolley with the chrome bell, foam cannon, pressure washer, polisher with orange pad, wax pad, wheel brushes, steamer, aqua towels.</li>
+      <li><b>When:</b> golden hour. An hour after sunrise or 1–1.5 h before sunset.</li>
+      <li><b>Where:</b> a leafy client driveway, plus one Perth skyline shot (Kings Park lookout or South Perth foreshore). Water-capture mat near any stormwater drain.</li>
+    </ul>
+  </details>
+  <details>
+    <summary>Phone settings</summary>
+    <ul>
+      <li>Vertical, 4K, 30 fps. HDR video off. No filters.</li>
+      <li>Tap and hold to lock focus and exposure. Into the sun, expose for the bright spray.</li>
+      <li>0.5× for low hero angles, 1× for most, 2–3× for talking and details.</li>
+      <li>Roll 1 s before the action, hold 1 s after. At least 5 s, 2–3 takes.</li>
+      <li>Keep sound on every clip. For lines: clip-on mic or phone 30 cm away, no wind.</li>
+      <li>Name clips by code if you can, like <b>A04-1</b>. If not, send everything.</li>
+    </ul>
+  </details>
+</header>
+
+<nav id="tabs" aria-label="Reels">
+  <button data-go="A" aria-pressed="true">A · Perth teaser</button>
+  <button data-go="B" aria-pressed="false">B · Talking</button>
+  <button data-go="C" aria-pressed="false">C · Cinematic</button>
+</nav>
+
+<section id="A">
+  <h2>A · "Perth. Are you ready?"</h2>
+  <p class="setup">Black-and-white teaser, fast cuts, giant text. Ends on the bell.</p>
+  <div class="shots" data-reel="A"></div>
+</section>
+
+<section id="B">
+  <h2>B · "Done properly"</h2>
+  <p class="setup">He talks to camera, with cutaways of the work. Captions are added in the edit.</p>
+  <div class="shots" data-reel="B"></div>
+  <div class="vo"><b>Voice-over lines</b>: record in a quiet parked car, phone 30 cm away, 3 takes each, slow and dry. Skip these and the AI voice is used.
+    <ol>
+      <li>Most places rush it.</li><li>Shiny today. Swirls tomorrow.</li><li>At Aureus, it's foam first,</li><li>machine polish,</li><li>then wax, by hand.</li>
+      <li>Every spoke.</li><li>By hand.</li><li>Steam for the leather.</li><li>Gold Detail. One ninety-nine. We come to you.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="C">
+  <h2>C · "The shine"</h2>
+  <p class="setup">No talking. Sun behind the car, low angles, slow or no camera moves.</p>
+  <div class="shots" data-reel="C"></div>
+</section>
+
+<button class="reset" id="reset" type="button">Untick all shots</button>
+<footer>Drop the clips into <b>Shoot/</b> in the Brand Launch Reels folder on the Mac. The edit is ready and waiting.</footer>
+</div>
+
+<script>
+const SHOTS = {
+  A: [
+    ["A01","Van parked kerbside, logo side to camera, slow push toward the logo",["1×","slow walk-in","6 s"]],
+    ["A02","Extreme close-up of the logo on the van panel, slow slide sideways",["2×","slide","4 s"]],
+    ["A03","Perth skyline (Kings Park lookout or South Perth foreshore), still",["1× or 2×","locked","6 s"]],
+    ["A04","Polisher spinning on the paint, tight, low side angle",["1×","still","5 s"]],
+    ["A05","Water beads on the bonnet after rinse, sun glinting through",["3×","still","5 s"]],
+    ["A06","Quick-detail pack, 2 s each: foam trigger squeeze, mitt into bucket, brush into a spoke, steam puff on a seat, towel fold, glove pulled on",["1–2×","close","6 × 2 s"]],
+    ["A07","Car hero, front three-quarter, low, slow walk-in",["0.5×","walk-in","6 s"]],
+    ["A08","Snow foam blanket covering the car, wide",["1×","still","6 s"]],
+    ["A09","Pressure rinse shot into the sun, spray lit up",["1×","still","6 s"]],
+    ["A10","He walks toward camera pushing the trolley, unsmiling glare",["1×","camera backs away","6 s"]],
+    ["A11","He taps the bell once (clean ding), then looks to camera",["1×","medium","3 takes"],"Perth. You ready?"],
+  ],
+  B: [
+    ["B01","In the driver's seat of the finished car, door open, he turns to camera",["2×","still"],"We come to you."],
+    ["B02","Swirl marks on a dirty panel caught in low sun",["3×","slow slide"]],
+    ["B03","Backlit rinse from a lower angle than A09",["1×"]],
+    ["B04","Close-up, cloth in hand, he glares at the paint, then at camera",["2×"],"Not here."],
+    ["B05","Wide walk-in with trolley, van and car behind. Keep the top third clear for the title",["1×"]],
+    ["B06","Foam sliding down a door, close",["2×"]],
+    ["B07","Machine polish on the bonnet, medium",["1×"]],
+    ["B08","Hand wax with an applicator pad, close",["2×"]],
+    ["B09","Brush between wheel spokes, extreme close-up",["3×"]],
+    ["B10","Kneeling at the wheel, wide",["1×"]],
+    ["B11","Steam on the leather seat, close",["2×"]],
+    ["B12","Bell tap, a different angle from A11",["2×"]],
+    ["B13","Standing beside the finished car, to camera, one small grin at the end",["2×","still"],"Done properly, or it's not done."],
+    ["B14","Finished car hero, slow walk around the front (end card sits over it)",["0.5×","walk","8 s"]],
+  ],
+  C: [
+    ["C01","Ultra-low front angle of the car, him snow-foaming behind",["0.5×","still","6 s"]],
+    ["C02","Sun flaring through the spray as he rinses",["0.5×","still","6 s"]],
+    ["C03","Kneeling, cleaning the wheel, low side angle",["1×","5 s"]],
+    ["C04","Wash mitt gliding over the bonnet, medium",["1×","5 s"]],
+    ["C05","Drying towel pulled across the bonnet",["1×","5 s"]],
+    ["C06","Door wipe with towel, medium, him in frame",["1×","5 s"]],
+    ["C07","Flash pack: 10 × 1 s grabs of any action, shot into the sun",["0.5–1×","10 × 1 s"]],
+    ["C08","Finished car alone, low front angle, still (closing shot)",["0.5×","locked","8 s"]],
+  ],
+};
+const KEY = "aureus-shoot-ticks";
+let ticks = {};
+try { ticks = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { ticks = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ticks)); } catch (e) {} };
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+for (const [reel, list] of Object.entries(SHOTS)) {
+  const box = document.querySelector(`.shots[data-reel="${reel}"]`);
+  box.innerHTML = list.map(([code, what, meta, line]) => `
+    <label class="shot" for="cb-${code}">
+      <input type="checkbox" id="cb-${code}" data-code="${code}">
+      <div style="min-width:0">
+        <div class="top"><span class="code">${code}</span><span class="what">${esc(what)}</span></div>
+        <div class="meta">${meta.map(m => `<span class="chip">${esc(m)}</span>`).join("")}</div>
+        ${line ? `<div class="line">He says on camera:<br><span class="say">“${esc(line)}”</span></div>` : ""}
+      </div>
+    </label>`).join("");
+}
+const all = [...document.querySelectorAll(".shot input")];
+function refresh() {
+  let n = 0;
+  for (const cb of all) { cb.checked = !!ticks[cb.dataset.code]; cb.closest(".shot").classList.toggle("done", cb.checked); n += cb.checked; }
+  document.getElementById("count").textContent = `${n} / ${all.length}`;
+  document.getElementById("fill").style.width = `${(100 * n) / all.length}%`;
+}
+all.forEach(cb => cb.addEventListener("change", () => { ticks[cb.dataset.code] = cb.checked; save(); refresh(); }));
+document.getElementById("reset").addEventListener("click", () => { ticks = {}; save(); refresh(); });
+const tabs = [...document.querySelectorAll("#tabs button")];
+tabs.forEach(b => b.addEventListener("click", () => document.getElementById(b.dataset.go).scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" })));
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) tabs.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.go === e.target.id))); }), { rootMargin: "-40% 0px -55% 0px" });
+document.querySelectorAll("section").forEach(s => io.observe(s));
+refresh();
+</script>

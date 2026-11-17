@@ -10,4 +10,4 @@ Finished 9:16 reels (1080×1920, -14 LUFS), sorted by category. Each comes in tw
 | Narrated Ad | Aureus-Ad-The-Shine-Comes-To-You | 32.6 s | The cinematic ad, final version (v6): standalone raw shots, he narrates every service in one voice, glass labels, offer card. Earlier versions v1-v5 stay in `08 Social Media/Launch Reels/ad/` |
 | Cinematic | Aureus-Reel-C-The-Shine | 13.6 s | No talking: flash-cut opener, beat cuts, teal/warm grade, rooftop car park with Perth skyline |
 
-Brand launch reels made 17 Nov 2026; Reel 1 and the narrated ad are the first Aureus videos (17 Nov 2026). Source shots, scripts and notes: `../Brand Launch Reels/`.
+Brand launch reels made 17 Nov 2026; Reel 1 and the narrated ad are the first Aureus videos (17 Nov 2026). Shots, scripts, audio and notes: `../Assets/` (see its README).
