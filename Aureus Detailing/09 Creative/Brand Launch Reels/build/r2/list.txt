@@ -11,3 +11,4 @@ file '/Users/mdarfanuzzaman/Documents/Monsoor Motors/Aureus Detailing/09 Creativ
 file '/Users/mdarfanuzzaman/Documents/Monsoor Motors/Aureus Detailing/09 Creative/Brand Launch Reels/build/r2/seg10.mp4'
 file '/Users/mdarfanuzzaman/Documents/Monsoor Motors/Aureus Detailing/09 Creative/Brand Launch Reels/build/r2/seg11.mp4'
 file '/Users/mdarfanuzzaman/Documents/Monsoor Motors/Aureus Detailing/09 Creative/Brand Launch Reels/build/r2/seg12.mp4'
+file '/Users/mdarfanuzzaman/Documents/Monsoor Motors/Aureus Detailing/09 Creative/Brand Launch Reels/build/r2/seg13.mp4'
