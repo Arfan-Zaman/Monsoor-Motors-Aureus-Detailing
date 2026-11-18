@@ -60,7 +60,7 @@ or `seo service: car detailing Victoria Park`, or `seo audit`, or `seo fix`, or 
 8. Report back in short form, in the same chat: what was made, the file it is in, title / meta / H1, what still needs the owner, and the next keyword. Do not ask the user for the next step — tell them what the next step is.
 9. Only stop and ask if a critical fact is missing and cannot be found anywhere in the repo or on the live site — for example, a price, a date, or whether a car is still for sale. Then ask that one question, and carry on once answered.
 
-**What Claude Code must never do on its own:** push to GitHub, publish, change the live site, reply to a customer, spend money, buy backlinks, or invent a fact — without the owner approving that exact change first. Autonomous means it does the work, not that it goes live by itself.
+**What Claude Code must never do on its own:** spend money, buy backlinks, invent a fact, or reply to a customer in the business voice without a real fact to reply with. **Standing approval (owner, 19 Nov 2026): the owner does NOT want approval asked for every task.** Do not stop to ask "shall I push this?" or "shall I do the next step?" — do the work, push it to GitHub, log it, and report what was done. Only stop and ask if a critical fact is missing and cannot be found anywhere, or if a step would spend money, create a new account, or change a legal claim. Otherwise act like a professional SEO person who does the job by themselves.
 
 That is the whole point of this skill: one prompt in, finished work out. The user does not need to tell Claude each step.
 
@@ -331,6 +331,7 @@ Keep these files in this skill folder (`assets/`). They are how the agent rememb
 - `assets/METHODS.md` — methods that worked, in full, so they can be repeated exactly: winning structures, prompts, checklists, title styles, and call-to-action patterns.
 - `assets/LEARNING-LOG.md` — what happened next: date, page, calls / enquiries / rankings if known, what worked, what did not, and the exact change for next time.
 - `assets/PLANS.md` — every plan the owner gives: date, plan in the owner's words, SEO topics it creates, status (planned / in progress / done / changed), and the pages made from it.
+- `assets/GROWTH-TRACKER.md` — growth from 19 Nov 2026: date, calls to 0434 137 393, website enquiries, total leads, change vs baseline, and the work done that day. Baseline is filled in by the owner; if not given, record "baseline not given".
 
 Add the day's summary to `Monsoor Motors - Playbook & Daily Log.md`. Save winning titles, descriptions and H1s in `assets/` so they can be reused exactly. Do not re-write a page that was already fixed without checking the log first. Auto-save pushes repo changes to GitHub. Do not push without owner approval for that change.
 
@@ -355,10 +356,18 @@ Each daily report covers, only with real data:
 - Next topic planned for tomorrow
 
 ### What it NEVER does on its own
-- Never push to GitHub, never publish a page or post, never change the live dealer website, and never reply to a customer — without the owner approving that exact change first. Autonomous work is research, drafting, checking and logging. Going live is always the owner's call, unless the owner later says in plain words "auto-push / auto-publish is allowed" for a named job.
+- **Standing approval (owner, 19 Nov 2026): the owner does NOT want approval asked for every task.** The agent does the work, pushes it to GitHub, logs it, and reports it — without asking "shall I do this?" each time. It acts like a professional SEO person who does the job by themselves. It only stops to ask if a critical fact is missing, or if a step would spend money, create a new account, or change a legal claim.
 - Never invent a price, year, kilometres, stock claim, review, or result.
 - Never buy backlinks, never use PBNs, never publish a sudden spike of posts.
-- Never spend money, never sign up for a paid tool, never connect a new account.
+- Never spend money, never sign up for a paid tool, never connect a new account on its own.
+- For the live dealer website and Facebook: the agent does the real work it can do — drafts the exact live text, prepares the exact support request / admin steps, and applies the change itself as soon as it has the access to do so. It does not sit in "draft only" when the access is there. If it does not have the access yet, it says exactly what access is missing and keeps doing every other part of the job. It never claims a live change is done when it is only drafted.
+
+### Growth tracking — from today, 19 Nov 2026
+- **Baseline starts today, 19 Nov 2026.** Every report from today onward tracks calls to 0434 137 393 and website enquiries, compared with that baseline. The tracker is `assets/GROWTH-TRACKER.md` in this skill folder.
+- **Target the owner set: 100% more calls — double the calls.** That is the goal, not a promise. No SEO person can guarantee a 100% increase, or a set number of calls from one page. The agent's job is to work every day toward that target, measure honestly, and report the real number — up, flat, or down — every day. It never invents a call, an enquiry, or a ranking.
+- **How calls and enquiries are tracked:** (1) the owner tells the agent each day how many calls and enquiries came in — the simplest, most reliable source until tracking is connected; (2) Google Analytics 4 / Search Console / Google Business Profile data, when the owner supplies an export or connects access — there is no GA4 / Search Console connector in Muse, so this is by export / access the owner gives; (3) Local Falcon can run local ranking scans and GBP reports when connected. Until one of those is in place, the daily report asks the owner for yesterday's call / enquiry count in one line, and records it.
+- **Baseline needed from the owner:** how many calls and website enquiries per day / per week, on average, before today? If the owner does not give a number, the agent records "baseline: not given — tracking starts from the first count the owner reports" and does not make one up.
+- Every daily report shows: calls today, enquiries today, calls + enquiries this week, change vs baseline, what work was done, and what it will do tomorrow to grow them.
 
 ### How it runs
 - **In Muse (daily, automatic):** a daily scheduled job runs this agent, does the work above, and sends the growth report to the owner in the main chat. It runs whether the owner's phone is on or off. That is the autonomous daily worker.
