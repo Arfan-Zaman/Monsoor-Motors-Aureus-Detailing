@@ -41,3 +41,23 @@ Keep it short. Detailed facts live in the playbook (below), so Claude doesn't re
 - Load the **`aureus-video-studio`** skill before any Higgsfield work. It picks the right prompt pack, keeps characters, cars and brand consistent (reference elements, Soul ID), and logs every generation in `.claude/skills/aureus-video-studio/assets/`.
 - Installed prompt packs: `higgsfield-prompt-suite`, `hf-*`, `hf-video-*`, `ugc-factory` (sources and licences in `aureus-video-studio/SOURCES.md`).
 - Lint every Seedance prompt with `higgsfield-prompt-suite/scripts/seedance_lint.py` before spending credits.
+
+## Video editing — make it look human, not AI (set 18 Nov 2026)
+
+Goal: a viewer should feel a person edited this, not a generator. Apply to Higgsfield/Kling generations, edits in `Launch Reels/ad/make_ad_v6.py` / ffmpeg, and the Launch Reels and Car wash reel projects. Log edits in `aureus-video-studio/assets/GENERATION-LOG.md`.
+
+**This relaxes the 17 Nov rule.** The one-take rule in `aureus-video-studio` §8 ("no grade, no grain, no zooms, no flashes") is superseded: subtle, natural editing is now allowed, no heavy effects. Never retime a shot, never change a real car's colour, condition or features, and never add fake testimonials, fake results or copied music. Blur plates. Label AI content where Instagram, TikTok or Facebook require it.
+
+**AI tells to reject on sight:** too-smooth, floaty motion with no camera breathing or reframing; perfect, unchanging light, waxy paint and plastic-looking skin; hands, tools or badges that morph between cuts; every shot the same length (for example, every shot exactly 3 s) or the same shot repeated; dead silence, or an over-polished voiceover with no room sound.
+
+**Edit like a human**
+- Cut on movement — a wipe, a spray, a door closing, a head turn — not in a still pose.
+- Vary shot lengths: mix 1–2 s detail shots with 3–5 s hero shots. Never let the rhythm go metronomic.
+- Keep it 9:16, 1080×1920, faces and text in the centre safe area (avoid top 250 px and bottom 400 px).
+- Subtle handheld feel only: a tiny reframe or slow push-in, never a zoom punch or flash cut.
+- Keep small imperfections a real shoot would have — spray mist, a moving shadow, an uneven pan.
+- Colour: light, natural work only. Match white balance and exposure between shots. No heavy grade, no grain filter.
+- Sound: natural room tone under everything. Real close-mic ASMR for the work; his voice only, cloned from `ad/audio/v4/persona-voice-ref.wav`; music about 13 dB under.
+- Pace for reels: hook in the first 2–3 s (the detailer to camera, or the dirtiest before-shot). Offer on screen in the first 3 s for paid ads; 30 s paid, longer cut for organic.
+
+**Brand stays the same:** Aureus navy #071A33, aqua #00A8A8, hot pink #FF4D8D (≤10%), Montserrat, chrome A logo; Monsoor navy #0F2747, orange #FF5F15 accent only. End card: logo, phone 0434 137 393, handle @aureusdetailing.com.au. Frosted-glass labels, warm white text, watermark top left at about 55%.
