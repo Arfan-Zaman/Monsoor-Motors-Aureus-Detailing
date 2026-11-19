@@ -31,5 +31,10 @@ first=$(git diff --cached --name-only | head -3 | sed 's#.*/##' | paste -sd ', '
 git commit -q -m "Auto-save: $n file(s) – $first" -m "Saved automatically after a Claude Code step on $(date '+%Y-%m-%d %H:%M')." || exit 0
 
 # Push in the background so Claude isn't slowed down; log any failure.
-( git push -q >/dev/null 2>"$HOME/.claude/monsoor-autosave-push.log" || true ) &!
+# New worktree branches have no upstream yet, so set one on first push.
+if git rev-parse --abbrev-ref '@{u}' >/dev/null 2>&1; then
+  ( git push -q >/dev/null 2>"$HOME/.claude/monsoor-autosave-push.log" || true ) &!
+else
+  ( git push -q -u origin HEAD >/dev/null 2>"$HOME/.claude/monsoor-autosave-push.log" || true ) &!
+fi
 exit 0
