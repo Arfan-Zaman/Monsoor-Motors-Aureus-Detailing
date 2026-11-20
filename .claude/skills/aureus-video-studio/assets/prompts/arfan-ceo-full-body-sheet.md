@@ -32,3 +32,13 @@ FACE IS THE PRIORITY. Reproduce his real face exactly as it is in the photos, a 
 
 Lesson: in v2 the shirt collar drifted to a button-down. Next time add "soft spread point collar, no collar buttons, exactly as the shirt element".
 
+## v3 (21 Nov 2026): edit of v2 to fix the long neck. This worked well: editing an approved sheet keeps the face and changes only what is listed.
+
+First image reference: the sheet to edit (v2 job `26e6c1c6`), then face front, smile, three-quarter, profile. Prompt opens with "Edit the first attached reference image ... Recreate the same sheet ... Make only these corrections, in every panel:" then:
+
+1. NECK: his neck is too long in the reference sheet. Give him a natural, balanced, average-length neck as in his own photos: shorter and slightly thicker, the head sitting lower and closer to the shoulders, the beard reaching down close to the collar line, the shoulders slightly higher and naturally sloped. Head, neck and shoulders in normal real proportion, nothing stretched.
+2. SHIRT COLLAR: a soft plain point collar with NO collar buttons, exactly as the shirt element; top two buttons open, collar sitting close around the neck; one chest pocket; tucked in. Not a button-down collar, not a band collar.
+3. BUILD: ordinary natural build of a man in his early thirties, about 175 cm, not bulky, not broad-shouldered.
+
+Then the v2 face block and the outfit element lines as above.
+

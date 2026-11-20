@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan (CEO) full-body sheet v3 (neck balanced)
+
+**What I did**
+- Arfan said the neck looked long. Made v3 as an edit of v2: balanced neck, plain point collar, natural build, same face (2.75 credits; 8.25 of the 10 allowed used).
+
+**Files changed**
+- `Brand Kit/Characters/Arfan-CEO/Arfan-CEO-Full-Body-Sheet-v3.png`
+- `.claude/skills/aureus-video-studio/assets/prompts/arfan-ceo-full-body-sheet.md`, `ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to approve v3 as the master full-body sheet. 1.75 credits left in this budget, not enough for another 2K run.
+
+---
+
 ## 21 Nov 2026: Arfan (CEO) full-body sheet v2 (face fix)
 
 **What I did**
