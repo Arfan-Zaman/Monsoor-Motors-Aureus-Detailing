@@ -13,3 +13,12 @@ Top row, five head-and-shoulders portraits at the same scale, eye level: (1) str
 Bottom row, four panels: (6) front view with his natural warm smile as in the smiling photo; (7) front view with head tilted slightly up; (8) close-up of the back of his right hand and wrist, fingers relaxed and spread, with the silver band on the ring finger; (9) close-up of the back of his left hand and wrist, fingers relaxed and spread, no ring. Hands exactly as photographed: same proportions, skin tone, knuckles, nails and forearm hair, five fingers each.
 
 He wears the same garment as in the photos in every face panel: a black band-collar shirt with a dark burgundy inner placket and small metal press studs, top studs open. Real photography look, natural skin texture with visible pores, no retouching. No text, no labels, no logos, no watermark, no other people.
+
+## v3 additions (21 Nov 2026): owner said eyes and eyebrows looked fake. Insert these two blocks after the identity paragraph. This is the version to reuse.
+
+Eyes and eyebrows must look completely real, as in an unretouched studio photograph: his own eye shape and eyelids copied from the photos, eyes relaxed and naturally open, looking calmly at the lens in the front views, dark brown irises with real iris texture, moist natural sclera with faint veins, small soft catchlights from the softbox, real lower lashes and soft natural under-eye skin. Eyebrows are his own natural brows made of individual fine hairs, slightly uneven and sparse at the edges, with skin visible between hairs. No drawn, filled, darkened, sharpened or symmetrical brows, no eyeliner, no makeup, no glassy or painted eyes, no squint, no frown.
+
+Lighting: a real professional portrait studio setup, the same in every panel. One large softbox key light at 45 degrees camera-left, slightly above eye level; a white reflector fill on the right; a subtle hair light from behind; soft natural shadow under the jaw and beside the nose, gentle light falloff on the backdrop. Shot on a full-frame camera with an 85mm portrait lens at f/5.6, accurate natural skin colour, true-to-life contrast.
+
+Hand panels in v3 also say: right hand thumb on the left side of the panel, left hand thumb on the right side, fingers pointing down. This fixed the left hand.
+

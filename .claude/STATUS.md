@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan (CEO) character sheet v3 (eyes and lighting fixed)
+
+**What I did**
+- Arfan said the eyes and eyebrows looked fake. Made v3 with natural eyes and brows and a real studio lighting setup (2.75 credits). Profiles and both hands are now correct too.
+
+**Files changed**
+- `Brand Kit/Characters/Arfan-CEO/Arfan-CEO-Character-Sheet-v3.png`
+- `.claude/skills/aureus-video-studio/assets/prompts/arfan-ceo-character-sheet.md`, `ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to approve v3. Then save it as a Higgsfield reference element for future videos.
+
+---
+
 ## 21 Nov 2026: Arfan (CEO) character sheet made
 
 **What I did**
