@@ -4,6 +4,22 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan (CEO) character sheet, first try
+
+**What I did**
+- Uploaded Arfan's 14 reference photos (10 face angles, 4 hand shots) to Higgsfield and saved copies in the Brand Kit.
+- Made 2 sheets with Soul 2.0 (under 1 credit). Both rejected: no panels, no grey background, face changed in one.
+
+**Files changed**
+- `Brand Kit/Characters/Arfan-CEO/source/` (14 photos)
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to choose: GPT Image 2.6 with all 14 photos (about 5.5 credits for 2 versions at 2K), or train a Soul ID first.
+
+---
+
 ## 20 Nov 2026: rule merged into main
 
 **What I did**
