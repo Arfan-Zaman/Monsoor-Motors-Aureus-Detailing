@@ -1,33 +1,38 @@
-# Monsoor Motors: "Meet our new CEO" intro video (plan, version 2: two shots)
+# Monsoor Motors: "Meet our new CEO" intro video (plan, version 3)
 
-Status: 3D blocking done in Blender, 21 Nov 2026. No Higgsfield video generated yet, no credits spent on this video.
+Status: 3D blocking v3 rendered in Blender, 21 Nov 2026. No Higgsfield video generated yet, no credits spent on this video.
 
 ## The video
-- Format: 9:16 vertical, 1080x1920, 27 seconds, two shots. Reels, TikTok, Facebook.
-- Aim: announce Arfan as CEO and promise a properly run Japanese hybrid import process.
-- Place: the Monsoor Motors yard, 530 Albany Highway, Victoria Park. A Toyota C-HR sits side-on behind both men, the MONSOOR MOTORS sign above.
-- Both men are in frame in both shots (a two-shot throughout).
+- Format: 9:16 vertical, 1080x1920, 32 seconds, two shots. Reels, TikTok, Facebook.
+- Aim: announce Arfan as CEO and build trust in the whole business: every kind of car, and Japanese imported hybrids in particular.
+- Nobody walks. Arfan stays on his mark and the camera travels to his side.
+- Set: showroom glass front with the MONSOOR MOTORS sign, hero Toyota C-HR on a navy plinth behind the two men, stock cars in the bays, feather banners, planters and bollards.
 
-## Shot list
+## Shot list and script
 
 | Shot | Time | Camera | Action | Words |
 |---|---|---|---|---|
-| 1 | 0 to 11 s | 35 mm, eye level (1.5 m), wide two-shot, slow push-in from 4.2 m to 3.5 m | Monsoor and Arfan side by side, turned slightly toward each other. At 4.5 s Monsoor presents Arfan with an open hand. At 9 s Arfan turns to the lens and starts to step forward. Cut on the step | Monsoor: "I'm Monsoor, founder of Monsoor Motors. Meet Arfan, our new CEO." |
-| 2 | 11 to 27 s | 50 mm, starts 1 m to the right, small arc left and push-in to a medium shot | Arfan walks 1.4 m forward into the frame; Monsoor eases back half a step and watches him. Open hands on the promise (16 to 20 s). Points back to the C-HR (23 to 26 s). End card over the last 2 s | Arfan: "Thanks, Monsoor. I'm Arfan. My job: every Japanese hybrid we import is chosen, checked and delivered the right way. Come and see for yourself." |
+| 1 | 0 to 9 s | 35 mm, eye level (1.5 m), wide two-shot, slow push-in from 3.75 m to 3.15 m | Monsoor and Arfan side by side, sign above, C-HR behind. Monsoor puts a hand on his heart on "trust", then presents Arfan with an open hand. Cut as Arfan turns to the lens | Monsoor: "I built Monsoor Motors on one thing: trust. Now meet the man who will carry it forward. Arfan, our new CEO." |
+| 2 | 9 to 32 s | 50 mm. Starts as a tighter two-shot, trucks right to Arfan's side (12 to 17 s), creeps in, then pushes in and drops a little below eye level for the last line | Arfan squares up to the lens and follows the camera with his body. Monsoor leaves frame as the camera travels. Arfan sweeps a hand to the cars, palms down on "no surprises", points at the lens on "YOU", opens both arms on "WE" | Arfan: "Thank you, Monsoor. Buying a car is a big decision. So here is my promise. Every car on this yard, from family runabouts to Japanese imported hybrids, is hand-picked, properly checked and honestly priced. No surprises. No pressure. You choose the car. We bring it to your home." |
 
-End card: Monsoor logo, 530 Albany Highway Victoria Park, 0434 137 393, MD32748.
+Delivery note: the last two sentences are said with full energy, a beat of silence before "You choose the car".
+End card (last second): Monsoor Motors, 530 Albany Highway Victoria Park, 0434 137 393, MV Dealer Licence MD32748.
 
 ## Previs files (folder `previs/`)
-- `CEO-Intro-Previs.mp4`: the full 27 s video rendered in 3D in Blender with shot notes and script on screen (stays on this Mac, videos are not in git).
-- `CEO-Intro-Storyboard.png`: six key moments.
-- `CEO-Intro-Floorplan.png`: top view with people, car and both camera paths.
-- `CEO-Intro-Previs.blend`: the Blender scene. `previs_scene.py` builds and renders it; `previs_post.py` adds the labels and makes the storyboard and floor plan.
+- `CEO-Intro-Previs.mp4`: the full 32 s video rendered in 3D in Blender (EEVEE) with shot notes and script on screen. Stays on this Mac; videos are not in git.
+- `CEO-Intro-Storyboard.png`: eight key moments.
+- `CEO-Intro-Floorplan.png`: top view with people, cars and both camera paths.
+- `CEO-Intro-Previs.blend`: the Blender scene. `previs_scene.py` builds and renders it; `previs_post.py` adds labels and makes the storyboard and floor plan.
 - To re-render: `blender -b -P previs_scene.py -- <frames_dir> <file.blend>` then `python previs_post.py <frames_dir> .`
 
+## Characters (Higgsfield project Monsoor Motors)
+- Arfan: element `Arfan-CEO-Master` (full-body sheet v2 + face sheet v3).
+- Monsoor: element `MA-Monsor-Owner-v2` (three-panel full-body sheet, approved 20 Nov 2026).
+
 ## Workflow from here
-1. You approve the blocking and script (or ask for changes; a re-render is free).
-2. You provide: founder's photos and written OK, real C-HR photos, a 30 s voice sample from each of you.
-3. Build references: founder character sheet and element, C-HR element, yard background.
+1. You approve the blocking and script (changes are a free re-render).
+2. You provide: real C-HR photos, a 30 s voice sample from each of you, and confirmation that Monsoor agrees to appear.
+3. Build the C-HR element and the yard background.
 4. Keyframe stills: start frame of each shot, matched to the previs framing. You approve before any video.
 5. Generate the two video shots from the stills, following the previs moves.
 6. Voice and sound: both real voices cloned from your samples, yard room tone, quiet music.
@@ -36,11 +41,9 @@ End card: Monsoor logo, 530 Albany Highway Victoria Park, 0434 137 393, MD32748.
 9. Publish.
 
 ## Rules that apply
-- Founder's likeness needs his own photos and his written OK first.
-- The C-HR must be a real stock car shown as it is (colour, condition, features), plates blurred. If no C-HR is in stock, it must be labelled as an illustration.
-- "Chosen, checked and delivered the right way" must describe what the business really does.
+- "Hand-picked, properly checked and honestly priced" and "we bring it to your home" must describe what the business really does. If home delivery has limits (area, fee), say so on screen or in the caption.
+- The C-HR must be a real stock car shown as it is, plates blurred. If none is in stock, label it as an illustration.
 - Label the video as AI-generated where the platforms ask.
-- Existing assets: element `Arfan-CEO-Master`, face sheet v3, full-body sheet v2, outfit elements (see asset register).
 
 ## Cost
-Blender previs: free. Higgsfield part not priced yet; fewer shots than version 1, so a rough guess is 50 to 90 credits. Exact prices will be checked before each paid step.
+Blender previs: free. Higgsfield part not priced yet; rough guess 50 to 90 credits. Exact prices will be checked before each paid step.

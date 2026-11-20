@@ -4,6 +4,23 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: CEO intro previs v3 and both characters filed in Monsoor Motors project
+
+**What I did**
+- Reworked the intro: Arfan stays on his mark and the camera travels to his side; stronger trust script ending "You choose the car. We bring it to your home."; richer 3D set (showroom, hero C-HR on plinth, stock cars, banners). Rendered the full 32 s video in Blender (EEVEE). Free.
+- Filed Monsoor's approved full-body sheet (element `MA-Monsor-Owner-v2`) in the Higgsfield project Monsoor Motors, next to Arfan's master sheets (element `Arfan-CEO-Master`).
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/PLAN.md` (version 3)
+- `Ready Posts/2026-11-21-ceo-intro-video/previs/` (scripts, .blend, storyboard, floor plan; the .mp4 stays local)
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to approve blocking and script, then send real C-HR photos and two voice samples, and confirm home delivery terms.
+
+---
+
 ## 21 Nov 2026: CEO intro video 3D previs (two shots) and master element
 
 **What I did**
