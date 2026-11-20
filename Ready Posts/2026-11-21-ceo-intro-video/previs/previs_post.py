@@ -35,8 +35,8 @@ SHOTS = [
 BEATS = [  # (first frame, last frame, speaker, line, camera or action note)
     (1, 120, "MONSOOR", "I built Monsoor Motors on one thing: trust.", "Hand on heart. Slow push-in."),
     (121, 216, "MONSOOR", "Now meet the man who will carry it forward. Arfan, our new CEO.", "Presents Arfan with an open hand. Cut as Arfan turns to the lens."),
-    (217, 290, "ARFAN", "Thank you, Monsoor.", "Tighter two-shot. Arfan squares up to the lens."),
-    (291, 400, "ARFAN", "Buying a car is a big decision. So here is my promise.", "Camera trucks right to Arfan's side. Monsoor leaves frame."),
+    (217, 300, "ARFAN", "Thank you for the opportunity. Hello, this is Arfan.", "Tighter two-shot. A nod to Monsoor, then he squares up to the lens."),
+    (301, 400, "ARFAN", "Buying a car is a big decision. So here is my promise.", "Camera trucks right to Arfan's side. Monsoor leaves frame."),
     (401, 560, "ARFAN", "Every car on this yard, from family runabouts to Japanese imported hybrids, is hand-picked, properly checked and honestly priced.", "Arfan alone, C-HR behind. He sweeps a hand to the cars."),
     (561, 655, "ARFAN", "No surprises. No pressure.", "Both palms down, calm and firm. Camera creeps in."),
     (656, 700, "ARFAN  (full energy)", "YOU choose the car.", "Points straight at the lens. Push-in starts."),

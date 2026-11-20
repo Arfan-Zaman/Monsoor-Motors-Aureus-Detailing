@@ -13,7 +13,7 @@ Status: 3D blocking v3 rendered in Blender, 21 Nov 2026. No Higgsfield video gen
 | Shot | Time | Camera | Action | Words |
 |---|---|---|---|---|
 | 1 | 0 to 9 s | 35 mm, eye level (1.5 m), wide two-shot, slow push-in from 3.75 m to 3.15 m | Monsoor and Arfan side by side, sign above, C-HR behind. Monsoor puts a hand on his heart on "trust", then presents Arfan with an open hand. Cut as Arfan turns to the lens | Monsoor: "I built Monsoor Motors on one thing: trust. Now meet the man who will carry it forward. Arfan, our new CEO." |
-| 2 | 9 to 32 s | 50 mm. Starts as a tighter two-shot, trucks right to Arfan's side (12 to 17 s), creeps in, then pushes in and drops a little below eye level for the last line | Arfan squares up to the lens and follows the camera with his body. Monsoor leaves frame as the camera travels. Arfan sweeps a hand to the cars, palms down on "no surprises", points at the lens on "YOU", opens both arms on "WE" | Arfan: "Thank you, Monsoor. Buying a car is a big decision. So here is my promise. Every car on this yard, from family runabouts to Japanese imported hybrids, is hand-picked, properly checked and honestly priced. No surprises. No pressure. You choose the car. We bring it to your home." |
+| 2 | 9 to 32 s | 50 mm. Starts as a tighter two-shot, trucks right to Arfan's side (12 to 17 s), creeps in, then pushes in and drops a little below eye level for the last line | Arfan squares up to the lens and follows the camera with his body. Monsoor leaves frame as the camera travels. Arfan sweeps a hand to the cars, palms down on "no surprises", points at the lens on "YOU", opens both arms on "WE" | Arfan: "Thank you for the opportunity. Hello, this is Arfan. Buying a car is a big decision. So here is my promise. Every car on this yard, from family runabouts to Japanese imported hybrids, is hand-picked, properly checked and honestly priced. No surprises. No pressure. You choose the car. We bring it to your home." |
 
 Delivery note: the last two sentences are said with full energy, a beat of silence before "You choose the car".
 End card (last second): Monsoor Motors, 530 Albany Highway Victoria Park, 0434 137 393, MV Dealer Licence MD32748.
@@ -28,6 +28,11 @@ End card (last second): Monsoor Motors, 530 Albany Highway Victoria Park, 0434 1
 ## Characters (Higgsfield project Monsoor Motors)
 - Arfan: element `Arfan-CEO-Master` (full-body sheet v2 + face sheet v3).
 - Monsoor: element `MA-Monsor-Owner-v2` (three-panel full-body sheet, approved 20 Nov 2026).
+- Car: element `Monsoor-CHR-Hybrid-Black` (real photo of the black Toyota C-HR Hybrid; photos in `Cars/Toyota C-HR Hybrid (black)/`).
+
+## Voices
+- Arfan: his own voice, cloned from a recording of `voice/Arfan-voice-sample-lines.md` (Higgsfield voice name `Arfan-CEO`).
+- Monsoor: his own voice from his existing reference recording (file to be confirmed).
 
 ## Workflow from here
 1. You approve the blocking and script (changes are a free re-render).

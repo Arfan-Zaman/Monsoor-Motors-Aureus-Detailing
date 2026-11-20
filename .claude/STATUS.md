@@ -4,6 +4,24 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: C-HR element sheet, script opening, voice sample lines
+
+**What I did**
+- Made a 2K six-view grey studio sheet of the real black Toyota C-HR Hybrid (2.75 credits) and saved it as the element `Monsoor-CHR-Hybrid-Black-Sheet` in the Higgsfield project Monsoor Motors.
+- Changed Arfan's opening line to "Thank you for the opportunity. Hello, this is Arfan." in the plan and the previs labels.
+- Wrote seven short sample lines for Arfan to read for his voice clone.
+
+**Files changed**
+- `Cars/Toyota C-HR Hybrid (black)/` (photos and sheet)
+- `Ready Posts/2026-11-21-ceo-intro-video/PLAN.md`, `voice/Arfan-voice-sample-lines.md`, `previs/previs_post.py`, storyboard
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan records the sample lines; then create his Higgsfield voice. Confirm which recording is Monsoor's real voice (the files on record are the AI "master detailer" voice).
+
+---
+
 ## 21 Nov 2026: CEO intro previs v3 and both characters filed in Monsoor Motors project
 
 **What I did**
