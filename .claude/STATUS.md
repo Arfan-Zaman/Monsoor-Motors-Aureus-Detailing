@@ -4,6 +4,23 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan (CEO) full-body sheet and reference elements
+
+**What I did**
+- Saved Arfan's sheet v3 as the Higgsfield character element `Arfan-CEO`.
+- Found real product photos (black linen shirt, coffee gurkha trousers, black Chelsea boot, Seiko SRPD55) and saved each as a reference element.
+- Made the full-body sheet at 2K with sculpted studio lighting using those elements: 2.75 credits of the 10 allowed.
+
+**Files changed**
+- `Brand Kit/Characters/Arfan-CEO/Arfan-CEO-Full-Body-Sheet-v1.png`
+- `.claude/skills/aureus-video-studio/assets/prompts/arfan-ceo-full-body-sheet.md`, `ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to approve. Optional second run (2.75 credits) to make the face fuller and the expression calmer, closer to his photos.
+
+---
+
 ## 21 Nov 2026: Arfan (CEO) character sheet v3 (eyes and lighting fixed)
 
 **What I did**
