@@ -4,6 +4,19 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: ICM Japan reel caption
+
+**What I did**
+- Wrote the post caption from the owner's line (improved wording, contact details, hashtags).
+
+**Files changed**
+- `Ready Posts/2026-11-20-icm-japan-visit/README.md` (Caption section), this file.
+
+**What's next**
+- Owner posts the reel with the caption once the voice and name spelling are approved.
+
+---
+
 ## 21 Nov 2026: ICM Japan reel v2 (owner's fixes)
 
 **What I did**

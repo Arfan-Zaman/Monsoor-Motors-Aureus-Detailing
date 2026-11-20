@@ -24,3 +24,17 @@
 - The roll-up banner prints the licence as **MD322748**; the playbook says **MD32748**. One of them is wrong: check before reprinting.
 
 **Cost:** 33 credits (16.25 + 13 + 3.75 for the room tone, no longer used). v2 edit: 0 credits.
+
+## Caption
+
+We were delighted to welcome Mr. Trimoty from ICM Japan to our office at Monsoor Motors. 🇯🇵🤝🇦🇺
+
+We had productive discussions on bringing quality Japanese cars to Perth, and we look forward to building on them.
+
+Looking for a car from Japan? Tell us what you want, and we'll source it, import it, or help you find one locally. Pre-orders are now open.
+
+📞 0434 137 393
+📍 530 Albany Highway, Victoria Park WA
+🌐 monsoormotors.com.au
+
+#MonsoorMotors #ICMJapan #JapaneseCars #JapaneseImports #CarImport #PerthCars #VictoriaPark #Perth
