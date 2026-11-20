@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan voice take 8
+
+**What I did**
+- Arfan liked take 7's accent and asked for it closer to his own voice and very slightly husky. Made take 8 (natural pitch, slight husky cue, same accent and script). Filed in the project's Voices folder.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/voice/Arfan-script-voice-8.*`
+- `.claude/skills/aureus-video-studio/assets/GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to say whether take 8 replaces locked take 7. Then the test still.
+
+---
+
 ## 21 Nov 2026: voice locked, project organised, realism workflow adopted
 
 **What I did**
