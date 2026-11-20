@@ -142,3 +142,8 @@ Odometers: our C-HR 45,000 km (real); every other car a random, believable readi
 - Voice: his real cloned voice only; warm, low, unhurried.
 - Delivery car: our black C-HR (no white C-HR exists).
 - New shot: Monsoor arrives at the yard in a badge-less black luxury muscle car (the only loud engine in the ad).
+
+## 10. Arfan scene outfit for this ad (21 Nov 2026, Arfan's request; replaces black-linen look in THIS ad only)
+- Element `Arfan-Outfit-CrimeDrama` `10f68c0b-8ac3-4cea-8da7-62c55afbdb59` + face `Arfan-CEO-Final` `cde963a1-6dce-441f-b16d-fd74bad0f52e`.
+- Black matte camp-collar shirt, thin silver chain, sand linen blazer open, coffee gurkha trousers, black Chelsea boots, Seiko olive dial (left), silver ring (right), Ray-Ban Meta: clear at night, green by day.
+- Pairing logic: Monsoor = navy + gold (the boss); Arfan = black/sand + silver (the right-hand man). Never the same colour block in a two-shot.
