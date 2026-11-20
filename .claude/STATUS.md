@@ -4,6 +4,23 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan's final character element and personality
+
+**What I did**
+- Made a 2K close-headshot sheet from the master full-body sheet (2.75 credits) and created the final character element `Arfan-CEO-Final` (headshots + full-body v2 + portrait crop). Its description is his personality, speech, body language, locked voice and outfit.
+- Removed the older versions of Arfan from the Higgsfield project and moved the old local sheets to `Old versions (do not use)/`.
+- Wrote `Brand Kit/Characters/Arfan-CEO/PERSONA.md` (public-safe). Saved his full background to local memory only.
+
+**Files changed**
+- `Brand Kit/Characters/Arfan-CEO/` (headshots, crop, PERSONA.md, old versions folder)
+- `.claude/skills/aureus-video-studio/SKILL.md`, `assets/ASSET-REGISTER.md`, `assets/GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to delete the old elements `Arfan-CEO` and `Arfan-CEO-Master` in the Higgsfield web app. Then the shot 1 draft (27 credits).
+
+---
+
 ## 21 Nov 2026: voice version 10 locked
 
 **What I did**
