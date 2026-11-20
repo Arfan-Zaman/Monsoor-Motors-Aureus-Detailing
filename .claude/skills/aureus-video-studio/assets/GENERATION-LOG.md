@@ -59,3 +59,11 @@ One line per Higgsfield generation. Reuse the prompt, seed and references of kee
 **Ad v4 (17 Nov 2026): 0 credits.** Owner rejected the connected one-take look; v4 is a cut edit from existing shots (`ad/make_ad_v4.py`). Links L1-L7, LC, LD are unused; LA, LB and L8 are used only for their clean opening seconds.
 
 **Ad v5 (17 Nov 2026): about 8 credits**, all voice lines (`seed_audio`, cloned from `ad/audio/v4/persona-voice-ref.wav`): four short lines not used, the seven-part full script recorded twice (first wording was unclear), closing line recorded three times. Picture uses only existing shots (`ad/make_ad_v5.py`). Lesson: check every download decodes fully (`i1.mp4` and `w2.mp4` were truncated) and never submit more than 6 jobs at once.
+
+**ICM Japan visit announcement reel (20 Nov 2026): 33 credits** (balance 3000 → 2967). Monsoor Motors, not the Aureus project. Edit: `Ready Posts/2026-11-20-icm-japan-visit/make_reel.py`.
+
+| Date | Project | Model | Prompt file | Seed | References used | Credits | Result link | Keep? Why |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | ICM Japan visit: handshake hook (5 s) | kling4_0 i2v 1080p 9:16 | Ready Posts/2026-11-20-icm-japan-visit/README.md | - | real handshake photo, cropped 9:16 (media 5893af68) | 16.25 | job 8c03de03 | Keep: faces hold, natural handheld drift |
+| 2026-11-20 | ICM Japan visit: seated conversation (4 s) | kling4_0 i2v 1080p 9:16 | Ready Posts/2026-11-20-icm-japan-visit/README.md | - | real seated photo, cropped 9:16 (media a780ca1d) | 13 | job d7247693 | Keep: small nods and laugh, faces true |
+| 2026-11-20 | ICM Japan visit: office room tone 15 s | mirelo_text_to_audio | Ready Posts/2026-11-20-icm-japan-visit/README.md | - | - | 3.75 | job bb9bbde3 | Keep: only audio bed (no music, add in-app) |

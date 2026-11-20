@@ -194,6 +194,12 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Decisions / feedback: owner approved no-approval mode 19 Nov — agent does the work, pushes to GitHub, logs and reports; only stops if a critical fact is missing or a step would spend money, create an account, or change a legal claim. Growth tracking can now measure against the baseline (4 calls, 6 enquiries/day) from 20 Nov. Facebook still not connected; no GA4/Search Console data.
 - To-do next: owner sends the Virtual Yard support request; owner to confirm correct prices for the Mazda3, RAV4 and Yaris Ascent and whether the Golf at $2,500 stays listed; next content item is `sell my car Perth` (service page) on 20 Nov; owner to report each day's call/enquiry count for the growth tracker.
 
+### 20 Nov 2026 (ICM Japan visit announcement reel)
+- What we made / changed: 15 s 9:16 announcement reel from two WhatsApp photos of Mr. Trimoty (ICM Japan) visiting the office. Kling 4.0 animated the handshake (hook) and the seated talk; free banner push-in and navy end card in ffmpeg. 33 credits.
+- Files: `Ready Posts/2026-11-20-icm-japan-visit/` (`make_reel.py`, `README.md`; video local only).
+- Decisions / feedback: owner asked for an announcement ad, so the hook reads "ANNOUNCEMENT · ICM Japan visits Monsoor Motors" with "Japanese import pre-orders now open" in the first 3 s. Room tone only; music to be added in-app.
+- To-do next: confirm "Trimoty" spelling, turn on the AI label when posting, and check the licence number: the roll-up banner prints MD322748, this playbook says MD32748.
+
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
 - What we made / changed:
