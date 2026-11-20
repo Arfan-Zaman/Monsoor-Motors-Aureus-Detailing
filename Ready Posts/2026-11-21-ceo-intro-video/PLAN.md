@@ -32,7 +32,7 @@ End card (last second): Monsoor Motors, 530 Albany Highway Victoria Park, 0434 1
 
 ## Voices
 - Arfan: his own voice, cloned from a recording of `voice/Arfan-voice-sample-lines.md` (Higgsfield voice `Arfan-CEO-1`, id `6a63aee1-ec53-4b65-acab-0e1fc67b9637`, created 21 Nov 2026).
-- Monsoor: his own voice from his existing reference recording (file to be confirmed).
+- Monsoor: his own voice, cloned with `seed_audio` from `voice/monsor-voice-ref.wav` (Higgsfield audio upload `86bea944-a814-4dca-b916-693ca824b333`), the same reference the Mercedes ML300 review reel used.
 
 ## Workflow from here
 1. You approve the blocking and script (changes are a free re-render).
