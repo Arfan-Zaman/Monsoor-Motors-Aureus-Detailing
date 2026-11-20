@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan's script, take 3 (fluent, accent, 23 s)
+
+**What I did**
+- Regenerated Arfan's script in voice `Arfan-CEO-2` with a delivery cue (fluent flow, correct pronunciation, light British accent with an Australian tone) and a 23 s time window. Result is 23.0 s and fits shot 2.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/voice/Arfan-script-voice-3.wav` and `.mp3`
+- `.claude/skills/aureus-video-studio/assets/GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to approve take 3. Then approve the blocking and move to keyframe stills.
+
+---
+
 ## 21 Nov 2026: both scripts voiced
 
 **What I did**
