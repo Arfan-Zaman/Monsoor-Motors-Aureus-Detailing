@@ -1,3 +1,63 @@
+# "Queue Jump": 29 s reel, production plan (v3, Arfan's concept)
+
+Status: story for Arfan's approval, 21 Nov 2026. Supersedes v2 ("See you less, bowser", kept below for reference). Nothing rendered or generated. Credit cap: 250.
+Placement: Meta (Facebook and Instagram Reels), 9:16, 1080x1920, captions burned in. No campaign mention.
+
+## Idea
+A packed Perth servo on a Thursday night: everyone in the queue is a victim of the bowser (we mock the bowser, never the people). A black Japanese-import C-HR Hybrid glides in silently on electric power, the whole servo goes quiet, Arfan tops up in seconds and drives off. The next day the dad from the queue is at our yard. Monsoor hands him the keys, then turns to Arfan: "Good job." Logo only at the end.
+
+## The fuel claim (true, with a source line on screen)
+Average Australian passenger car: about 10.8 L/100 km (ABS Survey of Motor Vehicle Use, 2018). C-HR Hybrid: 4.3 L/100 km official, 5.2 L/100 km in RACV's real-world test. On screen: "About half the fuel of the average Aussie car.*" Source line on the end card: "*ABS SMVU 2018 average 10.8 L/100km vs RACV real-world C-HR Hybrid test 5.2 L/100km." No dollar totals shown on pumps.
+
+## Story
+| # | Time | Picture | Sound / words | On screen |
+|---|---|---|---|---|
+| 1 Hook | 0.0–3.0 | Night. The servo price board ticks up. Fast cuts: fuel gauge on E, nozzle clunk | Price board clicks, engines idling | "Perth. Thursday night." |
+| 2 | 3.0–8.0 | The queue: utes and SUVs to the road, a bloke eating dinner in his car, a kid asleep in the back, a pained face at the pump as it keeps going | Horn, pump whirr, music pulse | |
+| 3 | 8.0–11.0 | A black C-HR Hybrid glides in on electric power. No engine sound. The servo goes quiet; heads turn | Sudden near-silence | |
+| 4 | 11.0–15.0 | Arfan steps out, nods to the queue, a quick top-up | Arfan: "Hello mates." | "Japanese-import hybrid. About half the fuel of the average Aussie car.*" |
+| 5 | 15.0–18.0 | He drives off. The dad in the queue stares; his kid wakes up | Kid: "Dad... can we get one?" | |
+| 6 | 18.0–23.5 | Next day, our yard in daylight. The dad and kid with their new C-HR Hybrid. Monsoor hands over the keys, then turns to Arfan. Arfan smiles, looking at him | Monsoor: "Good job." Arfan: "That means a lot for me." | |
+| 7 | 23.5–26.5 | The C-HR rolls into the family's driveway; the kid runs to it | Arfan (voice-over): "You choose the car! We bring it to your home!" | "Delivered to your door" |
+| 8 | 26.5–29.0 | End card, logo revealed last | Music button | Monsoor Motors · Japanese hybrids, inspected, warranty included · 0434 137 393 · 530 Albany Hwy, Victoria Park · MD32748 · Conditions apply · *source line · AI-generated scenes |
+
+Early brand cue: the Monsoor Motors dealer plate frame on the C-HR in shots 3–5; full logo only on the end card (about 2.5 s, long enough to read).
+
+## Voices
+- Arfan, fixed voice and tone: "Hello mates." and "You choose the car! We bring it to your home!" are cut from the locked track (free). "That means a lot" is cut from the locked track; the two words "for me" are new, generated with the locked track as reference and spliced on (about 1 credit).
+- Monsoor: "Good job." is new, in his cloned real voice (about 1 credit).
+- Kid: "Dad... can we get one?" generated inside the video shot (native audio).
+
+## Cast, locations, props
+- Arfan (`Arfan-CEO-Final`, outfit `Arfan-CEO-Outfit-Locked`), Monsoor (`MA-Monsor-Owner-v2`), the dad and the kid (new, fictional, not customers, no review lines), queue extras (wide shots only, kept small).
+- The C-HR: our real black C-HR Hybrid (`Monsoor-CHR-Hybrid-Black-Sheet`), plates blank, dealer plate frame added. Queue cars: generic utes, SUVs, sedans, no badges.
+- Locations: Perth servo at night (new, generic, no brand), our Victoria Park yard in daylight (new, from real yard photos if available), the family's driveway (new).
+
+## Craft notes (from the Higgsfield tutorial and the risks of AI video)
+- Night crowds and many moving cars are where AI video breaks (morphing). Two or three wide queue shots only; everything else close and simple.
+- Generate locations at three-quarter angles; grey-background sheets for the dad and kid; tack-sharp, real texture.
+- One generation per location (servo night, yard day, driveway), 480p draft first, then 720p final of the winner; cut the best takes together.
+- Mock the bowser, never the drivers.
+
+## Credit budget (cap 250)
+| Item | Credits |
+|---|---|
+| New sheets at medium: dad + kid, servo night, yard day, driveway (5 × 1) | 5 |
+| Start frames (5 × 1) | 5 |
+| New voice: "for me", "Good job" | 2 |
+| Servo night, shots 1–5 (18 s): draft 54 + final 126 | 180 |
+| Yard + driveway, shots 6–7 (8.5 s → 9 s): final only 63 | 63 |
+| **Total** | **255**, over by 5 |
+To stay under 250: draft only the hardest servo shots (2–4, 8 s) instead of all 18 s (saves 30), giving about 225 with a 25-credit spare. End card and supers are made in-house (free); 1080p by upscaling on this Mac (free).
+
+## Truth checks
+- Inspected, warranty included, auction report kept: confirmed by Arfan. Delivery: "Conditions apply" plus terms in the ad caption.
+- Fuel claim as above, with the source line. No pump totals.
+- Fictional family; AI-generated scenes labelled on the end card and with Meta's AI info label.
+
+---
+(v2 kept for reference)
+
 # "See you less, bowser": 29 s reel, production plan (v2)
 
 Status: story plan for Arfan's approval, 21 Nov 2026. Nothing rendered or generated for this version. Credit cap: 250.
