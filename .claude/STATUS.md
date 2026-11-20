@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: iPhone video shoot script for Arfan's AI character
+
+**What I did**
+- Wrote a 6-clip iPhone video shoot script (settings, head turn, talking-to-camera lines, expressions, outdoor walk, yard, room tone) for training a Higgsfield Soul ID and voice clone of Arfan.
+
+**Files changed**
+- `Brand Kit/AI Character/Video Shoot Script - Arfan AI Character.md` (new)
+- `.claude/STATUS.md` (this entry)
+
+**What's next**
+- Arfan films the clips and AirDrops them to a private folder on the Mac. Claude then pulls frames, trains the Soul ID and clones the voice.
+
+---
+
 ## 20 Nov 2026: rule merged into main
 
 **What I did**
