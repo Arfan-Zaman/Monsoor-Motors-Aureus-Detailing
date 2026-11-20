@@ -18,10 +18,10 @@ Average Australian passenger car: about 10.8 L/100 km (ABS Survey of Motor Vehic
 | 4 | 11.0–15.0 | Arfan steps out, nods to the queue, a quick top-up | Arfan: "Hello mates." | "Japanese-import hybrid. About half the fuel of the average Aussie car.*" |
 | 5 | 15.0–18.0 | He drives off. The dad in the queue stares; his kid wakes up | Kid: "Dad... can we get one?" | |
 | 6 | 18.0–23.5 | Next day, our yard in daylight. The dad and kid with their new C-HR Hybrid. Monsoor hands over the keys, then turns to Arfan. Arfan smiles, looking at him | Monsoor: "Good job." Arfan: "That means a lot for me." | |
-| 7 | 23.5–26.5 | The C-HR rolls into the family's driveway; the kid runs to it | Arfan (voice-over): "You choose the car! We bring it to your home!" | "Delivered to your door" |
-| 8 | 26.5–29.0 | End card, logo revealed last | Music button | Monsoor Motors · Japanese hybrids, inspected, warranty included · 0434 137 393 · 530 Albany Hwy, Victoria Park · MD32748 · Conditions apply · *source line · AI-generated scenes |
+| 7 | 23.5–28.0 | The C-HR rolls into the family's driveway; the kid runs to it; the dad looks at the car, then out to the street, quietly pleased. A held, calm last beat so the viewer thinks about us | Arfan (voice-over): "You choose the car! We bring it to your home!" | "Delivered to your door" |
+| 8 | 28.0–29.0 | Brand: 1 second, logo and phone only | Music button | Monsoor Motors logo · 0434 137 393 · small line: MD32748 · *source · AI-generated scenes |
 
-Early brand cue: the Monsoor Motors dealer plate frame on the C-HR in shots 3–5; full logo only on the end card (about 2.5 s, long enough to read).
+Timing (Arfan, 21 Nov 2026): 28 s of story, then 1 s of brand. The brand second carries only the logo and the phone number (plus the small legal line); the address, inspection, warranty and delivery terms go in the ad text and the Call Now button, because 1 s is too short to read more. Early brand cue: the Monsoor Motors dealer plate frame on the C-HR in shots 3–5.
 
 ## Voices
 - Arfan, fixed voice and tone: "Hello mates." and "You choose the car! We bring it to your home!" are cut from the locked track (free). "That means a lot" is cut from the locked track; the two words "for me" are new, generated with the locked track as reference and spliced on (about 1 credit).
