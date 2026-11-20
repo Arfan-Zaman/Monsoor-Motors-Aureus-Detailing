@@ -165,3 +165,16 @@ Every other people element is retired for this ad.
 ## 12. FINAL wardrobe updates (21 Nov 2026, overrides section 11 rows for Arfan and Monsoor)
 - Arfan outfit: `Arfan-Outfit-Hawaiian-Final` `65e2a486-0981-4ed2-94c7-79811238c4f6`: black Hawaiian shirt (olive/sand/coffee), boxy, untucked; ecru ramie trousers, loose mid-rise; brown suede-canvas chunky sneakers; Seiko olive dial; silver ring; Ray-Ban Meta (clear night / green day). Face and expressions ONLY from `Arfan-CEO-Final` cde963a1. Ordinary arms.
 - Monsoor: `MA-Monsoor-Boss-v2` `0bd837e0-5c67-4768-a4b4-a105fc5ed65c`: same as Boss plus a fine classy 3 mm gold Figaro chain. Face via Soul ID 7d5bf600.
+
+## 13. ELEMENT RULE FOR THE SHOOT (Arfan, 21 Nov 2026) — FINAL, overrides everything above
+Only these elements are used. Nothing else.
+| Who / what | Element | ID |
+|---|---|---|
+| Arfan FACE, hair, expressions (only source of his face) | `Arfan-CEO-Final` | `cde963a1-6dce-441f-b16d-fd74bad0f52e` |
+| Arfan CLOTHES ONLY (no face; cropped from the approved sheet) | `Arfan-Outfit-Shoot` | `eca28f45-7884-4495-ba6a-c63daadda53f` |
+| Monsoor | `MA-Monsoor-Boss-v2` (face via Soul ID 7d5bf600) | `0bd837e0-5c67-4768-a4b4-a105fc5ed65c` |
+| Dave | `Dave-Real` | `a35c0972-e514-477c-ab08-88676417cb5f` |
+| Mia | `Mia-Real` | `ba7458bd-24a7-493f-8838-f74d52ca113b` |
+| Drivers | `Driver-GenZ-Guy-Real`, `Driver-GenZ-Woman-Real`, `Driver-Retiree-Real`, `Driver-Glam-Real` | f2a7b2b7…, b77e0ccd…, eefa2c79…, 0b6631a2… (section 11) |
+| Black C-HR | `Monsoor-CHR-Hybrid-Black-Sheet` | `526b5aa4-80d5-4c7a-96a5-9b6078b58ead` |
+Never use for Arfan: Arfan-CEO-Outfit-Locked, Arfan-Outfit-CrimeDrama, Arfan-Outfit-Hawaiian, Arfan-Outfit-Hawaiian-Final (they contain generated faces).

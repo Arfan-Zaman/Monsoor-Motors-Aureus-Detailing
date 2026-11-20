@@ -14,7 +14,7 @@ Plan only: nothing generated, nothing committed. This file merges `roles/CINEMAT
 | 3 | Dave's car | White stock C-HR | **No white C-HR.** Dave buys **our black C-HR** (`526b5aa4…`), the car he saw at the servo. Arfan tags it SOLD at the yard and delivers it. |
 | 4 | Yard | Dave and Mia choose the car at the yard | Cut. They found us through the plate frame; the yard is now **Arfan + Monsoor, next morning**, and the delivery follows. |
 | 5 | Monsoor | `MA-Monsoor-Hero` / `MA-Monsor-*`, element-only face | **`MA-Monsoor-Boss-v2` `0bd837e0-5c67-4768-a4b4-a105fc5ed65c`.** Face route: Soul ID `7d5bf600-ee1b-484d-a95f-6bfae7b6e5af` start frame on `soul_2` → GPT Image 2.6 edit (costume, placement) → video with `<<<8eab65a7…>>>`. Older Monsoor elements are retired from every prompt. |
-| 6 | Arfan's outfit | Several drafts | **`Arfan-Outfit-Hawaiian-Final` `7a6ad32a…` + face `Arfan-CEO-Final` `cde963a1…`** in every Arfan shot. Crime-drama outfit `10f68c0b` rejected; not used anywhere. |
+| 6 | Arfan's outfit | Several drafts | **`Arfan-Outfit-Shoot` `7a6ad32a…` + face `Arfan-CEO-Final` `cde963a1…`** in every Arfan shot. Crime-drama outfit `10f68c0b` rejected; not used anywhere. |
 | 7 | "That means a lot for me" | Keep "for me" (new 0.5 s) | **Cut "for me".** The locked clip "That means a lot." (1.56 s) fits the yard beat, needs no new Arfan audio, and avoids the non-standard English being burned into captions. |
 | 8 | Price board | Ticks up once (CONTINUITY) | **Static** (FuelWatch). Only Dave's pump meter ticks. |
 | 9 | Fuel super | "…Official figures.*" / source line under it | Locked text only: **"Over 40% less fuel than his ASX.\*"** The qualifier lives in the brand-card legal line and the caption. |
@@ -103,7 +103,7 @@ Key. Size: EWS/WS/MWS/MS/MCU/CU/ECU. Angle: low / eye / high / OTS / ground. Sou
 
 | Who / what | Every shot |
 |---|---|
-| Arfan | `Arfan-CEO-Final` + `Arfan-Outfit-Hawaiian-Final`: black linen shirt, coffee gurkha trousers, black Chelsea boots, olive Seiko on the left wrist, silver ring on the right hand, Ray-Ban Meta glasses (clear at the servo and in the car, light green tint at the yard and home). Never touches the glasses. |
+| Arfan | `Arfan-CEO-Final` + `Arfan-Outfit-Shoot`: black linen shirt, coffee gurkha trousers, black Chelsea boots, olive Seiko on the left wrist, silver ring on the right hand, Ray-Ban Meta glasses (clear at the servo and in the car, light green tint at the yard and home). Never touches the glasses. |
 | Monsoor | `MA-Monsoor-Boss-v2` via the Soul ID route: deep navy silk camp-collar palm-print shirt, gold rope chain, gold watch, charcoal trousers, loafers, dark aviators by day. Navy + gold vs Arfan's black + silver. |
 | Dave / Mia | `Dave-Real` a35c0972 / `Mia-Real` ba7458bd, same clothes night and next evening (one day later reads as casual). Mia ~1.3 m. |
 | Black C-HR | `526b5aa4…`, RHD; filler right rear (verify); Monsoor Motors plate frame + small door decal (our real artwork); SOLD tag from #29 on; plate blank; odometer 45,000 km. |
@@ -121,7 +121,7 @@ Key. Size: EWS/WS/MWS/MS/MCU/CU/ECU. Angle: low / eye / high / OTS / ground. Sou
 
 **Face routes**
 - **Monsoor:** `soul_2` with `soul_id 7d5bf600-ee1b-484d-a95f-6bfae7b6e5af` (quoted 0.12, billed ≈1) → GPT Image 2.6 high **edit** for costume and placement, keeping the face → video with `<<<0bd837e0-5c67-4768-a4b4-a105fc5ed65c>>>`. Never text- or element-only.
-- **Arfan:** always `<<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>>` + `<<<65e2a486-0981-4ed2-94c7-79811238c4f6>>>`.
+- **Arfan:** always `<<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>>` + `<<<eca28f45-7884-4495-ba6a-c63daadda53f>>>`.
 
 ### C0. Look lock (first spend)
 **SF-V1 start frame = look-lock still** (2.75). It is judged at 100%:
@@ -145,7 +145,7 @@ If it passes, screenshot the settings to `reference/look-lock.png`. Every later 
 | SF-V1 | V1 (look lock) | `<<<a35c0972-e514-477c-ab08-88676417cb5f>>>` `<<<ba7458bd-24a7-493f-8838-f74d52ca113b>>>` | From outside the passenger window, 50 mm: Dave at the wheel of his grey 2021 Mitsubishi ASX, three-quarter, eyes down to the gauge, both hands on the wheel; Mia asleep against the left rear window, soft; red signal on the bonnet; a sodium streetlight behind his shoulder (flare test); magenta shop neon soft (bokeh test); Albany Highway, Victoria Park, night. |
 | SF-V2 | V2 | `<<<37296861-4e5c-4308-9dab-449dcb59a5b9>>>` `<<<a35c0972-e514-477c-ab08-88676417cb5f>>>` | Medium-wide from beside the pump island: the night queue of ordinary petrol cars, headlights on, exhaust haze; Dave at pump 2, nozzle in the ASX's left-rear filler, left hand on the roof; static price board soft behind; teal canopy light, rain-dark concrete reflections. |
 | SF-V3 | V3 | `<<<37296861-4e5c-4308-9dab-449dcb59a5b9>>>` `<<<526b5aa4-80d5-4c7a-96a5-9b6078b58ead>>>` | Low car-rig view beside the black C-HR Hybrid gliding past the queue on rain-dark concrete; canopy and streetlights streaking across the paint; plate blank; queue soft. |
-| SF-V4 | V4 | servo + C-HR + `<<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>>` `<<<65e2a486-0981-4ed2-94c7-79811238c4f6>>>` | 50 mm eye level: Arfan three-quarter beside the black C-HR's open driver's door (right side) at pump 1, Ray-Ban Meta glasses with clear lenses, eyes fully visible, locked outfit, Seiko left wrist, ring right hand; face ≥1/4 of frame; canopy key, warm shop fill, sodium rim. |
+| SF-V4 | V4 | servo + C-HR + `<<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>>` `<<<eca28f45-7884-4495-ba6a-c63daadda53f>>>` | 50 mm eye level: Arfan three-quarter beside the black C-HR's open driver's door (right side) at pump 1, Ray-Ban Meta glasses with clear lenses, eyes fully visible, locked outfit, Seiko left wrist, ring right hand; face ≥1/4 of frame; canopy key, warm shop fill, sodium rim. |
 | SF-V5 | V5 | servo + `<<<a35c0972-e514-477c-ab08-88676417cb5f>>>` + C-HR | 50 mm: Dave three-quarter by his ASX at pump 2, hand on the nozzle, eyes on his meter; over his shoulder, the black C-HR at pump 1, tail-lights on, **our real plate-frame and decal artwork comped on before the video**. |
 | SF-V6 | V6 | servo + `<<<ba7458bd-24a7-493f-8838-f74d52ca113b>>>` | 75 mm from outside the open rear side window of the ASX: Mia awake, chin on the sill, hugging her backpack, eyes to frame right (Dad); warm shop light on her face; face ≥1/3 of frame. |
 | SF-V10s | V10 start | yard + muscle car | 32 mm low near the brick: the badge-less black muscle car rolling in through our yard gate, morning sun from frame left, palms and flags; driver not visible behind the tinted glass. |
@@ -299,7 +299,7 @@ Negative: no phone, no text, no logos, no slow motion, no morphing hands, no wax
 **V4** · Seedance 2.0 std · start SF-V4 · audio ref "Hello mates" (locked) · 18
 ```text
 **Aspect ratio**: 9:16  **Resolution**: 720p  **Mode**: std  **Duration**: 4s
-<<<37296861-4e5c-4308-9dab-449dcb59a5b9>>> servo, <<<526b5aa4-80d5-4c7a-96a5-9b6078b58ead>>> black C-HR, <<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>> Arfan in <<<65e2a486-0981-4ed2-94c7-79811238c4f6>>>. His lips follow the audio reference exactly.
+<<<37296861-4e5c-4308-9dab-449dcb59a5b9>>> servo, <<<526b5aa4-80d5-4c7a-96a5-9b6078b58ead>>> black C-HR, <<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>> Arfan in <<<eca28f45-7884-4495-ba6a-c63daadda53f>>>. His lips follow the audio reference exactly.
 Holds still for a moment, then: Arfan wearing his Ray-Ban Meta glasses, clear lenses, pushes the car door shut behind him while walking to the pump, glances at the man at the next pump, small nod, says "Hello mates" lightly, looks back to the pump and reaches for the nozzle.
 Emotion: relaxed, dry humour, a passing courtesy, never smug.
 Imperfections: half-smile starts on the left side and is gone at once; a half-step as he turns; sleeve creases on the reach.
@@ -351,7 +351,7 @@ Negative: no phone, no text, no logos, no slow motion, no morphing hands, no wax
 **V7** · Seedance 2.0 std · start SF-V7 (Soul ID) · audio ref "Good job." + "That means a lot." · 18
 ```text
 **Aspect ratio**: 9:16  **Resolution**: 720p  **Mode**: std  **Duration**: 4s
-<<<d9dfe0fd-89ba-4fba-b719-ee33c0f0588b>>> yard, <<<0bd837e0-5c67-4768-a4b4-a105fc5ed65c>>> Monsoor, <<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>> Arfan in <<<65e2a486-0981-4ed2-94c7-79811238c4f6>>>. Lips follow the audio reference, each mouth only on its own line.
+<<<d9dfe0fd-89ba-4fba-b719-ee33c0f0588b>>> yard, <<<0bd837e0-5c67-4768-a4b4-a105fc5ed65c>>> Monsoor, <<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>> Arfan in <<<eca28f45-7884-4495-ba6a-c63daadda53f>>>. Lips follow the audio reference, each mouth only on its own line.
 Morning, outdoors in a sunny Perth car yard. Holds still for a moment, then: Monsoor rests his left hand flat on Arfan's right shoulder, one soft pat: "Good job." Arfan's shoulder dips under the hand, he looks at Monsoor, chin a touch down. Slow blink, small eyebrow lift, small smile becomes a real smile: "That means a lot." Glances down, then back up.
 Arfan wearing his Ray-Ban Meta glasses, light green-tinted lenses, eyes visible.
 Emotion: proud and fatherly; humble and moved.
@@ -377,7 +377,7 @@ Negative: no phone, no text, no logos, no slow motion, no morphing hands, no wax
 
 **V9** · Cinema Studio 3.0 · start SF-V9 · 20
 ```text
-<<<d5da6271-1093-470d-8628-5d69ef5f882d>>> family home, <<<526b5aa4-80d5-4c7a-96a5-9b6078b58ead>>> black C-HR, <<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>> Arfan in <<<65e2a486-0981-4ed2-94c7-79811238c4f6>>>, <<<a35c0972-e514-477c-ab08-88676417cb5f>>> Dave, <<<ba7458bd-24a7-493f-8838-f74d52ca113b>>> Mia. Exterior, golden hour, a suburban family driveway in Perth. Holds still for a moment, then: Arfan walks from the car to Dave, holds the keys out flat on his open palm; Dave lifts them off by the ring, looks at the car, grins; Arfan nods and steps back half a pace. Mia comes in, both palms on the car door, looks in the window. Arfan wearing his Ray-Ban Meta glasses, light green-tinted lenses, eyes visible.
+<<<d5da6271-1093-470d-8628-5d69ef5f882d>>> family home, <<<526b5aa4-80d5-4c7a-96a5-9b6078b58ead>>> black C-HR, <<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>> Arfan in <<<eca28f45-7884-4495-ba6a-c63daadda53f>>>, <<<a35c0972-e514-477c-ab08-88676417cb5f>>> Dave, <<<ba7458bd-24a7-493f-8838-f74d52ca113b>>> Mia. Exterior, golden hour, a suburban family driveway in Perth. Holds still for a moment, then: Arfan walks from the car to Dave, holds the keys out flat on his open palm; Dave lifts them off by the ring, looks at the car, grins; Arfan nods and steps back half a pace. Mia comes in, both palms on the car door, looks in the window. Arfan wearing his Ray-Ban Meta glasses, light green-tinted lenses, eyes visible.
 Emotion: warm, simple, real; Arfan gives the moment to the family.
 Imperfections: Arfan's palm stays open a moment after the keys go; Dave weighs the keys once; Mia's last two steps stutter.
 Light: low sun behind them as a warm rim, soft sky fill on faces.
