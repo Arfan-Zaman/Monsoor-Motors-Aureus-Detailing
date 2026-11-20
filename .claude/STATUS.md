@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan chose full-body sheet v2 as the master
+
+**What I did**
+- Arfan preferred v2 over v3. Marked v2 (job `26e6c1c6`) as the master full-body sheet and v3 as not used. No credits spent.
+
+**Files changed**
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Use element `Arfan-CEO`, face sheet v3 and full-body sheet v2 as references for any image or video of Arfan.
+
+---
+
 ## 21 Nov 2026: Arfan (CEO) full-body sheet v3 (neck balanced)
 
 **What I did**
