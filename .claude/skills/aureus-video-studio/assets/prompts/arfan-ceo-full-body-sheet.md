@@ -22,3 +22,13 @@ Four full-length standing panels of equal width, head to boots fully visible wit
 Then a narrower right column with two stacked detail panels: (5) waist-up portrait facing the camera with a calm confident expression, showing the open collar, the linen texture and the tucked gurkha waistband; (6) close-up of his left wrist and hand resting against the trousers, showing the Seiko watch dial and steel bracelet clearly with the shirt cuff just above it.
 
 No text, no labels, no captions, no watermark, no other people, no props.
+
+## v2 change (21 Nov 2026): face came out too slim and stern in v1
+
+Extra image references: sheet v3 job `249ccc61` first, then face front, smile, two three-quarter views, profile, left hand.
+Replace the identity sentences with this block:
+
+FACE IS THE PRIORITY. Reproduce his real face exactly as it is in the photos, a full likeness match in every panel, as if the same person walked into the studio today. Keep his true facial proportions: his face is fairly broad and full, with soft full cheeks, a wide forehead, a soft jaw hidden under a thick full black beard, a broad nose and relaxed heavy-lidded dark brown eyes. Do NOT slim the face, do NOT sharpen or hollow the cheekbones, do NOT narrow the nose, do NOT enlarge the eyes, do NOT make him look like a model or actor, do NOT trim or shape the beard thinner. Same hairline, same black swept-back slightly messy hair, same natural uneven eyebrows. Expression: calm, relaxed and approachable with a neutral mouth and soft eyes, no frown, no scowl, no furrowed brow.
+
+Lesson: in v2 the shirt collar drifted to a button-down. Next time add "soft spread point collar, no collar buttons, exactly as the shirt element".
+

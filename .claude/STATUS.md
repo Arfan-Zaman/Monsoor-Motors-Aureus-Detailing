@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan (CEO) full-body sheet v2 (face fix)
+
+**What I did**
+- Made full-body sheet v2 with a stronger face block: fuller face, calm expression (2.75 credits; 5.5 of the 10 allowed used).
+
+**Files changed**
+- `Brand Kit/Characters/Arfan-CEO/Arfan-CEO-Full-Body-Sheet-v2.png`
+- `.claude/skills/aureus-video-studio/assets/prompts/arfan-ceo-full-body-sheet.md`, `ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to pick v1 (truer shirt) or v2 (truer face). 4.5 credits left in the budget for one more run if wanted.
+
+---
+
 ## 21 Nov 2026: Arfan (CEO) full-body sheet and reference elements
 
 **What I did**
