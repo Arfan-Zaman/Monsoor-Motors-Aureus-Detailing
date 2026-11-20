@@ -25,6 +25,7 @@ The on-screen character for Monsoor Motors videos. Real person: Md Arfan Uz Zama
 - Outfit (element `Arfan-CEO-Outfit-Locked`, sheet `Wardrobe/Arfan-CEO-Wardrobe-Sheet-Final.png`): black **ramie-cotton** shirt, matte with a soft slub texture, no shine, **burnt wooden buttons**, tucked into coffee-brown high-waisted gurkha trousers cut **a little loose and a little long** (full break on the boots), black leather Chelsea boots, Seiko 5 Sports with an **olive dial** (same colour as the sunglass lenses) on the left wrist, plain silver band on the right ring finger, **Ray-Ban Meta Wayfarer Gen 2, shiny black with green lenses**.
 
 ## Voice (locked)
+- **Fixed communication style (Arfan, 21 Nov 2026):** the locked track's voice and tone are used for every line he speaks in every video: polished, slightly deep and husky, light British accent blended with a relaxed Australian tone, completely fluent, humble with Monsoor, "mates" with the audience, full energy on the call to action. New lines are generated with the locked track as the audio reference.
 - Voice clone `Arfan-CEO-2` (Higgsfield voice id `714d186a-286b-4858-b9ff-a231abf164f2`).
 - Locked intro line: `Ready Posts/2026-11-21-ceo-intro-video/voice/Arfan-script-voice-LOCKED.wav` (Higgsfield audio `c09e823d-80e7-4ebf-b918-a9fa83384302`).
 
