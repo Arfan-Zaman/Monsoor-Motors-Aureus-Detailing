@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: both scripts voiced
+
+**What I did**
+- Arfan re-recorded his voice (`Arfan-CEO-2`). Generated Monsoor's script in his cloned real voice (8.7 s, fits shot 1) and Arfan's script in his new voice (30.4 s; shot 2 allows about 22 s).
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/voice/Monsoor-script-voice-1.*`, `Arfan-script-voice-2.*`, `Arfan-voice-sample-lines-2.md`, `PLAN.md`
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to approve both voices. Then settle the timing of his part: lengthen shot 2 to about 31 s or trim the script.
+
+---
+
 ## 21 Nov 2026: Arfan voice test line
 
 **What I did**
