@@ -4,6 +4,23 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan voice versions 5 and 6
+
+**What I did**
+- Version 5: Arfan recorded his greeting; generated the opening in that voice (`Arfan-CEO-Opening`) and spliced it onto take 3.
+- Version 6: one new full take with a fuller, stronger tone, British-Australian blend, fully fluent (pitch one step lower).
+- Both filed in the Higgsfield project's Voices folder.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/voice/Arfan-script-voice-5.*`, `Arfan-script-voice-6.*`
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to pick the final voice track (5 or 6). Then keyframe stills on the auction yard background.
+
+---
+
 ## 21 Nov 2026: standard background (Japanese auction yard) and re-voiced opening
 
 **What I did**
