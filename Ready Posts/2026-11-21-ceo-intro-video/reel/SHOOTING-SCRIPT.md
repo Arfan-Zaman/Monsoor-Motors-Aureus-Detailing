@@ -178,3 +178,4 @@ Only these elements are used. Nothing else.
 | Drivers | `Driver-GenZ-Guy-Real`, `Driver-GenZ-Woman-Real`, `Driver-Retiree-Real`, `Driver-Glam-Real` | f2a7b2b7…, b77e0ccd…, eefa2c79…, 0b6631a2… (section 11) |
 | Black C-HR | `Monsoor-CHR-Hybrid-Black-Sheet` | `526b5aa4-80d5-4c7a-96a5-9b6078b58ead` |
 Never use for Arfan: Arfan-CEO-Outfit-Locked, Arfan-Outfit-CrimeDrama, Arfan-Outfit-Hawaiian, Arfan-Outfit-Hawaiian-Final (they contain generated faces).
+| Arfan silver chain (prop, no face) | `Arfan-Silver-Chain` | `885feadc-5d46-4b17-b593-b9d51ec33742` |
