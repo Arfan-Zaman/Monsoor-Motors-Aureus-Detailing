@@ -1,5 +1,8 @@
 # "Queue Jump": DIRECTOR'S CUT (production document, v1)
 
+> **TEXT AND NUMBERS (Arfan, 21 Nov 2026):** every plate, screen, price, sign and sticker uses `TEXT-AND-NUMBERS.md` word for word. Nothing is blank. Each prompt that shows one quotes it.
+
+
 > **ALL-VIDEO RULE (Arfan, 21 Nov 2026):** every shot in the final ad is real generated VIDEO with real motion (camera breathing, light flicker, needles moving, hands, reflections). NO still images or Ken-Burns stills anywhere, inserts and brand hero included. Images and elements are references and start frames only. Inserts (dashes, pump meter, POWER button, speed camera) become 4 s Seedance 2.0 clips cut down to their 0.4–1.0 s.
 
 
