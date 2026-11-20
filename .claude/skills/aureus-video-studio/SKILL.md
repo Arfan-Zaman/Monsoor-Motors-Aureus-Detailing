@@ -50,6 +50,7 @@ Other packs (anime, fight scenes, music video, food, fashion, podcast, SaaS, cou
 
 ## 4. Asset library (where things live)
 - **Higgsfield destination:** project **Aureus Detailing** in the Plus workspace. workspace_id `68fdca71-5be8-4d53-ac58-fa86267eb49b`, project/folder_id `5b8de463-c51c-494a-9cf5-608268e53889`. Pass this `folder_id` on every Aureus generation. Monsoor Motors work does not go in this project.
+- **Monsoor Motors destination (set 21 Nov 2026):** project **Monsoor Motors**, project and root folder id `fede0767-fd25-4fc1-b998-cf207b85dba4`. Subfolders: Characters `807c11b2-2b67-4a36-a00a-23eeca0b4160`, Cars `efcfe4d8-0cbc-4304-b008-bc02d73f9541`, Voices `d23fa704-4b62-484f-9dca-d311e2e9937f`. Pass the matching `folder_id` on **every** Monsoor generation and attach every upload with `attach_project_asset`, without being asked. The owner expects every sheet, car and voice to be in the project.
 
 - `assets/ASSET-REGISTER.md`: every reusable asset: characters, reference elements, Soul IDs, logos uploaded to Higgsfield (media IDs), approved style prompts, music.
 - `assets/GENERATION-LOG.md`: one line per generation: date, project, model, prompt file, seed, references, cost, result link, keep / reject and why.

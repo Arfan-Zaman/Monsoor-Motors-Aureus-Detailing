@@ -4,6 +4,23 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: everything filed in the Monsoor Motors project; blocking and Monsoor's voice approved
+
+**What I did**
+- Made three folders in the Higgsfield project Monsoor Motors (Characters, Cars, Voices) and filed all 13 assets: every Arfan sheet, Monsoor's sheet, the C-HR sheet and photos, the voice lines and Monsoor's voice reference.
+- Wrote the rule into the video skill and saved it to memory: file every Monsoor asset in the project when it is made.
+- Arfan approved the 3D blocking and Monsoor's voice line. Marked both in the plan.
+
+**Files changed**
+- `.claude/skills/aureus-video-studio/SKILL.md`, `assets/ASSET-REGISTER.md`
+- `Ready Posts/2026-11-21-ceo-intro-video/PLAN.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Price and make the two keyframe stills (start of each shot), filed in the project.
+
+---
+
 ## 21 Nov 2026: Arfan approved voice take 3
 
 **What I did**
