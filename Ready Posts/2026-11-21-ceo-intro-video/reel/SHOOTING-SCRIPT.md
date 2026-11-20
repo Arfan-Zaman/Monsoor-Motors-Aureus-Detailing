@@ -147,3 +147,17 @@ Odometers: our C-HR 45,000 km (real); every other car a random, believable readi
 - Element `Arfan-Outfit-CrimeDrama` `10f68c0b-8ac3-4cea-8da7-62c55afbdb59` + face `Arfan-CEO-Final` `cde963a1-6dce-441f-b16d-fd74bad0f52e`.
 - Black matte camp-collar shirt, thin silver chain, sand linen blazer open, coffee gurkha trousers, black Chelsea boots, Seiko olive dial (left), silver ring (right), Ray-Ban Meta: clear at night, green by day.
 - Pairing logic: Monsoor = navy + gold (the boss); Arfan = black/sand + silver (the right-hand man). Never the same colour block in a two-shot.
+
+## 11. LOCKED CAST FOR THE SHOOT (21 Nov 2026, final; overrides sections 8-10)
+| Role | Element | ID | Source |
+|---|---|---|---|
+| Arfan (face) | `Arfan-CEO-Final` | `cde963a1-6dce-441f-b16d-fd74bad0f52e` | locked |
+| Arfan (outfit, his LOCKED black linen look; crime-drama outfit rejected) | `Arfan-CEO-Outfit-Locked` | `7a6ad32a-7dac-499e-85d0-8a4e59329622` | locked |
+| Monsoor (boss; face via Soul ID `7d5bf600-ee1b-484d-a95f-6bfae7b6e5af`) | `MA-Monsoor-Boss` | `8eab65a7-d3d1-4b41-a3c3-49c91bf27208` | Monsoor to approve |
+| Dave | `Dave-Real` | `a35c0972-e514-477c-ab08-88676417cb5f` | nano_banana realism pass |
+| Mia | `Mia-Real` | `ba7458bd-24a7-493f-8838-f74d52ca113b` | nano_banana realism pass |
+| Driver Gen Z guy | `Driver-GenZ-Guy-Real` | `f2a7b2b7-5837-4e58-8b9a-58fc908d7663` | in-car only |
+| Driver Gen Z woman | `Driver-GenZ-Woman-Real` | `b77e0ccd-9139-4914-9e86-6ace90669d6e` | in-car only |
+| Driver retiree | `Driver-Retiree-Real` | `eefa2c79-d3b5-4572-9a53-b0139fb58f3e` | in-car only |
+| Driver glam (V8) | `Driver-Glam-Real` | `0b6631a2-04b5-4809-9b49-31acf7df8db3` | in-car only |
+Every other people element is retired for this ad.
