@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: "Meet our new CEO" intro video plan
+
+**What I did**
+- Wrote the plan for the Monsoor Motors intro video: founder introduces Arfan, Arfan takes over the scene and makes his promise, C-HR behind them. Six scenes, draft script, nine-step workflow. No credits spent.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/PLAN.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to approve the script and send: founder's photos and written OK, real C-HR photos, a 30 s voice sample from each of them. Then build the founder's character sheet.
+
+---
+
 ## 21 Nov 2026: Arfan chose full-body sheet v2 as the master
 
 **What I did**
