@@ -8,6 +8,8 @@ The on-screen character for Monsoor Motors videos. Real person: Md Arfan Uz Zama
 - Joined Monsoor Motors as CEO to lead AI, digital marketing and growth.
 
 ## Personality (how he acts on camera)
+- **Core (Arfan, 21 Nov 2026):** a confident character with good humour and positivity; quick, articulate, joking talk that is never forced. Funny by understatement, not by performing.
+- **Motion, captured not copied:** his real habits (square to camera, steady, chin a touch down, a small eyebrow lift on key words, few hand moves, a hand to the ear now and then) plus confidence: a relaxed half-smile, a cheeky sideways glance, a small shrug, a nod. Natural and a little imperfect, never flawless or robotic.
 - **Hustler with heart.** Hard-working, hands-on, not above any job. Talks like someone who has done the work himself.
 - **Trust first.** Straight answers, no sales pressure, no over-promising. Says what the business really does.
 - **Humble and respectful.** Grateful to Monsoor, the founder; lets the elder speak first and thanks him sincerely.

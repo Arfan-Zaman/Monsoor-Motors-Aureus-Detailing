@@ -7,7 +7,7 @@ Placement: Meta (Facebook and Instagram Reels), 9:16, 1080x1920, captions burned
 A packed Perth servo on a Thursday night: everyone in the queue is a victim of the bowser (we mock the bowser, never the people). A black Japanese-import C-HR Hybrid glides in silently on electric power, the whole servo goes quiet, Arfan tops up in seconds and drives off. The next day the dad from the queue is at our yard. Monsoor hands him the keys, then turns to Arfan: "Good job." Logo only at the end.
 
 ## The fuel claim (true, with a source line on screen)
-Average Australian passenger car: about 10.8 L/100 km (ABS Survey of Motor Vehicle Use, 2018). C-HR Hybrid: 4.3 L/100 km official, 5.2 L/100 km in RACV's real-world test. On screen: "About half the fuel of the average Aussie car.*" Source line on the end card: "*ABS SMVU 2018 average 10.8 L/100km vs RACV real-world C-HR Hybrid test 5.2 L/100km." No dollar totals shown on pumps.
+Average Australian passenger car: about 10.8 L/100 km (ABS Survey of Motor Vehicle Use, 2018). C-HR Hybrid: 4.3 L/100 km official, 5.2 L/100 km in RACV's real-world test. Updated 21 Nov 2026 (Arfan): compare like for like. On screen: "C-HR Hybrid vs C-HR petrol: about a third less fuel.*" Source: official combined figures, C-HR Hybrid 4.3 vs C-HR 1.2T petrol 6.4 L/100km. Dave drives a same-size petrol small SUV. No dollar totals shown on pumps.
 
 ## Story
 | # | Time | Picture | Sound / words | On screen |
