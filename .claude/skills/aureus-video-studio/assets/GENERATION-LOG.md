@@ -66,4 +66,4 @@ One line per Higgsfield generation. Reuse the prompt, seed and references of kee
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-20 | ICM Japan visit: handshake hook (5 s) | kling4_0 i2v 1080p 9:16 | Ready Posts/2026-11-20-icm-japan-visit/README.md | - | real handshake photo, cropped 9:16 (media 5893af68) | 16.25 | job 8c03de03 | Keep: faces hold, natural handheld drift |
 | 2026-11-20 | ICM Japan visit: seated conversation (4 s) | kling4_0 i2v 1080p 9:16 | Ready Posts/2026-11-20-icm-japan-visit/README.md | - | real seated photo, cropped 9:16 (media a780ca1d) | 13 | job d7247693 | Keep: small nods and laugh, faces true |
-| 2026-11-20 | ICM Japan visit: office room tone 15 s | mirelo_text_to_audio | Ready Posts/2026-11-20-icm-japan-visit/README.md | - | - | 3.75 | job bb9bbde3 | Keep: only audio bed (no music, add in-app) |
+| 2026-11-20 | ICM Japan visit: office room tone 15 s | mirelo_text_to_audio | Ready Posts/2026-11-20-icm-japan-visit/README.md | - | - | 3.75 | job bb9bbde3 | Rejected 21 Nov: owner disliked the sound; v2 uses existing music + his ML300 voice lines (0 credits) |

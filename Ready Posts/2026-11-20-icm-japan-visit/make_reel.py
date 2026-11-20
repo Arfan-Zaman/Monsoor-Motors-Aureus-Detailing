@@ -4,16 +4,22 @@ Usage:
   /opt/miniconda3/bin/python -I make_reel.py <work_dir> <out.mp4>
 
 <work_dir> must hold:
-  shake.mp4   Kling 4.0 i2v of the handshake photo (5 s)
-  seated.mp4  Kling 4.0 i2v of the seated photo (4 s)
-  icm1.jpeg   original seated photo (for the banner push-in shot)
-  room.mp3    15 s room tone (mirelo_text_to_audio)
+  shake.mp4     Kling 4.0 i2v of the handshake photo (5 s)
+  seated.mp4    Kling 4.0 i2v of the seated photo (4 s)
+  v_intro.wav   his cloned voice, ML300 reel line T1 ("Hi, I'm Monsor from Monsoor Motors. Look at ...")
+  v_japan.wav   his cloned voice, ML300 reel line T7 ("We can also import cars like this from Japan ...")
+  music.mp3     original AI underscore (Launch Reels/ad/audio/music.mp3, job 4ffeabd7)
 
-Shots (varied lengths, hard cuts on movement, one short dissolve into the end card):
-  0.00-4.60  handshake (hook)          label: ANNOUNCEMENT / ICM Japan visits Monsoor Motors + pre-orders open
-  4.60-8.60  seated, mid-conversation  label: Mr. Trimoty, ICM Japan
-  8.60-11.40 slow push-in on the real banner ("We import Japanese Cars", "pre-orders"), no label
-  11.40-15.0 navy end card             logo, offer line, phone, web
+Shots (hard cut on the handshake, short dissolve into the end card):
+  0.00-5.00  handshake (hook)          label: ANNOUNCEMENT / ICM Japan visits Monsoor Motors + pre-orders open
+  5.00-9.00  seated, mid-conversation  label: Mr. Trimoty, ICM Japan
+  9.00-15.0  navy end card, slow push-in: logo, offer line, phone, web
+
+Sound: music bed all the way through; his voice sits in the background (soft room feel),
+the music dips a little under it:
+  0.5 s  "Hi, I'm Monsor from Monsoor Motors."
+  4.0 s  "We can also import cars from Japan for you, at an affordable price. We are taking pre-orders now."
+         ("like this" cut out; it referred to the Mercedes)
 """
 import subprocess
 import sys
@@ -31,7 +37,7 @@ NAVY = (15, 39, 71)
 ORANGE = (255, 95, 21)
 WARM = (247, 245, 242)
 
-S1, S2, S3, S4 = 0.0, 4.6, 8.6, 11.4  # shot starts
+S1, S2, S4 = 0.0, 5.0, 9.0  # shot starts (S4 = end card)
 
 
 def font(size, weight="Bold"):
@@ -119,7 +125,7 @@ def main(work, out):
         ((110, 1250, 860, 190),
          [("Mr. Trimoty, ICM Japan", 58, "Bold", WARM),
           ("Productive talks on Japanese car imports", 34, "Medium", WARM)],
-         S2 + 0.25, S3 - 0.05),
+         S2 + 0.25, S4 - 0.25),
     ]
     for i, (box, lines, *_) in enumerate(labels):
         text_card(g / f"t{i}.png", lines, box)
@@ -135,35 +141,31 @@ def main(work, out):
 
     # --- base timeline -------------------------------------------------
     norm = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1,format=yuv420p"
-    d1, d2, d3, d4 = S2 - S1, S3 - S2, S4 - S3, DUR - S4
-    # banner shot: crop around the banner from the 3060x4080 original, slow push-in
-    zp_frames = int(round((d3 + 0.3) * FPS))
-    banner = (
-        "crop=1100:1956:910:560,scale=2160:3840,"
-        f"zoompan=z='1+0.06*on/{zp_frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)+12*sin(on/9)'"
-        f":d={zp_frames}:s={W}x{H}:fps={FPS},setsar=1,format=yuv420p"
-    )
+    d1, d2, d4 = S2 - S1, S4 - S2, DUR - S4
+    n4 = int(round((d4 + 0.3) * FPS))
     fc = [
         f"[0:v]trim=0:{d1},setpts=PTS-STARTPTS,{norm}[v1]",
-        f"[1:v]trim=0:{d2},setpts=PTS-STARTPTS,{norm}[v2]",
-        f"[2:v]{banner},trim=0:{d3 + 0.2},setpts=PTS-STARTPTS[v3]",
-        f"[3:v]{norm},trim=0:{d4 + 0.2},setpts=PTS-STARTPTS,settb=1/30[v4]",
-        "[v1][v2][v3]concat=n=3:v=1:a=0,settb=1/30[v123]",
+        f"[1:v]trim=0:{d2 + 0.03},setpts=PTS-STARTPTS,{norm}[v2]",
+        # end card: very slow push-in so it is not a dead still
+        f"[2:v]scale={W * 2}:{H * 2},zoompan=z='1+0.035*on/{n4}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+        f":d={n4}:s={W}x{H}:fps={FPS},setsar=1,format=yuv420p,trim=0:{d4 + 0.2},setpts=PTS-STARTPTS,settb=1/30[v4]",
+        "[v1][v2]concat=n=2:v=1:a=0,settb=1/30[v12]",
         # 6-frame dissolve into the end card
-        f"[v123][v4]xfade=transition=fade:duration=0.2:offset={S4 - 0.2:.2f},trim=0:{DUR}[base]",
+        f"[v12][v4]xfade=transition=fade:duration=0.2:offset={S4 - 0.2:.2f},trim=0:{DUR}[base]",
     ]
     inputs = [
         "-i", work / "shake.mp4",
         "-i", work / "seated.mp4",
-        "-loop", "1", "-framerate", FPS, "-t", d3 + 0.5, "-i", work / "icm1.jpeg",
-        "-loop", "1", "-framerate", FPS, "-t", d4 + 0.5, "-i", g / "end.png",
-        "-i", work / "room.mp3",
+        "-loop", "1", "-framerate", FPS, "-t", 1, "-i", g / "end.png",
         "-loop", "1", "-framerate", FPS, "-t", DUR, "-i", g / "wm.png",
+        "-i", work / "v_intro.wav",
+        "-i", work / "v_japan.wav",
+        "-i", work / "music.mp3",
     ]
-    idx = 6
+    idx = 7
     cur = "base"
     # watermark on footage only
-    fc.append(f"[{cur}][5:v]overlay=56:262:enable='lt(t,{S4 - 0.2})'[w0]")
+    fc.append(f"[{cur}][3:v]overlay=56:262:enable='lt(t,{S4 - 0.2})'[w0]")
     cur = "w0"
     for i, (box, _, t0, t1) in enumerate(labels):
         x, y, w, h = box
@@ -184,11 +186,23 @@ def main(work, out):
         ]
         cur = f"o{i}"
     fc.append(f"[{cur}]format=yuv420p[vout]")
-    # audio: room tone, gentle fades, mastered to about -14 LUFS
-    fc.append(
-        f"[4:a]atrim=0:{DUR},afade=t=in:d=0.3,afade=t=out:st={DUR - 0.8}:d=0.8,"
-        "loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[aout]"
-    )
+    # audio: his voice in the background over the music, master about -14 LUFS
+    fc += [
+        # "Hi, I'm Monsor from Monsoor Motors." (cut before "Look at this Mercedes")
+        "[4:a]aresample=48000,atrim=0:2.74,afade=t=out:st=2.66:d=0.08,adelay=500|500[vi]",
+        # drop "like this": keep 0-1.19 s and 1.66 s to the end
+        "[5:a]aresample=48000,asplit[ja][jb]",
+        "[ja]atrim=0:1.19,afade=t=out:st=1.16:d=0.03[j1]",
+        "[jb]atrim=1.66,asetpts=PTS-STARTPTS,afade=t=in:d=0.03[j2]",
+        "[j1][j2]concat=n=2:v=0:a=1,adelay=4000|4000[vj]",
+        "[vi][vj]amix=inputs=2:normalize=0:duration=longest,"
+        "highpass=f=90,lowpass=f=7500,aecho=0.8:0.6:38:0.14,loudnorm=I=-20:TP=-3,aresample=48000,"
+        f"apad,atrim=0:{DUR},asplit[vo][sc]",
+        f"[6:a]aresample=48000,atrim=0:{DUR},afade=t=in:d=0.3,afade=t=out:st={DUR - 1.8}:d=1.8,"
+        "loudnorm=I=-21:TP=-3,aresample=48000[mu]",
+        "[mu][sc]sidechaincompress=threshold=0.05:ratio=3:attack=30:release=450[mud]",
+        "[mud][vo]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9,aresample=48000[aout]",
+    ]
     run(["ffmpeg", "-v", "error", "-y", *inputs,
          "-filter_complex", ";".join(fc),
          "-map", "[vout]", "-map", "[aout]", "-t", DUR,

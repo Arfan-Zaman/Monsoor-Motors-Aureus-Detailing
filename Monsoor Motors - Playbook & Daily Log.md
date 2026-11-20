@@ -200,6 +200,10 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Decisions / feedback: owner asked for an announcement ad, so the hook reads "ANNOUNCEMENT · ICM Japan visits Monsoor Motors" with "Japanese import pre-orders now open" in the first 3 s. Room tone only; music to be added in-app.
 - To-do next: confirm "Trimoty" spelling, turn on the AI label when posting, and check the licence number: the roll-up banner prints MD322748, this playbook says MD32748.
 
+### 21 Nov 2026 (ICM Japan reel v2)
+- What we made / changed: owner's fixes: banner zoom shot removed, room tone replaced by the original Monsoor ad music with his cloned voice (ML300 reel lines T1 + T7, "like this" cut out) in the background. 0 credits.
+- Decisions / feedback: owner wants his voice as natural background talk under music, not voice-over shot by shot. Don't regenerate for small fixes.
+
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
 - What we made / changed:

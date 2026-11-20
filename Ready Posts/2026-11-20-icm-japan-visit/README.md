@@ -2,14 +2,15 @@
 
 **Story:** Mr. Trimoty from ICM Japan (Japanese car exporter) visited the Monsoor Motors office in Victoria Park. Productive talks on Japanese car imports. Source: two WhatsApp photos from 12 Nov 2026 (handshake, seated by the roll-up banner).
 
-**Output:** `ICM-Japan-Visit-Announcement-15s.mp4` (1080×1920, 15.0 s, 30 fps, -16 LUFS). Video is local only (not in git). Rebuild with `make_reel.py` (needs the clips from Higgsfield jobs 8c03de03, d7247693 and audio bb9bbde3, plus the original seated photo).
+**Output:** `ICM-Japan-Visit-Announcement-15s.mp4` (1080×1920, 15.0 s, 30 fps, -14.5 LUFS). Video is local only (not in git). Rebuild free with `make_reel.py` (work folder needs the two Kling clips from jobs 8c03de03 and d7247693, his voice lines and the music; see the script header).
 
 | Time | Shot | On screen |
 |---|---|---|
-| 0.0–4.6 s | Handshake photo animated (Kling 4.0) | ANNOUNCEMENT · ICM Japan visits Monsoor Motors · Japanese import pre-orders now open |
-| 4.6–8.6 s | Seated photo animated (Kling 4.0) | Mr. Trimoty, ICM Japan · Productive talks on Japanese car imports |
-| 8.6–11.4 s | Slow push-in on the real banner (free, ffmpeg) | none (banner reads "We import Japanese Cars", "now taking pre-orders") |
-| 11.4–15.0 s | Navy end card | Logo · Tell us the car you want. We'll source it from Japan. · pre-orders · 0434 137 393 · monsoormotors.com.au · address · "Visit photos animated with AI" |
+| 0–5 s (hook) | Handshake photo animated (Kling 4.0) | ANNOUNCEMENT · ICM Japan visits Monsoor Motors · Japanese import pre-orders now open |
+| 5–9 s | Seated photo animated (Kling 4.0) | Mr. Trimoty, ICM Japan · Productive talks on Japanese car imports |
+| 9–15 s | Navy end card, slow push-in | Logo · Tell us the car you want. We'll source it from Japan. · pre-orders · 0434 137 393 · monsoormotors.com.au · address · "Visit photos animated with AI" |
+
+**Sound (v2, 21 Nov, owner's changes, 0 credits):** banner zoom shot removed; room tone replaced by the original Monsoor ad music (`Aureus Detailing/08 Social Media/Launch Reels/ad/audio/music.mp3`, job 4ffeabd7) with his already-cloned voice in the background, taken from the Mercedes ML300 reel (`audio/T1.wav`, `audio/T7.wav`): "Hi, I'm Monsor from Monsoor Motors." … "We can also import cars from Japan for you, at an affordable price. We are taking pre-orders now." ("like this" cut out). Music dips a little under his voice.
 
 **Prompts (Kling 4.0, image-to-video, start image only)**
 - Handshake: "Real office photo comes to life. The two men shake hands firmly, a natural double pump of the handshake, both smiling warmly, then glance at each other and back to the camera. Filmed on a phone held by a colleague: subtle handheld breathing, tiny natural sway, slow gentle push-in toward the handshake. Soft window daylight from the left. Keep both faces, glasses, beard, clothing, the roll-up banner and its printed text exactly as in the photo. No new people, no extra hands, no camera cuts, no music."
@@ -19,7 +20,7 @@
 **Before posting**
 - Confirm the spelling "Trimoty" and that ICM Japan is happy to be named.
 - Turn on the platform's AI label (Meta "AI info" / TikTok AI-generated toggle): the two people shots are animated from real photos.
-- Add a licensed track from the Instagram/Facebook/TikTok music library about 13 dB under (the file has room tone only).
+- His voice is AI-cloned: have Mr Monsor hear it and approve before posting.
 - The roll-up banner prints the licence as **MD322748**; the playbook says **MD32748**. One of them is wrong: check before reprinting.
 
-**Cost:** 33 credits (16.25 + 13 + 3.75).
+**Cost:** 33 credits (16.25 + 13 + 3.75 for the room tone, no longer used). v2 edit: 0 credits.

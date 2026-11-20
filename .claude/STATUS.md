@@ -4,6 +4,19 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: ICM Japan reel v2 (owner's fixes)
+
+**What I did**
+- Removed the banner zoom shot. Replaced the room tone with the existing Monsoor ad music and his already-cloned voice (two ML300 reel lines) in the background. 0 credits, nothing regenerated. Still 15 s.
+
+**Files changed**
+- `Ready Posts/2026-11-20-icm-japan-visit/make_reel.py`, `README.md` (video local only), generation log, playbook Daily Log, this file.
+
+**What's next**
+- Owner: approve his cloned voice, confirm "Trimoty", turn on the AI label, then post. Licence mismatch (banner MD322748 vs playbook MD32748) still open.
+
+---
+
 ## 20 Nov 2026: ICM Japan visit announcement reel
 
 **What I did**
