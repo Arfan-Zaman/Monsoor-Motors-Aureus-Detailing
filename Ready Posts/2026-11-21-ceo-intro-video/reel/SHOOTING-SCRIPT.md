@@ -179,3 +179,25 @@ Only these elements are used. Nothing else.
 | Black C-HR | `Monsoor-CHR-Hybrid-Black-Sheet` | `526b5aa4-80d5-4c7a-96a5-9b6078b58ead` |
 Never use for Arfan: Arfan-CEO-Outfit-Locked, Arfan-Outfit-CrimeDrama, Arfan-Outfit-Hawaiian, Arfan-Outfit-Hawaiian-Final (they contain generated faces).
 | Arfan silver chain (prop, no face) | `Arfan-Silver-Chain` | `885feadc-5d46-4b17-b593-b9d51ec33742` |
+
+## 14. Scene elements, review 21 Nov 2026
+KEEP: Dave ASX (ad79f160), glam V8 SUV (161e066d), Monsoor muscle car (4ced8bfe), 3 montage SUVs (f126c31f), dashes ASX (20bc1914) / Seltos (1d6d1590) / CX-3 (4f93e0c3) / V8 (4cfd475f), C-HR POWER+READY (8a474c56), flash effect (355047fd).
+REJECT (cartoon look, my prompt pushed neon): Perth red lights (e96680d3), Kona dash (5564fcac), pump display (de2f3010). Redo only with the LOOK OVERRIDE wording, after Arfan's OK.
+
+## 15. Scene prop/vehicle elements (final, 21 Nov 2026)
+| Element | ID |
+|---|---|
+| `Car-Dave-ASX-Grey` | `72b88997-79c1-45f9-b89a-4d973ab8b8bf` |
+| `Car-Glam-V8-SUV` | `91778809-b36a-4e7d-9fa5-1842bcd23ea6` |
+| `Car-Monsoor-MuscleCar` | `f4bc483a-e560-4684-baa0-1d6f785b0a18` |
+| `Cars-Montage-3-SUVs` | `8d3c5687-f046-4b41-b90e-70876da00828` |
+| `Dash-ASX` | `a00f549c-9715-4a94-bd1c-e46e53fe4794` |
+| `Dash-Seltos` | `1fdf0ac9-dcae-41fc-b809-5645237dee70` |
+| `Dash-CX3` | `15d87646-3d1c-4fa9-a91e-8156765a3d6c` |
+| `Dash-V8` | `f20a1df3-3dc8-485f-a9a8-6f950f492e4e` |
+| `CHR-Power-Ready` | `9240a5dd-a106-4ce7-af51-171c3dea6de7` |
+| `FX-SpeedCam-Flash` | `775bb10c-faf2-4ce9-80fd-cb418f58a323` |
+| `Prop-WA-Speed-Camera` | `e7548e77-bc74-4c9a-9ec1-3408876f7880` |
+
+## 16. ONE WORLD RULE (Arfan, 21 Nov 2026)
+Every shot must look like the same film, same camera, same night/day, same crew: identical look settings on every generation; natural real colour (target look = `Prop-WA-Speed-Camera` image); the same cast/car/prop element IDs every time they appear; night shots share the same Perth night (LED/sodium streetlights, dark sky, wet-look road only where it rained in the previous shot); day shots share one sun direction per location; match white balance and exposure between cuts in the edit. All lessons from this project apply: locked voice only, real faces from locked elements, cut on movement, varied shot lengths, no slow-mo except where approved, situational humour only, no style words in prompts.

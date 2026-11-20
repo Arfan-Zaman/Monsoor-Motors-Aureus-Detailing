@@ -1,5 +1,8 @@
 # "Queue Jump": look bible and continuity sheet
 
+> **LOOK OVERRIDE (Arfan, 21 Nov 2026): REAL LIVE-ACTION, NEVER CARTOON.** Supersedes every "sunset-to-neon", "teal/magenta neon", "anamorphic flare", "cinematic palette" or GTA-colour instruction below. Every prompt must read like a real commercial shot on a real camera: natural colour, true Perth night exposure (LED and sodium streetlights, real shop lighting, mostly dark sky), natural daylight by day, skin and paint as they really are, mild real lens behaviour only. No saturated purple/pink skies, no candy neon, no glow, no stylised grading. The GTA wink lives ONLY in framing, pacing and the edit (locals montage, low angles, hard cuts), never in the colours. Before sending, check each prompt twice for any word that pushes style (cinematic, neon, vibrant, epic, dramatic, glowing) and remove it.
+
+
 Rule (Arfan, 21 Nov 2026): one set-up for the whole shoot so every shot looks like the same camera, crew and day; every person, prop and light is where it would really be, in the right order. Nothing may look pasted in.
 
 ## 1. Look bible (identical on every generation)

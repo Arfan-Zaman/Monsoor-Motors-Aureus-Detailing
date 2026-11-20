@@ -1,5 +1,11 @@
 # "Queue Jump": DIRECTOR'S CUT (production document, v1)
 
+> **ALL-VIDEO RULE (Arfan, 21 Nov 2026):** every shot in the final ad is real generated VIDEO with real motion (camera breathing, light flicker, needles moving, hands, reflections). NO still images or Ken-Burns stills anywhere, inserts and brand hero included. Images and elements are references and start frames only. Inserts (dashes, pump meter, POWER button, speed camera) become 4 s Seedance 2.0 clips cut down to their 0.4–1.0 s.
+
+
+> **LOOK OVERRIDE (Arfan, 21 Nov 2026): REAL LIVE-ACTION, NEVER CARTOON.** Supersedes every "sunset-to-neon", "teal/magenta neon", "anamorphic flare", "cinematic palette" or GTA-colour instruction below. Every prompt must read like a real commercial shot on a real camera: natural colour, true Perth night exposure (LED and sodium streetlights, real shop lighting, mostly dark sky), natural daylight by day, skin and paint as they really are, mild real lens behaviour only. No saturated purple/pink skies, no candy neon, no glow, no stylised grading. The GTA wink lives ONLY in framing, pacing and the edit (locals montage, low angles, hard cuts), never in the colours. Before sending, check each prompt twice for any word that pushes style (cinematic, neon, vibrant, epic, dramatic, glowing) and remove it.
+
+
 21 Nov 2026 · 39.0 s · 9:16 · 1080×1920 delivery · 34.0 s story + 5.0 s brand · Meta / Instagram paid and organic.
 Plan only: nothing generated, nothing committed. This file merges `roles/CINEMATOGRAPHY.md`, `roles/CHOREOGRAPHY.md`, `roles/CONTENT-AND-SOUND.md`, `roles/MARKETING.md` (story fixes, compliance, variants), `roles/REAL-NUMBERS.md`, `SHOOTING-SCRIPT.md` §7–8 and `CONTINUITY.md`, plus the client changes of 21 Nov. **Where any of those files disagree with this one, this one wins.**
 
