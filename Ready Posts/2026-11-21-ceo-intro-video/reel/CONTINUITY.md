@@ -1,6 +1,10 @@
 # "Queue Jump": look bible and continuity sheet
 
-> **LOOK OVERRIDE (Arfan, 21 Nov 2026): REAL LIVE-ACTION, NEVER CARTOON.** Supersedes every "sunset-to-neon", "teal/magenta neon", "anamorphic flare", "cinematic palette" or GTA-colour instruction below. Every prompt must read like a real commercial shot on a real camera: natural colour, true Perth night exposure (LED and sodium streetlights, real shop lighting, mostly dark sky), natural daylight by day, skin and paint as they really are, mild real lens behaviour only. No saturated purple/pink skies, no candy neon, no glow, no stylised grading. The GTA wink lives ONLY in framing, pacing and the edit (locals montage, low angles, hard cuts), never in the colours. Before sending, check each prompt twice for any word that pushes style (cinematic, neon, vibrant, epic, dramatic, glowing) and remove it.
+> **LOOK (Arfan, 21 Nov 2026, final): GTA VI-TRAILER MOOD, REAL LIVE-ACTION FILM.** The whole ad should feel like that trailer world (mood, environment, lighting, cinematography, shot choices), but filmed for real on a cinema camera, never cartoon or CG.
+> - **Day/golden hour:** warm, humid, sun-drenched Perth; low golden sun, real lens flare from the sun, palm silhouettes, heat haze, rich warm grade (golds, teal shadows), saturated but believable skin and paint.
+> - **Night:** wet streets reflecting real light sources, mixed sodium-orange and LED-white streetlights, practical neon from real shop signs only (pink, teal, red) glowing on surfaces near them, deep real blacks, light haze; the sky stays a real dark night or a real dusk gradient (never purple/candy).
+> - **Camera:** anamorphic feel (horizontal flare streaks from headlights and signs, oval bokeh), mild film grain, low hero angles, slow push-ins, smooth car-mount tracking, the odd handheld/phone-video insert, hard cuts on action.
+> - **Never:** flat CG skin, plastic paint, glowing outlines, painted skies, anime colour, everything-neon frames. Style words allowed in prompts only when tied to a real source ("neon from the noodle-bar sign reflecting on the wet road"). Check every prompt twice.
 
 
 Rule (Arfan, 21 Nov 2026): one set-up for the whole shoot so every shot looks like the same camera, crew and day; every person, prop and light is where it would really be, in the right order. Nothing may look pasted in.
