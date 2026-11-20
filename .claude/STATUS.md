@@ -4,6 +4,19 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 20 Nov 2026: rule merged into main
+
+**What I did**
+- Merged the latest `main` from GitHub into this branch (no conflicts), then pushed it to `main`. Every session now gets the push + status rule.
+
+**Files changed**
+- `.claude/STATUS.md` (this entry). `CLAUDE.md` and `Tools/autosave.sh` are now on `main`.
+
+**What's next**
+- Nothing pending for this task. The next session that works here adds its own entry above this one.
+
+---
+
 ## 20 Nov 2026: push + status rule set up
 
 **What I did**
