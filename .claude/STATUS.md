@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: voice version 10 locked
+
+**What I did**
+- Arfan locked version 10 as his final voice track. Saved it as `Arfan-script-voice-LOCKED.wav`, renamed take 7 so only one file says LOCKED, and updated the plan and asset register.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/voice/Arfan-script-voice-LOCKED.*`, `Arfan-script-voice-7.*`, `PLAN.md`
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Shot 1 draft, 27 credits, when Arfan says go.
+
+---
+
 ## 21 Nov 2026: Arfan voice version 10 (three pronunciation fixes)
 
 **What I did**
