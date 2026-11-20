@@ -6,7 +6,7 @@ Status: 3D blocking v3 and both voice tracks APPROVED by Arfan, 21 Nov 2026. Nex
 - Format: 9:16 vertical, 1080x1920, 32 seconds, two shots. Reels, TikTok, Facebook.
 - Aim: announce Arfan as CEO and build trust in the whole business: every kind of car, and Japanese imported hybrids in particular.
 - Nobody walks. Arfan stays on his mark and the camera travels to his side.
-- Set: showroom glass front with the MONSOOR MOTORS sign, hero Toyota C-HR on a navy plinth behind the two men, stock cars in the bays, feather banners, planters and bollards.
+- Set (changed 21 Nov 2026): a Japanese used-car auction yard, the standard background for all Monsoor Motors videos (element `Japan-Auction-Yard-Plate`, file `location/Japan-Auction-Yard-Plate-v1.png`). The two men stand in the empty numbered bays with the black C-HR Hybrid parked behind them, rows of auction cars and the auction hall beyond. The Blender previs still shows the earlier dealership set; positions and camera moves are unchanged.
 
 ## Shot list and script
 

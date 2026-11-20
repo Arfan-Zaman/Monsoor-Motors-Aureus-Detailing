@@ -4,6 +4,22 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: standard background (Japanese auction yard) and re-voiced opening
+
+**What I did**
+- Arfan rejected the Perth foreshore background. Made a 2K Japanese auction yard plate and saved it as the element `Japan-Auction-Yard-Plate`: the one background for all Monsoor Motors videos. Filed in the project's Locations folder.
+- Re-voiced only Arfan's opening ("Thank you for the opportunity. Hello, this is Arfan.") in two tones and spliced each onto take 3: versions 4A and 4B.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/location/` (two plates), `voice/Arfan-script-voice-4A.*`, `4B.*`, `PLAN.md`
+- `.claude/skills/aureus-video-studio/SKILL.md`, `assets/ASSET-REGISTER.md`, `assets/GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to pick 4A or 4B. Then make the two keyframe stills on the auction yard background.
+
+---
+
 ## 21 Nov 2026: everything filed in the Monsoor Motors project; blocking and Monsoor's voice approved
 
 **What I did**
