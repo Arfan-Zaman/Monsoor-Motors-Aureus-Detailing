@@ -31,7 +31,7 @@ End card (last second): Monsoor Motors, 530 Albany Highway Victoria Park, 0434 1
 - Car: element `Monsoor-CHR-Hybrid-Black` (real photo of the black Toyota C-HR Hybrid; photos in `Cars/Toyota C-HR Hybrid (black)/`).
 
 ## Voices
-- Arfan: his own voice, cloned from a recording of `voice/Arfan-voice-sample-lines.md` (Higgsfield voice name `Arfan-CEO`).
+- Arfan: his own voice, cloned from a recording of `voice/Arfan-voice-sample-lines.md` (Higgsfield voice `Arfan-CEO-1`, id `6a63aee1-ec53-4b65-acab-0e1fc67b9637`, created 21 Nov 2026).
 - Monsoor: his own voice from his existing reference recording (file to be confirmed).
 
 ## Workflow from here

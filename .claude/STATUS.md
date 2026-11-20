@@ -4,6 +4,22 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan's voice clone created
+
+**What I did**
+- Arfan recorded his sample lines in the Higgsfield voice recorder; the voice `Arfan-CEO-1` is created and ready. Recorded its ID in the asset register and the plan.
+- The separate local recording `voice/arfan-voice-ref.wav` came out silent (room noise only), so it was not used.
+
+**Files changed**
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`
+- `Ready Posts/2026-11-21-ceo-intro-video/PLAN.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Test the voice on one script line. Still needed: a real recording of Monsoor's voice.
+
+---
+
 ## 21 Nov 2026: C-HR element sheet, script opening, voice sample lines
 
 **What I did**
