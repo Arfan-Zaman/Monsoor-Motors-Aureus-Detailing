@@ -4,6 +4,19 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: ICM Japan reel on Aureus TikTok
+
+**What I did**
+- Owner said yes: posted the reel on TikTok @aureusdetailing.com.au with the caption (+ #AureusDetailing) and the AI-generated label on. TikTok shows it as "Content under review" (private until the review clears).
+
+**Files changed**
+- This file.
+
+**What's next**
+- Check TikTok Studio later that the review cleared and the post is public.
+
+---
+
 ## 21 Nov 2026: ICM Japan reel posted
 
 **What I did**
