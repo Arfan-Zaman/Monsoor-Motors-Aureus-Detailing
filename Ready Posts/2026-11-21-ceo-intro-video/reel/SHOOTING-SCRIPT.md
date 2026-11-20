@@ -134,3 +134,11 @@ Dress code: Arfan and Monsoor fixed; everyone else Gen Z Miami-meets-Perth.
 | Montage: glam driver (badge-less luxury V8 SUV) | `Driver-Glam-V8` | `f259a71f-a7d2-4f57-87cc-f11ed2523fa4` |
 Retired: Dad-Dave, Kid-Mia, Kid-Mia-v2, Extra-Tradie-Ute, Extra-Nurse-SUV, Extra-Retiree-Sedan (delete in web app).
 Odometers: our C-HR 45,000 km (real); every other car a random, believable reading (about 12,100 km a year in WA).
+
+## 9. Monsoor hero, approved route (21 Nov 2026, supersedes section 8 row for Monsoor)
+- Element `MA-Monsoor-Boss` `8eab65a7-d3d1-4b41-a3c3-49c91bf27208`: warm-hearted GTA-style boss ("a good soul"): navy silk camp-collar palm shirt, gold rope chain, gold watch, charcoal trousers, loafers, dark aviators by day.
+- Face ALWAYS via Soul ID `7d5bf600-ee1b-484d-a95f-6bfae7b6e5af` (soul_2) start frames, then costume edit, then video. The element-only face route was rejected by Monsoor on 20 Nov.
+- Build widened toward his real stocky build; arms read slightly gym-muscular. **Show Monsoor before locking.**
+- Voice: his real cloned voice only; warm, low, unhurried.
+- Delivery car: our black C-HR (no white C-HR exists).
+- New shot: Monsoor arrives at the yard in a badge-less black luxury muscle car (the only loud engine in the ad).
