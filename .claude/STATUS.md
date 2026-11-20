@@ -4,6 +4,23 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: new Cinema Studio project and Arfan's wardrobe reference
+
+**What I did**
+- Created the Higgsfield Cinema Studio project "Monsoor Motors - CEO Intro" with folders in the tutorial's order (storyboard, characters, locations, props, voice, shot 1, shot 2, final edit) and filed every asset into it, including the storyboard, floor plan and previs video.
+- Downloaded the real outfit product photos into `Brand Kit/Characters/Arfan-CEO/Wardrobe/` and made a wardrobe sheet: v3 has a matte ramie-cotton shirt and looser, longer trousers.
+- Credits for this work: 8.25 of Arfan's 10.
+
+**Files changed**
+- `Brand Kit/Characters/Arfan-CEO/Wardrobe/`, `PERSONA.md`
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`, `GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Burnt wooden buttons need one more edit (2.75 credits, over the 10 cap): Arfan to approve. Then replace the wardrobe element and import elements into the project in the web app.
+
+---
+
 ## 21 Nov 2026: Arfan's final character element and personality
 
 **What I did**

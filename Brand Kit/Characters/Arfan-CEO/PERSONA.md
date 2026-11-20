@@ -22,7 +22,7 @@ The on-screen character for Monsoor Motors videos. Real person: Md Arfan Uz Zama
 
 ## Look (locked)
 - Face and body: element `Arfan-CEO-Final` (close headshots + full-body sheet v2).
-- Outfit: black linen shirt tucked into coffee-brown high-waisted gurkha trousers, black Chelsea boots, Seiko with black dial on the left wrist, silver band on the right ring finger.
+- Outfit (wardrobe sheet `Wardrobe/Arfan-CEO-Wardrobe-Sheet-v3.png`): black **ramie-cotton** shirt, matte with a soft slub texture, no shine, **burnt wooden buttons** (sheet still shows pale buttons; to update), tucked into coffee-brown high-waisted gurkha trousers cut **a little loose with a little extra length** (full break on the boots), black leather Chelsea boots, Seiko 5 Sports black dial on the left wrist, plain silver band on the right ring finger.
 
 ## Voice (locked)
 - Voice clone `Arfan-CEO-2` (Higgsfield voice id `714d186a-286b-4858-b9ff-a231abf164f2`).
