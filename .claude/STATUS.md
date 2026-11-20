@@ -4,6 +4,23 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: voice locked, project organised, realism workflow adopted
+
+**What I did**
+- Re-voiced Arfan's script with his new opening ("That means a lot. Hello mates, this is Arfan.") and locked it: `Arfan-script-voice-7-LOCKED.wav`, 23.0 s.
+- Studied Higgsfield's tutorial (youtu.be/1BzzdY-nK9A) and wrote its method into the video skill as section 9, with how to use the AI direction model (Cinema Studio 4.0).
+- Applied it: made a three-quarter angle of the auction yard and saved both views as the element `Japan-Auction-Yard-2-Views`. Filed the outfit photos in the project.
+
+**Files changed**
+- `.claude/skills/aureus-video-studio/SKILL.md` (section 9), `assets/ASSET-REGISTER.md`, `assets/GENERATION-LOG.md`
+- `Ready Posts/2026-11-21-ceo-intro-video/PLAN.md`, `voice/Arfan-script-voice-7-LOCKED.*`, `location/Japan-Auction-Yard-Plate-v1-three-quarter.png`
+- `.claude/STATUS.md`
+
+**What's next**
+- Test still: Arfan, Monsoor and the C-HR on the auction yard (about 2.75 credits). Then keyframes and 480p drafts.
+
+---
+
 ## 21 Nov 2026: Arfan voice versions 5 and 6
 
 **What I did**

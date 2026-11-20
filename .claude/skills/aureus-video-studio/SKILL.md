@@ -50,7 +50,7 @@ Other packs (anime, fight scenes, music video, food, fashion, podcast, SaaS, cou
 
 ## 4. Asset library (where things live)
 - **Higgsfield destination:** project **Aureus Detailing** in the Plus workspace. workspace_id `68fdca71-5be8-4d53-ac58-fa86267eb49b`, project/folder_id `5b8de463-c51c-494a-9cf5-608268e53889`. Pass this `folder_id` on every Aureus generation. Monsoor Motors work does not go in this project.
-- **Monsoor Motors destination (set 21 Nov 2026):** project **Monsoor Motors**, project and root folder id `fede0767-fd25-4fc1-b998-cf207b85dba4`. Subfolders: Characters `807c11b2-2b67-4a36-a00a-23eeca0b4160`, Cars `efcfe4d8-0cbc-4304-b008-bc02d73f9541`, Voices `d23fa704-4b62-484f-9dca-d311e2e9937f`, Locations `1481f567-aae0-492b-9597-df92e5ecd99b`. **Standard background for every Monsoor Motors video (set 21 Nov 2026): element `Japan-Auction-Yard-Plate`** (Japanese auction yard). Use it in every keyframe so all videos share one place. Pass the matching `folder_id` on **every** Monsoor generation and attach every upload with `attach_project_asset`, without being asked. The owner expects every sheet, car and voice to be in the project.
+- **Monsoor Motors destination (set 21 Nov 2026):** project **Monsoor Motors**, project and root folder id `fede0767-fd25-4fc1-b998-cf207b85dba4`. Subfolders: Characters `807c11b2-2b67-4a36-a00a-23eeca0b4160`, Cars `efcfe4d8-0cbc-4304-b008-bc02d73f9541`, Voices `d23fa704-4b62-484f-9dca-d311e2e9937f`, Locations `1481f567-aae0-492b-9597-df92e5ecd99b`. **Standard background for every Monsoor Motors video (set 21 Nov 2026): element `Japan-Auction-Yard-2-Views`** (Japanese auction yard, three-quarter and straight-on views; the older single-view element `Japan-Auction-Yard-Plate` is superseded). Use it in every keyframe so all videos share one place. Pass the matching `folder_id` on **every** Monsoor generation and attach every upload with `attach_project_asset`, without being asked. The owner expects every sheet, car and voice to be in the project.
 
 - `assets/ASSET-REGISTER.md`: every reusable asset: characters, reference elements, Soul IDs, logos uploaded to Higgsfield (media IDs), approved style prompts, music.
 - `assets/GENERATION-LOG.md`: one line per generation: date, project, model, prompt file, seed, references, cost, result link, keep / reject and why.
@@ -88,3 +88,36 @@ The owner prefers raw Higgsfield footage to edited versions. Build ads like this
 - **Text:** a few frosted-glass labels (footage blurred behind them), warm white, no brand colours pushed; watermark top left at about 55%.
 - **Lengths:** 30 s for paid ads with the offer on screen in the first 3 s; a longer full cut for organic.
 - **Edit free on this Mac:** `Launch Reels/ad/make_ad_v6.py` (standalone shots only) (he narrates throughout; 6-frame dissolves; muted glass visuals; logo bottom centre; master to -14 LUFS). Spend credits only on new shots, and file every job in the Higgsfield project folders (asset register).
+
+## 9. Realism workflow (set 21 Nov 2026, from Higgsfield's own tutorial "How I Get Perfect AI Realism in Every Shot", youtu.be/1BzzdY-nK9A)
+Use this order for every new video. It replaces guessing with cheap tests, and it is why earlier runs wasted credits.
+
+**A. Plan before spending**
+1. Script, then a shot list: decide how much action fits in one generation and split scenes to match.
+2. Test the plan free or cheaply first: a Blender previs (`Ready Posts/2026-11-21-ceo-intro-video/previs/`) or black-and-white storyboard frames. Fix the prompt here, before any video credit. The video prompts must match the storyboard shot for shot.
+
+**B. Build the assets (the foundation)**
+3. Characters: grey background, three views in one sheet (face close-up, full-body front, full-body back). No blown-out highlights on the face in the sheet: they turn into plastic skin in close-ups. The expression on the sheet carries into the acting, so put the wanted expression on the sheet.
+4. Locations: generate at a **three-quarter angle**, not straight-on, so the video model can see the layout and does not have to invent the rest when the angle changes. State the lighting; it sets the mood and colour. For a second location in the same film, attach the first as a reference so light and colour match.
+5. Real products and cars: start from a real photo, make a prop sheet from several angles, and check the sheet against reality (for example steering wheel on the correct side: right-hand drive for our Japanese imports).
+6. Avoid thin stripes and fine patterns on clothes: they shimmer and smear.
+7. **Test the pair** (character + location) in one cheap still or draft before committing. If the face looks fake or the light does not match, change the asset, not the prompt.
+8. Lock the winners, give each a name, save each as a reference element, and file it in the Higgsfield project. Every later prompt calls the assets by those names (element placeholders), never by a fresh description.
+
+**C. Generate**
+9. Video prompts follow the storyboard: the exact order of actions, the framing of each shot, the lighting.
+10. Say how a thing is **used**, not only how it looks (a cap that flips, a door on the driver's side, which hand).
+11. Say how the character **feels** during the action: expression, energy, how he moves. Flat acting comes from prompts with no emotion.
+12. No superlatives ("very white", "extremely shiny"): the model overdoes them.
+13. When the same fault repeats in two takes, the cause is usually the **reference image**. Fix the reference, then regenerate; do not keep rewriting the prompt.
+14. Small wrong detail (text, a label): grab a frame, fix only that detail in an image model, and feed the fixed frame back as a reference.
+15. Generate two or three takes of the same shot list, then cut the best part of each together. The matching shot list is what makes them cut.
+16. Product or logo shot: a small camera move, then hold still long enough to read.
+17. Use draft mode first where the model has it (Seedance 2.5 `draft: true`, a 480p draft that can be finalised within seven days via `draft_job_id`), and finalise only the take that works.
+
+**D. AI direction (Higgsfield "Cinema Studio 4.0", model `cinematic_studio_video_4_0`)**
+- This is the option with automatic prompt direction. It takes the same references as Seedance (mode `omni_reference`: `start_image`, `end_image`, `image_references`, `video_references`, `audio_references`), 4 to 30 s, up to 1080p.
+- Its direction controls are separate parameters, not prompt words: `era_id`, `camera_model_id`, `camera_lens_id`, `camera_aperture_id`, `pacing_id`, `genre_id`, `light` + `light_id`, `color_palette`. Look the ids up with `get_presets` before use; never invent an id.
+- How to use it properly: give it the locked assets as references and a start frame; set camera body, lens and aperture to match the previs (for example 35 mm for the wide two-shot, 50 mm for the single); choose natural daylight lighting and a calm pacing; keep the prompt to action, order and emotion, and leave camera and light to the controls so the two do not fight.
+- Our rule on top: no heavy grade, real speed, one continuous move per shot, as in the "edit like a human" section of CLAUDE.md.
+
