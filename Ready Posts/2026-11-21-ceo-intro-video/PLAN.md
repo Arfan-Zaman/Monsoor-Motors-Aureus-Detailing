@@ -49,5 +49,27 @@ Done: script and voices locked; blocking approved; characters, car and location 
 - The C-HR must be a real stock car shown as it is, plates blurred. If none is in stock, label it as an illustration.
 - Label the video as AI-generated where the platforms ask.
 
-## Cost
-Blender previs: free. Higgsfield part not priced yet; rough guess 50 to 90 credits. Exact prices will be checked before each paid step.
+## Cost (real quotes from Higgsfield, 21 Nov 2026)
+
+**Prices** (9:16, with references; Seedance 2.5 and Cinema Studio 4.0 cost the same): 480p draft 3 credits a second, 720p 7, 1080p 16. Finalising a draft is charged again at the final resolution. The video is 32 s: shot 1 is 9 s, shot 2 is 23 s.
+
+| Step (tutorial method) | Shot 1 (9 s) | Shot 2 (23 s) | Both |
+|---|---|---|---|
+| 480p draft | 27 | 69 | 96 |
+| Final at 720p | 63 | 161 | 224 |
+| Final at 1080p | 144 | 368 | 512 |
+
+| Budget | What it covers | Credits |
+|---|---|---|
+| Floor | No drafts, straight to 720p, both shots right first time | 224 |
+| **Minimal (recommended)** | One draft of each shot, then finalise both at 720p; upscale to 1080p on this Mac for free | **320** |
+| Low, with one redo | As minimal, plus one extra draft of each shot | 416 |
+| 1080p from Higgsfield | One draft of each shot, finalise at 1080p | 608 |
+
+- Each failed 720p take costs 63 or 161; each failed draft costs 27 or 69. That is why drafts come first.
+- Every second cut from the video saves 10 credits on the minimal path.
+- First spend: the shot 1 draft, 27 credits. It tests the characters, the car, the location, the lip sync and the voice reference in one go.
+- Stills are not needed on this path (the tutorial attaches the assets straight to the video model). A test still is 2.75 credits if wanted.
+
+**Spent so far this session (from the Higgsfield transaction list): 183.39 credits.** Voice clones 120 (three at 40 each), voice lines 32.9, images 30.25, Soul 2.0 tests 0.24. Balance 2,783.61.
+Correction: full voice takes with the long delivery cue cost 4.1 to 6.1 credits each, not the "about 2.1" quoted earlier. Each new recording in the Higgsfield recorder makes a voice clone and costs 40 credits.

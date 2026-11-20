@@ -4,6 +4,22 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: real cost plan for the video
+
+**What I did**
+- Got real Higgsfield quotes for every step and wrote a costed plan: minimal path 320 credits (drafts 96 + 720p finals 224), floor 224, 1080p path 608.
+- Checked the transaction list: 183.39 credits spent this session (voice clones 120, voice lines 32.9, images 30.25). Corrected my earlier underquote on voice takes in the plan, the log and memory.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/PLAN.md` (Cost section)
+- `.claude/skills/aureus-video-studio/assets/GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to lock take 7 or take 8, then approve the first spend: shot 1 draft, 27 credits.
+
+---
+
 ## 21 Nov 2026: Arfan voice take 8
 
 **What I did**
