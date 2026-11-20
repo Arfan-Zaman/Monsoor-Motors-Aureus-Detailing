@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan voice version 10 (three pronunciation fixes)
+
+**What I did**
+- Generated take 9 with take 8 as the audio reference and only the three fixes stated (longer "lot", drawn-out "mates", deeper M and N). The rest of take 9 drifted, so version 10 joins take 9's opening onto take 8's untouched remainder (23.4 s).
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/voice/Arfan-script-voice-9.*`, `Arfan-script-voice-10.*`
+- `.claude/skills/aureus-video-studio/assets/GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to confirm version 10 as the locked track. Then the shot 1 draft (27 credits).
+
+---
+
 ## 21 Nov 2026: real cost plan for the video
 
 **What I did**
