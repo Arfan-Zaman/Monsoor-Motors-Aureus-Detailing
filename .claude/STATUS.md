@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: ICM Japan reel posted
+
+**What I did**
+- Posted the reel with the caption to the Monsoor Motors Facebook Page (Meta Business Suite, shows in Published) and Instagram @monsoor.motors (AI label on, not shared to the personal Facebook).
+- Checked both Chrome profiles: Browser 2 is personal (Instagram sabiha_nowriin, TikTok @mdarfanuzzaman4), so nothing posted there. The only TikTok signed in on Browser 1 is @aureusdetailing.com.au. No Monsoor Motors TikTok found.
+
+**Files changed**
+- This file.
+
+**What's next**
+- TikTok: owner to say whether a Monsoor Motors TikTok exists, or whether to post on the Aureus TikTok.
+
+---
+
 ## 21 Nov 2026: ICM Japan reel caption
 
 **What I did**
