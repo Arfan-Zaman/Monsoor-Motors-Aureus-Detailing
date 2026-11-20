@@ -161,3 +161,7 @@ Odometers: our C-HR 45,000 km (real); every other car a random, believable readi
 | Driver retiree | `Driver-Retiree-Real` | `eefa2c79-d3b5-4572-9a53-b0139fb58f3e` | in-car only |
 | Driver glam (V8) | `Driver-Glam-Real` | `0b6631a2-04b5-4809-9b49-31acf7df8db3` | in-car only |
 Every other people element is retired for this ad.
+
+## 12. FINAL wardrobe updates (21 Nov 2026, overrides section 11 rows for Arfan and Monsoor)
+- Arfan outfit: `Arfan-Outfit-Hawaiian-Final` `65e2a486-0981-4ed2-94c7-79811238c4f6`: black Hawaiian shirt (olive/sand/coffee), boxy, untucked; ecru ramie trousers, loose mid-rise; brown suede-canvas chunky sneakers; Seiko olive dial; silver ring; Ray-Ban Meta (clear night / green day). Face and expressions ONLY from `Arfan-CEO-Final` cde963a1. Ordinary arms.
+- Monsoor: `MA-Monsoor-Boss-v2` `0bd837e0-5c67-4768-a4b4-a105fc5ed65c`: same as Boss plus a fine classy 3 mm gold Figaro chain. Face via Soul ID 7d5bf600.
