@@ -4,6 +4,23 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: CEO intro video 3D previs (two shots) and master element
+
+**What I did**
+- Reworked the intro video into two shots (27 s) and rendered the whole video as 3D blocking in Blender: framing, lenses, camera moves, the walk, gestures and script timing. Free, no credits.
+- Saved Arfan's chosen master sheets as the element `Arfan-CEO-Master` and filed them in the Higgsfield project Monsoor Motors.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/PLAN.md` (version 2)
+- `Ready Posts/2026-11-21-ceo-intro-video/previs/` (scripts, .blend, storyboard, floor plan; the .mp4 stays local)
+- `.claude/skills/aureus-video-studio/assets/ASSET-REGISTER.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to approve the blocking and script, then send the founder's photos and OK, real C-HR photos and two voice samples.
+
+---
+
 ## 21 Nov 2026: "Meet our new CEO" intro video plan
 
 **What I did**
