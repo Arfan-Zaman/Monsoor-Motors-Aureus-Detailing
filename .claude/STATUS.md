@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 21 Nov 2026: Arfan voice test line
+
+**What I did**
+- Generated Arfan's full script in his cloned voice `Arfan-CEO-1` (2.1 credits) for him to hear. It runs 31.1 s against about 22 s planned for shot 2.
+
+**Files changed**
+- `Ready Posts/2026-11-21-ceo-intro-video/voice/Arfan-voice-test-1.wav` and `.mp3` (audio may stay local)
+- `.claude/skills/aureus-video-studio/assets/GENERATION-LOG.md`
+- `.claude/STATUS.md`
+
+**What's next**
+- Arfan to say whether it sounds like him. Then fix the timing (faster rate, shorter script, or a longer shot).
+
+---
+
 ## 21 Nov 2026: Monsoor's voice reference found
 
 **What I did**
