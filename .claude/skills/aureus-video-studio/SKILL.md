@@ -110,6 +110,7 @@ Use this order for every new video. It replaces guessing with cheap tests, and i
 10. Say how a thing is **used**, not only how it looks (a cap that flips, a door on the driver's side, which hand).
 11. Say how the character **feels** during the action: expression, energy, how he moves. Flat acting comes from prompts with no emotion.
 12. No superlatives ("very white", "extremely shiny"): the model overdoes them.
+12a. **Sharp and textured, always (Arfan, 21 Nov 2026):** every prompt asks for tack-sharp focus and real visible texture (skin pores, fabric weave, leather grain, metal brushing); no smoothing, no blur, no shallow depth of field on reference sheets. Crop a detail at full size and check it before showing any result.
 13. When the same fault repeats in two takes, the cause is usually the **reference image**. Fix the reference, then regenerate; do not keep rewriting the prompt.
 14. Small wrong detail (text, a label): grab a frame, fix only that detail in an image model, and feed the fixed frame back as a reference.
 15. Generate two or three takes of the same shot list, then cut the best part of each together. The matching shot list is what makes them cut.
