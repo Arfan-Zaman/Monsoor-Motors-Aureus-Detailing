@@ -25,3 +25,13 @@
 - Voice v2 (GTA-style delivery): voice/qj/Arfan-Boss-v2.wav "Boss... just got the car. Coming." · Arfan-WhatsUp-v2.wav "Hey, what's up?" · Monsoor-GoodJob-v2.wav "Good... job." · Mia-v2.wav "Daaad... can we get one?" · Glam-ComeOn.wav · Dave-KiddingMe.wav. Choose by ear.
 - Monsoor's car: Car-Monsoor-Hellcat (Dodge Challenger SRT Hellcat Redeye Widebody).
 - Logos: real badges on real cars in the story only; never another brand's logo in our graphics; no GTA/Rockstar marks.
+
+## Update 22 Nov 2026 (compliance and new elements)
+- `Monsoor-Motors-Logo` ab8bec5b-8aec-4287-94ee-b631f9142d8e: official logo (horizontal navy + stacked on warm white). Use on the yard sign, flags, frame and end card. Never redraw it.
+- `Props-Plate-AZ420-SOLD-Keys` 6a3d3eb7-3e65-4fd7-83b9-b91398f0cf33: C-HR plate `AZ 420` in the MONSOOR MOTORS · VICTORIA PARK frame. Supersedes Props-PlateFrame-SOLD-Keys.
+- `GTA-Yard-Premium-AZ420` 53a82c2f-9ca9-45be-ab3b-00e974844e23: supersedes GTA-Yard-Premium.
+- `Dog-American-Bully` 68998f3e-e0b2-4b46-9133-2c20e41f586f: supersedes Dog-Pitbull-Muscle (American Bully type, seatbelt harness in car, lead at the yard).
+- `Arfan-Seiko-watch` e60833f4-19af-4613-84fe-050d48c20b2f: **must be in every prompt that shows Arfan's hands or wrist, POV shots included** (POWER press, nozzle, SOLD tag, keys, steering wheel). Left wrist, olive dial, steel bracelet.
+- Key handover uses the real Toyota C-HR smart key element `Props-CHR-Smart-Key` 313d52b9-7298-4634-87c4-d1030e280285, not a generic fob.
+- Rule: every recurring object in a shot is passed as its element; no object described from text alone when an element exists.
+- `GTA-Yard-Premium-Final` 8d00a83a-56af-463e-b2f2-846e7626c405: **use this yard.** Real logo on the wall sign AND the navy feather flags (orange edge); C-HR plate `AZ 420`, SOLD tag. Supersedes GTA-Yard-Premium and GTA-Yard-Premium-AZ420.
