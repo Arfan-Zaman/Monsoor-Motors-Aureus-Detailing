@@ -35,8 +35,8 @@ SEG = [
  ('c', (C+'c03.mp4', 1.0), 2.00, 'DAVE at the lights'),
  ('i', (E+'dash/Dash-Tucson.png', 0.49, 0.47, 1.4, 0.0), 1.00, 'DASH Tucson'),
  ('c', (C+'c04.mp4', 1.5), 2.00, 'SERVO wide'),
- ('c', (C+'c05.mp4', 0.6), 0.45, 'C-HR arrives, Arfan on the call'),          # him driving
- ('c', (C+'c19.mp4', 10.7), 0.40, 'CALL DASH: C-HR cluster POV while he talks'),   # dash POV in the middle of the drive, before the call
+ ('c', (C+'c05.mp4', 0.6), 0.35, 'C-HR arrives, Arfan on the call'),          # him driving
+ ('i', (E+'props/Prop-HandsFree-Call.png', 0.56, 0.5, 1.0, 0.0), 0.50, 'CALL DASH: driver POV, wheel and call screen'),   # Higgsfield POV still, handheld drift   # dash POV in the middle of the drive, before the call
  ('c', (C+'c05.mp4', 1.9), 1.65, 'CALL BACK: his face on the call'),          # back on him for the whole line (lips from clip 1.9)
  ('c', (C+'c10.mp4', 0.0), 1.00, 'MIA LOOKS out from her dad\'s car'),
  ('c', (C+'c18.mp4', 1.0), 2.00, 'ARRIVE: C-HR rolls in, Mia watching'),
