@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — FINAL 45 s film cut made
+- Did: 16 Seedance 2.5 film clips (2 pilot close-ups at 1080p, 14 at 720p) from locked start frames (element IDs in every prompt; Monsoor via Soul ID), lip-synced to the locked voice lines; wrong edge faces cropped out of both close-ups; final edit qj45_final.py (film LUT 45%, upscale to 1080x1920, cards, freezes, MISSION PASSED, full mix). QJ45-FINAL.mp4: 45.0 s, -14.3 LUFS, no gaps. About 630 credits (cap 700).
+- Files: reel/qj45_final.py, VIDEO-PROMPTS-45.md, graphics/Brand-Card-1080.png (videos local only).
+- Next: Arfan reviews; known: READY dash odometer digits not exact; montage woman/retiree are one-off faces.
+
+
 ## 22 Nov 2026 — driving shot, face/face conversation, clear voices, production sheet
 - Did: Arfan driving shot (BOSS call, SWANLINE, dog harnessed); Good job conversation as Monsoor CU then Arfan CU; Mia's full line (pause tightened, carries over the cut); all voice lines levelled; PRODUCTION-SHEET-45.md: 42 shots with element IDs, prompts, camera, lines, overlays, face-lock rules. Animatic stills drifted on faces; final start frames must be regenerated from the face elements.
 - Files: reel/PRODUCTION-SHEET-45.md, qj45_animatic.py, elements/gta stills, voice/qj/*-norm.wav (local).

@@ -16,6 +16,13 @@ Timing follows `QJ45-Animatic.mp4` / `PRODUCTION-SHEET-45.md`. 16 generation cli
 - `audio_references`: the locked voice line, only in clips with dialogue (then `generate_audio: true` for lip-sync). Otherwise `generate_audio: false`; the sound comes from our mix.
 - Price: 80 credits per 5 s (16 per second).
 
+**Rule: every visible person named with their own reference (Arfan, 22 Nov 2026)**
+- In the talking close-ups, "the other man" made the model invent a stranger at the frame edge.
+- Every person who appears, even only a head, shoulder or hand at the frame edge, is named in the prompt with their own `image_references` (Arfan's face frame, Monsoor's Soul frame, Dave, Mia, a driver).
+- Or the prompt says "only his shoulder and hand at the frame edge, his head stays out of frame".
+- Prompts are re-read before every submit.
+- Pilot fix: both close-ups were cropped to remove the wrong head (`pilot/*-crop.mp4`).
+
 **Prompt rules (from the Seedance preflight linter)**
 - Video prompts never use real names: the start frame carries identity ("the same bearded man...").
 - Every video prompt:
