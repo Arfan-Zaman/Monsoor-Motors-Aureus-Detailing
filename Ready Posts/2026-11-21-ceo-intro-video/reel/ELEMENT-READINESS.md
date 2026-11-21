@@ -35,3 +35,11 @@
 - Key handover uses the real Toyota C-HR smart key element `Props-CHR-Smart-Key` 313d52b9-7298-4634-87c4-d1030e280285, not a generic fob.
 - Rule: every recurring object in a shot is passed as its element; no object described from text alone when an element exists.
 - `GTA-Yard-Premium-Final` 8d00a83a-56af-463e-b2f2-846e7626c405: **use this yard.** Real logo on the wall sign AND the navy feather flags (orange edge); C-HR plate `AZ 420`, SOLD tag. Supersedes GTA-Yard-Premium and GTA-Yard-Premium-AZ420.
+
+## Update 22 Nov 2026, later: plate AZ 007 (final), GR86 at 52, Monsoor approved
+- **Plate is now `AZ 007`** (Arfan's final choice). AZ 420 elements are retired.
+- `Yard-Final-AZ007` df5571c0-29f4-4760-b8cc-ebb8d5c4561c: **THE yard.** Supersedes every earlier yard element.
+- `Props-Plate-AZ007-SOLD-Keys` 8a465251-85d5-48a8-8d61-aaa84333a305: **THE plate/props sheet.** Supersedes every earlier plate element.
+- `Dash-GR86-52kmh` 3f075568-2302-4411-a7a8-a7761fec2bdb: lawful launch dash (52 km/h, low-fuel light). Supersedes Dash-GR86-Real.
+- Monsoor approved his look (Soul ID route) on 22 Nov 2026.
+- 45 s: no paid video exists yet, so nothing needs re-rendering. The free Blender previs gets re-timed to 45 s before video generation.

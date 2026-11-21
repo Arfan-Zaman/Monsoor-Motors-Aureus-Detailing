@@ -1,5 +1,10 @@
 # Status
 
+## 22 Nov 2026 — plate AZ 007, GR86 at 52, Monsoor approved
+- Did: plate switched to AZ 007 (yard + props sheet), GR86 dash fixed to 52 km/h, Monsoor's likeness approval logged; new elements Yard-Final-AZ007, Props-Plate-AZ007-SOLD-Keys, Dash-GR86-52kmh.
+- Files: reel/COMPLIANCE.md, TEXT-AND-NUMBERS-v2.md, ELEMENT-READINESS.md, elements images.
+- Next: re-time the Blender previs to 45 s; copy the final elements into the project's Elements tab; start AI direction.
+
 ## 22 Nov 2026 — compliance fixes and new elements
 - Did: lawful speed-camera gag, American Bully dog with harness, seatbelts, claim 'About half the fuel.*', C-HR plate AZ 420 in the Monsoor frame, pre-order caption. New Higgsfield elements: Monsoor-Motors-Logo, Props-Plate-AZ420-SOLD-Keys, GTA-Yard-Premium-Final (logo flags), Dog-American-Bully, Props-CHR-Smart-Key. Watch element required on every hand or POV shot.
 - Files: reel/COMPLIANCE.md, TEXT-AND-NUMBERS-v2.md, ELEMENT-READINESS.md, elements/gta + elements/props images.
