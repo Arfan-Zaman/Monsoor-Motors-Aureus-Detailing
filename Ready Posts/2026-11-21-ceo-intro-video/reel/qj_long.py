@@ -179,7 +179,7 @@ B += [('m', MU+'GenZ-A.mp3', 0.0, -9, oA, 8.5, 0.05, 1.0),                      
       ('m', FX+'tension_drone.wav', night+0.05, -13, 0, None, 0.1, 0.3)]
 B += [('m', MU+'GenZ-B-muffled.wav', chr_, -9, oB, 3.3, 0.3, 0.4),
       ('m', MU+'Gangster-of-Miami-inst.mp3', chr_+3.0, -8, 0.635+16*60/92.3, L('DOOR')-(chr_+3.0), 0.15, 0.12),   # Monsoor's BGM with his laugh, end of 'coming' to the end of the dog shot
-      ('v', VO+'Monsoor-Laugh-LOCKED-phone.wav', chr_+3.1, 2, 0, L('DOOR')-(chr_+3.1), 0.05, 0.3),   # LOCKED laugh over the phone from the end of 'coming' to the end of the dog shot                                  # Monsoor laughs back over the phone: "Ha ha ha... Good, good."
+      ('v', VO+'Monsoor-Laugh-LOCKED-phone.wav', chr_+3.1, 2, 0, L('DOOR')-(chr_+3.1), 0.02, 0.04),   # LOCKED laugh over the phone from the end of 'coming' to the end of the dog shot                                  # Monsoor laughs back over the phone: "Ha ha ha... Good, good."
       ('f', FX+'loafer_steps_brick.wav', hc+2.98, -1, 0, None, 0, 0),                                   # his loafers on the brick
       ]
 B += [('f', FX+'sub_drop.wav', 0.0, -5, 0, None, 0, 0),                          # PERTH opener
@@ -258,9 +258,10 @@ for j, (bus, f, st, g, off, dur, fi, fo) in enumerate(B):
     flt.append(ch); buses[bus].append(f'[x{j}]')
 def mixbus(k, n): return ''.join(buses[k]) + f'amix=inputs={len(buses[k])}:normalize=0:duration=longest[{n}]'
 flt += [mixbus('m', 'mus'), mixbus('a', 'amb'), mixbus('v', 'vox'), mixbus('f', 'sfx'),
+        f"[amb]volume=0.22:enable='between(t,{chr_+3.1:.2f},{L('DOOR'):.2f})'[amb2]", f"[sfx]volume=0.22:enable='between(t,{chr_+3.1:.2f},{L('DOOR'):.2f})'[sfx2]",   # after 'coming': everything else turned down, his laugh + BGM lead
         '[vox]asplit=2[vox1][voxsc]',
         '[mus][voxsc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=350:makeup=1[mud]',
-        f'[mud][amb][vox1][sfx]amix=inputs=4:normalize=0,atrim=0:{total},afade=t=out:st={total-0.6}:d=0.6,alimiter=limit=0.5:attack=1:release=60:level=false,loudnorm=I=-14:TP=-2:LRA=11,alimiter=limit=0.7:attack=0.3:release=40:level=false[m]']
+        f'[mud][amb2][vox1][sfx2]amix=inputs=4:normalize=0,atrim=0:{total},afade=t=out:st={total-0.6}:d=0.6,alimiter=limit=0.5:attack=1:release=60:level=false,loudnorm=I=-14:TP=-2:LRA=11,alimiter=limit=0.7:attack=0.3:release=40:level=false[m]']
 run(['ffmpeg', '-y', '-i', vid2] + inp + ['-filter_complex', ';'.join(flt), '-map', '0:v', '-map', '[m]', '-t', f'{total:.3f}', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', 'QJ-FULL-STORY.mp4'])
 print(f'total {total:.2f}s')
 for st, l in marks: print(f'{st:6.2f}  {l}')
