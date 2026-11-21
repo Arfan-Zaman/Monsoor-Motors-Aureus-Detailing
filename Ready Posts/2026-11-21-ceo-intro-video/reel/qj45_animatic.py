@@ -82,11 +82,11 @@ B = [
  ('v', VO+'Arfan-WhatsUp-v4a-trim.wav', src(12.05), 3, 0, None, 0, 0),
  ('v', VO+'Dave-KiddingMe.wav', at(11)+0.4, 2, 0, None, 0, 0),
  ('v', VO+'Mia-v2.wav', at(12)+0.2, 2, 0, None, 0, 0),
- ('v', VO+'Monsoor-GoodJob-v3b-trim.wav', src(25.00), 3, 0, None, 0, 0),
+ ('v', VO+'Monsoor-GoodJob-v4-smile-trim.wav', src(25.00), 3, 0, None, 0, 0),
  ('v', VO+'Arfan-MeansALot-LOCKEDcut.wav', src(26.45), 3, 0, None, 0, 0),
  ('v', VO+'Arfan-YouChoose-LOCKEDcut.wav', src(28.20), 3, 0, None, 0, 0),
  ('v', VO+'Arfan-WeBring-LOCKEDcut.wav', src(29.45), 3, 0, None, 0, 0),
- ('f', AM+'Dog-Bark-2.mp3', at(9)+0.12, 0, 0, 1.6, 0, 0.4),
+ ('f', AM+'Dog-Woof-Curious.wav', at(9)+0.05, 1, 0, None, 0, 0),
  # SOUND ON EVERY ARRIVAL
  ('f', FX+'super_whoosh.wav', 0.10, -6, 0, None, 0, 0),
  ('f', FX+'camera_strobe.wav', at(1), -2, 0, None, 0, 0),

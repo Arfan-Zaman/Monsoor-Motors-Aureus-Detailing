@@ -53,3 +53,5 @@
 - Monsoor "Good job.": `voice/qj/Monsoor-GoodJob-v3b.wav` — one breath, no gap, 0.6 s of speech (trimmed version used).
 - 45 s animatic: `QJ45-Animatic.mp4` (local, built by `qj45_animatic.py`): the 39 s previs re-cut + new beats (flash, police mirror, pulled-over dash, BUSTED, demerits, dog reveal, yard AZ 007, dog at yard), fuel super replaced by "About half the fuel.*". Previs dash numbers are placeholders; the elements carry the real ones.
 - **LOCKED (Arfan, 22 Nov 2026):** "What's up?" = `Arfan-WhatsUp-v4a-trim.wav` (warm). "Good job." = `Monsoor-GoodJob-v3b-trim.wav`. Older takes of these two lines are retired.
+- **Dog sound LOCKED (22 Nov 2026):** `audio/sfx/Dog-Woof-Curious.wav` = one real deep woof, then curious sniffs, a low talking grumble and a short whine (built from Dog-BarkCurious-A).
+- **Monsoor "Good job!" LOCKED:** `voice/qj/Monsoor-GoodJob-v4-smile-trim.wav` (smiling, warm, one breath). Face: his own natural smile.

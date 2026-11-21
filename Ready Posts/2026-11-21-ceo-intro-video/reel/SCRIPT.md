@@ -77,7 +77,7 @@ Sound: a clean music button; the start-button chime as the sonic logo.
 
 ## LOCKED 22 Nov 2026: the "Good job" moment (yard, next morning)
 - Shot: MCU over Monsoor's right shoulder onto Arfan, 75 mm, slow 3% push. Monsoor walks up after the MONSOOR freeze, stops beside Arfan, and rests his **left hand on Arfan's right shoulder** and **keeps it there** through both lines (one gentle squeeze, no pats).
-- **Monsoor** (aviators pushed up or in hand so his eyes show): looks at Arfan, not the camera; warm, proud, fatherly; a slow nod and a small closed-mouth smile; "Good job." in one breath (`Monsoor-GoodJob-v3b-trim.wav`).
+- **Monsoor** (aviators pushed up or in hand so his eyes show): looks at Arfan, not the camera; warm, proud, fatherly; **smiling in his own natural way** (his real smile from the Soul ID face, the one in his photos: open, warm, eyes creasing, not a forced grin) and a slow nod; "Good job." in one breath (`Monsoor-GoodJob-v3b-trim.wav`).
 - **Arfan**: turns his head to Monsoor, eyes soften, chin dips a touch, a humble, moved half-smile, then meets his eyes: "That means a lot." (locked track).
 - Feeling: a quiet win between a boss and the man he trusts. Not comic, not stiff. Music drops from the gangster hit into the warm pad under both lines.
 - The dog is **not** in the yard scene.
