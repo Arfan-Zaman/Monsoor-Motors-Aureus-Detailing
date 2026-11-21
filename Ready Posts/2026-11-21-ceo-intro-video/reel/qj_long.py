@@ -21,7 +21,8 @@ def shake(label):
                     f"scale={W}:{H}:flags=lanczos")
     return ''
 GRADE = (f"scale={W}:{H}:flags=lanczos:force_original_aspect_ratio=increase,crop={W}:{H},unsharp=5:5:0.35,"
-         f"split[o][g];[g]lut3d={LUT}[l];[o][l]blend=all_mode=normal:all_opacity=0.45,noise=alls=4:allf=t,fps={FPS}")
+         f"split[o][g];[g]lut3d={LUT}[l];[o][l]blend=all_mode=normal:all_opacity=0.62,"
+         f"colorbalance=rs=-0.04:bs=0.05:rm=0.02:bm=-0.01:rh=0.05:gh=0.01:bh=-0.05,eq=saturation=1.1:contrast=1.05,noise=alls=4:allf=t,fps={FPS}")
 SEG = [
  ('i', (E+'gta/GTA-Perth-Aerial.png', 0.40, 0.5, 1.0, 0.08), 1.50, 'OPEN: Perth aerial'),
  ('c', (C+'c01.mp4', 0.0), 5.00, 'MONTAGE red lights'),
@@ -34,16 +35,16 @@ SEG = [
  ('c', (C+'c03.mp4', 1.0), 2.00, 'DAVE at the lights'),
  ('i', (E+'dash/Dash-Tucson.png', 0.49, 0.47, 1.4, 0.0), 1.00, 'DASH Tucson'),
  ('c', (C+'c04.mp4', 1.5), 2.00, 'SERVO wide'),
- ('c', (C+'c05.mp4', 0.0), 4.00, 'C-HR arrives, Arfan on the call'),
+ ('c', (C+'c05.mp4', 1.4), 2.50, 'C-HR arrives, Arfan on the call'),
  ('c', (C+'c10.mp4', 0.0), 1.00, 'MIA LOOKS out from her dad\'s car'),
- ('c', (C+'c18.mp4', 0.5), 3.00, 'ARRIVE: C-HR rolls in, Mia watching'),
+ ('c', (C+'c18.mp4', 1.0), 2.00, 'ARRIVE: C-HR rolls in, Mia watching'),
  ('c', (C+'c06.mp4', 0.0), 1.00, 'DOG woof'),
  ('c', (C+'c07.mp4', 0.0), 1.50, 'DOOR: splash, steps out'),
  ('freeze', (C+'c07.mp4', 1.4, 'graphics/Card-ARFAN-CEO-GTA.png'), 1.00, 'FREEZE: ARFAN / CEO'),
  ('c', (C+'c07.mp4', 1.4), 3.50, 'WHATSUP'),
  ('c', (C+'c17.mp4', 1.5), 3.00, 'FILL: Arfan fills the C-HR'),
  ('c', (C+'c08.mp4', 0.8), 2.50, 'POWER, READY'),
- ('c', (C+'c09.mp4', 0.0), 4.00, 'DAVE double take'),
+ ('c', (C+'c09.mp4', 0.3), 3.50, 'DAVE double take'),
  ('i', (E+'dash/Pump-Dave.png', 0.34, 0.47, 1.25, 0.0), 1.00, 'PUMP Dave'),
  ('c', (C+'c10.mp4', 1.0), 3.00, 'MIA line'),
  ('c', (C+'c11.mp4', 1.2), 2.50, 'NIGHT: Dave decides'),
@@ -75,7 +76,7 @@ for i, (k, a, b, lab_) in enumerate(SEG):
         x0 = min(max(cx * iw - cw / 2, 0), iw - cw); y0 = min(max(cy * ih - ch / 2, 0), ih - ch)
         drift = (dx * iw) if dx else cw * 0.03
         x0 = min(x0, iw - cw - drift) if x0 + cw + drift > iw else x0
-        vf = (f"crop={int(cw)}:{int(ch)}:'{x0:.1f}+{drift:.1f}*t/{dur}':'{y0:.1f}',scale={W}:{H}:flags=lanczos,unsharp=5:5:0.3,noise=alls=4:allf=t,fps={FPS}")
+        vf = (f"crop={int(cw)}:{int(ch)}:'{x0:.1f}+{drift:.1f}*t/{dur}':'{y0:.1f}'," + GRADE.replace(f'scale={W}:{H}:flags=lanczos:force_original_aspect_ratio=increase,crop={W}:{H},', f'scale={W}:{H}:flags=lanczos,'))
         run(['ffmpeg', '-y', '-loop', '1', '-framerate', str(FPS), '-i', f, '-t', str(dur), '-vf', vf, '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', o])
     elif k == 'flash':
         run(['ffmpeg', '-y', '-f', 'lavfi', '-i', f'color=white:s={W}x{H}:r={FPS}', '-t', str(dur), '-c:v', 'libx264', '-pix_fmt', 'yuv420p', o])
@@ -109,7 +110,7 @@ OVL = [  # (file, start, duration)
  ('graphics/Tag-LAYLA.png', L('GR86')+0.05, 0.8),
  ('graphics/Tag-DAVE.png', L('DAVE at')+0.1, 1.2),
  ('graphics/Stamp-SERVO.png', L('SERVO')+0.1, 1.4),
- ('graphics/HUD-CALL-BOSS.png', L('C-HR arrives')+0.3, 2.6),
+ ('graphics/HUD-CALL-BOSS.png', L('C-HR arrives')+0.1, 2.3),
  ('graphics/Pop-PUMP-ARFAN.png', L('FILL')+0.6, 1.2),
  ('graphics/Super-HalfFuel-720.png', L('POWER')+1.1, 1.4),
  ('graphics/White-Flash.png', L('GR86')+1.72, 0.22),
@@ -158,6 +159,17 @@ B += [('m', MU+'GenZ-A.mp3', 0.0, -9, oA, 8.5, 0.05, 1.0),                      
       ('m', MU+'GenZ-B.mp3', g(L('FREEZE: ARFAN')), -11, oB, L('DAVE double')-g(L('FREEZE: ARFAN'))+0.5, 0.05, 0.5),  # slams in on the ARFAN / CEO hit
       ('m', MU+'GenZ-C.mp3', g(L('DAVE double')), -14, oC, night-g(L('DAVE double'))+0.2, 0.5, 0.4),  # brighter, hopeful under "kidding me" / Mia
       ('m', FX+'tension_drone.wav', night+0.05, -13, 0, None, 0.1, 0.3)]
+B += [('m', MU+'GenZ-B-muffled.wav', chr_, -9, oB, g(L('FREEZE: ARFAN'))-chr_, 0.3, 0.05),            # low muffled pulse under the silent C-HR, builds to the slam
+      ('v', VO+'Monsoor-PhoneReply.wav', chr_+2.85, 0, 0, None, 0, 0),                                  # Monsoor laughs back over the phone: "Ha ha ha... Good, good."
+      ('m', FX+'monsoor_laugh_hook_fx.wav', g(L('FREEZE: MONSOOR'))-2.0, -15, 0, None, 0, 0.2),         # funky 'ha . ha-ha . HAaa' on the beat into his freeze
+      ('f', FX+'loafer_steps_brick.wav', hc+2.98, -1, 0, None, 0, 0),                                   # his loafers on the brick
+      ('m', V+'Monsoor-Laugh-Punch.wav', brand+1.2, -16, 0, None, 0.05, 0.4)]
+B += [('f', FX+'sub_drop.wav', 0.0, -5, 0, None, 0, 0),                          # PERTH opener
+      ('f', FX+'sub_drop.wav', busted, -3, 0, None, 0, 0),                      # BUSTED
+      ('f', FX+'sub_drop.wav', L('FREEZE: ARFAN'), -3, 0, None, 0, 0),          # ARFAN / CEO + groove slam
+      ('f', FX+'sub_rumble.wav', hc+0.6, -4, 0, None, 0, 0),                    # Hellcat rolls into the yard
+      ('f', FX+'sub_drop.wav', fzm, -3, 0, None, 0, 0),                         # MONSOOR / BOSS
+      ('f', FX+'sub_drop.wav', g(hero+0.5), -3, 0, None, 0, 0)]                 # MISSION PASSED slam                           # a last little boss laugh under the end card
 B += [('m', MU+'Boss-Arrival.mp3', g(hc+1.0), -6, onset(MU+'Boss-Arrival.mp3'), 1.9, 0, 0.5),   # gangster hit 1 on the Hellcat
       ('m', MU+'Boss-Arrival.mp3', fzm-0.05, -5, 5.40, 2.3, 0.05, 0.6),                        # hit 2 on MONSOOR / BOSS
       ('m', FX+'warm_pad.wav', cum-0.2, -12, 0, None, 0.3, 0),
@@ -172,9 +184,9 @@ B += [('a', AM+'Yard-Morning-Ambience.mp3', deliv-0.3, -10, 0, 5.0, 0.4, 0.8), (
       ('a', AM+'Yard-Morning-Ambience.mp3', yard+4.4, -8, 0, 5.0, 0.6, 1.0)]
 # VOICES (placed on each clip's lip timing)
 B += [('v', VO+'Glam-ComeOn-norm.wav', L('GR86')+1.40, 0, 0, None, 0, 0),
-      ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+1.90, 0, 0, None, 0, 0),
+      ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.50, 0, 0, None, 0, 0),
       ('v', VO+'Arfan-WhatsUp-v4a-trim-norm.wav', L('WHATSUP')+2.50, 0, 0, None, 0, 0),
-      ('v', VO+'Dave-KiddingMe-norm.wav', L('DAVE double')+0.30, 0, 0, None, 0, 0),
+      ('v', VO+'Dave-KiddingMe-norm.wav', L('DAVE double')+0.00, 0, 0, None, 0, 0),
       ('v', VO+'Mia-v2-tight-norm.wav', L('MIA line')+0.48, 0, 0, None, 0, 0),
       ('v', VO+'Monsoor-GoodJob-v4-smile-trim-norm.wav', cum+0.57, 1, 0, None, 0, 0),
       ('v', VO+'Arfan-MeansALot-LIPSYNC.wav', cua+1.45, 2, 0, None, 0, 0),
@@ -193,7 +205,7 @@ B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
       ('f', FX+'popup_pop.wav', chr_+0.3, -6, 0, None, 0, 0),
       ('f', AM+'Dog-Woof-Curious.wav', L('DOG')-0.05, -1, 0, 1.05, 0, 0.15),
       ('f', FX+'stamp_thud.wav', door+0.25, -6, 0, None, 0, 0),                                   # sneaker splash hit
-      ('f', FX+'freeze_riser.wav', L('FREEZE: ARFAN')-0.6, -6, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', L('FREEZE: ARFAN'), -2, 0, None, 0, 0),
+      ('f', FX+'door_slam_heavy.wav', L('FREEZE: ARFAN')-0.03, 0, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', L('FREEZE: ARFAN'), -6, 0, None, 0, 0),
       # the fill: nozzle in, pump runs, meter ticks, auto shut-off at 36.20, nozzle out, flap, nozzle holstered
       ('f', FX+'fuel_pump_run.wav', fill+0.0, -6, 0, 0.6, 0.05, 0.05),         # pump running while he holds the nozzle
       ('f', FX+'fuel_clickoff.wav', fill+0.6, -2, 0, None, 0, 0),             # auto shut-off at 36.20
@@ -202,12 +214,12 @@ B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
       ('f', FX+'fuel_flap_click.wav', fill+2.1, -3, 0, None, 0, 0),           # flap shut
       ('f', FX+'fuel_holster.wav', fill+2.4, -8, 0, None, 0, 0),
       ('f', FX+'phone_tap.wav', L('POWER')+0.5, -4, 0, None, 0, 0), ('f', FX+'ready_chime.wav', L('POWER')+1.1, -4, 0, None, 0, 0), ('f', FX+'super_whoosh.wav', L('POWER')+1.05, -8, 0, None, 0, 0),
-      ('f', FX+'fuel_clickoff.wav', L('DAVE double')+1.0, -4, 0, None, 0, 0),                     # Dave's pump finally stops
+      ('f', FX+'fuel_clickoff.wav', L('DAVE double')+0.7, -4, 0, None, 0, 0),                     # Dave's pump finally stops
       ('f', FX+'popup_pop.wav', L('PUMP Dave')+0.05, -4, 0, None, 0, 0),
       ('f', FX+'heartbeat.wav', night+0.2, -2, 0, None, 0, 0),
       ('f', FX+'phone_tap.wav', L('PHONE')+0.55, -4, 0, None, 0, 0), ('f', FX+'confirm_ding.wav', L('PHONE')+0.6, -4, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', yard+0.05, -6, 0, None, 0, 0), ('f', FX+'stamp_thud.wav', yard+0.4, -5, 0, None, 0, 0),
-      ('f', FX+'freeze_riser.wav', fzm-0.6, -6, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', fzm, -2, 0, None, 0, 0),
+      ('f', FX+'door_slam_heavy.wav', fzm-0.03, 0, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', fzm, -6, 0, None, 0, 0),
       ('f', FX+'number_tick.wav', L('KEY')+0.2, -6, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', hero+0.3, -6, 0, None, 0, 0),
       ('f', FX+'sonic_logo.wav', brand+0.2, -2, 0, None, 0, 0)]

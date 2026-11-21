@@ -55,3 +55,6 @@
 - **LOCKED (Arfan, 22 Nov 2026):** "What's up?" = `Arfan-WhatsUp-v4a-trim.wav` (warm). "Good job." = `Monsoor-GoodJob-v3b-trim.wav`. Older takes of these two lines are retired.
 - **Dog sound LOCKED (22 Nov 2026):** `audio/sfx/Dog-Woof-Curious.wav` = one real deep woof, then curious sniffs, a low talking grumble and a short whine (built from Dog-BarkCurious-A).
 - **Monsoor "Good job!" LOCKED:** `voice/qj/Monsoor-GoodJob-v4-smile-trim.wav` (smiling, warm, one breath). Face: his own natural smile.
+
+## LOCKED (Arfan, 22 Nov 2026): Monsoor laugh
+- `voice/qj/Monsoor-Laugh-LOCKED.wav` (Higgsfield job `02c140e6-a4d5-404a-8ece-19de54783ba1`, seed_audio cloned from his voice ref `86bea944-a814-4dca-b916-693ca824b333`): rolling GTA-boss laugh, then "Good... good." 7.7 s. Arfan loves it: reuse in later videos. Phone-filtered cut used in the full-story video (`Monsoor-PhoneReply.wav`).
