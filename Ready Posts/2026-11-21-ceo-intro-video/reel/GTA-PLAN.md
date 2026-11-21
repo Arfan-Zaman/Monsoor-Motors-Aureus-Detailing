@@ -1,5 +1,8 @@
 # "Queue Jump": GTA VI-style plan (Arfan, 22 Nov 2026)
 
+> **FILM, NOT HDR (Arfan, 22 Nov 2026, overrides grade notes):** every shot must look like A-grade cinema camera footage: ARRI Alexa 35 + anamorphic lenses, soft highlight roll-off, natural (not crunchy) contrast, true skin tones, shadows allowed to fall into real darkness, gentle film grain, mild halation only on practical lights. NEVER: HDR look, local-contrast pop, over-sharpened detail, glowing edges, everything-saturated frames, lifted flat shadows. Every image and video prompt ends with: "Shot on ARRI Alexa 35 with anamorphic lenses, natural film contrast, soft highlight roll-off, true skin tones, fine film grain. No HDR look, no over-sharpening, no oversaturation." The GTA VI mood comes from palette and light direction, not from processing.
+
+
 Goal: every scene feels like the GTA VI trailers' world, set in Perth, filmed as real live action. Real cars, real fuel numbers, real Perth fuel price. No GTA/Rockstar names, logos, fonts, HUD or music.
 
 ## 1. Real numbers (being researched now → `roles/REAL-NUMBERS-v2.md`)

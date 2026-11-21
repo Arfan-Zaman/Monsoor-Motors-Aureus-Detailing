@@ -1,5 +1,8 @@
 # "Queue Jump": look bible and continuity sheet
 
+> **FILM, NOT HDR (Arfan, 22 Nov 2026, overrides grade notes):** every shot must look like A-grade cinema camera footage: ARRI Alexa 35 + anamorphic lenses, soft highlight roll-off, natural (not crunchy) contrast, true skin tones, shadows allowed to fall into real darkness, gentle film grain, mild halation only on practical lights. NEVER: HDR look, local-contrast pop, over-sharpened detail, glowing edges, everything-saturated frames, lifted flat shadows. Every image and video prompt ends with: "Shot on ARRI Alexa 35 with anamorphic lenses, natural film contrast, soft highlight roll-off, true skin tones, fine film grain. No HDR look, no over-sharpening, no oversaturation." The GTA VI mood comes from palette and light direction, not from processing.
+
+
 > **LOOK (Arfan, 21 Nov 2026, final): GTA VI-TRAILER MOOD, REAL LIVE-ACTION FILM.** The whole ad should feel like that trailer world (mood, environment, lighting, cinematography, shot choices), but filmed for real on a cinema camera, never cartoon or CG.
 > - **Day/golden hour:** warm, humid, sun-drenched Perth; low golden sun, real lens flare from the sun, palm silhouettes, heat haze, rich warm grade (golds, teal shadows), saturated but believable skin and paint.
 > - **Night:** wet streets reflecting real light sources, mixed sodium-orange and LED-white streetlights, practical neon from real shop signs only (pink, teal, red) glowing on surfaces near them, deep real blacks, light haze; the sky stays a real dark night or a real dusk gradient (never purple/candy).

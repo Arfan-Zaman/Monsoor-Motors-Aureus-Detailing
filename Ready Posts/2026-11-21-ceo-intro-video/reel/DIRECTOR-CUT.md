@@ -1,5 +1,8 @@
 # "Queue Jump": DIRECTOR'S CUT (production document, v1)
 
+> **FILM, NOT HDR (Arfan, 22 Nov 2026, overrides grade notes):** every shot must look like A-grade cinema camera footage: ARRI Alexa 35 + anamorphic lenses, soft highlight roll-off, natural (not crunchy) contrast, true skin tones, shadows allowed to fall into real darkness, gentle film grain, mild halation only on practical lights. NEVER: HDR look, local-contrast pop, over-sharpened detail, glowing edges, everything-saturated frames, lifted flat shadows. Every image and video prompt ends with: "Shot on ARRI Alexa 35 with anamorphic lenses, natural film contrast, soft highlight roll-off, true skin tones, fine film grain. No HDR look, no over-sharpening, no oversaturation." The GTA VI mood comes from palette and light direction, not from processing.
+
+
 > **TEXT AND NUMBERS (Arfan, 21 Nov 2026):** every plate, screen, price, sign and sticker uses `TEXT-AND-NUMBERS.md` word for word. Nothing is blank. Each prompt that shows one quotes it.
 
 
