@@ -42,8 +42,8 @@ SEG = [
  ('c', (C+'c18.mp4', 1.0), 2.00, 'ARRIVE: C-HR rolls in, Mia watching'),
  ('c', (C+'c06.mp4', 0.0), 1.00, 'DOG woof'),
  ('ramp', (C+'c07.mp4', [(0.0, 0.2, 1.0), (0.2, 0.6, 0.5), (0.6, 1.35, 1.5)]), 1.50, 'DOOR: splash, steps out'),   # old footstep: real speed hit, slow-mo crown, speed-up into the freeze
- ('freeze', (C+'c19.mp4', 3.85, 'graphics/Card-ARFAN-CEO-GTA.png'), 1.00, 'FREEZE: ARFAN / CEO'),
- ('ramp', (C+'c19.mp4', [(3.8, 5.0, 0.48), (5.0, 6.0, 1.0)]), 3.50, 'WHATSUP'),   # new take: slow-mo lean out of the freeze, real speed into 'What's up?' (lips at clip 5.1 = 33.0 s, same as the voice)
+ ('freeze', (C+'c19.mp4', 4.7, 'graphics/Card-ARFAN-CEO-GTA.png'), 1.75, 'FREEZE: ARFAN / CEO'),   # freeze on his side look
+ ('ramp', (C+'c19.mp4', [(4.7, 5.0, 0.4), (5.0, 5.5, 1.0), (5.5, 6.0, 0.33)]), 2.75, 'WHATSUP'),   # thaws from the freeze in slow-mo, real speed on 'What's up?' (lips at clip 5.1 = seg 0.85), slow-mo smile   # new take: slow-mo lean out of the freeze, real speed into 'What's up?' (lips at clip 5.1 = 33.0 s, same as the voice)
  ('c', (C+'c19.mp4', 6.0), 3.00, 'FILL: Arfan fills the C-HR'),
  ('c', (C+'c19.mp4', 9.0), 2.50, 'POWER, READY'),
  ('c', (C+'c09.mp4', 0.3), 3.50, 'DAVE double take'),
@@ -56,7 +56,6 @@ SEG = [
  ('freeze', (C+'c12.mp4', 4.85, 'graphics/Card-MONSOOR-BOSS-GTA.png'), 1.00, 'FREEZE: MONSOOR / BOSS'),
  ('c', (P+'Pilot-Monsoor-GoodJob-crop.mp4', 0.5), 2.50, 'CU MONSOOR'),
  ('c', (P+'Pilot-Arfan-MeansALot-crop.mp4', 1.8), 2.50, 'CU ARFAN'),
- ('i', (E+'props/Props-CHR-Smart-Key.png', 0.80, 0.5, 1.0, 0.0), 1.00, 'KEY detail'),
  ('c', (C+'c15.mp4', 0.0), 5.00, 'DELIVERY'),
  ('ramp', (C+'c16.mp4', [(0.0, 1.75, 0.7)]), 2.50, 'HERO'),   # gentle slow-mo on the MISSION PASSED hero
  ('s', 'graphics/Brand-Card-1080.png', 3.00, 'BRAND'),
@@ -185,8 +184,8 @@ B += [('f', FX+'sub_drop.wav', 0.0, -5, 0, None, 0, 0),                         
 # Monsoor's BGM 'Gangster of Miami': filtered build under the Hellcat, his 'HA' pickup into the freeze, the drop lands on MONSOOR / BOSS, out after 'Good job!'
 BGM_DROP = 0.635 + 16*60/92.3
 B += [('m', MU+'Monsoor-BGM-Gangster-of-Miami-v3.wav', hc, -7, BGM_DROP-(fzm-hc), cum+2.4-hc, 0.4, 0.8),
-      ('m', MU+'Arfan-MiamiDon-BGM.mp3', cua, -10, 10.3, L('KEY')-cua+0.3, 0.05, 0.4), ('m', FX+'warm_pad.wav', cum+4.2, -12, 0, None, 0.3, 1.2)]
-B += [('m', MU+'Delivery-GenZ.mp3', L('KEY')-0.2, -8, 0, hero-L('KEY')+0.6, 0.4, 0.15),
+      ('m', MU+'Arfan-MiamiDon-BGM.mp3', cua, -10, 10.3, deliv+2.9-cua, 0.05, 0.5)]   # Arfan's BGM from his close-up to the end of 'We bring it to your home'
+B += [('m', MU+'Delivery-GenZ.mp3', deliv+2.4, -8, 0, hero-deliv-2.4+0.6, 0.5, 0.15),
       ('m', MU+'Mission-Passed-GenZ.mp3', g(hero+0.5), -11, onset(MU+'Mission-Passed-GenZ.mp3'), 2.4, 0, 0.6),   # MISSION PASSED sting, hands over to Monsoor's BGM
       ('m', MU+'Monsoor-BGM-Gangster-of-Miami-v3.wav', g(hero+0.5)-0.3, -5, 0.635+12*4*60/92.3-0.3, None, 0.3, 0),   # his BGM lift lands on the slam, laugh chops ride to the end
       ]
@@ -198,7 +197,7 @@ B += [('a', AM+'Yard-Morning-Ambience.mp3', deliv-0.3, -10, 0, 5.0, 0.4, 0.8), (
 # VOICES (placed on each clip's lip timing)
 B += [('v', VO+'Glam-Ugh-Sync.wav', L('GR86')+3.42, 0, 0, None, 0, 0),   # soft 'ugh' + 'Come on!' locked to her lips in c02 (cross-correlated with the clip audio)
       ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.85, 0, 0, None, 0, 0),
-      ('v', VO+'Arfan-WhatsUp-v4a-trim-norm.wav', L('WHATSUP')+2.50, 0, 0, None, 0, 0),
+      ('v', VO+'Arfan-WhatsUp-v4a-trim-norm.wav', L('WHATSUP')+0.80, 0, 0, None, 0, 0),
       ('v', VO+'Dave-KiddingMe-norm.wav', L('DAVE double')+0.00, 0, 0, None, 0, 0),
       ('v', VO+'Mia-v2-tight-norm.wav', L('MIA line')+0.48, 0, 0, None, 0, 0),
       ('v', VO+'Monsoor-GoodJob-v4-smile-trim-norm.wav', cum+0.57, 1, 0, None, 0, 0),
@@ -236,7 +235,6 @@ B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
       ('f', FX+'phone_tap.wav', L('PHONE')+0.55, -4, 0, None, 0, 0), ('f', FX+'confirm_ding.wav', L('PHONE')+0.6, -4, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', yard+0.05, -6, 0, None, 0, 0), ('f', FX+'stamp_thud.wav', yard+0.4, -5, 0, None, 0, 0),
       ('f', FX+'door_slam_heavy.wav', fzm-0.03, 0, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', fzm, -6, 0, None, 0, 0),
-      ('f', FX+'number_tick.wav', L('KEY')+0.2, -6, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', hero+0.3, -6, 0, None, 0, 0),
       ]
 inp, flt, buses = [], [], {'m': [], 'a': [], 'v': [], 'f': []}
