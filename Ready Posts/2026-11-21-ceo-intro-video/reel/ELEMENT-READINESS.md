@@ -46,3 +46,4 @@
 - Yard-Final-AZ007 df5571c0-29f4-4760-b8cc-ebb8d5c4561c · Props-Plate-AZ007-SOLD-Keys 8a465251-85d5-48a8-8d61-aaa84333a305 · Dash-GR86-52kmh 3f075568-2302-4411-a7a8-a7761fec2bdb.
 - `FX-Police-Mirror-Lights`: generic pull-over lights in her mirror (no livery). Game-style cards: graphics/Card-BUSTED-GTA.png and graphics/Card-DEMERITS-GTA.png (fine amount blurred, pink; -3 DEMERIT POINTS yellow), built by graphics/make_gta_cards.py in Pricedown.
 - Every on-screen arrival has a matching sound: see the table at the end of MUSIC-CUES.md.
+- `Dash-GR86-PulledOver`: 0 km/h, ODO 18,645 km, hazards, low-fuel light, red-blue wash (the odometer follows the story).
