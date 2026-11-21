@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — game-style layer + freeze intros
+- Did: freeze-frame intros ARFAN / CEO and MONSOOR / BOSS; location stamps, LAYLA and DAVE tags, BOSS calling HUD, pump pop-ups, MISSION PASSED with an original victory sting; all with sounds; no silent gaps; 44.95 s, -14.5 LUFS.
+- Files: reel/graphics/make_gta_cards.py + new PNGs, qj45_animatic.py, GTA-PLAN.md section 8, audio/music/Mission-Passed.mp3.
+- Next: copy final elements into the project's Elements tab; AI direction with start frames.
+
+
 ## 22 Nov 2026 — sound mix fixed, boss cue, faster call, bark
 - Did: no silent gaps (servo + yard ambience, crossfaded music, music ducks under every line); original gangster cue on Monsoor's arrival (hits on the Hellcat and the MONSOOR freeze) into a warm pad under Good job / That means a lot; Boss call 2.3 s (was 5.1); dog only in the car with one released bark; That means a lot + delivery lines cut from the locked track; Good job moment locked in SCRIPT.md. Mix -14.4 LUFS.
 - Files: reel/qj45_animatic.py, COMPLIANCE.md, SCRIPT.md, audio/music/Boss-Arrival.mp3, audio/sfx/*.mp3.

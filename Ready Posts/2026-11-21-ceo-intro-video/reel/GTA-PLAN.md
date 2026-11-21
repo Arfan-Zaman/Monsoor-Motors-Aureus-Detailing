@@ -50,3 +50,21 @@ We **can't** use the GTA VI trailer songs or Rockstar's music. They're licensed 
 
 ## 7. Still locked from before
 Locked faces and voices; "What's up?" as a new line in Arfan's locked voice; real live action, never cartoon; every shot is real video; one world; the text-and-numbers bible (updated with the new real figures).
+
+## 8. Game-style layer — LOCKED 22 Nov 2026 (Arfan: "add many more things like that")
+All in Pricedown (graphics/make_gta_cards.py), each with its own sound (MUSIC-CUES.md). No GTA/Rockstar logos, HUD art, wanted stars or game audio.
+| When | Overlay | Sound |
+|---|---|---|
+| Open | `PERTH CBD / 10:47 PM` location stamp (replaces "Tuesday night. Perth.") | whoosh |
+| GR86 at the green | tag `LAYLA / LEAD FOOT` | whoosh |
+| Speed camera | FLASH → `BUSTED` → `FINE $▒▒▒ / -3 DEMERIT POINTS` | shutter, slam, pop + cha-ching |
+| Dave in his car | tag `DAVE / TIRED DAD` | whoosh |
+| Servo wide | `SWANLINE / ALBANY HWY · 10:52 PM` | whoosh |
+| Silent glide | phone HUD `BOSS · CALLING...` | pop |
+| Arfan steps out | FREEZE ~1 s: `ARFAN / CEO` | riser + hit |
+| Arfan's pump stops | pop `ARFAN · PUMP 1  $36.20` (green) | pop + cha-ching |
+| Dave's pump stops | pop `DAVE · PUMP 2  $94.99` (red) | pop |
+| Next morning | `VICTORIA PARK / NEXT MORNING · 8:15 AM` | whoosh |
+| Monsoor steps out | FREEZE ~1 s: `MONSOOR / BOSS` | riser + hit + gangster cue hit 2 |
+| "Good job!" / "That means a lot." | **nothing on screen** (keep the emotion clean) | warm pad |
+| Keys drop into Dave's hand | `MISSION PASSED / +1 HAPPY FAMILY` | original victory sting (audio/music/Mission-Passed.mp3), not GTA's sound |
