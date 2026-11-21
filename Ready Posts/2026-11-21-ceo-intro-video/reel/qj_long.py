@@ -35,9 +35,9 @@ SEG = [
  ('c', (C+'c03.mp4', 1.0), 2.00, 'DAVE at the lights'),
  ('i', (E+'dash/Dash-Tucson.png', 0.49, 0.47, 1.4, 0.0), 1.00, 'DASH Tucson'),
  ('c', (C+'c04.mp4', 1.5), 2.00, 'SERVO wide'),
- ('c', (C+'c05.mp4', 1.4), 1.20, 'C-HR arrives, Arfan on the call'),
- ('c', (C+'c19.mp4', 10.7), 0.70, 'CALL DASH: C-HR cluster POV while he talks'),   # cutaway on 'just got the car'
- ('c', (C+'c05.mp4', 3.3), 0.60, 'CALL BACK: his face on "coming"'),
+ ('c', (C+'c05.mp4', 0.6), 0.45, 'C-HR arrives, Arfan on the call'),          # him driving
+ ('c', (C+'c19.mp4', 10.7), 0.40, 'CALL DASH: C-HR cluster POV while he talks'),   # dash POV in the middle of the drive, before the call
+ ('c', (C+'c05.mp4', 1.9), 1.65, 'CALL BACK: his face on the call'),          # back on him for the whole line (lips from clip 1.9)
  ('c', (C+'c10.mp4', 0.0), 1.00, 'MIA LOOKS out from her dad\'s car'),
  ('c', (C+'c18.mp4', 1.0), 2.00, 'ARRIVE: C-HR rolls in, Mia watching'),
  ('c', (C+'c06.mp4', 0.0), 1.00, 'DOG woof'),
@@ -197,7 +197,7 @@ B += [('a', AM+'Yard-Morning-Ambience.mp3', deliv-0.3, -10, 0, 5.0, 0.4, 0.8), (
       ('a', AM+'Yard-Morning-Ambience.mp3', yard+4.4, -8, 0, 5.0, 0.6, 1.0)]
 # VOICES (placed on each clip's lip timing)
 B += [('v', VO+'Glam-Ugh-Sync.wav', L('GR86')+3.42, 0, 0, None, 0, 0),   # soft 'ugh' + 'Come on!' locked to her lips in c02 (cross-correlated with the clip audio)
-      ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.50, 0, 0, None, 0, 0),
+      ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.85, 0, 0, None, 0, 0),
       ('v', VO+'Arfan-WhatsUp-v4a-trim-norm.wav', L('WHATSUP')+2.50, 0, 0, None, 0, 0),
       ('v', VO+'Dave-KiddingMe-norm.wav', L('DAVE double')+0.00, 0, 0, None, 0, 0),
       ('v', VO+'Mia-v2-tight-norm.wav', L('MIA line')+0.48, 0, 0, None, 0, 0),
