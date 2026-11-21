@@ -163,7 +163,7 @@ B += [('m', MU+'GenZ-B-muffled.wav', chr_, -9, oB, g(L('FREEZE: ARFAN'))-chr_, 0
       ('v', VO+'Monsoor-PhoneReply.wav', chr_+2.85, 0, 0, None, 0, 0),                                  # Monsoor laughs back over the phone: "Ha ha ha... Good, good."
       ('m', FX+'monsoor_laugh_hook_fx.wav', g(L('FREEZE: MONSOOR'))-2.0, -15, 0, None, 0, 0.2),         # funky 'ha . ha-ha . HAaa' on the beat into his freeze
       ('f', FX+'loafer_steps_brick.wav', hc+2.98, -1, 0, None, 0, 0),                                   # his loafers on the brick
-      ('m', V+'Monsoor-Laugh-Punch.wav', brand+1.2, -16, 0, None, 0.05, 0.4)]
+      ]
 B += [('f', FX+'sub_drop.wav', 0.0, -5, 0, None, 0, 0),                          # PERTH opener
       ('f', FX+'sub_drop.wav', busted, -3, 0, None, 0, 0),                      # BUSTED
       ('f', FX+'sub_drop.wav', L('FREEZE: ARFAN'), -3, 0, None, 0, 0),          # ARFAN / CEO + groove slam
@@ -175,15 +175,16 @@ B += [('m', MU+'Boss-Arrival.mp3', g(hc+1.0), -6, onset(MU+'Boss-Arrival.mp3'), 
       ('m', FX+'warm_pad.wav', cum-0.2, -12, 0, None, 0.3, 0),
       ('m', FX+'warm_pad.wav', cum+4.2, -12, 0, None, 0.3, 1.2)]
 B += [('m', MU+'Delivery-GenZ.mp3', L('KEY')-0.2, -8, 0, hero-L('KEY')+0.6, 0.4, 0.15),
-      ('m', MU+'Mission-Passed-GenZ.mp3', g(hero+0.5), -4, onset(MU+'Mission-Passed-GenZ.mp3'), 2.6, 0, 0.4),
-      ('m', MU+'Delivery-GenZ.mp3', hero+2.5, -9, 6.6, None, 0.5, 0.8)]
+      ('m', MU+'Mission-Passed-GenZ.mp3', g(hero+0.5), -13, onset(MU+'Mission-Passed-GenZ.mp3'), None, 0, 0),   # sting plays out under the remix to the end
+      ('v', FX+'monsoor_laugh_remix_fx.wav', g(hero+0.5), 5, 0, None, 0, 0.3),       # laugh remix riding the MISSION PASSED sting
+      ]
 # AMBIENCE
 B += loop('a', AM+'Servo-Night-Ambience.mp3', L('DAVE at'), night, -7, 11.0, xf=1.0, off=0.0)
 B += [('a', AM+'Yard-Morning-Ambience.mp3', deliv-0.3, -10, 0, 5.0, 0.4, 0.8), ('a', AM+'Yard-Morning-Ambience.mp3', deliv+4.2, -11, 0, 5.0, 0.6, 1.0), ('m', FX+'warm_pad.wav', deliv+3.4, -13, 0, None, 0.4, 0.6),
       ('a', AM+'Yard-Morning-Ambience.mp3', yard, -6, 0, 5.0, 0.3, 0.6),
       ('a', AM+'Yard-Morning-Ambience.mp3', yard+4.4, -8, 0, 5.0, 0.6, 1.0)]
 # VOICES (placed on each clip's lip timing)
-B += [('v', VO+'Glam-ComeOn-norm.wav', L('GR86')+1.40, 0, 0, None, 0, 0),
+B += [('v', VO+'Glam-Ugh-OnBeat.wav', L('GR86')+2.00, 0, 0, None, 0, 0),   # one soft 'ugh' on the beat after the flash, 'Come on!' on the next beat
       ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.50, 0, 0, None, 0, 0),
       ('v', VO+'Arfan-WhatsUp-v4a-trim-norm.wav', L('WHATSUP')+2.50, 0, 0, None, 0, 0),
       ('v', VO+'Dave-KiddingMe-norm.wav', L('DAVE double')+0.00, 0, 0, None, 0, 0),
@@ -199,6 +200,7 @@ B += [('f', FX+'number_tick.wav', L(d)+0.15+k*0.08, -8, 0, None, 0, 0) for d in 
 B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
       ('f', FX+'camera_strobe.wav', L('GR86')+1.70, -2, 0, None, 0, 0),
       ('f', FX+'busted_slam.wav', busted-0.35, 0, 0, None, 0, 0),
+      ('f', FX+'police_siren_onbeat.wav', L('GR86'), -11, 0, None, 0, 0),        # siren from her launch, wail on the 2-beat, winds down onto the downbeat as FINE ends
       ('f', FX+'popup_pop.wav', L('FINE'), -2, 0, None, 0, 0), ('f', FX+'cha_ching.wav', L('FINE')+0.08, -3, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', L('DAVE at')+0.15, -8, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', servo+0.15, -8, 0, None, 0, 0),
@@ -222,7 +224,7 @@ B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
       ('f', FX+'door_slam_heavy.wav', fzm-0.03, 0, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', fzm, -6, 0, None, 0, 0),
       ('f', FX+'number_tick.wav', L('KEY')+0.2, -6, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', hero+0.3, -6, 0, None, 0, 0),
-      ('f', FX+'sonic_logo.wav', brand+0.2, -2, 0, None, 0, 0)]
+      ]
 inp, flt, buses = [], [], {'m': [], 'a': [], 'v': [], 'f': []}
 for j, (bus, f, st, g, off, dur, fi, fo) in enumerate(B):
     inp += ['-ss', str(off), '-i', f]

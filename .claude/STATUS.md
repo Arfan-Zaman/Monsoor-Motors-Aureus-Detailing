@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — Full story: siren, softer 'ugh', laugh-remix ending
+- Did: police siren designed on the 120 BPM beat from the GR86 launch to the end of FINE (dips under her voice); one soft 'ugh' + 'Come on!' on beats; no ting on the brand card; ends on Monsoor's laugh remix. -13.9 LUFS, peak -1.6 dB.
+- Files: reel/qj_long.py (audio local only).
+- Next: Arfan reviews Final Video/Queue-Jump-Full-Story.mp4.
+
+
 ## 22 Nov 2026 — FINAL 45 s film cut made
 - Did: 16 Seedance 2.5 film clips (2 pilot close-ups at 1080p, 14 at 720p) from locked start frames (element IDs in every prompt; Monsoor via Soul ID), lip-synced to the locked voice lines; wrong edge faces cropped out of both close-ups; final edit qj45_final.py (film LUT 45%, upscale to 1080x1920, cards, freezes, MISSION PASSED, full mix). QJ45-FINAL.mp4: 45.0 s, -14.3 LUFS, no gaps. About 630 credits (cap 700).
 - Files: reel/qj45_final.py, VIDEO-PROMPTS-45.md, graphics/Brand-Card-1080.png (videos local only).
