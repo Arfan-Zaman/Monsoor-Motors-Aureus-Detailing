@@ -7,12 +7,13 @@
 | Dave, Mia | Dave-Real · Mia-Real | READY |
 | Montage drivers | Driver-GenZ-Guy-Real · Driver-GenZ-Woman-Real · Driver-Retiree-Real · Driver-Glam-Real | READY |
 | Real cars | Car-Dave-Tucson-2023 · Car-GenZGuy-XTrail-2023 · Car-GenZWoman-Sportage-2023 · Car-Retiree-Outlander-2021 · Car-Glam-GR86-Pink · Car-Monsoor-Mustang-GT · Monsoor-CHR-Hybrid-Black-Sheet | READY |
-| Locations | GTA-Perth-Aerial-Dusk · GTA-RedLights-Neon · GTA-Servo-Neon · GTA-Yard-RealLogo · GTA-DaveHome-Modern | READY |
+| Locations | GTA-Perth-Aerial-Dusk · GTA-RedLights-Neon · GTA-Servo-Neon · **GTA-Yard-Premium** · GTA-DaveHome-Modern | READY |
+| Arfan's dog (in the C-HR at night, at his feet in the yard) | Dog-Pitbull-Gold | READY |
 | Props / FX | Props-PlateFrame-SOLD-Keys · Prop-HandsFree-Call · CHR-Power-Ready · Prop-WA-Speed-Camera · FX-SpeedCam-Flash | READY |
-| Dashboards of the NEW real cars (Tucson, X-Trail, Sportage, Outlander, GR86) | — | **MISSING** (old ASX/Seltos/CX-3/V8 dashes no longer match) |
-| Pump display with real numbers | — | **MISSING** (old one rejected) |
-| Voice: Arfan "Monsoor, just got the car. Coming." / "What's up?" | — | **MISSING** (new lines, locked voice) |
-| Voice: Monsoor "Good job." · Mia "Dad... can we get one?" | — | **MISSING** |
+| Dashboards of the real cars | Dash-Tucson-Real · Dash-XTrail-Real · Dash-Sportage-Real · Dash-Outlander-Real · Dash-GR86-Real | READY |
+| Pump display with real numbers | Pump-Dave-Real ($94.99 · 48.00 L · 197.9) | READY |
+| Voice: Arfan "Monsoor, just got the car. Coming." / "What's up?" | voice/qj/Arfan-JustGotTheCar.wav · Arfan-WhatsUp.wav | READY (check by ear) |
+| Voice: Monsoor "Good job." · Mia "Dad... can we get one?" | voice/qj/Monsoor-GoodJob.wav · Mia-A.wav / Mia-B.wav | READY (pick Mia by ear) |
 | Voice: Arfan "That means a lot." / CTA | locked track | READY |
 | Music (Gen Z sections A/B/C) + SFX (edit pack, hype cars, servo, yard) | audio/music, audio/sfx | READY (to approve by ear) |
 | Designed sounds (READY chime, sonic logo, risers, hits, strobe) | audio/designed | READY |
