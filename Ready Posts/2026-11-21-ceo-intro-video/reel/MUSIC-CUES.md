@@ -26,3 +26,20 @@
 | Realistic SFX (V8 launch, muscle-car rumble, servo ambience, magpie, camera strobe) | Mirelo / Seed Audio | ~8–10 |
 | READY chime, risers, hits, tape-stop, freeze whooshes | made **free** on this Mac (synthesised in Python/ffmpeg) | 0 |
 | Total | | **~20–22** |
+
+## RULE (Arfan, 22 Nov 2026): every on-screen arrival has its own matching sound
+Nothing appears silently. Each sound lands on the exact frame the graphic lands, 3–6 dB under dialogue, over the music. All made free on this Mac (`audio/designed/`).
+
+| On screen | Sound |
+|---|---|
+| `PERTH.` / `Tuesday night. Perth.` super | super_whoosh.wav |
+| Freeze-frame name cards ARFAN / MONSOOR / DAVE | freeze_riser.wav into freeze_hit.wav |
+| Speed-camera FLASH | camera_strobe.wav (shutter) |
+| `BUSTED` (Pricedown) | busted_slam.wav |
+| `FINE $▒▒▒` / `-3 DEMERIT POINTS` pop-up | popup_pop.wav + cha_ching.wav |
+| Police red-blue lights in her mirror | short siren "whoop" (Mirelo, to make) |
+| Dash numbers / pump figures settling | number_tick.wav |
+| POWER press, green `READY` | ready_chime.wav |
+| `About half the fuel.*` super | super_whoosh.wav + soft ready_chime motif |
+| `SOLD · Dave & Mia` tag | stamp_thud.wav |
+| Logo end card | sonic_logo.wav |

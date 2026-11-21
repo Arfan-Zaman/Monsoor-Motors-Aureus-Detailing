@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — speed-camera scene locked, GTA cards, arrival sounds
+- Did: speeding now implied only (sound + car leaves frame), flash, generic police lights in the mirror, "Ugh... oh, come ON!", Pricedown BUSTED card + pop-up (fine blurred in pink, -3 DEMERIT POINTS); real WA figure $400 / 3 points; plate AZ 007; GR86 dash 52; Monsoor approved; designed sounds for every on-screen arrival.
+- Files: reel/COMPLIANCE.md, MUSIC-CUES.md, ELEMENT-READINESS.md, graphics/make_gta_cards.py + cards, audio/designed/*.wav (local only).
+- Next: police siren whoop (Mirelo); re-time Blender previs to 45 s; copy final elements into the project's Elements tab; AI direction.
+
+
 ## 22 Nov 2026 — plate AZ 007, GR86 at 52, Monsoor approved
 - Did: plate switched to AZ 007 (yard + props sheet), GR86 dash fixed to 52 km/h, Monsoor's likeness approval logged; new elements Yard-Final-AZ007, Props-Plate-AZ007-SOLD-Keys, Dash-GR86-52kmh.
 - Files: reel/COMPLIANCE.md, TEXT-AND-NUMBERS-v2.md, ELEMENT-READINESS.md, elements images.

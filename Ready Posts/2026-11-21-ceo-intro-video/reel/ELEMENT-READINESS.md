@@ -43,3 +43,6 @@
 - `Dash-GR86-52kmh` 3f075568-2302-4411-a7a8-a7761fec2bdb: lawful launch dash (52 km/h, low-fuel light). Supersedes Dash-GR86-Real.
 - Monsoor approved his look (Soul ID route) on 22 Nov 2026.
 - 45 s: no paid video exists yet, so nothing needs re-rendering. The free Blender previs gets re-timed to 45 s before video generation.
+- Yard-Final-AZ007 df5571c0-29f4-4760-b8cc-ebb8d5c4561c · Props-Plate-AZ007-SOLD-Keys 8a465251-85d5-48a8-8d61-aaa84333a305 · Dash-GR86-52kmh 3f075568-2302-4411-a7a8-a7761fec2bdb.
+- `FX-Police-Mirror-Lights`: generic pull-over lights in her mirror (no livery). Game-style cards: graphics/Card-BUSTED-GTA.png and graphics/Card-DEMERITS-GTA.png (fine amount blurred, pink; -3 DEMERIT POINTS yellow), built by graphics/make_gta_cards.py in Pricedown.
+- Every on-screen arrival has a matching sound: see the table at the end of MUSIC-CUES.md.
