@@ -47,3 +47,8 @@
 - `FX-Police-Mirror-Lights`: generic pull-over lights in her mirror (no livery). Game-style cards: graphics/Card-BUSTED-GTA.png and graphics/Card-DEMERITS-GTA.png (fine amount blurred, pink; -3 DEMERIT POINTS yellow), built by graphics/make_gta_cards.py in Pricedown.
 - Every on-screen arrival has a matching sound: see the table at the end of MUSIC-CUES.md.
 - `Dash-GR86-PulledOver`: 0 km/h, ODO 18,645 km, hazards, low-fuel light, red-blue wash (the odometer follows the story).
+
+## Voice update 22 Nov 2026 (Arfan didn't like "Hey, what's up?" or the slow "Good... job.")
+- Arfan "What's up?": new takes `voice/qj/Arfan-WhatsUp-v4a.wav` (warm, relaxed) and `-v4b.wav` (quicker, cool); trimmed versions `-trim.wav`. No "hey", no laugh. v4a used in the animatic.
+- Monsoor "Good job.": `voice/qj/Monsoor-GoodJob-v3b.wav` — one breath, no gap, 0.6 s of speech (trimmed version used).
+- 45 s animatic: `QJ45-Animatic.mp4` (local, built by `qj45_animatic.py`): the 39 s previs re-cut + new beats (flash, police mirror, pulled-over dash, BUSTED, demerits, dog reveal, yard AZ 007, dog at yard), fuel super replaced by "About half the fuel.*". Previs dash numbers are placeholders; the elements carry the real ones.

@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — new voice takes + 45 s animatic
+- Did: new "What's up?" takes (no hey, natural) and a tight "Good job."; 45 s animatic re-cut from the previs with the new beats, cards and arrival sounds.
+- Files: reel/qj45_animatic.py, graphics/Super-HalfFuel-720.png, elements/gta/Dog-*-crop.png, ELEMENT-READINESS.md (mp4/wav local only).
+- Next: Arfan picks What's up v4a or v4b; copy final elements into the project's Elements tab; AI direction.
+
+
 ## 22 Nov 2026 — speed-camera scene locked, GTA cards, arrival sounds
 - Did: speeding now implied only (sound + car leaves frame), flash, generic police lights in the mirror, "Ugh... oh, come ON!", Pricedown BUSTED card + pop-up (fine blurred in pink, -3 DEMERIT POINTS); real WA figure $400 / 3 points; plate AZ 007; GR86 dash 52; Monsoor approved; designed sounds for every on-screen arrival.
 - Files: reel/COMPLIANCE.md, MUSIC-CUES.md, ELEMENT-READINESS.md, graphics/make_gta_cards.py + cards, audio/designed/*.wav (local only).
