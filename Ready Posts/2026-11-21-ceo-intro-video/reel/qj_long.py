@@ -35,15 +35,17 @@ SEG = [
  ('c', (C+'c03.mp4', 1.0), 2.00, 'DAVE at the lights'),
  ('i', (E+'dash/Dash-Tucson.png', 0.49, 0.47, 1.4, 0.0), 1.00, 'DASH Tucson'),
  ('c', (C+'c04.mp4', 1.5), 2.00, 'SERVO wide'),
- ('c', (C+'c05.mp4', 1.4), 2.50, 'C-HR arrives, Arfan on the call'),
+ ('c', (C+'c05.mp4', 1.4), 1.20, 'C-HR arrives, Arfan on the call'),
+ ('c', (C+'c19.mp4', 10.7), 0.70, 'CALL DASH: C-HR cluster POV while he talks'),   # cutaway on 'just got the car'
+ ('c', (C+'c05.mp4', 3.3), 0.60, 'CALL BACK: his face on "coming"'),
  ('c', (C+'c10.mp4', 0.0), 1.00, 'MIA LOOKS out from her dad\'s car'),
  ('c', (C+'c18.mp4', 1.0), 2.00, 'ARRIVE: C-HR rolls in, Mia watching'),
  ('c', (C+'c06.mp4', 0.0), 1.00, 'DOG woof'),
- ('c', (C+'c07.mp4', 0.0), 1.50, 'DOOR: splash, steps out'),
- ('freeze', (C+'c07.mp4', 1.4, 'graphics/Card-ARFAN-CEO-GTA.png'), 1.00, 'FREEZE: ARFAN / CEO'),
- ('c', (C+'c07.mp4', 1.4), 3.50, 'WHATSUP'),
- ('c', (C+'c17.mp4', 1.5), 3.00, 'FILL: Arfan fills the C-HR'),
- ('c', (C+'c08.mp4', 0.8), 2.50, 'POWER, READY'),
+ ('ramp', (C+'c07.mp4', [(0.0, 0.2, 1.0), (0.2, 0.6, 0.5), (0.6, 1.35, 1.5)]), 1.50, 'DOOR: splash, steps out'),   # old footstep: real speed hit, slow-mo crown, speed-up into the freeze
+ ('freeze', (C+'c19.mp4', 3.85, 'graphics/Card-ARFAN-CEO-GTA.png'), 1.00, 'FREEZE: ARFAN / CEO'),
+ ('ramp', (C+'c19.mp4', [(3.8, 5.0, 0.48), (5.0, 6.0, 1.0)]), 3.50, 'WHATSUP'),   # new take: slow-mo lean out of the freeze, real speed into 'What's up?' (lips at clip 5.1 = 33.0 s, same as the voice)
+ ('c', (C+'c19.mp4', 6.0), 3.00, 'FILL: Arfan fills the C-HR'),
+ ('c', (C+'c19.mp4', 9.0), 2.50, 'POWER, READY'),
  ('c', (C+'c09.mp4', 0.3), 3.50, 'DAVE double take'),
  ('i', (E+'dash/Pump-Dave.png', 0.34, 0.47, 1.25, 0.0), 1.00, 'PUMP Dave'),
  ('c', (C+'c10.mp4', 1.0), 3.00, 'MIA line'),
@@ -56,9 +58,15 @@ SEG = [
  ('c', (P+'Pilot-Arfan-MeansALot-crop.mp4', 1.8), 2.50, 'CU ARFAN'),
  ('i', (E+'props/Props-CHR-Smart-Key.png', 0.80, 0.5, 1.0, 0.0), 1.00, 'KEY detail'),
  ('c', (C+'c15.mp4', 0.0), 5.00, 'DELIVERY'),
- ('c', (C+'c16.mp4', 0.0), 2.50, 'HERO'),
+ ('ramp', (C+'c16.mp4', [(0.0, 1.75, 0.7)]), 2.50, 'HERO'),   # gentle slow-mo on the MISSION PASSED hero
  ('s', 'graphics/Brand-Card-1080.png', 3.00, 'BRAND'),
 ]
+# c19 (final Seedance take) matched to the neighbouring clips before the common grade: exposure, warmth, saturation
+MATCH = {'CALL DASH': 'colorchannelmixer=rr=1.75:gg=1.2:bb=0.9,eq=gamma=1.25:saturation=0.6,', 'WHATSUP': 'eq=gamma=1.2:saturation=1.05,colorbalance=rm=0.03:bm=-0.01,',
+         'FILL': 'eq=gamma=1.12:saturation=1.45,colorbalance=rm=0.02:gm=0.02,',
+         'POWER, READY': 'colorchannelmixer=rr=1.75:gg=1.2:bb=0.9,eq=gamma=1.25:saturation=0.6,'}
+# dog close-up: tight 9:16 crop on his head with a slow handheld drift so he feels alive
+PRE = {'CALL DASH': "crop=660:1173:x='30+4*sin(t*37)+20*t':y='54+3*sin(t*29)',", 'DOG woof': "crop=396:704:x='236+16*t+8*sin(t*3.1)':y='60+5*sin(t*4.3)',"}
 def probe(f):
     o = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', f], capture_output=True, text=True).stdout.strip().split(',')
     return int(o[0]), int(o[1])
@@ -67,9 +75,14 @@ for i, (k, a, b, lab_) in enumerate(SEG):
     o = os.path.join(work, f'seg{i:02d}.mp4'); dur = b
     if os.environ.get('REUSE') and os.path.exists(o) and os.path.getsize(o) > 1000:
         pass   # segment already rendered in this work dir
+    elif k == 'ramp':
+        f, parts = a
+        ch = ''.join(f"[0:v]trim={s0}:{s1},setpts=(PTS-STARTPTS)/{sp}[r{j}];" for j, (s0, s1, sp) in enumerate(parts))
+        ch += ''.join(f'[r{j}]' for j in range(len(parts))) + f'concat=n={len(parts)}:v=1:a=0,trim=0:{dur},setpts=PTS-STARTPTS,minterpolate=fps=60:mi_mode=blend,'
+        run(['ffmpeg', '-y', '-i', f, '-an', '-filter_complex', f'{ch}{MATCH.get(lab_.split(":")[0], "") if "c19" in f else ""}{GRADE}{shake(lab_)}', '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', o])
     elif k == 'c':
         f, ip = a
-        run(['ffmpeg', '-y', '-ss', str(ip), '-i', f, '-t', str(dur), '-an', '-filter_complex', f'[0:v]{GRADE}{shake(lab_)}', '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', o])
+        run(['ffmpeg', '-y', '-ss', str(ip), '-i', f, '-t', str(dur), '-an', '-filter_complex', f'[0:v]{PRE.get(lab_.split(":")[0], "")}{MATCH.get(lab_.split(":")[0], "") if "c19" in f else ""}{GRADE}{shake(lab_)}', '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', o])
     elif k == 'i':   # photo as a shot: 9:16 window on the detail, slow drift like a handheld reframe, light grain
         f, cx, cy, zoom, dx = a; iw, ih = probe(f)
         ch = min(ih / zoom, iw * 16 / 9 / zoom); cw = ch * 9 / 16
@@ -88,7 +101,7 @@ for i, (k, a, b, lab_) in enumerate(SEG):
     elif k == 'freeze':
         (f, ts, card) = a; n = int(dur * FPS)
         run(['ffmpeg', '-y', '-ss', str(ts), '-i', f, '-loop', '1', '-i', card, '-t', str(dur), '-filter_complex',
-             f'[0:v]trim=end_frame=1,loop={n}:1:0,setpts=N/{FPS}/TB,{GRADE},eq=saturation=0.8:contrast=1.06[fz];'
+             f'[0:v]trim=end_frame=1,loop={n}:1:0,setpts=N/{FPS}/TB,{MATCH["WHATSUP"] if "c19" in f else ""}{GRADE},eq=saturation=0.8:contrast=1.06[fz];'
              f"[fz]zoompan=z='1+0.03*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS}[bg];"
              f'[1:v]scale={W}:{H}[c];[bg][c]overlay=0:0,fps={FPS}{shake(lab_)}', '-t', str(dur), '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', o])
     else:
@@ -207,14 +220,14 @@ B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', servo+0.15, -8, 0, None, 0, 0),
       ('f', FX+'popup_pop.wav', chr_+0.3, -6, 0, None, 0, 0),
       ('f', AM+'Dog-Woof-Curious.wav', L('DOG')-0.05, -1, 0, 1.05, 0, 0.15),
-      ('f', FX+'stamp_thud.wav', door+0.25, -6, 0, None, 0, 0),                                   # sneaker splash hit
+      ('f', FX+'stamp_thud.wav', door+0.2, -6, 0, None, 0, 0), ('f', FX+'slowmo_whoomp.wav', door+0.2, -4, 0, None, 0, 0), ('f', FX+'super_whoosh.wav', door+1.0, -9, 0, None, 0, 0),   # splash, time slows, whips back to speed                                   # sneaker splash hit
       ('f', FX+'door_slam_heavy.wav', L('FREEZE: ARFAN')-0.03, 0, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', L('FREEZE: ARFAN'), -6, 0, None, 0, 0),
       # the fill: nozzle in, pump runs, meter ticks, auto shut-off at 36.20, nozzle out, flap, nozzle holstered
       ('f', FX+'fuel_pump_run.wav', fill+0.0, -6, 0, 0.6, 0.05, 0.05),         # pump running while he holds the nozzle
       ('f', FX+'fuel_clickoff.wav', fill+0.6, -2, 0, None, 0, 0),             # auto shut-off at 36.20
       ('f', FX+'cha_ching.wav', fill+0.7, -10, 0, None, 0, 0),
       ('f', FX+'fuel_nozzle_out.wav', fill+1.0, -4, 0, None, 0, 0),           # nozzle out
-      ('f', FX+'fuel_flap_click.wav', fill+2.1, -3, 0, None, 0, 0),           # flap shut
+      ('f', FX+'fuel_flap_click.wav', fill+2.75, -3, 0, None, 0, 0),           # flap shut
       ('f', FX+'fuel_holster.wav', fill+2.4, -8, 0, None, 0, 0),
       ('f', FX+'phone_tap.wav', L('POWER')+0.5, -4, 0, None, 0, 0), ('f', FX+'ready_chime.wav', L('POWER')+1.1, -4, 0, None, 0, 0), ('f', FX+'super_whoosh.wav', L('POWER')+1.05, -8, 0, None, 0, 0),
       ('f', FX+'fuel_clickoff.wav', L('DAVE double')+0.7, -4, 0, None, 0, 0),                     # Dave's pump finally stops

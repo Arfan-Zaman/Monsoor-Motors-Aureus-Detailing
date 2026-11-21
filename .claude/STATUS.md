@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — Final intro take, slow-mo, dog close-up, call dash cutaway, lip-sync audit
+- Did: last Seedance 2.5 720p 12 s take (job 32a750ba, 84 credits; face Arfan-CEO-Master, clothing Arfan-Outfit-Shoot) cut in from the freeze to READY, colour-matched; old footstep kept with slow-mo splash ramp + whoomp; slow-mo lean into 'What's up?' (lips on the voice at 33.0 s); dog close-up with handheld drift; C-HR dash POV cutaway on 'just got the car'; gentle slow-mo hero. Lip-sync audit: all lines within ~0.1 s. Credits: about 780 of 700 cap (approved by Arfan for the last generation). -14.1 LUFS, peak -2.8 dB.
+- Files: reel/qj_long.py, audio/designed/slowmo_whoomp.wav (local).
+- Next: Arfan's final review.
+
+
 ## 22 Nov 2026 — Arfan BGM 'Miami Don', C-HR arrival, lip-sync fix, Monsoor BGM ending
 - Did: Arfan's BGM (ElevenLabs 20 s, 140 BPM trap, job 2855031a) from ARFAN / CEO freeze to READY; C-HR fast arrival + hard stop (Mirelo job 96f9c41c) + sub rumble; her 'ugh / Come on!' re-synced to c02 lips (GR86+3.42, siren dips moved); ending: laugh remix replaced by Monsoor BGM v3 lift on the MISSION slam. Also made a hopeful alt (job 0396b770). About 696 / 700 credits used. -14.1 LUFS, peak -2.3 dB.
 - Files: reel/qj_long.py.
