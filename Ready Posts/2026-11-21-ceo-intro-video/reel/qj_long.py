@@ -171,7 +171,7 @@ B += [('f', FX+'sub_drop.wav', 0.0, -5, 0, None, 0, 0),                         
       ('f', FX+'sub_drop.wav', g(hero+0.5), -3, 0, None, 0, 0)]                 # MISSION PASSED slam                           # a last little boss laugh under the end card
 # Monsoor's BGM 'Gangster of Miami': filtered build under the Hellcat, his 'HA' pickup into the freeze, the drop lands on MONSOOR / BOSS, out after 'Good job!'
 BGM_DROP = 0.635 + 16*60/92.3
-B += [('m', MU+'Monsoor-BGM-Gangster-of-Miami-v2.wav', hc, -7, BGM_DROP-(fzm-hc), cum+2.4-hc, 0.4, 0.8),
+B += [('m', MU+'Monsoor-BGM-Gangster-of-Miami-v3.wav', hc, -7, BGM_DROP-(fzm-hc), cum+2.4-hc, 0.4, 0.8),
       ('m', FX+'warm_pad.wav', cum+1.8, -12, 0, None, 0.8, 0), ('m', FX+'warm_pad.wav', cum+4.2, -12, 0, None, 0.3, 1.2)]
 B += [('m', MU+'Delivery-GenZ.mp3', L('KEY')-0.2, -8, 0, hero-L('KEY')+0.6, 0.4, 0.15),
       ('m', MU+'Mission-Passed-GenZ.mp3', g(hero+0.5), -13, onset(MU+'Mission-Passed-GenZ.mp3'), None, 0, 0),   # sting plays out under the remix to the end

@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — Monsoor BGM v3: laugh as a Gen Z vocal-chop instrument
+- Did: make_monsoor_bgm.py chops 3 'ha' syllables from the LOCKED laugh and plays them every bar (HA on 1, ha-ha 16ths, deep pitched HA on 3, high answer on 4-and), stutter rolls + tape stops every 4th bar, rolling-laugh fills, 1/8 echo; same filter intro and soul lift. Placed in the full story, Hellcat to Good job.
+- Files: reel/make_monsoor_bgm.py, reel/qj_long.py.
+- Next: Arfan reviews.
+
+
 ## 22 Nov 2026 — Monsoor BGM placed: Hellcat to Good job
 - Did: 'Gangster of Miami' v2 replaces the Boss-Arrival hits, laugh hook and first warm pad from the Hellcat (52.5 s) through 'Good job!'; filtered build, his HA pickup, drop on MONSOOR / BOSS freeze, fades at 60.4 s into a warm pad. -14.3 LUFS, peak -2.8 dB.
 - Files: reel/qj_long.py.
