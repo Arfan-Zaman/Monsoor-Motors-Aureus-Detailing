@@ -5,7 +5,6 @@
 - Files: reel/COMPLIANCE.md, TEXT-AND-NUMBERS-v2.md, ELEMENT-READINESS.md, elements/gta + elements/props images.
 - Next: Dash-GR86 start frame at 52 km/h; copy new elements into the project's Elements tab; re-time to 45 s; AI direction.
 
-# Status
 
 Claude updates this file after every step and pushes it to GitHub. Newest entry at the top.
 
