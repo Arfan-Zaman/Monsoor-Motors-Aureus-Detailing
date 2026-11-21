@@ -66,7 +66,7 @@ MATCH = {'CALL DASH': 'colorchannelmixer=rr=1.75:gg=1.2:bb=0.9,eq=gamma=1.25:sat
          'FILL': 'eq=gamma=1.12:saturation=1.45,colorbalance=rm=0.02:gm=0.02,',
          'POWER, READY': 'colorchannelmixer=rr=1.75:gg=1.2:bb=0.9,eq=gamma=1.25:saturation=0.6,'}
 # dog close-up: tight 9:16 crop on his head with a slow handheld drift so he feels alive
-PRE = {'CALL DASH': "crop=660:1173:x='30+4*sin(t*37)+20*t':y='54+3*sin(t*29)',", 'DOG woof': "crop=396:704:x='236+16*t+8*sin(t*3.1)':y='60+5*sin(t*4.3)',"}
+PRE = {'CU ARFAN': "zoompan=z='1+0.09*(1-cos(PI*min(on/60\\,1)))/2':x='iw/2-(iw/zoom/2)+6*sin(on/17)':y='ih*0.42-(ih/zoom*0.42)':d=1:s=1080x1920:fps=24,", 'CALL DASH': "crop=660:1173:x='30+4*sin(t*37)+20*t':y='54+3*sin(t*29)',", 'DOG woof': "crop=396:704:x='236+16*t+8*sin(t*3.1)':y='60+5*sin(t*4.3)',"}
 def probe(f):
     o = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', f], capture_output=True, text=True).stdout.strip().split(',')
     return int(o[0]), int(o[1])
@@ -185,7 +185,7 @@ B += [('f', FX+'sub_drop.wav', 0.0, -5, 0, None, 0, 0),                         
 # Monsoor's BGM 'Gangster of Miami': filtered build under the Hellcat, his 'HA' pickup into the freeze, the drop lands on MONSOOR / BOSS, out after 'Good job!'
 BGM_DROP = 0.635 + 16*60/92.3
 B += [('m', MU+'Monsoor-BGM-Gangster-of-Miami-v3.wav', hc, -7, BGM_DROP-(fzm-hc), cum+2.4-hc, 0.4, 0.8),
-      ('m', FX+'warm_pad.wav', cum+1.8, -12, 0, None, 0.8, 0), ('m', FX+'warm_pad.wav', cum+4.2, -12, 0, None, 0.3, 1.2)]
+      ('m', MU+'Arfan-MiamiDon-BGM.mp3', cua, -10, 10.3, L('KEY')-cua+0.3, 0.05, 0.4), ('m', FX+'warm_pad.wav', cum+4.2, -12, 0, None, 0.3, 1.2)]
 B += [('m', MU+'Delivery-GenZ.mp3', L('KEY')-0.2, -8, 0, hero-L('KEY')+0.6, 0.4, 0.15),
       ('m', MU+'Mission-Passed-GenZ.mp3', g(hero+0.5), -11, onset(MU+'Mission-Passed-GenZ.mp3'), 2.4, 0, 0.6),   # MISSION PASSED sting, hands over to Monsoor's BGM
       ('m', MU+'Monsoor-BGM-Gangster-of-Miami-v3.wav', g(hero+0.5)-0.3, -5, 0.635+12*4*60/92.3-0.3, None, 0.3, 0),   # his BGM lift lands on the slam, laugh chops ride to the end
