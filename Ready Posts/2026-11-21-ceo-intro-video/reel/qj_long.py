@@ -156,7 +156,7 @@ oA, oB, oC = onset(MU+'GenZ-A.mp3'), onset(MU+'GenZ-B.mp3'), onset(MU+'GenZ-C.mp
 B += [('m', MU+'GenZ-A.mp3', 0.0, -9, oA, 8.5, 0.05, 1.0),                         # opening groove, out before its fade
       ('m', MU+'GenZ-B.mp3', 7.5, -9, oB, busted+2.0-7.5, 1.0, 0.6),               # same key and tempo, crossfaded on a bar
       ('m', MU+'GenZ-B.mp3', g(L('DAVE at')), -16, oB+2.0, chr_-g(L('DAVE at')), 0.5, 0.15),   # low under Dave and the servo, stops dead for the silent C-HR
-      ('m', MU+'GenZ-B.mp3', g(L('FREEZE: ARFAN')), -11, oB, L('DAVE double')-g(L('FREEZE: ARFAN'))+0.5, 0.05, 0.5),  # slams in on the ARFAN / CEO hit
+      ('m', MU+'Arfan-MiamiDon-BGM.mp3', L('FREEZE: ARFAN'), -8, 0.0, L('DAVE double')-L('FREEZE: ARFAN')+0.3, 0.02, 0.5),  # Arfan's main-character theme: ARFAN / CEO intro to the READY button
       ('m', MU+'GenZ-C.mp3', g(L('DAVE double')), -14, oC, night-g(L('DAVE double'))+0.2, 0.5, 0.4),  # brighter, hopeful under "kidding me" / Mia
       ('m', FX+'tension_drone.wav', night+0.05, -13, 0, None, 0.1, 0.3)]
 B += [('m', MU+'GenZ-B-muffled.wav', chr_, -9, oB, g(L('FREEZE: ARFAN'))-chr_, 0.3, 0.05),            # low muffled pulse under the silent C-HR, builds to the slam
@@ -174,8 +174,8 @@ BGM_DROP = 0.635 + 16*60/92.3
 B += [('m', MU+'Monsoor-BGM-Gangster-of-Miami-v3.wav', hc, -7, BGM_DROP-(fzm-hc), cum+2.4-hc, 0.4, 0.8),
       ('m', FX+'warm_pad.wav', cum+1.8, -12, 0, None, 0.8, 0), ('m', FX+'warm_pad.wav', cum+4.2, -12, 0, None, 0.3, 1.2)]
 B += [('m', MU+'Delivery-GenZ.mp3', L('KEY')-0.2, -8, 0, hero-L('KEY')+0.6, 0.4, 0.15),
-      ('m', MU+'Mission-Passed-GenZ.mp3', g(hero+0.5), -13, onset(MU+'Mission-Passed-GenZ.mp3'), None, 0, 0),   # sting plays out under the remix to the end
-      ('v', FX+'monsoor_laugh_remix_fx.wav', g(hero+0.5), 5, 0, None, 0, 0.3),       # laugh remix riding the MISSION PASSED sting
+      ('m', MU+'Mission-Passed-GenZ.mp3', g(hero+0.5), -11, onset(MU+'Mission-Passed-GenZ.mp3'), 2.4, 0, 0.6),   # MISSION PASSED sting, hands over to Monsoor's BGM
+      ('m', MU+'Monsoor-BGM-Gangster-of-Miami-v3.wav', g(hero+0.5)-0.3, -5, 0.635+12*4*60/92.3-0.3, None, 0.3, 0),   # his BGM lift lands on the slam, laugh chops ride to the end
       ]
 # AMBIENCE
 B += loop('a', AM+'Servo-Night-Ambience.mp3', L('DAVE at'), night, -7, 11.0, xf=1.0, off=0.0)
@@ -183,7 +183,7 @@ B += [('a', AM+'Yard-Morning-Ambience.mp3', deliv-0.3, -10, 0, 5.0, 0.4, 0.8), (
       ('a', AM+'Yard-Morning-Ambience.mp3', yard, -6, 0, 5.0, 0.3, 0.6),
       ('a', AM+'Yard-Morning-Ambience.mp3', yard+4.4, -8, 0, 5.0, 0.6, 1.0)]
 # VOICES (placed on each clip's lip timing)
-B += [('v', VO+'Glam-Ugh-OnBeat.wav', L('GR86')+2.00, 0, 0, None, 0, 0),   # one soft 'ugh' on the beat after the flash, 'Come on!' on the next beat
+B += [('v', VO+'Glam-Ugh-Sync.wav', L('GR86')+3.42, 0, 0, None, 0, 0),   # soft 'ugh' + 'Come on!' locked to her lips in c02 (cross-correlated with the clip audio)
       ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.50, 0, 0, None, 0, 0),
       ('v', VO+'Arfan-WhatsUp-v4a-trim-norm.wav', L('WHATSUP')+2.50, 0, 0, None, 0, 0),
       ('v', VO+'Dave-KiddingMe-norm.wav', L('DAVE double')+0.00, 0, 0, None, 0, 0),
@@ -199,7 +199,9 @@ B += [('f', FX+'number_tick.wav', L(d)+0.15+k*0.08, -8, 0, None, 0, 0) for d in 
 B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
       ('f', FX+'camera_strobe.wav', L('GR86')+1.70, -2, 0, None, 0, 0),
       ('f', FX+'busted_slam.wav', busted-0.35, 0, 0, None, 0, 0),
-      ('f', FX+'police_siren_onbeat.wav', L('GR86'), -3, 0, None, 0, 0),        # siren from her launch, wail on the 2-beat, winds down onto the downbeat as FINE ends
+      ('f', FX+'police_siren_onbeat.wav', L('GR86'), -3, 0, None, 0, 0),
+      ('f', AM+'CHR-Arrive-Fast-Stop.mp3', L('ARRIVE')-0.7, -1, 0, None, 0, 0.3),      # C-HR comes in fast, hard stop, body rocks with a low rumble
+      ('f', FX+'sub_rumble.wav', L('ARRIVE')+1.4, -7, 0, 1.2, 0, 0.5),                  # the stop: low vibration through the floor        # siren from her launch, wail on the 2-beat, winds down onto the downbeat as FINE ends
       ('f', FX+'popup_pop.wav', L('FINE'), -2, 0, None, 0, 0), ('f', FX+'cha_ching.wav', L('FINE')+0.08, -3, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', L('DAVE at')+0.15, -8, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', servo+0.15, -8, 0, None, 0, 0),

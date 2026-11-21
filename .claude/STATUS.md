@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — Arfan BGM 'Miami Don', C-HR arrival, lip-sync fix, Monsoor BGM ending
+- Did: Arfan's BGM (ElevenLabs 20 s, 140 BPM trap, job 2855031a) from ARFAN / CEO freeze to READY; C-HR fast arrival + hard stop (Mirelo job 96f9c41c) + sub rumble; her 'ugh / Come on!' re-synced to c02 lips (GR86+3.42, siren dips moved); ending: laugh remix replaced by Monsoor BGM v3 lift on the MISSION slam. Also made a hopeful alt (job 0396b770). About 696 / 700 credits used. -14.1 LUFS, peak -2.3 dB.
+- Files: reel/qj_long.py.
+- Next: Arfan reviews.
+
+
 ## 22 Nov 2026 — Monsoor BGM v3: laugh as a Gen Z vocal-chop instrument
 - Did: make_monsoor_bgm.py chops 3 'ha' syllables from the LOCKED laugh and plays them every bar (HA on 1, ha-ha 16ths, deep pitched HA on 3, high answer on 4-and), stutter rolls + tape stops every 4th bar, rolling-laugh fills, 1/8 echo; same filter intro and soul lift. Placed in the full story, Hellcat to Good job.
 - Files: reel/make_monsoor_bgm.py, reel/qj_long.py.
