@@ -6,7 +6,7 @@
 | Monsoor | MA-Monsoor-Boss-v2 · MA-Monsoor-Turnaround (face via Soul ID) | READY (Monsoor to approve look) |
 | Dave, Mia | Dave-Real · Mia-Real | READY |
 | Montage drivers | Driver-GenZ-Guy-Real · Driver-GenZ-Woman-Real · Driver-Retiree-Real · Driver-Glam-Real | READY |
-| Real cars | Car-Dave-Tucson-2023 · Car-GenZGuy-XTrail-2023 · Car-GenZWoman-Sportage-2023 · Car-Retiree-Outlander-2021 · Car-Glam-GR86-Pink · Car-Monsoor-Mustang-GT · Monsoor-CHR-Hybrid-Black-Sheet | READY |
+| Real cars | Car-Dave-Tucson-2023 · Car-GenZGuy-XTrail-2023 · Car-GenZWoman-Sportage-2023 · Car-Retiree-Outlander-2021 · Car-Glam-GR86-Pink · Car-Monsoor-Hellcat · Monsoor-CHR-Hybrid-Black-Sheet | READY |
 | Locations | GTA-Perth-Aerial-Dusk · GTA-RedLights-Neon · GTA-Servo-Neon · **GTA-Yard-Premium** · GTA-DaveHome-Modern | READY |
 | Arfan's dog (in the C-HR at night, at his feet in the yard) | Dog-Pitbull-Gold | READY |
 | Props / FX | Props-PlateFrame-SOLD-Keys · Prop-HandsFree-Call · CHR-Power-Ready · Prop-WA-Speed-Camera · FX-SpeedCam-Flash | READY |

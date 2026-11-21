@@ -7,7 +7,7 @@
 | Gen Z woman | 2023 Kia Sportage S 2.0 (red) | `1QPL 318` | `37,042 km` | `AVG 10.5 L/100km` (CarExpert) |
 | Retiree | 2021 Mitsubishi Outlander LS 2.5 (silver) | `1RTD 077` | `64,530 km` | `AVG 9.5 L/100km` (CarExpert) |
 | Glam driver | Toyota GR86, hot pink, kiss decals | `BURNIT` | `18,644 km` | low-fuel light + speedo just past 60 (no figure) |
-| Monsoor | Ford Mustang GT 5.0 V8, black | `MM BOSS` | — | — |
+| Monsoor | Dodge Challenger SRT Hellcat Redeye Widebody, black | `MM BOSS` | — | — |
 | Arfan | our 2018 Toyota C-HR Hybrid, black | `1MMH 045` (MONSOOR MOTORS · VICTORIA PARK frame) | `45,012 km` | `AVG 5.2 L/100km` + `READY` (RACV) |
 
 **Perth fuel (FuelWatch, real):** ULP 91 **197.9 c/L** (Victoria Park, Albany Hwy, 21–22 Nov 2026). Price board: `UNLEADED 91 197.9` (others shown smaller and soft-focus).
