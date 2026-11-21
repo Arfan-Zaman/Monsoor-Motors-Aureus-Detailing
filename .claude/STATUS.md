@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — driving shot, face/face conversation, clear voices, production sheet
+- Did: Arfan driving shot (BOSS call, SWANLINE, dog harnessed); Good job conversation as Monsoor CU then Arfan CU; Mia's full line (pause tightened, carries over the cut); all voice lines levelled; PRODUCTION-SHEET-45.md: 42 shots with element IDs, prompts, camera, lines, overlays, face-lock rules. Animatic stills drifted on faces; final start frames must be regenerated from the face elements.
+- Files: reel/PRODUCTION-SHEET-45.md, qj45_animatic.py, elements/gta stills, voice/qj/*-norm.wav (local).
+- Next: start frames per the sheet, checked against real photos, then video.
+
+
 ## 22 Nov 2026 — pre-order beat, MISSION PASSED ending, music in one style
 - Did: night pre-order scene (Dave + Mia on the phone, PRE-ORDER PLACED); hero ending Arfan + Monsoor + dog at the Hellcat with animated MISSION PASSED; new delivery music and sting in the opening-track style; voices re-spaced, harder ducking; 44.95 s, -14.5 LUFS, no gaps.
 - Files: reel/SCRIPT.md, qj45_animatic.py, graphics/make_mission_anim.py + Anim-MISSION-PASSED.mov, Pop-PREORDER.png, elements/gta + props stills, audio/music/*GenZ*.mp3.
