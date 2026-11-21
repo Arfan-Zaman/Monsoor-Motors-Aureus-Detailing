@@ -1,0 +1,208 @@
+"""FULL-STORY upload version of "Queue Jump" (organic post, not an ad): every Seedance clip at full length
++ our Higgsfield photos in story order, game cards, freezes, and sound designed shot by shot.
+Run: REUSE=1 /opt/miniconda3/bin/python -I qj_long.py <work_dir>   -> writes QJ-FULL-STORY.mp4"""
+import os, subprocess, sys
+W, H, FPS = 1080, 1920, 24
+work = sys.argv[1]; os.makedirs(work, exist_ok=True)
+V = '../voice/qj/'; D = 'audio/designed/'
+LUT = 'graphics/QJ_GTA_Perth_Film.cube'
+def run(c):
+    if c[0] == 'ffmpeg': c = ['ffmpeg', '-nostdin'] + c[1:]
+    subprocess.run(c, check=True, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+C, P, E = 'clips/', 'pilot/', 'elements/'
+GRADE = (f"scale={W}:{H}:flags=lanczos:force_original_aspect_ratio=increase,crop={W}:{H},unsharp=5:5:0.35,"
+         f"split[o][g];[g]lut3d={LUT}[l];[o][l]blend=all_mode=normal:all_opacity=0.45,noise=alls=4:allf=t,fps={FPS}")
+SEG = [
+ ('i', (E+'gta/GTA-Perth-Aerial.png', 0.40, 0.5, 1.0, 0.08), 2.00, 'OPEN: Perth aerial'),
+ ('c', (C+'c01.mp4', 0.0), 5.00, 'MONTAGE red lights'),
+ ('i', (E+'dash/Dash-XTrail.png', 0.49, 0.47, 1.5, 0.0), 1.00, 'DASH X-Trail'),
+ ('i', (E+'dash/Dash-Sportage.png', 0.50, 0.44, 1.5, 0.0), 1.00, 'DASH Sportage'),
+ ('i', (E+'dash/Dash-Outlander.png', 0.51, 0.46, 1.5, 0.0), 1.00, 'DASH Outlander'),
+ ('c', (C+'c02.mp4', 0.0), 5.00, 'GR86 launch, flash, police, come ON'),
+ ('card', (C+'c02.mp4', 3.4, 'graphics/Card-BUSTED-GTA.png'), 1.00, 'BUSTED'),
+ ('card', (C+'c02.mp4', 3.4, 'graphics/Card-DEMERITS-GTA.png'), 1.20, 'FINE / -3 DEMERIT POINTS'),
+ ('c', (C+'c03.mp4', 0.0), 4.00, 'DAVE at the lights'),
+ ('i', (E+'dash/Dash-Tucson.png', 0.49, 0.47, 1.4, 0.0), 1.20, 'DASH Tucson'),
+ ('c', (C+'c04.mp4', 0.0), 4.00, 'SERVO wide'),
+ ('c', (C+'c05.mp4', 0.0), 4.00, 'C-HR arrives, Arfan on the call'),
+ ('c', (C+'c06.mp4', 0.0), 4.00, 'DOG woof'),
+ ('c', (C+'c07.mp4', 0.0), 1.40, 'DOOR: splash, steps out'),
+ ('freeze', (C+'c07.mp4', 1.4, 'graphics/Card-ARFAN-CEO-GTA.png'), 1.00, 'FREEZE: ARFAN / CEO'),
+ ('c', (C+'c07.mp4', 1.4), 3.60, 'WHATSUP'),
+ ('i', (E+'gta/Arfan-Filling-CHR.png', 0.42, 0.5, 1.0, 0.05), 2.40, 'FILL: Arfan fills the C-HR'),
+ ('c', (C+'c08.mp4', 0.0), 3.75, 'POWER: pump stops at 36.20, POWER, READY'),
+ ('c', (C+'c09.mp4', 0.0), 4.00, 'DAVE double take'),
+ ('i', (E+'dash/Pump-Dave.png', 0.34, 0.47, 1.25, 0.0), 1.20, 'PUMP Dave'),
+ ('c', (C+'c10.mp4', 0.0), 4.00, 'MIA line'),
+ ('c', (C+'c11.mp4', 0.0), 4.00, 'NIGHT: Dave decides'),
+ ('i', (E+'props/Phone-PreOrder-CHR.png', 0.5, 0.47, 1.05, 0.0), 1.60, 'PHONE: PRE-ORDER'),
+ ('i', (E+'gta/Yard-Final-AZ007.png', 0.47, 0.5, 1.0, 0.04), 1.60, 'YARD: next morning'),
+ ('c', (C+'c12.mp4', 0.4), 4.60, 'HELLCAT arrives, Monsoor rises'),
+ ('freeze', (C+'c12.mp4', 4.85, 'graphics/Card-MONSOOR-BOSS-GTA.png'), 1.00, 'FREEZE: MONSOOR / BOSS'),
+ ('c', (P+'Pilot-Monsoor-GoodJob-crop.mp4', 0.0), 3.60, 'CU MONSOOR'),
+ ('c', (P+'Pilot-Arfan-MeansALot-crop.mp4', 0.3), 4.20, 'CU ARFAN'),
+ ('i', (E+'props/Props-CHR-Smart-Key.png', 0.80, 0.5, 1.0, 0.0), 1.20, 'KEY detail'),
+ ('c', (C+'c15.mp4', 0.0), 5.00, 'DELIVERY'),
+ ('c', (C+'c16.mp4', 0.0), 4.00, 'HERO'),
+ ('s', 'graphics/Brand-Card-1080.png', 3.00, 'BRAND'),
+]
+def probe(f):
+    o = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', f], capture_output=True, text=True).stdout.strip().split(',')
+    return int(o[0]), int(o[1])
+files, t, marks = [], 0.0, []
+for i, (k, a, b, lab_) in enumerate(SEG):
+    o = os.path.join(work, f'seg{i:02d}.mp4'); dur = b
+    if os.environ.get('REUSE') and os.path.exists(o) and os.path.getsize(o) > 1000:
+        pass   # segment already rendered in this work dir
+    elif k == 'c':
+        f, ip = a
+        run(['ffmpeg', '-y', '-ss', str(ip), '-i', f, '-t', str(dur), '-an', '-filter_complex', f'[0:v]{GRADE}', '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', o])
+    elif k == 'i':   # photo as a shot: 9:16 window on the detail, slow drift like a handheld reframe, light grain
+        f, cx, cy, zoom, dx = a; iw, ih = probe(f)
+        ch = min(ih / zoom, iw * 16 / 9 / zoom); cw = ch * 9 / 16
+        x0 = min(max(cx * iw - cw / 2, 0), iw - cw); y0 = min(max(cy * ih - ch / 2, 0), ih - ch)
+        drift = (dx * iw) if dx else cw * 0.03
+        x0 = min(x0, iw - cw - drift) if x0 + cw + drift > iw else x0
+        vf = (f"crop={int(cw)}:{int(ch)}:'{x0:.1f}+{drift:.1f}*t/{dur}':'{y0:.1f}',scale={W}:{H}:flags=lanczos,unsharp=5:5:0.3,noise=alls=4:allf=t,fps={FPS}")
+        run(['ffmpeg', '-y', '-loop', '1', '-framerate', str(FPS), '-i', f, '-t', str(dur), '-vf', vf, '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', o])
+    elif k == 'flash':
+        run(['ffmpeg', '-y', '-f', 'lavfi', '-i', f'color=white:s={W}x{H}:r={FPS}', '-t', str(dur), '-c:v', 'libx264', '-pix_fmt', 'yuv420p', o])
+    elif k == 's':
+        n = int(dur * FPS)
+        vf = (f"scale={W*2}:{H*2}:force_original_aspect_ratio=increase,crop={W*2}:{H*2},"
+              f"zoompan=z='1+0.03*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps={FPS}")
+        run(['ffmpeg', '-y', '-loop', '1', '-i', a, '-t', str(dur), '-vf', vf, '-c:v', 'libx264', '-pix_fmt', 'yuv420p', o])
+    elif k == 'freeze':
+        (f, ts, card) = a; n = int(dur * FPS)
+        run(['ffmpeg', '-y', '-ss', str(ts), '-i', f, '-loop', '1', '-i', card, '-t', str(dur), '-filter_complex',
+             f'[0:v]trim=end_frame=1,loop={n}:1:0,setpts=N/{FPS}/TB,{GRADE},eq=saturation=0.8:contrast=1.06[fz];'
+             f"[fz]zoompan=z='1+0.03*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS}[bg];"
+             f'[1:v]scale={W}:{H}[c];[bg][c]overlay=0:0,fps={FPS}', '-t', str(dur), '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', o])
+    else:
+        (f, ts, card) = a
+        run(['ffmpeg', '-y', '-ss', str(ts), '-i', f, '-loop', '1', '-i', card, '-t', str(dur), '-filter_complex',
+             f'[0:v]trim=end_frame=1,loop=999:1:0,setpts=N/{FPS}/TB,scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},gblur=sigma=18,eq=brightness=-0.18:saturation=0.6[bg];'
+             f'[1:v]scale={W}:{H}[c];[bg][c]overlay=0:0,fps={FPS}', '-t', str(dur), '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', o])
+    files.append(o); marks.append((t, lab_)); t += dur
+total = t
+with open(os.path.join(work, 'list.txt'), 'w') as f:
+    for o in files: f.write(f"file '{os.path.abspath(o)}'\n")
+vid = os.path.join(work, 'video.mp4')
+run(['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', os.path.join(work, 'list.txt'), '-c', 'copy', vid])
+def lab(s): return next(m[0] for m in marks if m[1].startswith(s))
+
+L = lab
+OVL = [  # (file, start, duration)
+ ('graphics/Stamp-PERTH.png', 0.3, 1.8),
+ ('graphics/Tag-LAYLA.png', L('GR86')+0.05, 0.8),
+ ('graphics/Tag-DAVE.png', L('DAVE at')+0.2, 1.2),
+ ('graphics/Stamp-SERVO.png', L('SERVO')+0.2, 1.4),
+ ('graphics/HUD-CALL-BOSS.png', L('C-HR arrives')+0.3, 2.6),
+ ('graphics/Pop-PUMP-ARFAN.png', L('POWER')+0.3, 1.1),
+ ('graphics/Super-HalfFuel-720.png', L('POWER')+1.5, 2.1),
+ ('graphics/Pop-PUMP-DAVE.png', L('PUMP Dave')+0.05, 1.1),
+ ('graphics/Pop-PREORDER.png', L('PHONE')+0.6, 0.9),
+ ('graphics/Stamp-YARD.png', L('YARD')+0.1, 1.4),
+ ('graphics/Anim-MISSION-PASSED.mov', L('HERO')+0.4, 1.95),
+]
+vid2 = os.path.join(work, 'video2.mp4')
+cmd = ['ffmpeg', '-y', '-i', vid]; fc, last = [], '0:v'
+for n, (png, st, du) in enumerate(OVL):
+    if png.endswith('.mov'):
+        cmd += ['-itsoffset', f'{st:.3f}', '-t', str(du), '-i', png]
+        fc.append(f'[{n+1}:v]scale={W}:{H},format=rgba[o{n}]')
+        fc.append(f"[{last}][o{n}]overlay=0:0:eof_action=pass:enable='between(t,{st:.3f},{st+du:.3f})'[v{n}]")
+    else:
+        cmd += ['-loop', '1', '-framerate', str(FPS), '-t', f'{total:.3f}', '-i', png]
+        fc.append(f'[{n+1}:v]scale={W}:{H},format=rgba,fade=t=in:st={st:.3f}:d=0.08:alpha=1,fade=t=out:st={st+du-0.15:.3f}:d=0.15:alpha=1[o{n}]')
+        fc.append(f"[{last}][o{n}]overlay=0:0:enable='between(t,{st:.3f},{st+du:.3f})'[v{n}]")
+    last = f'v{n}'
+run(cmd + ['-filter_complex', ';'.join(fc), '-map', f'[{last}]', '-t', f'{total:.3f}', '-c:v', 'libx264', '-crf', '17', '-pix_fmt', 'yuv420p', vid2])
+
+MU, AM, VO, FX = 'audio/music/', 'audio/sfx/', V, D
+def loop(bus, f, start, end, gain, seglen, xf=0.4, off=0):   # repeat a cue to fill start..end with crossfades
+    out, t = [], start
+    while t < end - 0.3:
+        d = min(seglen - off, end - t + xf)
+        out.append((bus, f, t, gain, off, d, xf if t > start else 0.2, xf)); t += d - xf; off = 0
+    return out
+busted, servo, chr_, door, fill = L('BUSTED'), L('SERVO'), L('C-HR arrives'), L('DOOR'), L('FILL')
+night, yard, hc, fzm, cum, cua = L('NIGHT'), L('YARD'), L('HELLCAT'), L('FREEZE: MONSOOR'), L('CU MONSOOR'), L('CU ARFAN')
+deliv, hero, brand = L('DELIVERY'), L('HERO'), L('BRAND')
+B = []
+# MUSIC (all in the opening track's style)
+B += loop('m', MU+'GenZ-A.mp3', 0.0, busted+2.2, -9, 8.2, xf=0.6)
+B += loop('m', MU+'GenZ-B.mp3', L('DAVE at'), chr_, -16, 12.04)                  # low groove under Dave and the servo
+B += [('m', MU+'GenZ-B.mp3', door+1.35, -11, 0, 12.04, 0, 0.4)]                   # slams in on the door clunk
+B += loop('m', MU+'GenZ-B.mp3', door+1.35+11.6, night, -12, 12.04, off=2.0)
+B += [('m', FX+'tension_drone.wav', night+0.3, -13, 0, None, 0, 0),
+      ('m', FX+'tension_drone.wav', night+2.4, -13, 0, None, 0.3, 0.2)]
+B += [('m', MU+'Boss-Arrival.mp3', hc+1.0, -6, 0.25, 3.5, 0, 0.4),
+      ('m', MU+'Boss-Arrival.mp3', fzm-0.05, -5, 5.40, 2.3, 0.05, 0.6),
+      ('m', FX+'warm_pad.wav', cum-0.2, -12, 0, None, 0.3, 0),
+      ('m', FX+'warm_pad.wav', cum+4.2, -12, 0, None, 0.3, 1.2)]
+B += [('m', MU+'Delivery-GenZ.mp3', L('KEY')-0.2, -11, 0, hero-L('KEY')+0.6, 0.4, 0.15),
+      ('m', MU+'Mission-Passed-GenZ.mp3', hero+0.4, -4, 0, 2.6, 0, 0.4),
+      ('m', MU+'Delivery-GenZ.mp3', hero+2.5, -9, 6.6, None, 0.5, 0.8)]
+# AMBIENCE
+B += loop('a', AM+'Servo-Night-Ambience.mp3', L('DAVE at'), night, -7, 12.0, xf=0.8)
+B += [('a', AM+'Yard-Morning-Ambience.mp3', yard, -6, 0, 5.0, 0.3, 0.6),
+      ('a', AM+'Yard-Morning-Ambience.mp3', yard+4.4, -8, 0, 5.0, 0.6, 1.0)]
+# VOICES (placed on each clip's lip timing)
+B += [('v', VO+'Glam-ComeOn-norm.wav', L('GR86')+2.6, 0, 0, None, 0, 0),
+      ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.5, 0, 0, None, 0, 0),
+      ('v', VO+'Arfan-WhatsUp-v4a-trim-norm.wav', L('WHATSUP')+0.3, 0, 0, None, 0, 0),
+      ('v', VO+'Dave-KiddingMe-norm.wav', L('DAVE double')+1.4, 0, 0, None, 0, 0),
+      ('v', VO+'Mia-v2-tight-norm.wav', L('MIA')+0.4, 0, 0, None, 0, 0),
+      ('v', VO+'Monsoor-GoodJob-v4-smile-trim-norm.wav', cum+0.5, 1, 0, None, 0, 0),
+      ('v', VO+'Arfan-MeansALot-LOCKEDcut-norm.wav', cua+0.5, 1, 0, None, 0, 0),
+      ('v', VO+'Arfan-YouChoose-LOCKEDcut-norm.wav', deliv+0.3, 0, 0, None, 0, 0),
+      ('v', VO+'Arfan-WeBring-LOCKEDcut-norm.wav', deliv+1.5, 0, 0, None, 0, 0)]
+# SOUND DESIGN, shot by shot
+B += [('f', FX+'super_whoosh.wav', 0.25, -6, 0, None, 0, 0),
+      ('f', FX+'popup_pop.wav', L('MONTAGE')+0.9, -10, 0, None, 0, 0)]                            # gum bubble pop
+B += [('f', FX+'number_tick.wav', L(d)+0.15+k*0.08, -8, 0, None, 0, 0) for d in ('DASH X-Trail', 'DASH Sportage', 'DASH Outlander', 'DASH Tucson') for k in range(3)]
+B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
+      ('f', FX+'camera_strobe.wav', L('GR86')+0.6, -2, 0, None, 0, 0),
+      ('f', FX+'busted_slam.wav', busted-0.35, 0, 0, None, 0, 0),
+      ('f', FX+'popup_pop.wav', L('FINE'), -2, 0, None, 0, 0), ('f', FX+'cha_ching.wav', L('FINE')+0.08, -3, 0, None, 0, 0),
+      ('f', FX+'super_whoosh.wav', L('DAVE at')+0.15, -8, 0, None, 0, 0),
+      ('f', FX+'super_whoosh.wav', servo+0.15, -8, 0, None, 0, 0),
+      ('f', FX+'popup_pop.wav', chr_+0.3, -6, 0, None, 0, 0),
+      ('f', AM+'Dog-Woof-Curious.wav', L('DOG')+0.3, 1, 0, None, 0, 0),
+      ('f', FX+'stamp_thud.wav', door+0.05, -6, 0, None, 0, 0),                                   # sneaker splash hit
+      ('f', FX+'freeze_riser.wav', L('FREEZE: ARFAN')-0.6, -6, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', L('FREEZE: ARFAN'), -2, 0, None, 0, 0),
+      # the fill: nozzle in, pump runs, meter ticks, auto shut-off at 36.20, nozzle out, flap, nozzle holstered
+      ('f', FX+'fuel_nozzle_in.wav', fill+0.05, -4, 0, None, 0, 0),
+      ('f', FX+'fuel_pump_run.wav', fill+0.2, -6, 0, 2.4, 0.1, 0.05),
+      ('f', FX+'fuel_clickoff.wav', L('POWER')+0.3, -2, 0, None, 0, 0),
+      ('f', FX+'cha_ching.wav', L('POWER')+0.4, -10, 0, None, 0, 0),
+      ('f', FX+'fuel_holster.wav', L('POWER')+0.6, -8, 0, None, 0, 0),
+      ('f', FX+'number_tick.wav', L('POWER')+0.85, -6, 0, None, 0, 0),
+      ('f', FX+'ready_chime.wav', L('POWER')+1.45, -4, 0, None, 0, 0), ('f', FX+'super_whoosh.wav', L('POWER')+1.4, -8, 0, None, 0, 0),
+      ('f', FX+'fuel_clickoff.wav', L('DAVE double')+1.0, -4, 0, None, 0, 0),                     # Dave's pump finally stops
+      ('f', FX+'popup_pop.wav', L('PUMP Dave')+0.05, -4, 0, None, 0, 0),
+      ('f', FX+'heartbeat.wav', night+0.6, -2, 0, None, 0, 0), ('f', FX+'heartbeat.wav', night+2.2, -3, 0, None, 0, 0),
+      ('f', FX+'phone_tap.wav', L('PHONE')+0.55, -4, 0, None, 0, 0), ('f', FX+'confirm_ding.wav', L('PHONE')+0.6, -4, 0, None, 0, 0),
+      ('f', FX+'super_whoosh.wav', yard+0.05, -6, 0, None, 0, 0), ('f', FX+'stamp_thud.wav', yard+0.4, -5, 0, None, 0, 0),
+      ('f', FX+'freeze_riser.wav', fzm-0.6, -6, 0, None, 0, 0), ('f', FX+'freeze_hit.wav', fzm, -2, 0, None, 0, 0),
+      ('f', FX+'number_tick.wav', L('KEY')+0.2, -6, 0, None, 0, 0),
+      ('f', FX+'super_whoosh.wav', hero+0.3, -6, 0, None, 0, 0),
+      ('f', FX+'sonic_logo.wav', brand+0.2, -2, 0, None, 0, 0)]
+inp, flt, buses = [], [], {'m': [], 'a': [], 'v': [], 'f': []}
+for j, (bus, f, st, g, off, dur, fi, fo) in enumerate(B):
+    inp += ['-ss', str(off), '-i', f]
+    ch = f'[{j+1}:a]aresample=48000,aformat=channel_layouts=stereo,volume={g}dB'
+    if dur: ch += f',atrim=0:{dur}'
+    if fi: ch += f',afade=t=in:d={fi}'
+    if fo and dur: ch += f',afade=t=out:st={max(dur-fo,0)}:d={fo}'
+    ms = int(max(st, 0) * 1000); ch += f',adelay={ms}|{ms},apad=whole_dur={total}[x{j}]'
+    flt.append(ch); buses[bus].append(f'[x{j}]')
+def mixbus(k, n): return ''.join(buses[k]) + f'amix=inputs={len(buses[k])}:normalize=0:duration=longest[{n}]'
+flt += [mixbus('m', 'mus'), mixbus('a', 'amb'), mixbus('v', 'vox'), mixbus('f', 'sfx'),
+        '[vox]asplit=2[vox1][voxsc]',
+        '[mus][voxsc]sidechaincompress=threshold=0.012:ratio=16:attack=10:release=300:makeup=1[mud]',
+        f'[mud][amb][vox1][sfx]amix=inputs=4:normalize=0,atrim=0:{total},afade=t=out:st={total-0.6}:d=0.6,loudnorm=I=-14:TP=-2:LRA=11,alimiter=limit=0.75:level=false[m]']
+run(['ffmpeg', '-y', '-i', vid2] + inp + ['-filter_complex', ';'.join(flt), '-map', '0:v', '-map', '[m]', '-t', f'{total:.3f}', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', 'QJ-FULL-STORY.mp4'])
+print(f'total {total:.2f}s')
+for st, l in marks: print(f'{st:6.2f}  {l}')
