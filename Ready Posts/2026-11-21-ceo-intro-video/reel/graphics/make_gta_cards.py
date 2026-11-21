@@ -122,3 +122,10 @@ for i, n in enumerate(names):
     bg = Image.new('RGBA', (W, H), (60, 52, 70, 255)); bg.alpha_composite(Image.open(os.path.join(out, n + '.png')))
     sheet.paste(bg.convert('RGB').resize((W // 3, H // 3)), (i * W // 3, 0))
 sheet.save(prev.replace('.jpg', '_more.jpg'))
+
+# 5) Pre-order pop-up (the night decision scene)
+c = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(c)
+d.rounded_rectangle([140, 1150, 940, 1420], radius=34, fill=(0, 0, 0, 185), outline=(90, 230, 120, 255), width=5)
+c = Image.alpha_composite(c, text_layer('PRE-ORDER PLACED', font(104), (centred_x('PRE-ORDER PLACED', font(104)), 1170), (90, 230, 120), stroke=6))
+c = Image.alpha_composite(c, text_layer('C-HR HYBRID  ·  DAVE & MIA', font(64), (centred_x('C-HR HYBRID  ·  DAVE & MIA', font(64)), 1300), (240, 240, 240), stroke=5))
+save(c, 'Pop-PREORDER.png')

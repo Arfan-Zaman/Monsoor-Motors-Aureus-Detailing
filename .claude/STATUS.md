@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — pre-order beat, MISSION PASSED ending, music in one style
+- Did: night pre-order scene (Dave + Mia on the phone, PRE-ORDER PLACED); hero ending Arfan + Monsoor + dog at the Hellcat with animated MISSION PASSED; new delivery music and sting in the opening-track style; voices re-spaced, harder ducking; 44.95 s, -14.5 LUFS, no gaps.
+- Files: reel/SCRIPT.md, qj45_animatic.py, graphics/make_mission_anim.py + Anim-MISSION-PASSED.mov, Pop-PREORDER.png, elements/gta + props stills, audio/music/*GenZ*.mp3.
+- Next: copy final elements into the project's Elements tab; AI direction with start frames.
+
+
 ## 22 Nov 2026 — game-style layer + freeze intros
 - Did: freeze-frame intros ARFAN / CEO and MONSOOR / BOSS; location stamps, LAYLA and DAVE tags, BOSS calling HUD, pump pop-ups, MISSION PASSED with an original victory sting; all with sounds; no silent gaps; 44.95 s, -14.5 LUFS.
 - Files: reel/graphics/make_gta_cards.py + new PNGs, qj45_animatic.py, GTA-PLAN.md section 8, audio/music/Mission-Passed.mp3.

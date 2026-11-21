@@ -81,3 +81,9 @@ Sound: a clean music button; the start-button chime as the sonic logo.
 - **Arfan**: turns his head to Monsoor, eyes soften, chin dips a touch, a humble, moved half-smile, then meets his eyes: "That means a lot." (locked track).
 - Feeling: a quiet win between a boss and the man he trusts. Not comic, not stiff. Music drops from the gangster hit into the warm pad under both lines.
 - The dog is **not** in the yard scene.
+
+## LOCKED 22 Nov 2026 (later): the decision beat and the new ending
+- **After Mia's line — NIGHT, Dave's lounge (~2 s):** Dave on the couch lit only by his phone, thumb hovering; Mia leans over his shoulder, eyes on the screen. Close-up: the Monsoor Motors listing (2018 C-HR Hybrid · Black · Japanese import · Pre-order, no price, clock 23:41). He taps **PRE-ORDER** → pop `PRE-ORDER PLACED · C-HR HYBRID · DAVE & MIA` + ding. Sound: heartbeat + low tension drone, no music. Hard cut to the morning yard; the `SOLD · Dave & Mia` tag now pays this off.
+- **Ending:** delivery (keys, Mia runs out) → **HERO:** Arfan and Monsoor at golden hour in front of the Hellcat (MM BOSS), Monsoor's arm on Arfan's shoulder, Arfan holding the dog on a short lead → animated **MISSION PASSED / +1 HAPPY FAMILY** (their mission, not Mia's) → brand card.
+- **Music, all in the opening track's style:** GenZ-A (open) → GenZ-B (servo + C-HR) → silence/heartbeat (night) → gangster boss cue (Monsoor) → warm pad (Good job) → Delivery-GenZ (handover; stops dead) → Mission-Passed-GenZ sting → Delivery-GenZ lift under the brand card.
+- **Voices never overlap:** "That means a lot." ends before "You choose the car!"; the sting comes after "We bring it to your home!". Music ducks hard under every line.
