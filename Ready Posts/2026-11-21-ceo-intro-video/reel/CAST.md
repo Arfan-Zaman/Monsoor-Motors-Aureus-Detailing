@@ -7,7 +7,7 @@ Look for every shot: GTA VI-trailer mood, real live-action film (see DIRECTOR-CU
 - Look: South Asian man, early 30s, light-medium brown skin, thick wavy black hair swept up and back, full dense black beard, warm brown eyes. Ordinary real build, average arms (not gym-built).
 - Wardrobe: black matte rayon camp-collar Hawaiian shirt (olive, sand, coffee palms and hibiscus), boxy, untucked, hem just below the waistband; off-white ecru ramie trousers, loose, mid-rise; brown suede-and-canvas chunky sneakers, off-white soles; steel Seiko with olive dial on LEFT wrist; silver ring on RIGHT hand; fine 2.5 mm silver curb chain; black Ray-Ban Meta Wayfarers ALWAYS on: CLEAR lenses at night, light GREEN tint by day.
 - Character: confident, warm, quick humour, never smug. Easy half-smile, cheeky glance, small nod. Humble and respectful with Monsoor (eyes, then head, then chin down a touch). Natural, not flawless.
-- Voice: ONLY the locked track `Arfan-script-voice-LOCKED.wav` (v10): polished, slightly deep and husky, light British accent with relaxed Australian tone. Lines: "Hello mates." / "That means a lot." / "You choose the car! We bring it to your home!"
+- Voice: ONLY the locked track `Arfan-script-voice-LOCKED.wav` (v10): polished, slightly deep and husky, light British accent with relaxed Australian tone. Lines: "What's up?" (NEW line, said with a smile; generate in his locked voice using v10 as reference, check by ear) / "That means a lot." / "You choose the car! We bring it to your home!"
 
 ## MONSOOR — owner, Mohammod A Monsor (real person, consent given)
 - Elements: `MA-Monsoor-Boss-v2` 0bd837e0-5c67-4768-a4b4-a105fc5ed65c; face ONLY via Soul ID 7d5bf600-ee1b-484d-a95f-6bfae7b6e5af (start frames), never text-only.

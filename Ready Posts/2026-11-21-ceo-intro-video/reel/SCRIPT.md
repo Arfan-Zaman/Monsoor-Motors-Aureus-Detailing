@@ -37,7 +37,7 @@ Monsoor Motors · Perth · GTA VI-trailer mood, real live action. Values from `T
 |---|---|---|
 | 9.75 | WS low car rig. The black C-HR Hybrid (`1MMH 045`, frame `MONSOOR MOTORS · VICTORIA PARK`) glides in. | **Music cuts dead.** Tyre hiss only. One cricket. |
 | 11.35 | ECU ground. ARFAN's brown chunky sneaker lands in a puddle. | Splash. Door clunk; music groove returns. |
-| 11.80 | MS → MCU. ARFAN (black Hawaiian shirt, ecru ramie trousers, silver chain, Ray-Ban Metas with CLEAR lenses) nods to Dave. | **ARFAN:** "Hello mates." |
+| 11.80 | MS → MCU. ARFAN (black Hawaiian shirt, ecru ramie trousers, silver chain, Ray-Ban Metas with CLEAR lenses) nods to Dave. | **ARFAN:** "What's up?" (with a warm smile) |
 | 13.20 | CU. Nozzle into the C-HR. | Click. |
 | 13.65 | ECU. Pump `1` stops at `$ 36.20` · `LITRES 18.11`. | Auto-shutoff clunk; Dave's pump still whirring. |
 | 14.25 | MS. Dave still filling, staring over. | |
@@ -73,4 +73,4 @@ Small line: `MD32748 · *Official combined: ASX 2.0 7.6 vs C-HR Hybrid 4.3 L/100
 Sound: a clean music button; the start-button chime as the sonic logo.
 
 ---
-**Lines to record:** Arfan (all from the locked track, no changes) · Monsoor "Good job." (his cloned voice) · Mia "Dad... can we get one?" (new, chosen by ear).
+**Lines to record:** Arfan "What's up?" (NEW, in his locked voice, v10 as reference); his other lines from the locked track, no changes · Monsoor "Good job." (his cloned voice) · Mia "Dad... can we get one?" (new, chosen by ear).

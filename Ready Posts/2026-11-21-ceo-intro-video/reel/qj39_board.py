@@ -33,7 +33,7 @@ S = {
 18:("Mia asleep, cheek squashed on the glass.","",""),
 19:("The black C-HR glides in. Calm, effortless.","","MUSIC CUTS DEAD. Tyre hiss. One cricket."),
 20:("Arfan's brown sneaker lands in the puddle.","","Splash. Door clunk; groove returns."),
-21:("Arfan: confident, easy half-smile, small nod to Dave.","ARFAN: \"Hello mates.\"","Locked voice."),
+21:("Arfan: relaxed, a warm genuine smile as he says it, small nod to Dave.","ARFAN: \"What's up?\" (with a smile)","New line in his locked voice (v10 reference)."),
 22:("Nozzle into the C-HR.","","Click."),
 23:("Pump 1 stops: $36.20 · 18.11 L.","","Auto-shutoff clunk; Dave's pump still whirring."),
 24:("Dave still filling, staring over.","",""),
@@ -65,7 +65,7 @@ def cover():
     d.text((140, 300), "'Queue Jump'  ·  39 s Meta/Instagram ad  ·  storyboard + script", font=F(56, "Medium"), fill=(230, 235, 245))
     y = 700
     for line in ["Story: busy Perth night, petrol drivers wince at their fuel readouts; a glam V8 gets busted by a speed camera.",
-                 "Dave fills his ASX while Mia sleeps. A black C-HR Hybrid glides in silently. Arfan: \"Hello mates.\" His pump stops first.",
+                 "Dave fills his ASX while Mia sleeps. A black C-HR Hybrid glides in silently. Arfan: \"What's up?\" His pump stops first.",
                  "Mia: \"Dad... can we get one?\" Next morning the boss, Monsoor, arrives in his muscle car: \"Good job.\" Arfan: \"That means a lot.\"",
                  "Arfan delivers the black C-HR to Dave's driveway: \"You choose the car! We bring it to your home!\"",
                  "",

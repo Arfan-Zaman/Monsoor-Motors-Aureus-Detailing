@@ -27,7 +27,7 @@ SHOTS = [
     (18, 9.25, 9.75, "CU / eye", "75mm, 2% push", "Mia asleep on the window"),
     (19, 9.75, 11.35, "WS / low", "32mm low car rig, real speed", "Black C-HR glides in, silent"),
     (20, 11.35, 11.80, "ECU / ground", "32mm ground level", "Arfan's boot in the puddle"),
-    (21, 11.80, 13.20, "MS > MCU / eye", "50mm gimbal straight push", "Arfan: 'Hello mates'"),
+    (21, 11.80, 13.20, "MS > MCU / eye", "50mm gimbal straight push", "Arfan: 'What's up?'"),
     (22, 13.20, 13.65, "CU / eye", "100mm", "Nozzle into C-HR filler"),
     (23, 13.65, 14.25, "ECU / eye", "100mm", "Pump 1 meter stops 9.84 L"),
     (24, 14.25, 14.65, "MS / eye", "50mm locked off", "Dave still filling"),

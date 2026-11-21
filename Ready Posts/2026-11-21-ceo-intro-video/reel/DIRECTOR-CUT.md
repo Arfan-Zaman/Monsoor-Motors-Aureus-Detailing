@@ -45,7 +45,7 @@ Plan only: nothing generated, nothing committed. This file merges `roles/CINEMAT
 
 ## (A) Treatment
 
-Tuesday night in Perth, the cheap-fuel night: locals sit at red lights across the city, each glancing at the fuel gauge, while "Tuesday night. Perth." holds still over the cuts: a Gen Z guy blowing a gum bubble on St Georges Tce at sunset, a Gen Z woman tucking her hair at a Kwinana Fwy ramp signal, and a hunched retiree peering over his glasses by Elizabeth Quay. Then a glam driver in a badge-less V8 launches at the green, ticks just past 60, and a speed camera flashes: busted, mouth open, sunglasses sliding. Dave is last, at his light, with Mia asleep behind him. At the servo the price board doesn't move; only Dave's pump meter runs, and runs. Then the sound drops out: a black C-HR Hybrid glides in on electric power, Arfan steps out with a throwaway "Hello mates", tops up, and his pump clicks off while Dave's is still going. POWER, a soft READY chime, then the dash: 4.3 L/100km, 45,000 km, "Over 40% less fuel than his ASX.\*" Dave does a double take as it leaves with the Monsoor Motors plate frame and door decal, and Mia, awake now, asks, "Dad... can we get one?" Next morning at our Victoria Park yard, Arfan presses a SOLD tag onto that same black C-HR. A badge-less muscle car rumbles in, the only loud engine in the film, and Monsoor steps out, aviators on and smiling. He puts a hand on Arfan's shoulder: "Good job." "That means a lot." At golden hour Arfan pulls the black C-HR into Dave's driveway and hands over the keys palm-up as Mia runs out, over his own voice: "You choose the car! We bring it to your home!" The film ends on a 5 s golden-hour hero of the car, with the logo, phone, URL and one legal line. The look is a quiet wink at a famous game trailer, carried only by the anamorphic glass, the pink-orange sunsets, the teal and magenta nights and the montage of locals. It is never named, and the jokes come only from the situation.
+Tuesday night in Perth, the cheap-fuel night: locals sit at red lights across the city, each glancing at the fuel gauge, while "Tuesday night. Perth." holds still over the cuts: a Gen Z guy blowing a gum bubble on St Georges Tce at sunset, a Gen Z woman tucking her hair at a Kwinana Fwy ramp signal, and a hunched retiree peering over his glasses by Elizabeth Quay. Then a glam driver in a badge-less V8 launches at the green, ticks just past 60, and a speed camera flashes: busted, mouth open, sunglasses sliding. Dave is last, at his light, with Mia asleep behind him. At the servo the price board doesn't move; only Dave's pump meter runs, and runs. Then the sound drops out: a black C-HR Hybrid glides in on electric power, Arfan steps out with a throwaway "What's up", tops up, and his pump clicks off while Dave's is still going. POWER, a soft READY chime, then the dash: 4.3 L/100km, 45,000 km, "Over 40% less fuel than his ASX.\*" Dave does a double take as it leaves with the Monsoor Motors plate frame and door decal, and Mia, awake now, asks, "Dad... can we get one?" Next morning at our Victoria Park yard, Arfan presses a SOLD tag onto that same black C-HR. A badge-less muscle car rumbles in, the only loud engine in the film, and Monsoor steps out, aviators on and smiling. He puts a hand on Arfan's shoulder: "Good job." "That means a lot." At golden hour Arfan pulls the black C-HR into Dave's driveway and hands over the keys palm-up as Mia runs out, over his own voice: "You choose the car! We bring it to your home!" The film ends on a 5 s golden-hour hero of the car, with the logo, phone, URL and one legal line. The look is a quiet wink at a famous game trailer, carried only by the anamorphic glass, the pink-orange sunsets, the teal and magenta nights and the montage of locals. It is never named, and the jokes come only from the situation.
 
 ---
 
@@ -57,7 +57,7 @@ Tuesday night in Perth, the cheap-fuel night: locals sit at red lights across th
 |---|---|---|---|---|
 | 1 Montage | 0.00–6.45 | Four Perth spots, sunset → blue hour → dusk → neon night; Albany Hwy at night | Same look at the gauge three times; the glam launch and speed-camera flash; Dave | M1–M4 (Seedance fast), M5 + V1 (CS 3.0), I-1…I-5 |
 | 2 Servo | 6.45–9.75 | Night servo, Victoria Park: teal canopy, magenta shop neon, amber sodium | Static board; Dave's meter runs; Mia asleep | V2, I-13, I-6, P-Mia |
-| 3 Arrival | 9.75–21.50 | Same servo | Silent glide; "Hello mates"; quick top-up; POWER/READY/4.3; double take; Mia's line | V3, V4, V5, V6, I-6…I-11 |
+| 3 Arrival | 9.75–21.50 | Same servo | Silent glide; "What's up"; quick top-up; POWER/READY/4.3; double take; Mia's line | V3, V4, V5, V6, I-6…I-11 |
 | 4 Yard | 21.50–28.05 | Our yard, next morning, hard sun from frame left | SOLD tag; muscle car; Monsoor's "Good job." | V10, V7, I-12, I-14 |
 | 5 Home | 28.05–34.00 | Dave's driveway, golden hour, low sun from frame left | Delivery, keys palm-up, Mia runs out; V.O. | V8, V9, I-15 |
 | 6 Brand | 34.00–39.00 | Black C-HR in our yard at golden hour | Logo build, phone, URL, legal line | P-Brand |
@@ -88,7 +88,7 @@ Key. Size: EWS/WS/MWS/MS/MCU/CU/ECU. Angle: low / eye / high / OTS / ground. Sou
 | 18 | 9.25–9.75 | CU / eye | Mia asleep against the ASX side window, cheek squashed, backpack on lap | 75 mm, 2% push | Still; breathing only | Muffled through glass; idles swell 9.4–9.75 | — | P-Mia (GPT 2.6 high) | Hard cut **into silence**. |
 | 19 | 9.75–11.35 | WS / low | Black C-HR glides past the queue, swings into pump 1 | 32 mm low car rig, real speed | Rolls, body roll, stops, nose dips; Dave glances once (background) | **MUS cuts dead 9.75; AMB −12 dB in 0.3 s**; tyre hiss, faint electric whine; one idle drops away; room-tone floor | — | V3 (CS 3.0) `<<<526b5aa4…>>>` | Cut on the settle. |
 | 20 | 11.35–11.80 | ECU / ground | Arfan's boot planted flat in a thin puddle reflecting the amber board | 32 mm ground level | Hem settling (still) | Door latch 11.37; boot on wet concrete | — | I-7 (medium) | **Match cut** partner of #32 (Monsoor's loafer). |
-| 21 | 11.80–13.20 | MS → MCU / eye | Arfan by pump 1, three-quarter, clear-lens Ray-Ban Metas | 50 mm gimbal, slow straight push | Pushes door shut behind him; glances at Dave; small nod; "Hello mates" lightly; looks back; reaches for nozzle | Door clunk 11.82; **MUS returns 11.82**, warm and low; **DX 12.10–12.80 "Hello mates."** (locked) | caption "Hello mates." 12.10–12.90 | V4 (Seedance 2.0 std + audio ref) | Cut on the reach. |
+| 21 | 11.80–13.20 | MS → MCU / eye | Arfan by pump 1, three-quarter, clear-lens Ray-Ban Metas | 50 mm gimbal, slow straight push | Pushes door shut behind him; glances at Dave; small nod; "What's up" lightly; looks back; reaches for nozzle | Door clunk 11.82; **MUS returns 11.82**, warm and low; **DX 12.10–12.80 "What's up?"** (locked) | caption "What's up?" 12.10–12.90 | V4 (Seedance 2.0 std + audio ref) | Cut on the reach. |
 | 22 | 13.20–13.65 | CU / eye | Right hand, silver ring, seats the nozzle in the C-HR filler (right rear) | 100 mm | One squeeze | Nozzle click 13.28 | — | I-8 (medium) | Hard cut on the click. |
 | 23 | 13.65–14.25 | ECU / eye | Pump 1 meter: runs briefly and **stops** | 100 mm (same pump face as #16; pumps identical) | — | Short pump run; **auto-shutoff clunk 14.10**; Dave's whirr still under | litres comp stops at 9.84 L | I-6 reuse | Cut 0.15 s after the clunk. |
 | 24 | 14.25–14.65 | MS / eye | Dave still filling, eyes on his meter; C-HR soft behind | 50 mm locked off | Weight on one leg, waiting | His whirr, now the only pump running | — | V5 head (CS 3.0) | Hard cut. |
@@ -203,7 +203,7 @@ If it passes, screenshot the settings to `reference/look-lock.png`. Every later 
 | M5 | Cinema Studio 3.0, 720p, 4 s · **20** | start_image SF-M5 | No dialogue. CS 3.0 chosen over Seedance fast for car weight (rear squat, tyre bite) |
 | V1, V2, V3, V5, V8, V9 | Cinema Studio 3.0, 720p, 4 s, audio off · **20 each** | start_image SF-V# (+ elements) | No dialogue on screen (V.O. only) |
 | V10 | Cinema Studio 3.0, 720p, 4 s · **20** | start_image SF-V10s + **end_image SF-V10e** | No dialogue |
-| V4 | Seedance 2.0 **std**, 720p, 4 s · **18** | start_image SF-V4; audio_reference: locked "Hello mates" (0.70 s, padded **only with its own room tone** to 2.0 s) | Audio reference; if the lips miss twice, fall back to the take where his head is turned at the line and lay the locked audio |
+| V4 | Seedance 2.0 **std**, 720p, 4 s · **18** | start_image SF-V4; audio_reference: locked "What's up" (0.70 s, padded **only with its own room tone** to 2.0 s) | Audio reference; if the lips miss twice, fall back to the take where his head is turned at the line and lay the locked audio |
 | V6 | Seedance 2.0 std · **18** | start_image SF-V6; audio_reference: approved Mia line (padded to 2.0 s) | Audio reference |
 | V7 | Seedance 2.0 std · **18** | start_image SF-V7; audio_reference: "Good job." + 0.65 s gap + locked "That means a lot." (≈2.7 s) | OTS hides Monsoor's mouth; Arfan's lips follow the reference |
 
@@ -309,11 +309,11 @@ Look: anamorphic, oval bokeh, real pores, natural colour, real speed.
 Negative: no phone, no text, no logos, no slow motion, no morphing hands, no waxy faces, no frozen smile, no lens looks.
 ```
 
-**V4** · Seedance 2.0 std · start SF-V4 · audio ref "Hello mates" (locked) · 18
+**V4** · Seedance 2.0 std · start SF-V4 · audio ref "What's up" (locked) · 18
 ```text
 **Aspect ratio**: 9:16  **Resolution**: 720p  **Mode**: std  **Duration**: 4s
 <<<37296861-4e5c-4308-9dab-449dcb59a5b9>>> servo, <<<526b5aa4-80d5-4c7a-96a5-9b6078b58ead>>> black C-HR, <<<cde963a1-6dce-441f-b16d-fd74bad0f52e>>> Arfan in <<<eca28f45-7884-4495-ba6a-c63daadda53f>>>. His lips follow the audio reference exactly.
-Holds still for a moment, then: Arfan wearing his Ray-Ban Meta glasses, clear lenses, pushes the car door shut behind him while walking to the pump, glances at the man at the next pump, small nod, says "Hello mates" lightly, looks back to the pump and reaches for the nozzle.
+Holds still for a moment, then: Arfan wearing his Ray-Ban Meta glasses, clear lenses, pushes the car door shut behind him while walking to the pump, glances at the man at the next pump, small nod, says "What's up" lightly, looks back to the pump and reaches for the nozzle.
 Emotion: relaxed, dry humour, a passing courtesy, never smug.
 Imperfections: half-smile starts on the left side and is gone at once; a half-step as he turns; sleeve creases on the reach.
 Light: cool canopy downlights above, warm shop window behind right, amber street-light rim, rain-dark concrete reflections.
@@ -485,7 +485,7 @@ The linter's word count includes the `<<<ID>>>` strings. Without them, every pro
 
 | Line | Source | Rule |
 |---|---|---|
-| "Hello mates." | `voice/Arfan-script-voice-LOCKED.wav` (v10) 4.50–5.40 | Locked; no regeneration |
+| "What's up?" | `voice/Arfan-script-voice-LOCKED.wav` (v10) 4.50–5.40 | Locked; no regeneration |
 | "That means a lot." | locked track 0.00–1.60 | Locked; "for me" is not used |
 | "You choose the car! We bring it to your home!" | locked track 21.30–23.43 | Locked |
 | "Good job." | Monsoor's **real cloned voice** only | Warm, unhurried, low and steady; short; one take chosen by ear |

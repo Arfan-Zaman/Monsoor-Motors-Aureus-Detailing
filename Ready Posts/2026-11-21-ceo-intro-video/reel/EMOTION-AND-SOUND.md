@@ -10,7 +10,7 @@ Every character feels something real in every shot, and the sound, music and sil
 | 2b | quietly pained, then dry acceptance | | | | eyes follow the climbing total, a slow exhale, head drops a little, a tiny "of course" smirk |
 | 2c | | asleep, oblivious | | | cheek squashed on the glass, mouth slightly open, peaceful |
 | 3 | curious, then surprised | | (in car) | | Dave's head turns slowly toward the silence, brows up |
-| 4 | puzzled, a bit envious | | confident, relaxed, playful | | Arfan: easy half-smile, cheeky glance, small nod "Hello mates", a tiny shrug; never smug |
+| 4 | puzzled, a bit envious | | confident, relaxed, playful | | Arfan: easy half-smile, cheeky glance, small nod "What's up", a tiny shrug; never smug |
 | 5 | thoughtful, cornered by his kid | awake, sharp, hopeful | | | Mia deadpan then eyes widen; Dave turns, a "don't start" face that cracks into a smile |
 | 6a | happy, a little proud of himself | thrilled, bouncing | warm, pleased for them | warm, generous, steady | Monsoor's open palm, unhurried; Mia bounces on her toes; Dave grins |
 | 6b | | | humble, moved, grateful | proud, fatherly | Monsoor's hand lands firmly on Arfan's shoulder, a short nod; Arfan looks at him, chin a touch down, eyes soften, small smile, "That means a lot for me" |
@@ -30,7 +30,7 @@ Time in seconds. M = music, FX = effects, AMB = ambience, DX = dialogue.
 | 8.0 | **Silence gag:** M1 cuts dead, AMB ducks −12 dB in 0.3 s; only tyre hiss on wet concrete and a faint electric whine as the C-HR glides in |
 | 10.5 | FX one cricket. Hold the near-silence |
 | 11.0 | FX driver's door clunk (solid, premium). M2 returns: confident, warm groove (claps, light funk guitar) |
-| 11.7 | DX Arfan "Hello mates." (locked track) |
+| 11.7 | DX Arfan "What's up?" (locked track) |
 | 12.6 | FX nozzle click into the filler; pump starts and stops quickly (a short, satisfying run) |
 | 15.0 | AMB back to normal level; FX the C-HR pulling away, electric, quiet |
 | 16.0 | DX Mia "Dad... can we get one?" (dry, close) — M2 drops to a single guitar stab under her |
