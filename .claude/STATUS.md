@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — Real-sounding siren + Monsoor BGM 'Gangster of Miami'
+- Did: siren rebuilt (wail → yelp at the pull-over → two burps, horn-speaker tone, street echoes, louder) ending on the FINE downbeat; Monsoor BGM: ElevenLabs Music 40 s instrumental (92 BPM, 808 + slap bass, mafia strings, brass; job 9742203d, 5.82 credits) with his LOCKED laugh chopped on the bars and 'Good... good.' at bar 12.
+- Files: reel/qj_long.py; Final Video/Music/ (audio local only).
+- Next: Arfan picks the scenes for the BGM.
+
+
 ## 22 Nov 2026 — Full story: siren, softer 'ugh', laugh-remix ending
 - Did: police siren designed on the 120 BPM beat from the GR86 launch to the end of FINE (dips under her voice); one soft 'ugh' + 'Come on!' on beats; no ting on the brand card; ends on Monsoor's laugh remix. -13.9 LUFS, peak -1.6 dB.
 - Files: reel/qj_long.py (audio local only).

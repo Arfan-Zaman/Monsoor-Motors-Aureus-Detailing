@@ -200,7 +200,7 @@ B += [('f', FX+'number_tick.wav', L(d)+0.15+k*0.08, -8, 0, None, 0, 0) for d in 
 B += [('f', FX+'super_whoosh.wav', L('GR86')-0.05, -6, 0, None, 0, 0),
       ('f', FX+'camera_strobe.wav', L('GR86')+1.70, -2, 0, None, 0, 0),
       ('f', FX+'busted_slam.wav', busted-0.35, 0, 0, None, 0, 0),
-      ('f', FX+'police_siren_onbeat.wav', L('GR86'), -11, 0, None, 0, 0),        # siren from her launch, wail on the 2-beat, winds down onto the downbeat as FINE ends
+      ('f', FX+'police_siren_onbeat.wav', L('GR86'), -3, 0, None, 0, 0),        # siren from her launch, wail on the 2-beat, winds down onto the downbeat as FINE ends
       ('f', FX+'popup_pop.wav', L('FINE'), -2, 0, None, 0, 0), ('f', FX+'cha_ching.wav', L('FINE')+0.08, -3, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', L('DAVE at')+0.15, -8, 0, None, 0, 0),
       ('f', FX+'super_whoosh.wav', servo+0.15, -8, 0, None, 0, 0),
