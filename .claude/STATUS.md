@@ -1,5 +1,11 @@
 # Status
 
+## 22 Nov 2026 — Monsoor BGM placed: Hellcat to Good job
+- Did: 'Gangster of Miami' v2 replaces the Boss-Arrival hits, laugh hook and first warm pad from the Hellcat (52.5 s) through 'Good job!'; filtered build, his HA pickup, drop on MONSOOR / BOSS freeze, fades at 60.4 s into a warm pad. -14.3 LUFS, peak -2.8 dB.
+- Files: reel/qj_long.py.
+- Next: Arfan reviews.
+
+
 ## 22 Nov 2026 — Real-sounding siren + Monsoor BGM 'Gangster of Miami'
 - Did: siren rebuilt (wail → yelp at the pull-over → two burps, horn-speaker tone, street echoes, louder) ending on the FINE downbeat; Monsoor BGM: ElevenLabs Music 40 s instrumental (92 BPM, 808 + slap bass, mafia strings, brass; job 9742203d, 5.82 credits) with his LOCKED laugh chopped on the bars and 'Good... good.' at bar 12.
 - Files: reel/qj_long.py; Final Video/Music/ (audio local only).
