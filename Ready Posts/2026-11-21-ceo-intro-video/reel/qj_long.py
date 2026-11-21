@@ -42,7 +42,7 @@ SEG = [
  ('c', (C+'c18.mp4', 1.0), 2.00, 'ARRIVE: C-HR rolls in, Mia watching'),
  ('c', (C+'c06.mp4', 0.0), 1.00, 'DOG woof'),
  ('ramp', (C+'c07.mp4', [(0.0, 0.2, 1.0), (0.2, 0.6, 0.5), (0.6, 1.35, 1.5)]), 1.50, 'DOOR: splash, steps out'),   # old footstep: real speed hit, slow-mo crown, speed-up into the freeze
- ('freeze', (C+'c19.mp4', 4.7, 'graphics/Card-ARFAN-CEO-GTA.png'), 1.75, 'FREEZE: ARFAN / CEO'),   # freeze on his side look
+ ('freeze', (E+'gta/Freeze-Arfan-GTA-art.png', 0, 'graphics/Card-ARFAN-CEO-GTA.png'), 1.75, 'FREEZE: ARFAN / CEO'),   # Higgsfield GTA-style key art of the c19 4.7 s side look (job 33523b55)   # freeze on his side look
  ('ramp', (C+'c19.mp4', [(4.7, 5.0, 0.4), (5.0, 5.5, 1.0), (5.5, 6.0, 0.33)]), 2.75, 'WHATSUP'),   # thaws from the freeze in slow-mo, real speed on 'What's up?' (lips at clip 5.1 = seg 0.85), slow-mo smile   # new take: slow-mo lean out of the freeze, real speed into 'What's up?' (lips at clip 5.1 = 33.0 s, same as the voice)
  ('c', (C+'c19.mp4', 6.0), 3.00, 'FILL: Arfan fills the C-HR'),
  ('c', (C+'c19.mp4', 9.0), 2.50, 'POWER, READY'),
@@ -99,8 +99,13 @@ for i, (k, a, b, lab_) in enumerate(SEG):
         run(['ffmpeg', '-y', '-loop', '1', '-i', a, '-t', str(dur), '-vf', vf, '-c:v', 'libx264', '-pix_fmt', 'yuv420p', o])
     elif k == 'freeze':
         (f, ts, card) = a; n = int(dur * FPS)
+        if 'ARFAN' in lab_:   # ARFAN freeze: Higgsfield GTA key art, saturated, animated push with a drift
+            head = (f'[0:v]scale={W}:{H}:flags=lanczos,loop={n}:1:0,setpts=N/{FPS}/TB,eq=saturation=1.12:contrast=1.04,noise=alls=3:allf=t,'
+                    f"zoompan=z='1.0+0.08*(1-cos(PI*on/{n}))/2':x='iw/2-(iw/zoom/2)+14*sin(on/9)':y='ih*0.4-(ih/zoom*0.4)':d=1:s={W}x{H}:fps={FPS}[fz];")
+        else:
+            head = f'[0:v]trim=end_frame=1,loop={n}:1:0,setpts=N/{FPS}/TB,{GRADE},eq=saturation=0.8:contrast=1.06[fz];'
         run(['ffmpeg', '-y', '-ss', str(ts), '-i', f, '-loop', '1', '-i', card, '-t', str(dur), '-filter_complex',
-             f'[0:v]trim=end_frame=1,loop={n}:1:0,setpts=N/{FPS}/TB,{MATCH["WHATSUP"] if "c19" in f else ""}{GRADE},eq=saturation=0.8:contrast=1.06[fz];'
+             head +
              f"[fz]zoompan=z='1+0.03*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS}[bg];"
              f'[1:v]scale={W}:{H}[c];[bg][c]overlay=0:0,fps={FPS}{shake(lab_)}', '-t', str(dur), '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', o])
     else:
@@ -126,6 +131,7 @@ OVL = [  # (file, start, duration)
  ('graphics/Pop-PUMP-ARFAN.png', L('FILL')+0.6, 1.2),
  ('graphics/Super-HalfFuel-720.png', L('POWER')+1.1, 1.4),
  ('graphics/White-Flash.png', L('GR86')+1.72, 0.22),
+ ('graphics/White-Flash.png', L('FREEZE: ARFAN'), 0.16),   # flash into the GTA key-art freeze
  ('graphics/Pop-PUMP-DAVE.png', L('PUMP Dave')+0.05, 1.1),
  ('graphics/Pop-PREORDER.png', L('PHONE')+0.6, 0.9),
  ('graphics/Stamp-YARD.png', L('YARD')+0.1, 1.4),
@@ -171,8 +177,10 @@ B += [('m', MU+'GenZ-A.mp3', 0.0, -9, oA, 8.5, 0.05, 1.0),                      
       ('m', MU+'Arfan-MiamiDon-BGM.mp3', L('FREEZE: ARFAN'), -8, 0.0, L('DAVE double')-L('FREEZE: ARFAN')+0.3, 0.02, 0.5),  # Arfan's main-character theme: ARFAN / CEO intro to the READY button
       ('m', MU+'GenZ-C.mp3', g(L('DAVE double')), -14, oC, night-g(L('DAVE double'))+0.2, 0.5, 0.4),  # brighter, hopeful under "kidding me" / Mia
       ('m', FX+'tension_drone.wav', night+0.05, -13, 0, None, 0.1, 0.3)]
-B += [('m', MU+'GenZ-B-muffled.wav', chr_, -9, oB, g(L('FREEZE: ARFAN'))-chr_, 0.3, 0.05),            # low muffled pulse under the silent C-HR, builds to the slam
-      ('v', VO+'Monsoor-PhoneReply.wav', chr_+2.85, 0, 0, None, 0, 0),                                  # Monsoor laughs back over the phone: "Ha ha ha... Good, good."
+B += [('m', MU+'GenZ-B-muffled.wav', chr_, -9, oB, 3.3, 0.3, 0.4),
+      ('m', MU+'Gangster-of-Miami-inst.mp3', chr_+3.0, -8, 0.635+16*60/92.3, L('DOG woof')+1.0-(chr_+3.0), 0.15, 0.5),   # Monsoor's BGM under his laugh, end of 'coming' to end of the dog shot
+      ('m', MU+'GenZ-B-muffled.wav', L('DOG woof')+0.9, -9, oB+L('DOG woof')+0.9-chr_, g(L('FREEZE: ARFAN'))-L('DOG woof')-0.9, 0.3, 0.05),            # low muffled pulse under the silent C-HR, builds to the slam
+      ('v', VO+'Monsoor-Laugh-LOCKED-phone.wav', chr_+3.1, 0, 0, L('DOG woof')+1.0-(chr_+3.1), 0.05, 0.5),   # LOCKED laugh over the phone from the end of 'coming' to the end of the dog shot                                  # Monsoor laughs back over the phone: "Ha ha ha... Good, good."
       ('f', FX+'loafer_steps_brick.wav', hc+2.98, -1, 0, None, 0, 0),                                   # his loafers on the brick
       ]
 B += [('f', FX+'sub_drop.wav', 0.0, -5, 0, None, 0, 0),                          # PERTH opener
@@ -205,6 +213,9 @@ B += [('v', VO+'Glam-Ugh-Sync.wav', L('GR86')+3.42, 0, 0, None, 0, 0),   # soft 
       ('v', VO+'Arfan-YouChoose-LOCKEDcut-norm.wav', deliv+0.3, 0, 0, None, 0, 0),
       ('v', VO+'Arfan-WeBring-LOCKEDcut-norm.wav', deliv+1.5, 0, 0, None, 0, 0)]
 # SOUND DESIGN, shot by shot
+B += [('f', FX+'sting_kidding_brass.wav', L('DAVE double')+2.95, -7, 0, None, 0, 0),   # comic brass button on 'you're kidding me'
+      ('f', FX+'sting_mia_cute.wav', L('MIA line')+2.6, -8, 0, None, 0, 0),         # cute climb + boing after 'can we get one?'
+      ('f', FX+'sting_preorder_pluck.wav', L('PHONE: PRE-ORDER')+0.15, -7, 0, None, 0, 0)]   # playful 'ba-da-bing' on the pre-order
 B += [('f', FX+'super_whoosh.wav', 0.25, -6, 0, None, 0, 0),
       ('f', FX+'popup_pop.wav', L('MONTAGE')+1.46, -8, 0, None, 0, 0)]                            # gum bubble pop
 B += [('f', FX+'number_tick.wav', L(d)+0.15+k*0.08, -8, 0, None, 0, 0) for d in ('DASH X-Trail', 'DASH Sportage', 'DASH Outlander', 'DASH Tucson') for k in range(3)]
