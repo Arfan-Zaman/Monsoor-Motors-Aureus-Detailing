@@ -4,6 +4,25 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 23 Nov 2026: AI agency proposal for Ashik
+
+**What I did**
+- Planned a new business for Arfan and his uncle Ashik: an AI-powered growth agency, separate from Monsoor Motors. First client is the Belgian pharmacy platform Ashik built (about 500 pharmacies); then Australia, then the USA and Canada.
+- Set four packages after checking European prices and competitors: AI Content Engine €1,000/mo, Search and AI Visibility (SEO) €900/mo, AI Automation and Agents from €2,500 + €300/mo, AI Growth Partner €2,500/mo.
+- Wrote the proposal for Ashik to verify, with a legal checklist, a 90-day plan and eight decisions for him.
+
+**Files changed**
+- No repo files apart from this one. The work is in two private Claude artifacts:
+  - Proposal: https://claude.ai/artifact/WnZGjAAkATZ7ed8EDycFDi
+  - Finance sheet: https://claude.ai/artifact/QaiEKkY6BgcQBJjBxTe4F8
+
+**What's next**
+- Arfan shares the proposal with Ashik (Share menu on the page).
+- Ashik checks his employment contract, who owns the platform code, and its tech stack.
+- Then: agency name, brand, one-page website, and the pitch to the Belgian owner.
+
+---
+
 ## 21 Nov 2026: outfit locked (olive watch dial)
 
 **What I did**
