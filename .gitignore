@@ -28,3 +28,6 @@ HR/
 *.webm
 *.mkv
 Car wash/Reference/breakdown/stems/
+
+# AI Business: separate project, kept out of the Monsoor repo (set 23 Nov 2026)
+AI Business/
