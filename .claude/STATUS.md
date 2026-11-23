@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: shot-for-shot clone + UGC + credit cost
+
+**What I did**
+- Broke AutoLinx's top ad (50 s) into frames and rebuilt it shot for shot with Monsoor, our hybrids and our script (16 shots). Explained UGC ads (real customers, staff-as-creator, paid creators; no AI "customers") with 3 prompt scripts and the ACCC disclosure rules.
+- Quoted Higgsfield live: the campaign needs 0–2 credits (all real footage); an AI map clip would be 76 (12 draft + 64 at 1080p). Balance 1,628.55.
+
+**Files changed**
+- `Facebook/Ads/Hybrid Import Campaign/Clone-Shot-List-and-UGC.md`, `.claude/STATUS.md`
+
+**What's next**
+- Film the 90-minute shot list; ask the next buyer for a handover UGC.
+
+---
+
 ## 24 Nov 2026: ad to clone + Meta algorithm
 
 **What I did**
