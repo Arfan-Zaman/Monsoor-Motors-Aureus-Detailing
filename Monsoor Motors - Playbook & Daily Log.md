@@ -80,7 +80,7 @@
 - Cars: Hyundai i30, Kia Rio ×2, Toyota Yaris, Mazda CX-5 ×2, BMW X1, Toyota Prado. **Car names were guessed from photos, so confirm before posting.** Pick one of each pair. Get customer permission.
 
 ### Weekly social media calendar (both brands)
-- `Social Media Calendar/Weekly-Social-Calendar.html`: day-by-day count of static posts and videos (posting 4 days, Mon–Thu, nothing Fri–Sun; each business 2 videos + 4–6 statics a week: Monsoor 5 static, videos Tue/Thu; Aureus 4 static, videos Mon/Wed) only (owner asked to keep just the "what to post each day" table; the dated 4-week plan was removed, still in git history). Published (private) at https://claude.ai/artifact/MMmN4vcyPAr3dKavoG2JsT
+- `Social Media Calendar/Weekly-Social-Calendar.html`: day-by-day count of static posts and videos (posting 4 days: Mon, Wed, Fri, Sat; each business 2 videos + 4–6 statics a week: Monsoor 5 static, videos Wed/Sat; Aureus 4 static, videos Mon/Fri) only (owner asked to keep just the "what to post each day" table; the dated 4-week plan was removed, still in git history). Published (private) at https://claude.ai/artifact/MMmN4vcyPAr3dKavoG2JsT
 
 ### Working / older versions
 - `Ready Posts/Facebook Cover/`: earlier cover drafts (plain navy, studio, showroom versions) + `_safe-zone-check.jpg`

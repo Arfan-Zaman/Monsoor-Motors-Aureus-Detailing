@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: posting days changed to Mon, Wed, Fri, Sat
+
+**What I did**
+- Moved every post onto Monday, Wednesday, Friday and Saturday as asked. Counts unchanged: Monsoor 5 static + 2 video (videos Wed, Sat), Aureus 4 static + 2 video (videos Mon, Fri). Republished to the same link.
+
+**Files changed**
+- `Social Media Calendar/Weekly-Social-Calendar.html`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Start posting to the table; merge the branch into main when the owner says.
+
+---
+
 ## 24 Nov 2026: calendar set to 4 posting days
 
 **What I did**
