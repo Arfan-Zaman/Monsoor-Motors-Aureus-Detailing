@@ -4,6 +4,14 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 23 Nov 2026: real number plates back on the Kluger photos
+
+- **What I did:** put the real plate 1DDP 822 back into the relit photos 01, 03, 04, 05 and 08 (copied from the real photo, warped and light-matched, 0 credits). Photo 02 shows the plate edge-on, so I left it as is.
+- **Files:** `Cars/Toyota Kluger KX-R V6 AWD (grey)/Post Ready/`, new `Tools/restore_plate.py`.
+- **Next:** owner posts; fix the website listing details.
+
+---
+
 ## 23 Nov 2026: Kluger sale photos in the Monsoor yard
 
 - **What I did:** graded all 15 Kluger photos; emptied the GTA final yard (C-HR removed); cut out the car and relit 8 outside shots into the yard with Higgsfield (about 33 credits); plates blurred; wrote the sale caption from the website listing.
