@@ -217,3 +217,9 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Decisions / feedback:
 - To-do next:
 -->
+
+### 24 Nov 2026: hybrid import Meta ad plan
+- What we made: `Facebook/Ads/Hybrid Import Campaign/Hybrid-Import-Meta-Ad-Plan.md`, a Meta lead-ad plan for Japanese hybrids (C-HR, Sienta, Axio/Fielder, Harrier, Prius, Aqua).
+- Learned: ADR 79/05 (from 1 Dec 2025) blocks new SEVS approvals for fuel-efficient Japanese-market cars; existing entries run to expiry (max 3 years) and can't be renewed. Prius entry expired 1 Dec 2025 (Drive, 29 Apr 2026). **Check ROVER before advertising any "we'll import it" model.**
+- Rules: every ad shows "MV Dealership Licence MD32748"; specific used-car ads show year, rego, cash price and yard address (WA MVD Act). Keep loan wording out of ads (Meta financial category).
+- Next: owner confirms SEVS expiry per model and gross profit per hybrid; film Ad 1 ("The rules just changed").

@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: hybrid import Meta ad plan
+
+**What I did**
+- Researched demand, Meta lead costs, WA ad rules and import rules, and wrote a low-budget Facebook/Instagram lead plan for Japanese hybrids: verdict, $25/day budget, cost-per-sale rule, 6 ad concepts, lead follow-up, kill/scale rules, compliance checklist.
+- Key finding: since 1 Dec 2025 (ADR 79/05) Japanese hybrids can't get new SEVS approvals. Prius entry already expired; others expire within 3 years. Plan only advertises importing models with a current entry, and adds a "we buy hybrids" ad.
+
+**Files changed**
+- `Facebook/Ads/Hybrid Import Campaign/Hybrid-Import-Meta-Ad-Plan.md`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Owner checks each model's SEVS expiry on ROVER and confirms gross profit per hybrid, then film Ad 1 and launch.
+
+---
+
 ## 24 Nov 2026: posting times moved to 5–8:30 pm Perth
 
 **What I did**
