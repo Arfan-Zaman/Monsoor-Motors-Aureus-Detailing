@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: animated storyboard sheet published
+
+**What I did**
+- Built a 16-panel animated storyboard for the "Perth, want a Japanese hybrid?" clone Reel, for free (PIL in code, real C-HR photos, 0 Higgsfield credits). Each panel loops its own shot at real speed. Published as a private Claude Artifact: https://claude.ai/artifact/NMwVN2REq5usrPRBt8vhq5
+
+**Files changed**
+- `Facebook/Ads/Hybrid Import Campaign/storyboard/` (make_animatic.py, make_sheet.py, Hybrid-Clone-Storyboard.html, panels/*.webp)
+- `.claude/STATUS.md`
+
+**What's next**
+- Owner reviews the storyboard; then film on the yard (shots 8–10 need real hybrids in stock).
+
+---
+
 ## 24 Nov 2026: shot-for-shot clone + UGC + credit cost
 
 **What I did**
