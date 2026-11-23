@@ -101,6 +101,7 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 
 - `Tools/publish_aureus_public.sh`: publishes a clean public copy of the Aureus Detailing folder to github.com/Arfan-Zaman/Aureus-Detailing (fresh single commit, private items left out).
 - `car_photo_enhance.py`: honest grade + Facebook crop for stock-car photos (light, colour, sharpen; optional background blur boxes).
+- `gta_price_promo.py`: GTA-style price post for a stock car (Pricedown, green price, odometer HUD, logo top-left) from a JSON config; `--no-reel` for photos only.
 - `restore_plate.py`: puts the real number plate from the original photo back into an AI-relit photo (SIFT match, warp, light match; free).
 - `car_yard_composite.py`: puts a Higgsfield background-remover cutout onto the empty Monsoor yard plate (shadow, warmth, plate blur); then relight with prompt `aureus-video-studio/assets/prompts/car-yard-relight.md`.
 

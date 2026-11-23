@@ -4,6 +4,14 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 23 Nov 2026: GTA price photos for the Kluger
+
+- **What I did:** made 4 GTA-style price posts (1080x1350) from the yard photos: Pricedown font, price $5,459 in GTA green on a black band, odometer 328,243 km HUD top-right, Monsoor logo top-left, phone and web. No reel (owner wants photos only). 0 credits.
+- **Files:** `Cars/Toyota Kluger KX-R V6 AWD (grey)/GTA Promo/`, `gta-promo.json`, new `Tools/gta_price_promo.py`.
+- **Next:** owner posts.
+
+---
+
 ## 23 Nov 2026: real number plates back on the Kluger photos
 
 - **What I did:** put the real plate 1DDP 822 back into the relit photos 01, 03, 04, 05 and 08 (copied from the real photo, warped and light-matched, 0 credits). Photo 02 shows the plate edge-on, so I left it as is.
