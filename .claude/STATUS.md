@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: calendar saved as PDF
+
+**What I did**
+- Exported the "What to post each day" table to a one-page A4 landscape PDF and checked it renders fully (Montserrat, nothing cut off).
+
+**Files changed**
+- `Social Media Calendar/Weekly-Social-Calendar.pdf`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Merge the branch into main when the owner says.
+
+---
+
 ## 24 Nov 2026: posting days changed to Mon, Wed, Fri, Sat
 
 **What I did**
