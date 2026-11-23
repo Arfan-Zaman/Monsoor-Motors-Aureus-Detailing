@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: ad to clone + Meta algorithm
+
+**What I did**
+- Checked live competitor ads in Meta Ad Library: AutoLinx Australia (Welshpool, Perth) runs 6 founder videos since 5-7 Nov; the "Perth, looking to import?" call-out gets the most impressions. UniBee (VIC) hybrid stock/offer ads running since 9 Oct. Nobody in Perth targets hybrid buyers.
+- Picked the AutoLinx call-out format to clone (structure only, our own words), rebuilt for hybrids with 5 different openings. Researched Meta's Andromeda/GEM/Lattice and Conversion Leads; wrote what that means for a $25/day budget.
+
+**Files changed**
+- `Facebook/Ads/Hybrid Import Campaign/Ad-To-Clone-and-Meta-Algorithm.md`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Fill real proof numbers (cars sold, Google rating), film the 5 openings, launch 6 ads in one ad set. Re-check AutoLinx ads around 10 Dec to see which survived.
+
+---
+
 ## 24 Nov 2026: hybrid ad scripts written from real data
 
 **What I did**
