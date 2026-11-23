@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: hybrid ad scripts written from real data
+
+**What I did**
+- Researched what's working: Motion 2026 hook benchmarks (announcement, price anchor, urgency, confession lead), Emplifi Q3 2026 dealer benchmarks (Reels/carousels 2x+ single images; Facebook Live 3x), live Meta Ad Library competitor ads (spec-list import ads, UniBee offers; no Perth hybrid dealer running video).
+- Wrote 7 ad scripts + a "guess the price" organic reel: hooks (3 variants each), timed shot lists, captions, headlines, lead form, test plan and a 2-hour shoot list.
+
+**Files changed**
+- `Facebook/Ads/Hybrid Import Campaign/Hybrid-Ad-Scripts.md`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Fill the [bracketed] real numbers (prices, km, rego, SEVS status), then film the shoot list in one morning.
+
+---
+
 ## 24 Nov 2026: hybrid import Meta ad plan
 
 **What I did**
