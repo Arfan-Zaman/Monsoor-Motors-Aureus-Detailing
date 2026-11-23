@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: calendar trimmed to "what to post each day"
+
+**What I did**
+- Kept only the daily table (statics and videos per business, with times and topics). Removed the slot grid, the four dated weeks and the rules section; they stay in git history. Republished to the same link.
+
+**Files changed**
+- `Social Media Calendar/Weekly-Social-Calendar.html`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Start posting to the table; merge the branch into main when the owner says.
+
+---
+
 ## 24 Nov 2026: calendar redone as statics + videos per day
 
 **What I did**

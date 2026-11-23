@@ -2,397 +2,116 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
 <style>
-/* Layout: header, a day-by-day count table (static / video per brand), the weekly slot grid, then dated weeks as tabs. */
+/* Layout: short header, then one day-by-day table of statics and videos per business. */
 :root {
   --bg: #F5F7FA;
   --surface: #FFFFFF;
   --fg: #0F1B2D;
   --muted: #5A6779;
   --line: #DCE2EA;
-  --mm: #0F2747;         /* Monsoor navy */
-  --mm-accent: #FF5F15;  /* Monsoor orange */
-  --au: #071A33;         /* Aureus navy */
-  --au-accent: #00A8A8;  /* Aureus aqua */
-  --mm-tint: #FFF1EA;
-  --au-tint: #E3F6F6;
+  --mm: #0F2747;
+  --mm-accent: #FF5F15;
+  --au: #071A33;
+  --au-accent: #00A8A8;
   --static: #E8EDF5;
   --static-fg: #24406B;
   --video: #2A1540;
   --video-fg: #FFFFFF;
-  --warn: #9A5B00;
-  --warn-tint: #FFF4DE;
   --font: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0A1322; --surface: #111D30; --fg: #E8EDF4; --muted: #9AA7B8; --line: #22324A;
   --mm: #8FB0E0; --mm-accent: #FF7A3D; --au: #7FD3D3; --au-accent: #1CC4C4;
-  --mm-tint: #2A1A12; --au-tint: #0E2A2E; --static: #1E2F4A; --static-fg: #C9D8EE; --video: #D9C6F0; --video-fg: #1A0E29;
-  --warn: #F2B65A; --warn-tint: #2B2312; color-scheme: dark } }
+  --static: #1E2F4A; --static-fg: #C9D8EE; --video: #D9C6F0; --video-fg: #1A0E29; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #0A1322; --surface: #111D30; --fg: #E8EDF4; --muted: #9AA7B8; --line: #22324A;
   --mm: #8FB0E0; --mm-accent: #FF7A3D; --au: #7FD3D3; --au-accent: #1CC4C4;
-  --mm-tint: #2A1A12; --au-tint: #0E2A2E; --static: #1E2F4A; --static-fg: #C9D8EE; --video: #D9C6F0; --video-fg: #1A0E29;
-  --warn: #F2B65A; --warn-tint: #2B2312; color-scheme: dark }
+  --static: #1E2F4A; --static-fg: #C9D8EE; --video: #D9C6F0; --video-fg: #1A0E29; color-scheme: dark }
 
 body { background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 15px; line-height: 1.5; }
 .wrap { max-width: 1180px; margin: 0 auto; padding-block: 32px 64px;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-  display: grid; gap: 40px; }
-h1, h2, h3 { margin: 0; text-wrap: balance; }
-h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.01em; }
-h2 { font-size: 1.3rem; font-weight: 800; }
+  display: grid; gap: 24px; }
+h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.01em; text-wrap: balance; }
 p { margin: 0; }
 .eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-header { display: grid; gap: 12px; }
+header { display: grid; gap: 10px; }
 header .lede { max-width: 70ch; color: var(--muted); }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.85rem; color: var(--muted); align-items: center; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
 .dot.mm { background: var(--mm-accent); } .dot.au { background: var(--au-accent); }
-section { display: grid; gap: 16px; }
-.sec-head { display: grid; gap: 4px; }
-.sec-head p { color: var(--muted); max-width: 72ch; }
-
-/* Type pills */
-.pill { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.pill { display: inline-flex; align-items: center; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
 .pill.s { background: var(--static); color: var(--static-fg); }
 .pill.v { background: var(--video); color: var(--video-fg); }
-.pill.none { background: transparent; color: var(--muted); border: 1px dashed var(--line); }
-
-/* Count table */
 .scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
-table.count { width: 100%; border-collapse: collapse; min-width: 760px; font-size: 0.85rem; }
-table.count th, table.count td { padding: 10px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); text-align: left; vertical-align: top; }
-table.count thead th { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-table.count thead th.best { color: var(--fg); }
-table.count thead th small { display: block; letter-spacing: 0; text-transform: none; font-weight: 600; font-size: 0.7rem; color: var(--muted); }
-table.count tbody th { font-weight: 800; white-space: nowrap; }
-table.count tbody tr.mm th { color: var(--mm); } table.count tbody tr.au th { color: var(--au); }
-table.count td .stack { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
-table.count td.total { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
-table.count tr:last-child th, table.count tr:last-child td { border-bottom: 0; }
-table.count th:last-child, table.count td:last-child { border-right: 0; }
-
-/* Slot grid */
-.rhythm { display: grid; grid-template-columns: 120px repeat(7, minmax(130px, 1fr)); min-width: 1030px; }
-.rhythm > div { padding: 10px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); min-width: 0; }
-.rhythm .day { font-weight: 700; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.rhythm .brand { font-weight: 800; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 8px; }
-.rhythm .brand.mm { color: var(--mm); } .rhythm .brand.au { color: var(--au); }
-.slot { display: grid; gap: 4px; font-size: 0.82rem; justify-items: start; }
+.scroll:focus-visible { outline: 2px solid var(--au-accent); outline-offset: 2px; }
+table { width: 100%; border-collapse: collapse; min-width: 900px; font-size: 0.85rem; }
+th, td { padding: 12px 10px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); text-align: left; vertical-align: top; }
+thead th { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+thead th.best { color: var(--fg); }
+thead th small { display: block; letter-spacing: 0; text-transform: none; font-weight: 600; font-size: 0.7rem; color: var(--muted); }
+tbody th { font-weight: 800; white-space: nowrap; }
+tr.mm th { color: var(--mm); } tr.au th { color: var(--au); }
+.slot { display: grid; gap: 4px; justify-items: start; }
 .slot + .slot { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); }
 .slot .t { font-weight: 700; font-variant-numeric: tabular-nums; }
-.slot .what { font-weight: 600; }
-.slot.quiet { color: var(--muted); }
-.cell-mm { background: color-mix(in srgb, var(--mm-tint) 45%, var(--surface)); }
-.cell-au { background: color-mix(in srgb, var(--au-tint) 45%, var(--surface)); }
-.chips { display: flex; flex-wrap: wrap; gap: 4px; }
-.chip { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); }
-
-/* Weeks */
-.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
-.tabs, .filter { display: flex; flex-wrap: wrap; gap: 6px; }
-button { font: inherit; cursor: pointer; }
-.tab, .fbtn { border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 6px 14px; font-size: 0.85rem; font-weight: 600; }
-.tab[aria-selected="true"], .fbtn[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-.tab:focus-visible, .fbtn:focus-visible, input:focus-visible, .scroll:focus-visible { outline: 2px solid var(--au-accent); outline-offset: 2px; }
-.theme-line { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; }
-.theme-line b { font-size: 1.05rem; }
-.theme-line p { color: var(--muted); }
-.wk-count { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 0.85rem; font-weight: 600; }
-.wk-count span { display: inline-flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-.days { display: grid; gap: 18px; }
-.daygroup { display: grid; gap: 8px; }
-.daygroup h3 { font-size: 0.95rem; font-weight: 800; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
-.daygroup h3 span { font-weight: 600; color: var(--muted); font-size: 0.85rem; }
-.post { display: grid; grid-template-columns: 28px 96px 1fr; gap: 12px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 8px; padding: 12px 14px; }
-.post.mm { border-left-color: var(--mm-accent); } .post.au { border-left-color: var(--au-accent); }
-.post.done { opacity: 0.55; }
-.post.done .title { text-decoration: line-through; }
-.post input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--au-accent); }
-.post .when { display: grid; gap: 4px; font-size: 0.8rem; justify-items: start; }
-.post .when b { font-size: 0.95rem; font-variant-numeric: tabular-nums; }
-.post .brandtag { font-weight: 700; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
-.post.mm .brandtag { color: var(--mm-accent); } .post.au .brandtag { color: var(--au-accent); }
-.post .body { display: grid; gap: 6px; min-width: 0; }
-.post .title { font-weight: 700; }
-.post .cap { font-size: 0.88rem; background: var(--bg); border-radius: 6px; padding: 8px 10px; }
-.post .cap::before { content: "Caption: "; font-weight: 700; color: var(--muted); }
-.post .meta { font-size: 0.8rem; color: var(--muted); }
-.post .check { font-size: 0.8rem; color: var(--warn); background: var(--warn-tint); border-radius: 6px; padding: 4px 8px; justify-self: start; }
-.post .check::before { content: "Confirm first: "; font-weight: 700; }
-.noposts { color: var(--muted); font-size: 0.9rem; background: var(--surface); border: 1px dashed var(--line); border-radius: 8px; padding: 10px 14px; }
-
-/* Rules */
-.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
-.rule { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; }
-.rule h3 { font-size: 0.95rem; }
-.rule ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 0.88rem; }
-.tags { font-size: 0.85rem; color: var(--muted); word-break: break-word; }
+.slot .w { font-weight: 600; }
+.rest { color: var(--muted); }
+td.total { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr:last-child th, tr:last-child td { border-bottom: 0; }
+th:last-child, td:last-child { border-right: 0; }
 footer { font-size: 0.8rem; color: var(--muted); }
-
-@media (max-width: 640px) {
-  .post { grid-template-columns: 24px 1fr; }
-  .post .when { grid-column: 2; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-  .post .body { grid-column: 1 / -1; }
-}
 </style>
 
 <div class="wrap">
   <header>
     <div class="eyebrow">Monsoor Motors · Aureus Detailing · Perth time (AWST)</div>
-    <h1>Weekly social calendar</h1>
-    <p class="lede">Each business posts <b>2 videos and 4–6 static posts every week</b>: Monsoor Motors 2 videos + 5 statics, Aureus Detailing 2 videos + 4 statics. A static post is a photo or a carousel. A video is a reel, posted on Instagram, Facebook and TikTok. The two brands post videos on different days so they never compete. Stories are extra and are not counted.</p>
+    <h1>What to post each day</h1>
+    <p class="lede">Same plan every week. Each business posts 2 videos and 4–6 static posts. Monsoor videos go out Tuesday and Thursday; Aureus videos go out Wednesday and Saturday, so the two never compete.</p>
     <div class="legend">
       <span><i class="dot mm"></i>Monsoor Motors</span>
       <span><i class="dot au"></i>Aureus Detailing</span>
       <span><i class="pill s">Static</i> photo or carousel</span>
-      <span><i class="pill v">Video</i> reel</span>
+      <span><i class="pill v">Video</i> reel (Instagram, Facebook, TikTok)</span>
     </div>
   </header>
 
-  <section aria-labelledby="count-h">
-    <div class="sec-head">
-      <h2 id="count-h">What to post each day</h2>
-      <p>Same plan every week. Monsoor videos go out Tuesday and Thursday; Aureus videos go out Wednesday and Saturday.</p>
-    </div>
-    <div class="scroll" tabindex="0" aria-label="Posts per day, scrolls sideways on small screens">
-      <table class="count" id="countTable"></table>
-    </div>
-  </section>
+  <div class="scroll" tabindex="0" aria-label="Posts per day, scrolls sideways on small screens">
+    <table id="t"></table>
+  </div>
 
-  <section aria-labelledby="rhythm-h">
-    <div class="sec-head">
-      <h2 id="rhythm-h">Weekly slots: time and topic</h2>
-      <p>Best reach in Perth is Tuesday and Wednesday, 12–8 pm. Each slot keeps the same topic every week, so planning is just picking the car or the job.</p>
-    </div>
-    <div class="scroll" tabindex="0" aria-label="Weekly slots, scrolls sideways on small screens">
-      <div class="rhythm" id="rhythm"></div>
-    </div>
-  </section>
-
-  <section aria-labelledby="weeks-h">
-    <div class="sec-head">
-      <h2 id="weeks-h">Next four weeks</h2>
-      <p>30 November to 27 December 2026, every post written out. Orange notes must be confirmed before the post goes up. Tick a post once it is live (ticks save in this browser only).</p>
-    </div>
-    <div class="controls">
-      <div class="tabs" role="tablist" id="tabs"></div>
-      <div class="filter" id="filter" aria-label="Filter by brand">
-        <button class="fbtn" data-f="all" aria-pressed="true">Both brands</button>
-        <button class="fbtn" data-f="mm" aria-pressed="false">Monsoor</button>
-        <button class="fbtn" data-f="au" aria-pressed="false">Aureus</button>
-      </div>
-    </div>
-    <div class="theme-line" id="themeLine"></div>
-    <div class="days" id="days"></div>
-  </section>
-
-  <section aria-labelledby="rules-h">
-    <div class="sec-head"><h2 id="rules-h">Before anything goes live</h2></div>
-    <div class="rules">
-      <div class="rule"><h3>People and plates</h3><ul>
-        <li>Blur every customer number plate.</li>
-        <li>Written OK from customers before showing their car or face.</li>
-        <li>Staff OK before they appear in a video.</li></ul></div>
-      <div class="rule"><h3>Truth (Australian Consumer Law)</h3><ul>
-        <li>No fake reviews, testimonials or results.</li>
-        <li>Prices match the listing and booking page: drive-away, no hidden extras.</li>
-        <li>No invented numbers or offers. Only post an offer the owner has agreed.</li></ul></div>
-      <div class="rule"><h3>AI content</h3><ul>
-        <li>Turn on the "AI-generated" label for AI video or images.</li>
-        <li>Monsoor static posts use real photos only, so they carry no AI label.</li>
-        <li>Never change a real car's colour, condition or features.</li></ul></div>
-      <div class="rule"><h3>Sizes</h3><ul>
-        <li>Static: 1080×1350 (photo or carousel).</li>
-        <li>Video: 9:16, 1080×1920, text clear of the top 250 px and bottom 400 px.</li>
-        <li>Hook in the first 2 seconds. Music added in the app at low volume.</li></ul></div>
-    </div>
-    <div class="rule">
-      <h3>Hashtags (5–8 per post)</h3>
-      <p class="tags"><b>Aureus:</b> #perthcardetailing #cardetailingperth #victoriapark #perthcars #mobiledetailing #paintcorrection #perth</p>
-      <p class="tags"><b>Monsoor:</b> #perthcars #usedcarsperth #victoriapark #japaneseimports #perthcardealer #carfinance #perth</p>
-    </div>
-  </section>
-
-  <footer>Monsoor Motors Pty Ltd · ABN 31 695 324 193 · MD32748 · 530 Albany Highway, Victoria Park WA 6100 · 0434 137 393 · Instagram @aureusdetailing.com.au. Updated 24 November 2026.</footer>
+  <footer>Monsoor Motors Pty Ltd · 530 Albany Highway, Victoria Park WA 6100 · 0434 137 393 · Instagram @aureusdetailing.com.au</footer>
 </div>
 
 <script>
 const DAYS = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
-const DAYNOTE = { Mon:"12–1 pm", Tue:"best reach", Wed:"best reach", Thu:"12–2 pm", Fri:"", Sat:"keep light", Sun:"rest day" };
-// k: s = static, v = video
-const RHYTHM = {
-  mm: {
-    Mon: [{k:"s", t:"12:00", w:"Car of the week", p:["FB","IG"]}],
-    Tue: [{k:"v", t:"18:30", w:"Reel: car walkaround or import story", p:["FB","IG","TT"]}],
-    Wed: [{k:"s", t:"12:30", w:"Help post: Import, Buy, Sell or Finance", p:["FB","IG"]},
-          {k:"s", t:"18:30", w:"Happy customer handover", p:["FB","IG"]}],
-    Thu: [{k:"v", t:"18:30", w:"Reel: people, yard or how-to", p:["FB","IG","TT"]}],
-    Fri: [{k:"s", t:"17:00", w:"Sell your car: get an offer", p:["FB","IG"]}],
-    Sat: [{k:"s", t:"10:00", w:"Stock update or import FAQ", p:["FB","IG"]}],
-    Sun: []
-  },
-  au: {
-    Mon: [{k:"s", t:"12:30", w:"Package or booking slots", p:["IG","FB"]}],
-    Tue: [{k:"s", t:"18:00", w:"Care tips carousel", p:["IG","FB"]}],
-    Wed: [{k:"v", t:"18:00", w:"Reel: before and after or reveal", p:["IG","TT","FB"]}],
-    Thu: [{k:"s", t:"12:30", w:"Before and after photo or swipe", p:["IG","FB"]}],
-    Fri: [{k:"s", t:"17:00", w:"Weekend bookings or find us", p:["IG","FB"]}],
-    Sat: [{k:"v", t:"10:00", w:"Reel: satisfying detail", p:["IG","TT","FB"]}],
-    Sun: []
-  }
+const NOTE = { Mon:"12–1 pm", Tue:"best reach", Wed:"best reach", Thu:"12–2 pm", Fri:"", Sat:"keep light", Sun:"rest day" };
+const PLAN = {
+  mm: { name:"Monsoor Motors",
+    Mon:[["s","12:00","Car of the week"]],
+    Tue:[["v","18:30","Car walkaround or import story"]],
+    Wed:[["s","12:30","Help post: Import, Buy, Sell or Finance"],["s","18:30","Happy customer handover"]],
+    Thu:[["v","18:30","People, the yard or a how-to"]],
+    Fri:[["s","17:00","Sell your car: get an offer"]],
+    Sat:[["s","10:00","Stock update or import FAQ"]],
+    Sun:[] },
+  au: { name:"Aureus Detailing",
+    Mon:[["s","12:30","A package or this week's booking slots"]],
+    Tue:[["s","18:00","Care tips carousel"]],
+    Wed:[["v","18:00","Before and after, or a reveal"]],
+    Thu:[["s","12:30","Before and after photo"]],
+    Fri:[["s","17:00","Weekend bookings or find us"]],
+    Sat:[["v","10:00","Satisfying detail"]],
+    Sun:[] }
 };
-
-// b: mm | au ; k: s | v
-const WEEKS = [
-  { id:"w1", label:"Week 1 · 30 Nov", range:"30 Nov – 6 Dec", theme:"Summer starts (1 Dec) · Aureus launch week",
-    note:"Aureus opens with its logo, packages and first reels. Monsoor leads with the C-HR, our best import story.",
-    posts:[
-      {d:"Mon 30 Nov", t:"12:00", b:"mm", k:"s", title:"Car of the week: Toyota C-HR Hybrid (black)", cap:"Hand-picked at a Japanese auction, now in Victoria Park. Drive-away price, no surprises. Call 0434 137 393.", src:"Cars/Toyota C-HR Hybrid (black)/", chk:"Still in stock and the drive-away price"},
-      {d:"Mon 30 Nov", t:"12:30", b:"au", k:"s", title:"Aureus Detailing is open: the gold standard of car care", cap:"Mobile or at our Victoria Park workshop, 7 days. Book via the link in bio.", src:"Aureus logo kit", chk:""},
-      {d:"Tue 1 Dec", t:"18:00", b:"au", k:"s", title:"Our packages: Silver $149 · Gold $199 · Aureus $299", cap:"Three packages, clear prices, no hidden extras. Swipe to see what each one includes.", src:"Aureus Brand-Basics packages", chk:"Prices and inclusions match the booking page"},
-      {d:"Tue 1 Dec", t:"18:30", b:"mm", k:"v", title:"Reel: the C-HR from auction sheet to our yard", cap:"From a Japanese auction to Albany Highway. This is how we pick our imports.", src:"C-HR auction photos + new walkaround footage", chk:""},
-      {d:"Wed 2 Dec", t:"12:30", b:"mm", k:"s", title:"How importing works: 4 steps", cap:"Thinking about a Japanese import? Here is how we find, check, ship and comply your car.", src:"SEO/content/2026-11-19-japanese-import-cars-perth.md", chk:""},
-      {d:"Wed 2 Dec", t:"18:00", b:"au", k:"v", title:"Reel: polish and reveal (car wash footage, Aureus end card)", cap:"Foam, rinse, polish, shine. Every car deserves gold.", src:"Car wash/Shots/ re-cut with Aureus end card", chk:"Staff in shot have said yes"},
-      {d:"Wed 2 Dec", t:"18:30", b:"mm", k:"s", title:"Happy customer: Hyundai i30", cap:"Congratulations on the new car, and thank you for choosing Monsoor Motors.", src:"Ready Posts/Upload Ready/01-Hyundai-i30.jpg", chk:"Customer permission and the car model"},
-      {d:"Thu 3 Dec", t:"12:30", b:"au", k:"s", title:"Foam vs clean (two-photo swipe)", cap:"Before the rinse and after. Which one is your car right now?", src:"Aureus Detailing/03 Mockups/Website hero car/", chk:"AI label on (AI illustration)"},
-      {d:"Thu 3 Dec", t:"18:30", b:"mm", k:"v", title:"Reel: meet Monsoor Motors (CEO intro)", cap:"Who we are, and why we do cars the honest way.", src:"Ready Posts/2026-11-21-ceo-intro-video/", chk:"Final cut approved; AI label if AI shots are used"},
-      {d:"Fri 4 Dec", t:"17:00", b:"mm", k:"s", title:"Selling your car? Send us 4 photos for an offer", cap:"Fair offers on your car. Message us 4 photos and the kilometres.", src:"Brand template", chk:""},
-      {d:"Fri 4 Dec", t:"17:00", b:"au", k:"s", title:"Mobile or workshop? How each one works", cap:"We come to you, or you drop it at Victoria Park. Swipe to choose.", src:"Aureus website copy", chk:"Mobile service area (suburbs)"},
-      {d:"Sat 5 Dec", t:"10:00", b:"mm", k:"s", title:"On the yard this weekend", cap:"Come and see the cars in person at 530 Albany Highway.", src:"Fresh yard photo", chk:"Saturday opening hours"},
-      {d:"Sat 5 Dec", t:"10:00", b:"au", k:"v", title:"Reel: satisfying wheel and tyre clean", cap:"The most satisfying 15 seconds of your day.", src:"New footage", chk:""}
-    ]},
-  { id:"w2", label:"Week 2 · 7 Dec", range:"7 – 13 Dec", theme:"Meet the people · Finance made simple",
-    note:"Monsoor shows the Golf and explains finance and selling. Aureus introduces the team and the Gold package.",
-    posts:[
-      {d:"Mon 7 Dec", t:"12:00", b:"mm", k:"s", title:"Car of the week: 2010 Volkswagen Golf 90 TSI", cap:"A city-friendly Golf with that turbo pull. Test drives at 530 Albany Highway.", src:"Cars/14:11:2026-2010 Volkswagen Golf 90 TSI/Edited", chk:"Golf still listed and its price"},
-      {d:"Mon 7 Dec", t:"12:30", b:"au", k:"s", title:"Find us: 530 Albany Highway, open 7 days", cap:"Victoria Park, open 7 days 8:30–6. Book via the link in bio.", src:"Workshop photo", chk:""},
-      {d:"Tue 8 Dec", t:"18:00", b:"au", k:"s", title:"Gold detail ($199): what's included", cap:"Our most popular package, item by item.", src:"Brand template", chk:"Gold inclusions match the booking page"},
-      {d:"Tue 8 Dec", t:"18:30", b:"mm", k:"v", title:"Reel: Golf walkaround (cut on the door closing)", cap:"60 seconds around the Golf. Ask us anything in the comments.", src:"New phone footage", chk:""},
-      {d:"Wed 9 Dec", t:"12:30", b:"mm", k:"s", title:"Car finance: how it works with us", cap:"Finance on quality used cars, explained in plain English.", src:"Brand template", chk:"Finance partner, wording and any credit licence lines"},
-      {d:"Wed 9 Dec", t:"18:00", b:"au", k:"v", title:"Reel: meet the team", cap:"The people who look after your car. Say hi next time you drop in.", src:"Car wash Shot 19 line-up + voiceover", chk:"Every staff member's OK"},
-      {d:"Wed 9 Dec", t:"18:30", b:"mm", k:"s", title:"Happy customer: Kia Rio", cap:"Another happy driver. Thank you for trusting us.", src:"Ready Posts/Upload Ready/02-Kia-Rio-A.jpg", chk:"Customer permission and the car model"},
-      {d:"Thu 10 Dec", t:"12:30", b:"au", k:"s", title:"Car wash myths: dish soap, dry towels, hot sun", cap:"Three habits that dull your paint, and what to do instead.", src:"Brand template", chk:""},
-      {d:"Thu 10 Dec", t:"18:30", b:"mm", k:"v", title:"Reel: how our sell-your-car offer works", cap:"Quick, fair offer. No pressure. Here is the whole process.", src:"Talking to camera on the yard", chk:"Payment method and timing"},
-      {d:"Fri 11 Dec", t:"17:00", b:"mm", k:"s", title:"Sell my car Perth: send us 4 photos", cap:"Fair offers on your car. Link in bio.", src:"SEO/content/2026-11-20-sell-my-car-perth.md", chk:""},
-      {d:"Fri 11 Dec", t:"17:00", b:"au", k:"s", title:"Weekend booking slots", cap:"A few spots left this weekend. Book via the link in bio.", src:"Brand template", chk:"Real slots available"},
-      {d:"Sat 12 Dec", t:"10:00", b:"mm", k:"s", title:"Import FAQ: kilometres, compliance, service history", cap:"The three questions everyone asks about Japanese imports.", src:"Brand template", chk:""},
-      {d:"Sat 12 Dec", t:"10:00", b:"au", k:"v", title:"Reel: interior detail", cap:"Seats, mats, vents, glass. Fresh again.", src:"New footage", chk:""}
-    ]},
-  { id:"w3", label:"Week 3 · 14 Dec", range:"14 – 20 Dec", theme:"Summer road trips · Perth sun and your paint",
-    note:"Helpful posts people save and share before the holidays. Aureus shows its first real customer car.",
-    posts:[
-      {d:"Mon 14 Dec", t:"12:00", b:"mm", k:"s", title:"Car of the week (owner picks from stock)", cap:"Holiday road trip ready. Drive-away price, no surprises.", src:"Fresh photos from the yard", chk:"Which car, its price and that it is in stock"},
-      {d:"Mon 14 Dec", t:"12:30", b:"au", k:"s", title:"Perth summer: protect your paint", cap:"Sun, bird droppings and tree sap all bite in summer. Here is what to do about each.", src:"Brand template", chk:""},
-      {d:"Tue 15 Dec", t:"18:00", b:"au", k:"s", title:"Before and after: a real customer car", cap:"Same car, same day. Gold detail.", src:"First booking photos", chk:"Customer permission; blur the plate"},
-      {d:"Tue 15 Dec", t:"18:30", b:"mm", k:"v", title:"Reel: 5 checks before a summer road trip", cap:"Tyres, coolant, air con, wipers, spare. Two minutes that save your holiday.", src:"New footage on a stock car", chk:""},
-      {d:"Wed 16 Dec", t:"12:30", b:"mm", k:"s", title:"What \"drive-away price\" means at Monsoor", cap:"The price you see is the price you pay to drive away.", src:"Brand template", chk:"Exactly what our drive-away price includes"},
-      {d:"Wed 16 Dec", t:"18:00", b:"au", k:"v", title:"Reel: before and after, real customer car", cap:"Watch it go from road dust to gold.", src:"First booking footage", chk:"Customer permission; blur the plate"},
-      {d:"Wed 16 Dec", t:"18:30", b:"mm", k:"s", title:"Happy customer: Toyota Yaris", cap:"Keys handed over just in time for summer. Enjoy it!", src:"Ready Posts/Upload Ready/04-Toyota-Yaris.jpg", chk:"Customer permission and the car model"},
-      {d:"Thu 17 Dec", t:"12:30", b:"au", k:"s", title:"Beach season: keep sand out of your car", cap:"Four easy habits for summer, from the people who vacuum it out.", src:"Brand template", chk:""},
-      {d:"Thu 17 Dec", t:"18:30", b:"mm", k:"v", title:"Reel: a day on the yard", cap:"Coffee, test drives, handovers. A normal day at Monsoor Motors.", src:"New phone footage", chk:"Staff and customers in shot said yes"},
-      {d:"Fri 18 Dec", t:"17:00", b:"mm", k:"s", title:"Upgrading before Christmas? Get an offer on your old car", cap:"Fair offers on your car, even this close to Christmas.", src:"Brand template", chk:""},
-      {d:"Fri 18 Dec", t:"17:00", b:"au", k:"s", title:"Last weekend before Christmas: book your detail", cap:"Get it clean before the family visits. Link in bio.", src:"Brand template", chk:"Real slots available"},
-      {d:"Sat 19 Dec", t:"10:00", b:"mm", k:"s", title:"Happy customer: Mazda CX-5", cap:"Room for the whole family this summer. Congratulations!", src:"Ready Posts/Upload Ready/05-Mazda-CX-5-A.jpg", chk:"Customer permission and the car model"},
-      {d:"Sat 19 Dec", t:"10:00", b:"au", k:"v", title:"Reel: Gold detail, start to finish", cap:"What you get in our most popular package, in 30 seconds.", src:"New footage", chk:""}
-    ]},
-  { id:"w4", label:"Week 4 · 21 Dec", range:"21 – 27 Dec", theme:"Christmas week",
-    note:"Still 2 videos each, 4 statics each. Nothing on Christmas Day. Holiday hours must be confirmed before Monday 21st.",
-    posts:[
-      {d:"Mon 21 Dec", t:"12:00", b:"mm", k:"s", title:"Holiday trading hours (Monsoor)", cap:"Our hours over Christmas and New Year. Save this post.", src:"Brand template", chk:"Christmas and New Year hours"},
-      {d:"Mon 21 Dec", t:"12:30", b:"au", k:"s", title:"Holiday trading hours (Aureus)", cap:"Our hours over Christmas and New Year. Save this post.", src:"Brand template", chk:"Christmas and New Year hours"},
-      {d:"Tue 22 Dec", t:"18:00", b:"au", k:"s", title:"Keep it clean over the break: 4 quick tips", cap:"Simple care between details, so the shine lasts through the holidays.", src:"Brand template", chk:""},
-      {d:"Tue 22 Dec", t:"18:30", b:"mm", k:"v", title:"Reel: thank you, Perth (our year on the yard)", cap:"Thank you to every customer who trusted us this year.", src:"Approved clips and handover photos", chk:"Only customers who said yes"},
-      {d:"Wed 23 Dec", t:"12:30", b:"mm", k:"s", title:"Car of the week (last before Christmas)", cap:"Drive into the new year in something better.", src:"Fresh photos from the yard", chk:"Which car, its price and that it is in stock"},
-      {d:"Wed 23 Dec", t:"18:00", b:"au", k:"v", title:"Reel: clean car for Christmas (quick transformation)", cap:"Last-minute clean before the family arrives.", src:"Best clip from the month", chk:"Bookings still open that day"},
-      {d:"Thu 24 Dec", t:"12:00", b:"mm", k:"s", title:"Merry Christmas from Monsoor Motors", cap:"Merry Christmas from all of us at 530 Albany Highway. Drive safe.", src:"Team photo or brand graphic", chk:"Staff OK if the team is in the photo"},
-      {d:"Thu 24 Dec", t:"12:30", b:"au", k:"s", title:"Merry Christmas from Aureus Detailing", cap:"Merry Christmas. Thank you for trusting us with your car.", src:"Brand graphic", chk:""},
-      {d:"Fri 25 Dec", none:true},
-      {d:"Sat 26 Dec", t:"10:00", b:"mm", k:"v", title:"Reel: stock walk-through for the new year", cap:"What's on the yard right now. Come and see us when we reopen.", src:"New phone footage", chk:"Reopening date; Boxing Day offer only if the owner agrees one"},
-      {d:"Sat 26 Dec", t:"10:00", b:"au", k:"v", title:"Reel: road-trip dirt, gone", cap:"Back from the coast? Bugs, sand and dust, all gone.", src:"New footage", chk:""},
-      {d:"Sun 27 Dec", t:"10:00", b:"mm", k:"s", title:"Safe holiday driving: rest every 2 hours", cap:"Long drive this week? Stop, revive, survive.", src:"Brand template", chk:""},
-      {d:"Sun 27 Dec", t:"10:30", b:"au", k:"s", title:"New year bookings are open", cap:"Start the new year with a clean car. Link in bio.", src:"Brand template", chk:"Booking dates open"}
-    ]}
-];
-
-const BRAND_NAME = { mm:"Monsoor", au:"Aureus" };
-const KIND = { s:"Static", v:"Video" };
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const pill = k => `<span class="pill ${k}">${KIND[k]}</span>`;
-const countPills = list => {
-  const s = list.filter(x => x.k === "s").length, v = list.filter(x => x.k === "v").length;
-  if (!s && !v) return `<span class="pill none">No post</span>`;
-  return (s ? `<span class="pill s">${s} static</span>` : "") + (v ? `<span class="pill v">${v} video</span>` : "");
-};
-
-// Count table
-(function(){
-  let h = `<thead><tr><th scope="col">Business</th>${DAYS.map(d => `<th scope="col" class="${DAYNOTE[d]==="best reach"?"best":""}">${d}<small>${DAYNOTE[d]}</small></th>`).join("")}<th scope="col">Week total</th></tr></thead><tbody>`;
-  for (const [k, name] of [["mm","Monsoor Motors"],["au","Aureus Detailing"]]) {
-    const all = DAYS.flatMap(d => RHYTHM[k][d]);
-    h += `<tr class="${k}"><th scope="row"><span style="display:inline-flex;gap:8px;align-items:center"><i class="dot ${k}"></i>${name}</span></th>`;
-    h += DAYS.map(d => `<td><div class="stack">${countPills(RHYTHM[k][d])}</div></td>`).join("");
-    h += `<td class="total">${all.filter(x=>x.k==="s").length} static<br>${all.filter(x=>x.k==="v").length} video</td></tr>`;
-  }
-  document.getElementById("countTable").innerHTML = h + "</tbody>";
-})();
-
-// Slot grid
-(function(){
-  let h = '<div></div>' + DAYS.map(d => `<div class="day">${d}</div>`).join("");
-  for (const [k, name] of [["mm","Monsoor Motors"],["au","Aureus Detailing"]]) {
-    h += `<div class="brand ${k}"><i class="dot ${k}" style="margin-top:6px"></i>${name}</div>`;
-    for (const d of DAYS) {
-      const slots = RHYTHM[k][d];
-      h += `<div class="cell-${k}">` + (slots.length ? slots.map(s => `<div class="slot">${pill(s.k)}<span class="t">${esc(s.t)}</span><span class="what">${esc(s.w)}</span><span class="chips">${s.p.map(p=>`<span class="chip">${esc(p)}</span>`).join("")}</span></div>`).join("") : `<div class="slot quiet">Rest. Reply to comments and messages.</div>`) + `</div>`;
-    }
-  }
-  document.getElementById("rhythm").innerHTML = h;
-})();
-
-// Weeks
-let done = {};
-try { done = JSON.parse(localStorage.getItem("mm-au-cal-done-v2") || "{}"); } catch(e) { done = {}; }
-const save = () => { try { localStorage.setItem("mm-au-cal-done-v2", JSON.stringify(done)); } catch(e) {} };
-let week = "w1", filter = "all";
-try { const w = localStorage.getItem("mm-au-cal-week"); if (WEEKS.some(x => x.id === w)) week = w; } catch(e) {}
-
-const tabs = document.getElementById("tabs");
-tabs.innerHTML = WEEKS.map(w => `<button class="tab" role="tab" id="tab-${w.id}" data-w="${w.id}">${esc(w.label)}</button>`).join("");
-tabs.addEventListener("click", e => { const b = e.target.closest("[data-w]"); if (!b) return; week = b.dataset.w; try { localStorage.setItem("mm-au-cal-week", week); } catch(err) {} render(); });
-document.getElementById("filter").addEventListener("click", e => { const b = e.target.closest("[data-f]"); if (!b) return; filter = b.dataset.f; render(); });
-
-function render(){
-  tabs.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.w === week));
-  document.querySelectorAll(".fbtn").forEach(b => b.setAttribute("aria-pressed", b.dataset.f === filter));
-  const w = WEEKS.find(x => x.id === week);
-  const real = w.posts.filter(p => !p.none);
-  const sum = b => { const l = real.filter(p => p.b === b); return `<span><i class="dot ${b}"></i>${BRAND_NAME[b]}: <span class="pill s">${l.filter(p=>p.k==="s").length} static</span><span class="pill v">${l.filter(p=>p.k==="v").length} video</span></span>`; };
-  document.getElementById("themeLine").innerHTML = `<span class="eyebrow">${esc(w.range)} · theme</span><b>${esc(w.theme)}</b><p>${esc(w.note)}</p><div class="wk-count">${sum("mm")}${sum("au")}</div>`;
-  const list = w.posts.map((p, i) => ({...p, key: `${w.id}-${i}`})).filter(p => p.none || filter === "all" || p.b === filter);
-  const groups = [];
-  for (const p of list) { let g = groups.find(x => x.d === p.d); if (!g) groups.push(g = {d:p.d, items:[]}); g.items.push(p); }
-  document.getElementById("days").innerHTML = groups.map(g => {
-    const real = g.items.filter(p => !p.none);
-    return `<div class="daygroup"><h3>${esc(g.d)} <span>${real.length ? countPills(real).replace(/class="pill/g,'class="pill') : ""}</span></h3>
-    ${real.length ? real.map(p => `
-      <div class="post ${p.b} ${done[p.key]?"done":""}">
-        <input type="checkbox" id="c-${p.key}" data-k="${p.key}" ${done[p.key]?"checked":""} aria-label="Mark posted: ${esc(p.title)}">
-        <div class="when"><b>${esc(p.t)}</b><span class="brandtag">${BRAND_NAME[p.b]}</span>${pill(p.k)}</div>
-        <div class="body">
-          <label class="title" for="c-${p.key}">${esc(p.title)}</label>
-          ${p.src?`<span class="meta">Source: ${esc(p.src)}</span>`:""}
-          ${p.cap?`<p class="cap">${esc(p.cap)}</p>`:""}
-          ${p.chk?`<span class="check">${esc(p.chk)}</span>`:""}
-        </div>
-      </div>`).join("") : `<p class="noposts">Christmas Day: no posts for either business.</p>`}
-    </div>`; }).join("");
+const K = { s:"Static", v:"Video" };
+let h = `<thead><tr><th scope="col">Business</th>${DAYS.map(d => `<th scope="col" class="${NOTE[d]==="best reach"?"best":""}">${d}<small>${NOTE[d]}</small></th>`).join("")}<th scope="col">Week</th></tr></thead><tbody>`;
+for (const k of ["mm","au"]) {
+  const all = DAYS.flatMap(d => PLAN[k][d]);
+  h += `<tr class="${k}"><th scope="row"><span style="display:inline-flex;gap:8px;align-items:center"><i class="dot ${k}"></i>${PLAN[k].name}</span></th>`;
+  h += DAYS.map(d => `<td>${PLAN[k][d].length ? PLAN[k][d].map(([t,time,w]) => `<div class="slot"><span class="pill ${t}">${K[t]}</span><span class="t">${time}</span><span class="w">${w}</span></div>`).join("") : `<span class="rest">Rest</span>`}</td>`).join("");
+  h += `<td class="total">${all.filter(x=>x[0]==="s").length} static<br>${all.filter(x=>x[0]==="v").length} video</td></tr>`;
 }
-document.getElementById("days").addEventListener("change", e => {
-  const k = e.target.dataset.k; if (!k) return;
-  if (e.target.checked) done[k] = true; else delete done[k];
-  save(); render();
-});
-render();
+document.getElementById("t").innerHTML = h + "</tbody>";
 </script>
