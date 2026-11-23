@@ -1,5 +1,11 @@
 # Status
 
+## 23 Nov 2026 — Ad 1 v2 (60 s, clearer story) + 20 s teaser
+- Did: qj_v2.py (copy of qj_long.py, original untouched): Mia now uses her own lip-matched take from c10; cut to 60 s (montage, GR86/BUSTED block, extra dash and Dave-at-lights shots trimmed); three story captions (Perth. Fuel costs a fortune. / Dave fills up. Again. / That night, Dave decides.). qj_teaser.py: 20 s teaser from the rendered segments, C-HR and Monsoor up front, Arfan BGM then Monsoor BGM. No new generations.
+- Files: reel/qj_v2.py, reel/qj_teaser.py, reel/graphics/v2/. Saved: Monsoor Motors/Ad 1/Queue-Jump-Ad-1-v2-60s.mp4, Queue-Jump-Teaser-20s.mp4.
+- Next: Arfan reviews.
+
+
 ## 22 Nov 2026 — Final intro take, slow-mo, dog close-up, call dash cutaway, lip-sync audit
 - Did: last Seedance 2.5 720p 12 s take (job 32a750ba, 84 credits; face Arfan-CEO-Master, clothing Arfan-Outfit-Shoot) cut in from the freeze to READY, colour-matched; old footstep kept with slow-mo splash ramp + whoomp; slow-mo lean into 'What's up?' (lips on the voice at 33.0 s); dog close-up with handheld drift; C-HR dash POV cutaway on 'just got the car'; gentle slow-mo hero. Lip-sync audit: all lines within ~0.1 s. Credits: about 780 of 700 cap (approved by Arfan for the last generation). -14.1 LUFS, peak -2.8 dB.
 - Files: reel/qj_long.py, audio/designed/slowmo_whoomp.wav (local).
