@@ -4,6 +4,14 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 23 Nov 2026: Monsoor logo on all 9 Kluger photos
+
+- **What I did:** added the white Monsoor logo top-left (soft shadow behind it) on photos 2 to 9 of `Final 9`; photo 1 already had it. Caption written in `Post Caption.md`.
+- **Files:** `Cars/Toyota Kluger KX-R V6 AWD (grey)/Final 9/`.
+- **Next:** owner posts.
+
+---
+
 ## 23 Nov 2026: Kluger final 9 chosen, older versions cleared
 
 - **What I did:** picked the best 9 into `Final 9` (GTA price front, front three-quarter, front, side, rear, dashboard, driver seat, rear seats, boot). Moved Edited, GTA Promo, Post Ready, Yard and configs to the Trash in the main folder; removed them here too (still in git history, commit f62ca51). The empty yard plate is in that commit and on Higgsfield (upload `9e27b364`).
