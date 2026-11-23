@@ -79,6 +79,9 @@
 - `Ready Posts/Colour Graded Photos/`: same photos full size without template (website / Marketplace)
 - Cars: Hyundai i30, Kia Rio ×2, Toyota Yaris, Mazda CX-5 ×2, BMW X1, Toyota Prado. **Car names were guessed from photos, so confirm before posting.** Pick one of each pair. Get customer permission.
 
+### Weekly social media calendar (both brands)
+- `Social Media Calendar/Weekly-Social-Calendar.html`: fixed weekly rhythm (Monsoor 4 feed posts + Friday Story push; Aureus 3 reels + 1 carousel + daily Stories) and the 4 weeks 30 Nov – 27 Dec 2026 planned post by post, with captions, sources and "confirm first" items. Published (private) at https://claude.ai/artifact/MMmN4vcyPAr3dKavoG2JsT
+
 ### Working / older versions
 - `Ready Posts/Facebook Cover/`: earlier cover drafts (plain navy, studio, showroom versions) + `_safe-zone-check.jpg`
 
@@ -199,6 +202,12 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Files: `SEO/content/2026-11-20-sell-my-car-perth.md`, `SEO/content/2026-11-19-japanese-import-cars-perth.md`, `.claude/skills/monsoor-aureus-seo-agent/assets/SEO-LOG.md`, `.claude/skills/monsoor-aureus-seo-agent/assets/GROWTH-TRACKER.md` (20 Nov row added; repo copy now carries the baseline 4 calls + 6 enquiries/day, which was local-only until today); workspace `files/2026-11-20-sell-my-car-perth-service-page-draft.md`, `files/2026-11-19-virtual-yard-support-request.md`.
 - Decisions / feedback: growth still not measured — no calls/enquiries reported for 19 or 20 Nov. Next content item is `car detailing Victoria Park` (Aureus service page) on 21 Nov.
 - To-do next: owner sends the Virtual Yard support request; owner approves professional consent for the Facebook Page; owner confirms Mazda3 availability and the sell-my-car page answers (payment, buying policy, Notice of Disposal, trade-ins); owner reports each day's call/enquiry count.
+
+### 24 Nov 2026 (Tue)
+- What we made / changed: weekly social media calendar for Monsoor Motors and Aureus Detailing (rhythm + 4 dated weeks to 27 Dec, Christmas week lighter, nothing on Christmas Day).
+- Files: `Social Media Calendar/Weekly-Social-Calendar.html`
+- Decisions / feedback: big posts Tue/Wed evenings; Aureus weeks 1–2 use launch posts 1–9; Monsoor feed stays real photos only (no AI label).
+- To-do next: owner confirms C-HR and Golf stock/prices, finance wording, drive-away inclusions, holiday hours, customer permissions; then schedule week 1 in Meta Business Suite.
 
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)

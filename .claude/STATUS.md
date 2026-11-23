@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: weekly social media calendar
+
+**What I did**
+- Built a weekly social calendar for both brands: fixed weekly slots (Perth time) plus the next four weeks (30 Nov – 27 Dec) planned post by post with captions, photo sources and items to confirm. Published it as a private page.
+
+**Files changed**
+- `Social Media Calendar/Weekly-Social-Calendar.html`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Owner confirms the flagged facts (stock, prices, finance wording, holiday hours, permissions), then week 1 gets scheduled in Meta Business Suite.
+
+---
+
 ## 21 Nov 2026: outfit locked (olive watch dial)
 
 **What I did**
