@@ -80,7 +80,7 @@
 - Cars: Hyundai i30, Kia Rio ×2, Toyota Yaris, Mazda CX-5 ×2, BMW X1, Toyota Prado. **Car names were guessed from photos, so confirm before posting.** Pick one of each pair. Get customer permission.
 
 ### Weekly social media calendar (both brands)
-- `Social Media Calendar/Weekly-Social-Calendar.html`: fixed weekly rhythm (Monsoor 4 feed posts + Friday Story push; Aureus 3 reels + 1 carousel + daily Stories) and the 4 weeks 30 Nov – 27 Dec 2026 planned post by post, with captions, sources and "confirm first" items. Published (private) at https://claude.ai/artifact/MMmN4vcyPAr3dKavoG2JsT
+- `Social Media Calendar/Weekly-Social-Calendar.html`: day-by-day count of static posts and videos (each business: 2 videos + 4–6 statics a week; Monsoor videos Tue/Thu, Aureus videos Wed/Sat) and the 4 weeks 30 Nov – 27 Dec 2026 planned post by post, with captions, sources and "confirm first" items. Published (private) at https://claude.ai/artifact/MMmN4vcyPAr3dKavoG2JsT
 
 ### Working / older versions
 - `Ready Posts/Facebook Cover/`: earlier cover drafts (plain navy, studio, showroom versions) + `_safe-zone-check.jpg`
@@ -206,7 +206,7 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 ### 24 Nov 2026 (Tue)
 - What we made / changed: weekly social media calendar for Monsoor Motors and Aureus Detailing (rhythm + 4 dated weeks to 27 Dec, Christmas week lighter, nothing on Christmas Day).
 - Files: `Social Media Calendar/Weekly-Social-Calendar.html`
-- Decisions / feedback: big posts Tue/Wed evenings; Aureus weeks 1–2 use launch posts 1–9; Monsoor feed stays real photos only (no AI label).
+- Decisions / feedback: owner wants the calendar as statics + videos per day: 2 videos and 4–6 static posts per week for each business; big posts Tue/Wed evenings; Monsoor feed stays real photos only (no AI label).
 - To-do next: owner confirms C-HR and Golf stock/prices, finance wording, drive-away inclusions, holiday hours, customer permissions; then schedule week 1 in Meta Business Suite.
 
 <!-- Next entry template:

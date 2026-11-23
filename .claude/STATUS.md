@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: calendar redone as statics + videos per day
+
+**What I did**
+- Rebuilt the calendar in the format asked: each day shows how many static posts and videos each business posts. Monsoor: 5 statics + 2 videos (videos Tue and Thu). Aureus: 4 statics + 2 videos (videos Wed and Sat). All four weeks (30 Nov – 27 Dec) refilled to match and checked by script. Republished to the same link.
+
+**Files changed**
+- `Social Media Calendar/Weekly-Social-Calendar.html`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Owner confirms the flagged facts, then week 1 gets scheduled in Meta Business Suite.
+
+---
+
 ## 24 Nov 2026: weekly social media calendar
 
 **What I did**
