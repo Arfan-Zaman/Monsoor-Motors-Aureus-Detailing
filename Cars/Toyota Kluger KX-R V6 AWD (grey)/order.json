@@ -1,0 +1,17 @@
+[
+ {"src":"5.jpg","name":"01-Front-Three-Quarter","crop":"none"},
+ {"src":"1.jpg","name":"02-Front-Three-Quarter-Right","crop":"none"},
+ {"src":"4.jpg","name":"03-Front-Shop","crop":"bottom"},
+ {"src":"3.jpg","name":"04-Front","crop":"bottom"},
+ {"src":"2.jpg","name":"05-Front-Left","crop":"bottom"},
+ {"src":"6.jpg","name":"06-Side-Left","crop":"none","blur":[[0,210,1230,425]]},
+ {"src":"9.jpg","name":"07-Side-Right","crop":"none","blur":[[1875,235,2000,465]]},
+ {"src":"7.jpg","name":"08-Rear","crop":"bottom"},
+ {"src":"8.jpg","name":"09-Boot","crop":"center"},
+ {"src":"14.jpg","name":"10-Dashboard","crop":"none","blur":[[400,240,620,435]]},
+ {"src":"13.jpg","name":"11-Dashboard-Wide","crop":"none","blur":[[395,380,610,555]]},
+ {"src":"15.jpg","name":"12-Centre-Console","crop":"center"},
+ {"src":"10.jpg","name":"13-Driver-Seat","crop":"center"},
+ {"src":"12.jpg","name":"14-Rear-Seats","crop":"center"},
+ {"src":"11.jpg","name":"15-Odometer","crop":"top"}
+]

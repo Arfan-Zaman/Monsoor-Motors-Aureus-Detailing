@@ -4,6 +4,14 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 23 Nov 2026: Kluger sale photos in the Monsoor yard
+
+- **What I did:** graded all 15 Kluger photos; emptied the GTA final yard (C-HR removed); cut out the car and relit 8 outside shots into the yard with Higgsfield (about 33 credits); plates blurred; wrote the sale caption from the website listing.
+- **Files:** `Cars/Toyota Kluger KX-R V6 AWD (grey)/Post Ready/` (15 photos), `Post Caption.md`, `Yard/`, `Tools/car_photo_enhance.py`, `Tools/car_yard_composite.py`, generation log, `prompts/car-yard-relight.md`.
+- **Next:** owner posts it; fix the website listing (badge says KX-R AWD, listing says Altitude FWD and 5 seats; rego expiry shows today).
+
+---
+
 ## 21 Nov 2026: outfit locked (olive watch dial)
 
 **What I did**
