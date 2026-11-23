@@ -4,6 +4,14 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 23 Nov 2026: Kluger final 9 chosen, older versions cleared
+
+- **What I did:** picked the best 9 into `Final 9` (GTA price front, front three-quarter, front, side, rear, dashboard, driver seat, rear seats, boot). Moved Edited, GTA Promo, Post Ready, Yard and configs to the Trash in the main folder; removed them here too (still in git history, commit f62ca51). The empty yard plate is in that commit and on Higgsfield (upload `9e27b364`).
+- **Files:** `Cars/Toyota Kluger KX-R V6 AWD (grey)/Final 9/`, `Original/`, `Post Caption.md`.
+- **Next:** owner posts.
+
+---
+
 ## 23 Nov 2026: Kluger interior photos show the Monsoor yard through the windows
 
 - **What I did:** replaced the view through the windows in the boot, both dashboard and driver-seat photos with the empty GTA yard (Higgsfield, then blended so only the glass areas change; the interior stays real). First try had the C-HR in view (my error, rejected). About 25 credits in total.
