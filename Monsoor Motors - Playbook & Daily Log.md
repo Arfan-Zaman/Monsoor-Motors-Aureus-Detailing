@@ -80,7 +80,7 @@
 - Cars: Hyundai i30, Kia Rio ×2, Toyota Yaris, Mazda CX-5 ×2, BMW X1, Toyota Prado. **Car names were guessed from photos, so confirm before posting.** Pick one of each pair. Get customer permission.
 
 ### Weekly social media calendar (both brands)
-- `Social Media Calendar/Weekly-Social-Calendar.html`: day-by-day count of static posts and videos (posting 4 days: Mon, Wed, Fri, Sat; each business 2 videos + 4–6 statics a week: Monsoor 5 static, videos Wed/Sat; Aureus 4 static, videos Mon/Fri) only (owner asked to keep just the "what to post each day" table; the dated 4-week plan was removed, still in git history). Published (private) at https://claude.ai/artifact/MMmN4vcyPAr3dKavoG2JsT
+- `Social Media Calendar/Weekly-Social-Calendar.html`: day-by-day count of static posts and videos (posting 4 days: Mon, Wed, Fri, Sat, all between 5 and 8:30 pm Perth; each business 2 videos + 4–6 statics a week: Monsoor 5 static, videos Wed/Sat; Aureus 4 static, videos Mon/Fri) only (owner asked to keep just the "what to post each day" table; the dated 4-week plan was removed, still in git history). Published (private) at https://claude.ai/artifact/MMmN4vcyPAr3dKavoG2JsT
 - `Social Media Calendar/Weekly-Social-Calendar.pdf`: one-page A4 landscape PDF of the same table (printed with headless Chrome; Montserrat installed locally)
 
 ### Working / older versions
@@ -116,7 +116,7 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 
 **Best time to post (Sprout Social 2026, local Perth time)**
 - **Tue & Wed 12–8 pm** (best) · Mon 12–1 pm · Thu 12–2 pm & ~8 pm · avoid weekends/early mornings.
-- Our default: **Tue/Wed 6–7 pm Perth** (= 8:30–9:30 pm on an Adelaide-time clock).
+- **Owner's rule (24 Nov 2026): post between 5 pm and 8:30 pm Perth time** (= 7:30–11 pm on an Adelaide-time clock). Posting days: Mon, Wed, Fri, Sat. Keep posts at least 30 minutes apart across both brands.
 - Check *Meta Business Suite → Insights → Audience* for our own followers' active times.
 
 **Google Business Profile:** use natural photos (`Colour Graded Photos`) in Photos; branded templates only in Posts/Updates (they show closer to 4:3, so check the crop).

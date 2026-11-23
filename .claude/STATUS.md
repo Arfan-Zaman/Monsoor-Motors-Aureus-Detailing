@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 24 Nov 2026: posting times moved to 5–8:30 pm Perth
+
+**What I did**
+- Moved every post into the owner's ideal window, 5 pm to 8:30 pm Perth, at least 30 minutes apart across both brands. Days and counts unchanged. Republished the page, rebuilt the one-page PDF, and replaced the old "Tue/Wed 6–7 pm" default in playbook section 6.
+
+**Files changed**
+- `Social Media Calendar/Weekly-Social-Calendar.html`, `Social Media Calendar/Weekly-Social-Calendar.pdf`
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Sync the main folder on the Mac once its file reorganisation is committed.
+
+---
+
 ## 24 Nov 2026: calendar saved as PDF
 
 **What I did**

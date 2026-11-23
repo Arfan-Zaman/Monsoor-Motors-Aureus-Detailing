@@ -68,7 +68,7 @@ footer { font-size: 0.8rem; color: var(--muted); }
   <header>
     <div class="eyebrow">Monsoor Motors · Aureus Detailing · Perth time (AWST)</div>
     <h1>What to post each day</h1>
-    <p class="lede">Same plan every week, posting 4 days: Monday, Wednesday, Friday and Saturday. On the other days there are no posts, only replies to comments and messages. Each business posts 2 videos and 4–6 static posts. Monsoor videos go out Wednesday and Saturday; Aureus videos go out Monday and Friday, so the two never share a video day.</p>
+    <p class="lede">Same plan every week, posting 4 days: Monday, Wednesday, Friday and Saturday. Every post goes out between 5 pm and 8:30 pm Perth time, the best window for our audience, at least 30 minutes apart. On the other days there are no posts, only replies to comments and messages. Each business posts 2 videos and 4–6 static posts. Monsoor videos go out Wednesday and Saturday; Aureus videos go out Monday and Friday, so the two never share a video day.</p>
     <div class="legend">
       <span><i class="dot mm"></i>Monsoor Motors</span>
       <span><i class="dot au"></i>Aureus Detailing</span>
@@ -86,18 +86,18 @@ footer { font-size: 0.8rem; color: var(--muted); }
 
 <script>
 const DAYS = ["Mon","Wed","Fri","Sat"];
-const NOTE = { Mon:"12–1 pm", Wed:"best reach", Fri:"weekend planning", Sat:"mornings" };
+const NOTE = { Mon:"5–8:30 pm", Wed:"5–8:30 pm", Fri:"5–8:30 pm", Sat:"5–8:30 pm" };
 const PLAN = {
   mm: { name:"Monsoor Motors",
-    Mon:[["s","12:00","Car of the week"],["s","18:30","Help post: Import, Buy, Sell or Finance"]],
-    Wed:[["s","12:30","Happy customer handover"],["v","18:30","Car walkaround or import story"]],
-    Fri:[["s","17:00","Sell your car: get an offer"]],
-    Sat:[["s","09:00","On the yard this weekend: stock update"],["v","12:00","People, the yard or a how-to"]] },
+    Mon:[["s","5:00 pm","Car of the week"],["s","7:30 pm","Help post: Import, Buy, Sell or Finance"]],
+    Wed:[["s","5:00 pm","Happy customer handover"],["v","7:00 pm","Car walkaround or import story"]],
+    Fri:[["s","5:30 pm","Sell your car: get an offer"]],
+    Sat:[["s","5:00 pm","Stock update: on the yard this week"],["v","7:00 pm","People, the yard or a how-to"]] },
   au: { name:"Aureus Detailing",
-    Mon:[["s","12:30","A package or this week's booking slots"],["v","18:00","Satisfying detail"]],
-    Wed:[["s","12:30","Before and after photo"],["s","18:00","Care tips carousel"]],
-    Fri:[["v","17:00","Before and after, or a reveal"]],
-    Sat:[["s","10:00","Open today: find us at 530 Albany Highway"]] }
+    Mon:[["s","5:30 pm","A package or this week's booking slots"],["v","6:30 pm","Satisfying detail"]],
+    Wed:[["s","5:30 pm","Before and after photo"],["s","8:00 pm","Care tips carousel"]],
+    Fri:[["v","6:30 pm","Before and after, or a reveal"]],
+    Sat:[["s","6:00 pm","Find us: 530 Albany Highway, open 7 days"]] }
 };
 const K = { s:"Static", v:"Video" };
 let h = `<thead><tr><th scope="col">Business</th>${DAYS.map(d => `<th scope="col" class="${NOTE[d]==="best reach"?"best":""}">${d}<small>${NOTE[d]}</small></th>`).join("")}<th scope="col">Week</th></tr></thead><tbody>`;
