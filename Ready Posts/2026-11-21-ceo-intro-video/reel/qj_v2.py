@@ -120,6 +120,16 @@ def lab(s): return next(m[0] for m in marks if m[1].startswith(s))
 
 L = lab
 OVL = [  # (file, start, duration)
+ ('graphics/v2/subs/s01.png', L('GR86')+2.22, 1.6),
+ ('graphics/v2/subs/s02.png', L('C-HR arrives')+0.85, 2.3),
+ ('graphics/v2/subs/s03.png', L('C-HR arrives')+3.15, 2.4),
+ ('graphics/v2/subs/s04.png', L('WHATSUP')+0.8, 1.0),
+ ('graphics/v2/subs/s05.png', L('DAVE double')+0.3, 3.2),
+ ('graphics/v2/subs/s06.png', L('MIA line')+0.5, 2.2),
+ ('graphics/v2/subs/s07.png', L('CU MONSOOR')+0.57, 1.1),
+ ('graphics/v2/subs/s08.png', L('CU ARFAN')+1.45, 1.3),
+ ('graphics/v2/subs/s09.png', L('DELIVERY')+0.3, 1.2),
+ ('graphics/v2/subs/s10.png', L('DELIVERY')+1.5, 1.4),
  ('graphics/Stamp-PERTH.png', 0.15, 1.6),
  ('graphics/Tag-LAYLA.png', L('GR86')+0.05, 0.8),
  ('graphics/v2/Cap-Premise.png', L('MONTAGE')+0.2, 2.2),
