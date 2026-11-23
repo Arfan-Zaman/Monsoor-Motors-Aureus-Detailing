@@ -4,6 +4,14 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 23 Nov 2026: Kluger interior photos show the Monsoor yard through the windows
+
+- **What I did:** replaced the view through the windows in the boot, both dashboard and driver-seat photos with the empty GTA yard (Higgsfield, then blended so only the glass areas change; the interior stays real). First try had the C-HR in view (my error, rejected). About 25 credits in total.
+- **Files:** `Cars/Toyota Kluger KX-R V6 AWD (grey)/Post Ready/09, 10, 11, 13`, new `Tools/window_view_blend.py`. Also copied to the main `Cars/` folder.
+- **Next:** owner posts.
+
+---
+
 ## 23 Nov 2026: GTA price photos for the Kluger
 
 - **What I did:** made 4 GTA-style price posts (1080x1350) from the yard photos: Pricedown font, price $5,459 in GTA green on a black band, odometer 328,243 km HUD top-right, Monsoor logo top-left, phone and web. No reel (owner wants photos only). 0 credits.
