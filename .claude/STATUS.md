@@ -4,6 +4,14 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 23 Nov 2026: GTA feature labels on the Kluger photos
+
+- **What I did:** added one feature per photo in the GTA font (white Pricedown title, yellow line under it, bottom-left): 3.5L V6, bull bar, alloy wheels, tow bar, automatic, power windows, rear air vents, cargo space. Only features visible in the photos or confirmed on the listing.
+- **Files:** `Cars/Toyota Kluger KX-R V6 AWD (grey)/Final 9/` (photos 2 to 9).
+- **Next:** owner posts.
+
+---
+
 ## 23 Nov 2026: Monsoor logo on all 9 Kluger photos
 
 - **What I did:** added the white Monsoor logo top-left (soft shadow behind it) on photos 2 to 9 of `Final 9`; photo 1 already had it. Caption written in `Post Caption.md`.
