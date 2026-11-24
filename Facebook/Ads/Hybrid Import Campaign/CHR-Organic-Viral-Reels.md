@@ -153,6 +153,30 @@ Once a fortnight, post a fun clip with Monsoor and the Aureus team: a trend soun
 
 **Credits:** 0. **Cost:** one phone, a clip-on mic (~$30) and one morning.
 
+## 5. Turning views into C-HR pre-orders
+
+**The offer, "The Japan List":** one auction run a month for C-HR pre-orders.
+- A $[X] deposit holds your place. It is **fully refundable** if you don't approve a car, or if we don't find one within [60] days.
+- You approve every car from its auction sheet before we bid.
+- The list closes on a real date each month. That's honest urgency, never fake scarcity.
+
+**The path:** Reel → comment "C-HR" → an automatic DM → 4 questions (year, colour, max km, budget) → Monsoor calls within 15 minutes → deposit → the auction.
+- Set up the comment-to-DM auto-reply in Meta Business Suite, or ManyChat.
+- Pin a 20 s "How The Japan List works" Reel to the top of the profile.
+
+**What each Reel adds to the pre-order:**
+| Reel | Ends with | Moves people to pre-order by |
+|---|---|---|
+| 1 Cost breakdown | "Comment C-HR and I'll do this breakdown for your car" | The reply is a personalised landed quote, which starts the pre-order |
+| 2 Before and after | "This one's taken. The Japan List closes [date]" | Shows the end result they're buying |
+| 3 Storytime | Each real pre-order customer becomes a series (with permission) | Viewers follow someone else's car and want their own |
+| 4 Buyer tips | "Save this" | Retarget the people who saved it with the Japan List ad |
+| 5 Rule news | "Comment HYBRID, I'll tell you if yours can still come in" | Honest urgency while the approval lasts |
+
+**Paid support:** boost any Reel at 2× usual views ($10–20/day, Get quote form). Retarget people who watched 50%+ of any Reel with the pinned "How it works" Reel.
+**Track:** views → comments → DMs → calls → deposits.
+**Before launch:** the deposit amount, written refund terms, and a check on ROVER of which C-HR build dates can still come in.
+
 ## Sources
 - Virlo, *Car TikTok ideas*, Nov 2026 (4,898 videos): https://virlo.ai/tiktok-ideas/cars
 - Fukasawa Imports, RX-7 import cost breakdown: https://www.tiktok.com/@fukasawa.imports/video/7501887978470411528
