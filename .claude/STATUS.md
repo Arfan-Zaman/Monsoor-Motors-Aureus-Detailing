@@ -4,6 +4,11 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: C-HR organic viral Reels (humanised)
+- **Did:** owner rejected the covered-car tag concept. Researched what breaks out organically (Virlo, 4,898 car videos, Oct–Nov 2026: storytime 39%, before/after 35%, shock hook 34%, motion first frame 41.5%, talking head worst at 18%) plus real examples (Fukasawa cost breakdown, Rohrman price reveal, Aspley Mazda staff). Wrote 5 real, phone-shot C-HR Reels and a posting playbook. 0 credits. Corrected a misquoted Virlo figure in the pre-order doc.
+- **Files:** `Facebook/Ads/Hybrid Import Campaign/CHR-Organic-Viral-Reels.md`, `CHR-PreOrder-Reel-29s.md`
+- **Next:** owner supplies real C-HR landed-cost numbers and the auction sheet. Film all 5 in one morning.
+
 ## 25 Nov 2026: C-HR pre-order Reel (29 s)
 - **Did:** researched which car Reel formats break out (text on screen leads) and the C-HR's SEVS status (SEV-000735 in force to Dec 2027, confirm on ROVER). Wrote a 29 s pre-order Reel, "Nobody's name is on it yet": a blank tag on a covered car in Japan, a chat thread and a real cover pull on our C-HR. It uses 3 visuals, 4 openings and linted AI prompts, with an estimated ~88–98 credits. Nothing generated yet.
 - **Files:** `Facebook/Ads/Hybrid Import Campaign/CHR-PreOrder-Reel-29s.md`

@@ -24,7 +24,8 @@ The pre-order puts the buyer's name on that car, and the auction sheet in their 
 
 - **Why a covered car:** it creates mystery (what's under there?). The AI never has to draw a real C-HR, so there are no morphing badges and no fake car. That keeps us inside the owner's rule: no AI pictures of our cars.
 - **Why it's cheap:** *the content does the work, not the visuals.* The ad uses **3 visuals**. The text changes, a chat thread plays out and the tag fills in, so it feels like 12 shots.
-- **Why text on screen:** in Virlo's study of 4,898 car videos (6 Oct–16 Nov 2026), text-on-screen videos beat twice the account's usual views 42.5% of the time, the best of any format. The text also reads with the sound off.
+- **Why text on screen:** in Virlo's study of 4,898 car videos (6 Oct–16 Nov 2026), 42.5% of car videos open on text on screen, and 30.3% of those beat twice the account's usual views. (Corrected 25 Nov: the best first frame is motion/action, at 41.5%.) The text also reads with the sound off.
+- **Superseded:** on 25 Nov the owner preferred a humanised organic approach. See `CHR-Organic-Viral-Reels.md`.
 
 ### The 3 visuals
 
