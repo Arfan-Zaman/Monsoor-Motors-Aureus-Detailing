@@ -4,6 +4,11 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: Viral Reels → C-HR pre-orders
+- **Did:** added the pre-order path: "The Japan List" (monthly auction run, refundable deposit, approve by auction sheet), comment-to-DM flow, what each Reel adds, boosting and tracking. Corrected the Aspley Mazda figures and added the real video links.
+- **Files:** `Facebook/Ads/Hybrid Import Campaign/CHR-Organic-Viral-Reels.md` (section 5)
+- **Next:** owner sets the deposit and refund terms, then the comment-to-DM auto-reply.
+
 ## 25 Nov 2026: C-HR organic viral Reels (humanised)
 - **Did:** owner rejected the covered-car tag concept. Researched what breaks out organically (Virlo, 4,898 car videos, Oct–Nov 2026: storytime 39%, before/after 35%, shock hook 34%, motion first frame 41.5%, talking head worst at 18%) plus real examples (Fukasawa cost breakdown, Rohrman price reveal, Aspley Mazda staff). Wrote 5 real, phone-shot C-HR Reels and a posting playbook. 0 credits. Corrected a misquoted Virlo figure in the pre-order doc.
 - **Files:** `Facebook/Ads/Hybrid Import Campaign/CHR-Organic-Viral-Reels.md`, `CHR-PreOrder-Reel-29s.md`
