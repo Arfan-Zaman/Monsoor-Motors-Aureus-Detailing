@@ -4,6 +4,11 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: real Japan yard photos of our C-HR saved
+- **Did:** saved 11 real photos of our black C-HR at the Japan yard (from WhatsApp, 640x480). No AI used. Quoted a 5 s 480p test to animate one of them (15 credits), not run.
+- **Files:** `Cars/Toyota C-HR Hybrid (black)/Japan yard (real)/`
+- **Next:** owner decides whether to run the animate test; ask the Japan agent for full-size originals.
+
 ## 25 Nov 2026: Viral Reels → C-HR pre-orders
 - **Did:** added the pre-order path: "The Japan List" (monthly auction run, refundable deposit, approve by auction sheet), comment-to-DM flow, what each Reel adds, boosting and tracking. Corrected the Aspley Mazda figures and added the real video links.
 - **Files:** `Facebook/Ads/Hybrid Import Campaign/CHR-Organic-Viral-Reels.md` (section 5)
