@@ -4,6 +4,11 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: C-HR Japan reference sheets (exterior + interior, 4K)
+- **Did:** sharpened the 11 real Japan yard photos with Higgsfield (4 jobs stuck, originals used). Built two 4K sheets with Higgsfield's Product Reference Sheet method (identity lock written for this exact car), checked every panel against the real photos and fixed the faults: TRD decal lettering and side, extra decal, auction keys. Kept the red start button, pasted the clean tyre row back. Saved as element `CHR-Japan-Black-TRD` (52213ae8). Spent 55 credits (balance 1,573.55).
+- **Files:** `Cars/Toyota C-HR Hybrid (black)/CHR-Japan-Exterior-Sheet-4K.jpg`, `CHR-Japan-Interior-Sheet-4K.jpg`; prompts in `.claude/skills/aureus-video-studio/assets/prompts/`; log and asset register.
+- **Next:** owner reviews both sheets; then use the element for scenes.
+
 ## 25 Nov 2026: real Japan yard photos of our C-HR saved
 - **Did:** saved 11 real photos of our black C-HR at the Japan yard (from WhatsApp, 640x480). No AI used. Quoted a 5 s 480p test to animate one of them (15 credits), not run.
 - **Files:** `Cars/Toyota C-HR Hybrid (black)/Japan yard (real)/`
