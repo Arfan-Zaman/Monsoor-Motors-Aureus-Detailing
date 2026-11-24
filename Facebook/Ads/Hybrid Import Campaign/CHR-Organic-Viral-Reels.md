@@ -42,7 +42,8 @@ Breakout videos ran a **median 39 s**, against 34 s for all car videos. Organic 
 |---|---|---|---|
 | **Fukasawa Imports** (Australian importer) | Cost breakdown to import an RX-7 from Japan to Australia | ~22,500 likes, the best Australian importer post found | **Line-by-line cost breakdown** |
 | **Rohrman Toyota** (US) | "$99 car" price breakdown, every fee shown | 409,500 views. The comments argued about the fees, which **fed the reach** | **Transparent price reveal** |
-| **Aspley Mazda** (Brisbane) | Staff dancing to Beyoncé on the lot | ~7M views, covered on the Today show | **Staff personality, not the car** |
+| **Aspley Mazda** (Brisbane, Jun 2025) | 3 salesmen doing the Beyoncé "Partition" trend between cars | 4.6M views, 370k likes | **Staff personality, not the car** |
+| **NZ Cheap Cars** (Auckland, May 2025) | Sales team in the same trend, POV: "how low can you go?" | ~10M views; Aspley copied it within weeks | **Ride a trend fast, with your own staff** |
 | **@extremedeepcleanasmr** | Long satisfying deep clean | 3.4M views, 49× usual | **Before and after with real sound** (we own Aureus) |
 | **Dealer secrets** (many US accounts) | "What dealers won't tell you" | Regularly viral, much press coverage | **Insider tip, buyer on our side** |
 | AutoLinx (Perth), Autocom Japan | Polished process explainers | A few hundred to a couple of thousand likes | ✗ **What not to do:** "we handle everything" gets ignored |
@@ -157,6 +158,7 @@ Once a fortnight, post a fun clip with Monsoor and the Aureus team: a trend soun
 - Fukasawa Imports, RX-7 import cost breakdown: https://www.tiktok.com/@fukasawa.imports/video/7501887978470411528
 - Daily Dot, Rohrman Toyota "$99 car" breakdown: https://dailydot.com/99-dollar-black-friday-car-deal
 - Mamamia, Aspley Mazda viral TikTok: https://www.mamamia.com.au/mazda-aspley-viral-tiktok/
+- Videos: https://www.tiktok.com/@aspleymazda/video/7511260894437854472 · https://www.tiktok.com/@nz.cheap.cars/video/7504098036449135892 · https://www.tiktok.com/@rohrmantoyota/video/7439780792986832159 · https://www.tiktok.com/@extremedeepcleanasmr/video/7694316665110072598
 - Covideo, *Social media for car dealerships 2026*: https://www.covideo.com/resources/blog/social-media-for-car-dealerships-the-2026/
 - Autocom Japan (process explainer, low engagement): https://www.tiktok.com/@autocom.japan.inc/video/7577251626767944978
 - Drive, hybrid import rule change: https://www.drive.com.au/news/australia-to-block-thousands-of-hybrid-car-imports-with-one-small-rule-change/
