@@ -4,6 +4,11 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: C-HR pre-order Reel (29 s)
+- **Did:** researched which car Reel formats break out (text on screen leads) and the C-HR's SEVS status (SEV-000735 in force to Dec 2027, confirm on ROVER). Wrote a 29 s pre-order Reel, "Nobody's name is on it yet": a blank tag on a covered car in Japan, a chat thread and a real cover pull on our C-HR. It uses 3 visuals, 4 openings and linted AI prompts, with an estimated ~88–98 credits. Nothing generated yet.
+- **Files:** `Facebook/Ads/Hybrid Import Campaign/CHR-PreOrder-Reel-29s.md`
+- **Next:** owner sets the deposit amount and terms and confirms the SEVS build ranges. Film the 4 s cover pull. Then generate a V1 draft (24 credits) after approval.
+
 ## 24 Nov 2026: animated storyboard sheet published
 
 **What I did**
