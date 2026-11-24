@@ -135,7 +135,7 @@ Once a fortnight, post a fun clip with Monsoor and the Aureus team: a trend soun
 ## 3. Posting playbook
 
 - **Which accounts:** post all five on Instagram, Facebook and TikTok. Upload the clean file each time, because watermarked reposts get pushed down.
-- **When:** 3 posts a week. Tue, Thu and Sat around 6–8 pm Perth time, and check Insights after 2 weeks.
+- **When:** 3 posts a week. Tue, Thu and Sat between 5 and 8:30 pm Perth time, and check Insights after 2 weeks.
 - **Captions:** burned into the video, centre safe area, Montserrat. Most people watch with the sound off.
 - **Sound:** our own voice and room sound first. If music, use the platform's licensed library, quietly underneath.
 - **Comment prompt on every post** ("comment C-HR") and reply within an hour. Video replies to the best comments.
