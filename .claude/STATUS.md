@@ -99,6 +99,14 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: Ad 1 v2, call line louder
+
+- **What I did:** "Boss, just got the car. Coming." raised 11 dB; music, ambience and effects turned down under the call only. Rest of the mix unchanged; whole ad still -14.7 LUFS, peak -2.5 dB.
+- **Files:** `Ready Posts/2026-11-21-ceo-intro-video/reel/qj_v2.py`; output saved over `Monsoor Motors/Ad 1/Queue-Jump-Ad-1-v2-60s-captions.mp4` (local, not in git).
+- **Next:** Arfan listens and posts.
+
+---
+
 ## 21 Nov 2026: outfit locked (olive watch dial)
 
 **What I did**

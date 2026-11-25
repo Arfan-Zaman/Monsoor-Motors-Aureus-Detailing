@@ -211,7 +211,7 @@ B += [('a', AM+'Yard-Morning-Ambience.mp3', deliv-0.3, -10, 0, 5.0, 0.4, 0.8), (
       ('a', AM+'Yard-Morning-Ambience.mp3', yard+4.4, -8, 0, 5.0, 0.6, 1.0)]
 # VOICES (placed on each clip's lip timing)
 B += [('v', VO+'Glam-Ugh-Sync.wav', L('GR86')+2.22, 0, 0, None, 0, 0),   # soft 'ugh' + 'Come on!' locked to her lips in c02 (cross-correlated with the clip audio)
-      ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.85, 0, 0, None, 0, 0),
+      ('v', VO+'Arfan-Boss-v3a-tight-norm.wav', chr_+0.85, 11, 0, None, 0, 0),   # +11 dB: 'Boss, just got the car. Coming.' must read clearly
       ('v', VO+'Arfan-WhatsUp-v4a-trim-norm.wav', L('WHATSUP')+0.80, 0, 0, None, 0, 0),
       ('v', VO+'Dave-KiddingMe-norm.wav', L('DAVE double')+0.00, 0, 0, None, 0, 0),
       ('v', VO+'Mia-ClipSync.wav', L('MIA line')+0.5, 0, 0, None, 0, 0),   # her own lip-matched take from c10
@@ -266,9 +266,9 @@ for j, (bus, f, st, g, off, dur, fi, fo) in enumerate(B):
     flt.append(ch); buses[bus].append(f'[x{j}]')
 def mixbus(k, n): return ''.join(buses[k]) + f'amix=inputs={len(buses[k])}:normalize=0:duration=longest[{n}]'
 flt += [mixbus('m', 'mus'), mixbus('a', 'amb'), mixbus('v', 'vox'), mixbus('f', 'sfx'),
-        f"[amb]volume=0.22:enable='between(t,{chr_+3.1:.2f},{L('DOOR'):.2f})'[amb2]", f"[sfx]volume=0.22:enable='between(t,{chr_+3.1:.2f},{L('DOOR'):.2f})'[sfx2]",   # after 'coming': everything else turned down, his laugh + BGM lead
+        f"[amb]volume=0.22:enable='between(t,{chr_+3.1:.2f},{L('DOOR'):.2f})',volume=0.3:enable='between(t,{chr_+0.8:.2f},{chr_+3.1:.2f})'[amb2]", f"[sfx]volume=0.22:enable='between(t,{chr_+3.1:.2f},{L('DOOR'):.2f})',volume=0.3:enable='between(t,{chr_+0.8:.2f},{chr_+3.1:.2f})'[sfx2]",   # after 'coming': everything else turned down, his laugh + BGM lead
         '[vox]asplit=2[vox1][voxsc]',
-        '[mus][voxsc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=350:makeup=1[mud]',
+        '[mus][voxsc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=350:makeup=1,volume=0.35:enable=\'between(t,'+f'{chr_+0.8:.2f},{chr_+3.05:.2f}'+')\'[mud]',   # music down under the call
         f'[mud][amb2][vox1][sfx2]amix=inputs=4:normalize=0,atrim=0:{total},afade=t=out:st={total-0.6}:d=0.6,alimiter=limit=0.5:attack=1:release=60:level=false,loudnorm=I=-14:TP=-2:LRA=11,alimiter=limit=0.7:attack=0.3:release=40:level=false[m]']
 run(['ffmpeg', '-y', '-i', vid2] + inp + ['-filter_complex', ';'.join(flt), '-map', '0:v', '-map', '[m]', '-t', f'{total:.3f}', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', 'QJ-STORY-V2.mp4'])
 print(f'total {total:.2f}s')
