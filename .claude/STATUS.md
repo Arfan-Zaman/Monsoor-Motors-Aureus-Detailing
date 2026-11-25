@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: A-frame now shows the website and a QR code
+
+**What I did**
+- Added aureusdetailing.com.au (checked live) and a vector QR code to it ("Scan to book") in a bottom row beside the address and hours. Tested the QR from the rendered PDF: it decodes to https://aureusdetailing.com.au. Logo and headline slightly smaller to make room.
+
+**Files changed**
+- `Aureus Detailing/10 Print/A-Frame 600x900/` (aframe.html, print PDF, preview JPG, assets/qr-website.svg)
+- `.claude/STATUS.md`, playbook daily log
+
+**What's next**
+- Owner approves, then send the PDF to the printer.
+
+---
+
 ## 25 Nov 2026: Aureus A-frame sign (600 x 900 mm)
 
 **What I did**

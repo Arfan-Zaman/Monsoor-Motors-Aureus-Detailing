@@ -214,6 +214,7 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - What we made / changed: Aureus A-frame sign 600 x 900 mm: logo, "Car Wash & Detailing", 3 packages with icons and from-prices, pink call-to-book bar, bold address, hours.
 - Files: `Aureus Detailing/10 Print/A-Frame 600x900/` (print PDF with 3 mm bleed, preview JPG, HTML source; rebuild PDF with Chrome headless print-to-pdf).
 - Decisions / feedback: owner rejected the AI foam-car photo as "cheap"; print pieces stay vector-only (logo, type, line icons) unless we have a sharp real photo.
+- Update: website aureusdetailing.com.au and a QR code ("Scan to book", tested, vector `assets/qr-website.svg`) added at the owner's request.
 - To-do next: owner approves, then order print.
 
 <!-- Next entry template:

@@ -18,27 +18,27 @@
   .safe { position: absolute; inset: 30mm 33mm 30mm 33mm;
           display: flex; flex-direction: column; align-items: center; text-align: center; }
 
-  .logo { width: 262mm; display: block; }
+  .logo { width: 225mm; display: block; }
   .by { font-size: 12mm; font-weight: 600; letter-spacing: 0.5mm; opacity: .8; margin-top: 2mm; }
 
-  .rule { display: flex; align-items: center; gap: 6mm; width: 100%; margin-top: 18mm; }
+  .rule { display: flex; align-items: center; gap: 6mm; width: 100%; margin-top: 14mm; }
   .rule i { flex: 1; height: 0.8mm; background: linear-gradient(90deg, rgba(0,168,168,0), #00A8A8); }
   .rule i:last-child { background: linear-gradient(90deg, #00A8A8, rgba(0,168,168,0)); }
   .rule b { width: 4mm; height: 4mm; background: #00A8A8; transform: rotate(45deg); }
 
-  h1 { font-weight: 900; text-transform: uppercase; line-height: 0.95; margin-top: 16mm; letter-spacing: -0.4mm; }
-  h1 .l1 { display: block; font-size: 86mm; }
-  h1 .l2 { display: block; font-size: 58mm; margin-top: 4mm; }
+  h1 { font-weight: 900; text-transform: uppercase; line-height: 0.95; margin-top: 13mm; letter-spacing: -0.4mm; }
+  h1 .l1 { display: block; font-size: 80mm; }
+  h1 .l2 { display: block; font-size: 55mm; margin-top: 4mm; }
   h1 .amp { color: #00A8A8; }
   .sub { font-size: 14.5mm; font-weight: 700; letter-spacing: 2.2mm; text-transform: uppercase; color: #00A8A8; margin-top: 11mm; }
 
-  .packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10mm; width: 100%; margin-top: 20mm; margin-bottom: 16mm; }
-  .pack { border: 0.8mm solid rgba(245,248,252,0.22); border-radius: 6mm; padding: 13mm 4mm 12mm;
+  .packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10mm; width: 100%; margin-top: 16mm; margin-bottom: 12mm; }
+  .pack { border: 0.8mm solid rgba(245,248,252,0.22); border-radius: 6mm; padding: 11mm 4mm 10mm;
           background: linear-gradient(180deg, rgba(245,248,252,0.07), rgba(245,248,252,0.02));
           display: flex; flex-direction: column; align-items: center; }
   .pack svg { width: 38mm; height: 38mm; }
   .pack .name { font-size: 23mm; font-weight: 900; text-transform: uppercase; letter-spacing: 0.6mm; margin-top: 6mm; }
-  .pack .what { font-size: 13.5mm; font-weight: 600; line-height: 1.25; opacity: .9; margin-top: 4mm; min-height: 34mm; }
+  .pack .what { font-size: 13.5mm; font-weight: 600; line-height: 1.25; opacity: .9; margin-top: 4mm; min-height: 32mm; }
   .pack .from { font-size: 10.5mm; font-weight: 700; text-transform: uppercase; letter-spacing: 1mm; opacity: .7; margin-top: 4mm; }
   .pack .price { font-size: 47mm; font-weight: 900; color: #FF4D8D; line-height: 1; margin-top: 1mm; }
 
@@ -46,10 +46,14 @@
   .book .label { font-size: 15mm; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5mm; }
   .book .phone { font-size: 60mm; font-weight: 900; line-height: 1; margin-top: 2mm; letter-spacing: -0.5mm; }
 
-  .addr { display: flex; align-items: center; justify-content: center; gap: 5mm;
-          font-size: 25mm; font-weight: 900; text-transform: uppercase; margin-top: 11mm; }
+  .foot { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12mm; margin-top: 10mm; text-align: left; }
+  .addr { display: flex; align-items: center; gap: 5mm; font-size: 24mm; font-weight: 900; text-transform: uppercase; line-height: 1.08; }
   .addr svg { width: 19mm; height: 23mm; flex: none; }
-  .info { font-size: 12mm; font-weight: 600; opacity: .82; margin-top: 5mm; }
+  .web { font-size: 21mm; font-weight: 800; color: #00A8A8; margin-top: 6mm; }
+  .info { font-size: 11.5mm; font-weight: 600; opacity: .82; margin-top: 4mm; }
+  .qr { flex: none; width: 96mm; background: #F5F8FC; border-radius: 5mm; padding: 7mm 7mm 4mm; text-align: center; color: #071A33; }
+  .qr img { width: 82mm; height: 82mm; display: block; }
+  .qr span { display: block; font-size: 8mm; font-weight: 900; letter-spacing: 0.3mm; white-space: nowrap; text-transform: uppercase; margin-top: 3mm; }
 </style>
 </head>
 <body>
@@ -108,11 +112,17 @@
       <div class="phone">0434 137 393</div>
     </div>
 
-    <div class="addr">
-      <svg viewBox="0 0 40 48" fill="#00A8A8"><path d="M20 2 C10 2 3 9.5 3 19 C3 31 20 46 20 46 C20 46 37 31 37 19 C37 9.5 30 2 20 2 Z M20 26 a7 7 0 1 1 0-14 a7 7 0 0 1 0 14 Z"/></svg>
-      530 Albany Hwy, Victoria Park
+    <div class="foot">
+      <div>
+        <div class="addr">
+          <svg viewBox="0 0 40 48" fill="#00A8A8"><path d="M20 2 C10 2 3 9.5 3 19 C3 31 20 46 20 46 C20 46 37 31 37 19 C37 9.5 30 2 20 2 Z M20 26 a7 7 0 1 1 0-14 a7 7 0 0 1 0 14 Z"/></svg>
+          <span>530 Albany Hwy,<br>Victoria Park</span>
+        </div>
+        <div class="web">aureusdetailing.com.au</div>
+        <div class="info">Open 7 days, 8:30 am to 6 pm<br>Pay when the job is done</div>
+      </div>
+      <div class="qr"><img src="assets/qr-website.svg" alt="QR code to aureusdetailing.com.au"><span>Scan to book</span></div>
     </div>
-    <div class="info">Open 7 days, 8:30 am to 6 pm &nbsp;·&nbsp; Pay when the job is done</div>
   </div>
 </div>
 </body>
