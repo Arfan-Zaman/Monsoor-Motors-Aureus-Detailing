@@ -2,127 +2,94 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
-<title>Aureus Detailing A-frame 600 x 900 mm</title>
+<title>Aureus Detailing A-frame 600 x 900 mm (v3)</title>
 <style>
-  /* 600 x 900 mm trim + 3 mm bleed each side = 606 x 906 mm. Vector only, no photos. */
+  /* 600 x 900 mm trim + 3 mm bleed = 606 x 906 mm. All positions in mm from the bleed edge.
+     Trim edge = 3 mm. Safe margin = 40 mm from trim (x 43 to 563). */
   @font-face { font-family: "Montserrat"; src: url("../../04 Fonts/Montserrat-Variable.ttf") format("truetype"); font-weight: 100 900; }
   @page { size: 606mm 906mm; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { width: 606mm; height: 906mm; }
   body { font-family: "Montserrat", sans-serif; color: #F5F8FC; background: #071A33;
          -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .sheet { position: relative; width: 606mm; height: 906mm; overflow: hidden; background: #071A33; }
-  .glow { position: absolute; left: 0; top: 0; width: 606mm; height: 906mm; }
-  .frame { position: absolute; inset: 15mm; border: 0.9mm solid rgba(0,168,168,0.45); border-radius: 8mm; }
+  .sheet { position: relative; width: 606mm; height: 906mm; overflow: hidden; }
+  .abs { position: absolute; }
 
-  .safe { position: absolute; inset: 30mm 33mm 30mm 33mm;
-          display: flex; flex-direction: column; align-items: center; text-align: center; }
+  /* ---------- top: brand + headline ---------- */
+  .bg { left: 0; top: 0; width: 606mm; height: 906mm; }
+  .supermark { right: -95mm; top: 60mm; width: 470mm; opacity: .16; }
+  .lockup { left: 38mm; top: 38mm; width: 330mm; }
+  .byline { left: 45mm; top: 133mm; font-size: 11mm; font-weight: 600; letter-spacing: .4mm; color: rgba(245,248,252,.75); }
 
-  .logo { width: 225mm; display: block; }
-  .by { font-size: 12mm; font-weight: 600; letter-spacing: 0.5mm; opacity: .8; margin-top: 2mm; }
+  .kicker { left: 44mm; top: 222mm; font-size: 12.5mm; font-weight: 800; letter-spacing: 2.6mm; text-transform: uppercase; color: #00A8A8; }
+  .h1 { left: 40mm; top: 244mm; font-weight: 900; text-transform: uppercase; line-height: .9; letter-spacing: -1mm; }
+  .h1 .a { display: block; font-size: 87mm; white-space: nowrap; }
+  .h1 .b { display: block; font-size: 71mm; margin-top: 4mm; white-space: nowrap; }
+  .h1 .amp { color: #00A8A8; }
 
-  .rule { display: flex; align-items: center; gap: 6mm; width: 100%; margin-top: 14mm; }
-  .rule i { flex: 1; height: 0.8mm; background: linear-gradient(90deg, rgba(0,168,168,0), #00A8A8); }
-  .rule i:last-child { background: linear-gradient(90deg, #00A8A8, rgba(0,168,168,0)); }
-  .rule b { width: 4mm; height: 4mm; background: #00A8A8; transform: rotate(45deg); }
+  /* ---------- middle: price menu ---------- */
+  .menu { left: 43mm; top: 440mm; width: 520mm; }
+  .menu .head { display: flex; align-items: center; gap: 6mm; font-size: 11mm; font-weight: 800; letter-spacing: 2.4mm; text-transform: uppercase; color: #00A8A8; }
+  .menu .head i { flex: 1; height: .7mm; background: rgba(0,168,168,.6); }
+  .row { display: flex; align-items: center; justify-content: space-between; padding: 10mm 0; border-bottom: .7mm solid rgba(245,248,252,.16); }
+  .row:last-child { border-bottom: 0; }
+  .row .n { font-size: 31mm; font-weight: 900; text-transform: uppercase; letter-spacing: .5mm; line-height: 1; }
+  .row .d { font-size: 13mm; font-weight: 600; color: rgba(245,248,252,.78); margin-top: 3mm; }
+  .row .p { text-align: right; line-height: 1; }
+  .row .p small { display: block; font-size: 9mm; font-weight: 700; letter-spacing: 1.2mm; text-transform: uppercase; color: rgba(245,248,252,.6); margin-bottom: 1.5mm; }
+  .row .p b { font-size: 50mm; font-weight: 900; color: #FF4D8D; letter-spacing: -.5mm; }
 
-  h1 { font-weight: 900; text-transform: uppercase; line-height: 0.95; margin-top: 13mm; letter-spacing: -0.4mm; }
-  h1 .l1 { display: block; font-size: 80mm; }
-  h1 .l2 { display: block; font-size: 55mm; margin-top: 4mm; }
-  h1 .amp { color: #00A8A8; }
-  .sub { font-size: 14.5mm; font-weight: 700; letter-spacing: 2.2mm; text-transform: uppercase; color: #00A8A8; margin-top: 11mm; }
-
-  .packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10mm; width: 100%; margin-top: 16mm; margin-bottom: 12mm; }
-  .pack { border: 0.8mm solid rgba(245,248,252,0.22); border-radius: 6mm; padding: 11mm 4mm 10mm;
-          background: linear-gradient(180deg, rgba(245,248,252,0.07), rgba(245,248,252,0.02));
-          display: flex; flex-direction: column; align-items: center; }
-  .pack svg { width: 38mm; height: 38mm; }
-  .pack .name { font-size: 23mm; font-weight: 900; text-transform: uppercase; letter-spacing: 0.6mm; margin-top: 6mm; }
-  .pack .what { font-size: 13.5mm; font-weight: 600; line-height: 1.25; opacity: .9; margin-top: 4mm; min-height: 32mm; }
-  .pack .from { font-size: 10.5mm; font-weight: 700; text-transform: uppercase; letter-spacing: 1mm; opacity: .7; margin-top: 4mm; }
-  .pack .price { font-size: 47mm; font-weight: 900; color: #FF4D8D; line-height: 1; margin-top: 1mm; }
-
-  .book { width: 100%; margin-top: auto; background: #FF4D8D; color: #071A33; border-radius: 6mm; padding: 8mm 10mm 10mm; }
-  .book .label { font-size: 15mm; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5mm; }
-  .book .phone { font-size: 60mm; font-weight: 900; line-height: 1; margin-top: 2mm; letter-spacing: -0.5mm; }
-
-  .foot { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12mm; margin-top: 10mm; text-align: left; }
-  .addr { display: flex; align-items: center; gap: 5mm; font-size: 24mm; font-weight: 900; text-transform: uppercase; line-height: 1.08; }
-  .addr svg { width: 19mm; height: 23mm; flex: none; }
-  .web { font-size: 21mm; font-weight: 800; color: #00A8A8; margin-top: 6mm; }
-  .info { font-size: 11.5mm; font-weight: 600; opacity: .82; margin-top: 4mm; }
-  .qr { flex: none; width: 96mm; background: #F5F8FC; border-radius: 5mm; padding: 7mm 7mm 4mm; text-align: center; color: #071A33; }
-  .qr img { width: 82mm; height: 82mm; display: block; }
-  .qr span { display: block; font-size: 8mm; font-weight: 900; letter-spacing: 0.3mm; white-space: nowrap; text-transform: uppercase; margin-top: 3mm; }
+  /* ---------- bottom: booking band ---------- */
+  .band { left: 0; top: 714mm; width: 606mm; height: 192mm; background: #F5F8FC; color: #071A33; }
+  .band .accent { position: absolute; left: 0; top: 0; width: 606mm; height: 3mm; background: #00A8A8; }
+  .call { position: absolute; left: 43mm; top: 20mm; }
+  .call .l { font-size: 11.5mm; font-weight: 800; letter-spacing: 2.4mm; text-transform: uppercase; color: #071A33; opacity: .7; }
+  .call .ph { font-size: 52mm; font-weight: 900; letter-spacing: -1mm; line-height: 1; margin-top: 3mm; white-space: nowrap; }
+  .meta { position: absolute; left: 43mm; top: 96mm; font-size: 15mm; font-weight: 800; line-height: 1.35; }
+  .meta .row2 { font-size: 19mm; font-weight: 900; margin-bottom: 1mm; }
+  .meta .row2 { display: flex; align-items: center; gap: 4mm; }
+  .meta svg { width: 13mm; height: 16mm; flex: none; }
+  .meta .hrs { font-size: 10.5mm; font-weight: 600; opacity: .7; margin-top: 2mm; }
+  .qr { position: absolute; right: 43mm; top: 18mm; width: 128mm; text-align: center; }
+  .qr .box { background: #fff; border: .8mm solid #071A33; border-radius: 4mm; padding: 7mm; }
+  .qr img { width: 112mm; height: 112mm; display: block; }
+  .qr span { display: block; font-size: 9mm; font-weight: 900; letter-spacing: .6mm; text-transform: uppercase; margin-top: 4mm; white-space: nowrap; }
 </style>
 </head>
 <body>
 <div class="sheet">
-  <svg class="glow" viewBox="0 0 606 906" preserveAspectRatio="none">
-    <defs><radialGradient id="g" cx="303" cy="175" r="330" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#123A66"/><stop offset="1" stop-color="#071A33"/></radialGradient></defs>
+  <svg class="abs bg" viewBox="0 0 606 906" preserveAspectRatio="none">
+    <defs>
+      <radialGradient id="g" cx="430" cy="230" r="420" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#143F6E"/><stop offset=".55" stop-color="#0A2342"/><stop offset="1" stop-color="#071A33"/>
+      </radialGradient>
+    </defs>
     <rect width="606" height="906" fill="url(#g)"/>
   </svg>
-  <div class="frame"></div>
 
-  <div class="safe">
-    <img class="logo" src="assets/logo-print.svg" alt="Aureus Detailing">
-    <div class="by">by Monsoor Motors Pty Ltd</div>
+  <img class="abs supermark" src="assets/symbol.svg" alt="">
+  <img class="abs lockup" src="assets/logo-horizontal.svg" alt="Aureus Detailing">
+  <div class="abs byline">by Monsoor Motors Pty Ltd</div>
 
-    <div class="rule"><i></i><b></b><i></i></div>
+  <div class="abs kicker">Mobile &nbsp;·&nbsp; Workshop &nbsp;·&nbsp; 7 days</div>
+  <div class="abs h1"><span class="a">Car Wash</span><span class="b"><span class="amp">&amp;</span> Detailing</span></div>
 
-    <h1><span class="l1">Car Wash</span><span class="l2"><span class="amp">&amp;</span> Detailing</span></h1>
-    <div class="sub">Mobile or at our workshop</div>
+  <div class="abs menu">
+    <div class="head">Packages <i></i></div>
+    <div class="row"><div><div class="n">Silver</div><div class="d">Wash and interior clean</div></div><div class="p"><small>from</small><b>$149</b></div></div>
+    <div class="row"><div><div class="n">Gold</div><div class="d">Silver plus machine polish</div></div><div class="p"><small>from</small><b>$199</b></div></div>
+    <div class="row"><div><div class="n">Aureus</div><div class="d">Gold plus ceramic shield</div></div><div class="p"><small>from</small><b>$299</b></div></div>
+  </div>
 
-    <div class="packs">
-      <div class="pack">
-        <svg viewBox="0 0 48 48" fill="none" stroke="#00A8A8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M24 5 C24 5 11 20 11 29 a13 13 0 0 0 26 0 C37 20 24 5 24 5 Z"/>
-          <path d="M18 30 a6 6 0 0 0 6 6"/>
-        </svg>
-        <div class="name">Silver</div>
-        <div class="what">Wash and<br>interior clean</div>
-        <div class="from">from</div>
-        <div class="price">$149</div>
-      </div>
-      <div class="pack">
-        <svg viewBox="0 0 48 48" fill="none" stroke="#00A8A8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M22 6 L25.5 18.5 L38 22 L25.5 25.5 L22 38 L18.5 25.5 L6 22 L18.5 18.5 Z"/>
-          <path d="M38 33 L39.5 37.5 L44 39 L39.5 40.5 L38 45 L36.5 40.5 L32 39 L36.5 37.5 Z"/>
-        </svg>
-        <div class="name">Gold</div>
-        <div class="what">Silver plus<br>machine polish</div>
-        <div class="from">from</div>
-        <div class="price">$199</div>
-      </div>
-      <div class="pack">
-        <svg viewBox="0 0 48 48" fill="none" stroke="#00A8A8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M24 4 L40 10 V23 C40 33 33 40 24 44 C15 40 8 33 8 23 V10 Z"/>
-          <path d="M16.5 24 L22 29.5 L32 19"/>
-        </svg>
-        <div class="name">Aureus</div>
-        <div class="what">Gold plus<br>ceramic shield</div>
-        <div class="from">from</div>
-        <div class="price">$299</div>
-      </div>
+  <div class="abs band">
+    <div class="accent"></div>
+    <div class="call"><div class="l">Call to book</div><div class="ph">0434 137 393</div></div>
+    <div class="meta">
+      <div class="row2"><svg viewBox="0 0 40 48" fill="#00A8A8"><path d="M20 2 C10 2 3 9.5 3 19 C3 31 20 46 20 46 C20 46 37 31 37 19 C37 9.5 30 2 20 2 Z M20 26 a7 7 0 1 1 0-14 a7 7 0 0 1 0 14 Z"/></svg>530 ALBANY HWY, VICTORIA PARK</div>
+      <div>aureusdetailing.com.au</div>
+      <div class="hrs">Open 7 days, 8:30 am to 6 pm &nbsp;·&nbsp; Pay when the job is done</div>
     </div>
-
-    <div class="book">
-      <div class="label">Call to book</div>
-      <div class="phone">0434 137 393</div>
-    </div>
-
-    <div class="foot">
-      <div>
-        <div class="addr">
-          <svg viewBox="0 0 40 48" fill="#00A8A8"><path d="M20 2 C10 2 3 9.5 3 19 C3 31 20 46 20 46 C20 46 37 31 37 19 C37 9.5 30 2 20 2 Z M20 26 a7 7 0 1 1 0-14 a7 7 0 0 1 0 14 Z"/></svg>
-          <span>530 Albany Hwy,<br>Victoria Park</span>
-        </div>
-        <div class="web">aureusdetailing.com.au</div>
-        <div class="info">Open 7 days, 8:30 am to 6 pm<br>Pay when the job is done</div>
-      </div>
-      <div class="qr"><img src="assets/qr-website.svg" alt="QR code to aureusdetailing.com.au"><span>Scan to book</span></div>
-    </div>
+    <div class="qr"><div class="box"><img src="assets/qr-website.svg" alt="QR code to aureusdetailing.com.au"></div><span>Scan to book online</span></div>
   </div>
 </div>
 </body>

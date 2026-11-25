@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: A-frame redesigned to a professional sign layout (v3)
+
+**What I did**
+- Researched A-frame sign practice (read from distance, sign not flyer, clear hierarchy, high contrast) and rebuilt the design: logo lockup top left, oversized chrome A as a faint supergraphic, huge left-aligned "CAR WASH & DETAILING", a price menu (Silver $149, Gold $199, Aureus $299), and an ice-white booking band with phone, bold address, website, hours and a QR code. Pink now only on prices (brand 10% rule). QR tested: opens https://aureusdetailing.com.au.
+- Added `render.sh` in the A-frame folder to rebuild the PDF and preview.
+
+**Files changed**
+- `Aureus Detailing/10 Print/A-Frame 600x900/` (aframe.html, render.sh, print PDF, preview JPG, assets/)
+- `.claude/STATUS.md`, playbook daily log
+
+**What's next**
+- Owner approves, then send the PDF to the printer.
+
+---
+
 ## 25 Nov 2026: A-frame now shows the website and a QR code
 
 **What I did**
