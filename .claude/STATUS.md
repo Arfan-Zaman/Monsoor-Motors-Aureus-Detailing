@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 26 Nov 2026: A-frame final, photo upscaled to 4K
+
+**What I did**
+- Team approved the Outlander design. Upscaled the photo in Higgsfield (bytedance 4K, 2 credits, job 2220da1b) to 2304 x 4096 and swapped it in. The print PDF now carries it at 97 dpi on 600 mm, checked sharp at full size. QR re-tested: opens https://aureusdetailing.com.au. Logged in GENERATION-LOG.
+
+**Files changed**
+- `Aureus Detailing/10 Print/A-Frame 600x900/` (print PDF, preview, assets/outlander.jpg, assets/outlander-4k.png)
+- `.claude/skills/aureus-video-studio/assets/GENERATION-LOG.md`, playbook daily log, `.claude/STATUS.md`
+
+**What's next**
+- Send the PDF to the printer (600 x 900 mm, 3 mm bleed included).
+
+---
+
 ## 26 Nov 2026: A-frame v4 with the Outlander photo
 
 **What I did**

@@ -216,7 +216,8 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Decisions / feedback: owner rejected the AI foam-car photo as "cheap"; print pieces stay vector-only (logo, type, line icons) unless we have a sharp real photo.
 - Update: website aureusdetailing.com.au and a QR code ("Scan to book", tested, vector `assets/qr-website.svg`) added at the owner's request.
 - Update (v3): redesigned as a professional sign layout: left-aligned huge headline, chrome A supergraphic, price menu, white booking band with phone, bold address, website, QR. Rebuild with `render.sh` in that folder.
-- To-do next: owner approves, then order print.
+- Update (v4, final, 26 Nov): hero photo = owner's Higgsfield Outlander PHEV (plate not blurred, owner's call), upscaled to 4K (2 credits) after team approval. Print PDF ready.
+- To-do next: send `Aureus-A-Frame-600x900mm-PRINT-3mm-bleed.pdf` to the printer.
 
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
