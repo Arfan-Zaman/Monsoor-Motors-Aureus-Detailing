@@ -2,7 +2,7 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
-<title>Aureus Detailing A-frame 600 x 900 mm (v3)</title>
+<title>Aureus Detailing A-frame 600 x 900 mm (v4, photo)</title>
 <style>
   /* 600 x 900 mm trim + 3 mm bleed = 606 x 906 mm. All positions in mm from the bleed edge.
      Trim edge = 3 mm. Safe margin = 40 mm from trim (x 43 to 563). */
@@ -15,70 +15,64 @@
   .sheet { position: relative; width: 606mm; height: 906mm; overflow: hidden; }
   .abs { position: absolute; }
 
-  /* ---------- top: brand + headline ---------- */
-  .bg { left: 0; top: 0; width: 606mm; height: 906mm; }
-  .supermark { right: -95mm; top: 60mm; width: 470mm; opacity: .16; }
-  .lockup { left: 38mm; top: 38mm; width: 330mm; }
-  .byline { left: 45mm; top: 133mm; font-size: 11mm; font-weight: 600; letter-spacing: .4mm; color: rgba(245,248,252,.75); }
+  /* ---------- photo ---------- */
+  .photo { left: 0; top: -24mm; width: 606mm; }
+  .fade-top { left: 0; top: 0; width: 606mm; height: 190mm; background: linear-gradient(180deg, rgba(7,26,51,.94) 0%, rgba(7,26,51,.78) 55%, rgba(7,26,51,0) 100%); }
+  .fade-bot { left: 0; top: 385mm; width: 606mm; height: 506mm; background: linear-gradient(180deg, rgba(7,26,51,0) 0%, rgba(7,26,51,.75) 28%, #071A33 46%, #071A33 100%); }
 
-  .kicker { left: 44mm; top: 222mm; font-size: 12.5mm; font-weight: 800; letter-spacing: 2.6mm; text-transform: uppercase; color: #00A8A8; }
-  .h1 { left: 40mm; top: 244mm; font-weight: 900; text-transform: uppercase; line-height: .9; letter-spacing: -1mm; }
+  /* ---------- brand ---------- */
+  .lockup { left: 38mm; top: 34mm; width: 300mm; }
+  .byline { left: 45mm; top: 120mm; font-size: 10.5mm; font-weight: 600; letter-spacing: .4mm; color: rgba(245,248,252,.85); }
+
+  /* ---------- headline ---------- */
+  .kicker { left: 44mm; top: 503mm; font-size: 12mm; font-weight: 800; letter-spacing: 2.6mm; text-transform: uppercase; color: #00A8A8; }
+  .h1 { left: 40mm; top: 521mm; font-weight: 900; text-transform: uppercase; line-height: .9; letter-spacing: -1mm; }
   .h1 .a { display: block; font-size: 87mm; white-space: nowrap; }
   .h1 .b { display: block; font-size: 71mm; margin-top: 4mm; white-space: nowrap; }
   .h1 .amp { color: #00A8A8; }
 
-  /* ---------- middle: price menu ---------- */
-  .menu { left: 43mm; top: 440mm; width: 520mm; }
-  .menu .head { display: flex; align-items: center; gap: 6mm; font-size: 11mm; font-weight: 800; letter-spacing: 2.4mm; text-transform: uppercase; color: #00A8A8; }
-  .menu .head i { flex: 1; height: .7mm; background: rgba(0,168,168,.6); }
-  .row { display: flex; align-items: center; justify-content: space-between; padding: 10mm 0; border-bottom: .7mm solid rgba(245,248,252,.16); }
-  .row:last-child { border-bottom: 0; }
-  .row .n { font-size: 31mm; font-weight: 900; text-transform: uppercase; letter-spacing: .5mm; line-height: 1; }
-  .row .d { font-size: 13mm; font-weight: 600; color: rgba(245,248,252,.78); margin-top: 3mm; }
-  .row .p { text-align: right; line-height: 1; }
-  .row .p small { display: block; font-size: 9mm; font-weight: 700; letter-spacing: 1.2mm; text-transform: uppercase; color: rgba(245,248,252,.6); margin-bottom: 1.5mm; }
-  .row .p b { font-size: 50mm; font-weight: 900; color: #FF4D8D; letter-spacing: -.5mm; }
+  /* ---------- packages: three columns ---------- */
+  .packs { left: 43mm; top: 685mm; width: 520mm; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .pk { padding: 0 6mm; border-left: .7mm solid rgba(245,248,252,.22); }
+  .pk:first-child { padding-left: 0; border-left: 0; }
+  .pk .n { font-size: 17mm; font-weight: 900; text-transform: uppercase; letter-spacing: .5mm; line-height: 1; }
+  .pk .d { font-size: 9.5mm; font-weight: 600; color: rgba(245,248,252,.78); margin-top: 2.5mm; white-space: nowrap; }
+  .pk .p { margin-top: 3mm; line-height: 1; white-space: nowrap; }
+  .pk .p small { font-size: 8.5mm; font-weight: 700; letter-spacing: .8mm; text-transform: uppercase; color: rgba(245,248,252,.6); margin-right: 2mm; }
+  .pk .p b { font-size: 36mm; font-weight: 900; color: #FF4D8D; letter-spacing: -.5mm; }
 
   /* ---------- bottom: booking band ---------- */
-  .band { left: 0; top: 714mm; width: 606mm; height: 192mm; background: #F5F8FC; color: #071A33; }
-  .band .accent { position: absolute; left: 0; top: 0; width: 606mm; height: 3mm; background: #00A8A8; }
-  .call { position: absolute; left: 43mm; top: 20mm; }
-  .call .l { font-size: 11.5mm; font-weight: 800; letter-spacing: 2.4mm; text-transform: uppercase; color: #071A33; opacity: .7; }
-  .call .ph { font-size: 52mm; font-weight: 900; letter-spacing: -1mm; line-height: 1; margin-top: 3mm; white-space: nowrap; }
-  .meta { position: absolute; left: 43mm; top: 96mm; font-size: 15mm; font-weight: 800; line-height: 1.35; }
-  .meta .row2 { font-size: 19mm; font-weight: 900; margin-bottom: 1mm; }
-  .meta .row2 { display: flex; align-items: center; gap: 4mm; }
-  .meta svg { width: 13mm; height: 16mm; flex: none; }
-  .meta .hrs { font-size: 10.5mm; font-weight: 600; opacity: .7; margin-top: 2mm; }
-  .qr { position: absolute; right: 43mm; top: 18mm; width: 128mm; text-align: center; }
-  .qr .box { background: #fff; border: .8mm solid #071A33; border-radius: 4mm; padding: 7mm; }
-  .qr img { width: 112mm; height: 112mm; display: block; }
-  .qr span { display: block; font-size: 9mm; font-weight: 900; letter-spacing: .6mm; text-transform: uppercase; margin-top: 4mm; white-space: nowrap; }
+  .band { left: 0; top: 768mm; width: 606mm; height: 138mm; background: #F5F8FC; color: #071A33; }
+  .band .accent { position: absolute; left: 0; top: 0; width: 606mm; height: 2.5mm; background: #00A8A8; }
+  .call { position: absolute; left: 43mm; top: 15mm; }
+  .call .l { font-size: 9.5mm; font-weight: 800; letter-spacing: 2mm; text-transform: uppercase; opacity: .7; }
+  .call .ph { font-size: 44mm; font-weight: 900; letter-spacing: -.8mm; line-height: 1; margin-top: 2mm; white-space: nowrap; }
+  .meta { position: absolute; left: 43mm; top: 71mm; font-size: 12mm; font-weight: 800; line-height: 1.3; }
+  .meta .row2 { display: flex; align-items: center; gap: 3mm; font-size: 15mm; font-weight: 900; }
+  .meta svg { width: 10mm; height: 12mm; flex: none; }
+  .meta .hrs { font-size: 9mm; font-weight: 600; opacity: .7; }
+  .qr { position: absolute; right: 43mm; top: 14mm; width: 92mm; text-align: center; }
+  .qr .box { background: #fff; border: .7mm solid #071A33; border-radius: 3mm; padding: 4.5mm; }
+  .qr img { width: 81mm; height: 81mm; display: block; }
+  .qr span { display: block; font-size: 7mm; font-weight: 900; letter-spacing: .4mm; text-transform: uppercase; margin-top: 2.5mm; white-space: nowrap; }
 </style>
 </head>
 <body>
 <div class="sheet">
-  <svg class="abs bg" viewBox="0 0 606 906" preserveAspectRatio="none">
-    <defs>
-      <radialGradient id="g" cx="430" cy="230" r="420" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#143F6E"/><stop offset=".55" stop-color="#0A2342"/><stop offset="1" stop-color="#071A33"/>
-      </radialGradient>
-    </defs>
-    <rect width="606" height="906" fill="url(#g)"/>
-  </svg>
+  <img class="abs photo" src="assets/outlander.jpg" alt="Mitsubishi Outlander PHEV, freshly detailed">
+  <div class="abs fade-top"></div>
+  <div class="abs fade-bot"></div>
 
-  <img class="abs supermark" src="assets/symbol.svg" alt="">
   <img class="abs lockup" src="assets/logo-horizontal.svg" alt="Aureus Detailing">
   <div class="abs byline">by Monsoor Motors Pty Ltd</div>
 
   <div class="abs kicker">Mobile &nbsp;·&nbsp; Workshop &nbsp;·&nbsp; 7 days</div>
   <div class="abs h1"><span class="a">Car Wash</span><span class="b"><span class="amp">&amp;</span> Detailing</span></div>
 
-  <div class="abs menu">
-    <div class="head">Packages <i></i></div>
-    <div class="row"><div><div class="n">Silver</div><div class="d">Wash and interior clean</div></div><div class="p"><small>from</small><b>$149</b></div></div>
-    <div class="row"><div><div class="n">Gold</div><div class="d">Silver plus machine polish</div></div><div class="p"><small>from</small><b>$199</b></div></div>
-    <div class="row"><div><div class="n">Aureus</div><div class="d">Gold plus ceramic shield</div></div><div class="p"><small>from</small><b>$299</b></div></div>
+  <div class="abs packs">
+    <div class="pk"><div class="n">Silver</div><div class="d">Wash + interior clean</div><div class="p"><small>from</small><b>$149</b></div></div>
+    <div class="pk"><div class="n">Gold</div><div class="d">+ Machine polish</div><div class="p"><small>from</small><b>$199</b></div></div>
+    <div class="pk"><div class="n">Aureus</div><div class="d">+ Ceramic shield</div><div class="p"><small>from</small><b>$299</b></div></div>
   </div>
 
   <div class="abs band">
@@ -86,8 +80,7 @@
     <div class="call"><div class="l">Call to book</div><div class="ph">0434 137 393</div></div>
     <div class="meta">
       <div class="row2"><svg viewBox="0 0 40 48" fill="#00A8A8"><path d="M20 2 C10 2 3 9.5 3 19 C3 31 20 46 20 46 C20 46 37 31 37 19 C37 9.5 30 2 20 2 Z M20 26 a7 7 0 1 1 0-14 a7 7 0 0 1 0 14 Z"/></svg>530 ALBANY HWY, VICTORIA PARK</div>
-      <div>aureusdetailing.com.au</div>
-      <div class="hrs">Open 7 days, 8:30 am to 6 pm &nbsp;·&nbsp; Pay when the job is done</div>
+      <div>aureusdetailing.com.au <span class="hrs">&nbsp;·&nbsp; Open 7 days, 8:30 am to 6 pm</span></div>
     </div>
     <div class="qr"><div class="box"><img src="assets/qr-website.svg" alt="QR code to aureusdetailing.com.au"></div><span>Scan to book online</span></div>
   </div>

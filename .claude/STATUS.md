@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 26 Nov 2026: A-frame v4 with the Outlander photo
+
+**What I did**
+- Built the owner's Higgsfield Outlander PHEV photo into the A-frame as the hero (top half), headline "CAR WASH & DETAILING" on the polished floor, three packages in columns, white booking band (phone, bold address, website, hours, QR). Plate left as is (owner said don't blur). Fixed the same logo-reflection hairline in the horizontal logo copy.
+- Uploaded the photo to Higgsfield (media d1a149d3-ff9c-4ac9-b31d-188b611a1de6); 4K upscale quoted at 2 credits, waiting for the owner's OK.
+
+**Files changed**
+- `Aureus Detailing/10 Print/A-Frame 600x900/` (aframe.html, PDF, preview, assets/outlander*.{png,jpg}, assets/logo-horizontal.svg)
+- `.claude/STATUS.md`
+
+**What's next**
+- Upscale to 4K (2 credits) and swap it in so the photo prints sharp at 600 mm.
+
+---
+
 ## 25 Nov 2026: A-frame redesigned to a professional sign layout (v3)
 
 **What I did**
