@@ -4,6 +4,21 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 25 Nov 2026: Aureus A-frame sign (600 x 900 mm)
+
+**What I did**
+- Designed the Aureus Detailing A-frame for the owner: big chrome logo, "by Monsoor Motors Pty Ltd", "CAR WASH & DETAILING", three packages with line icons and from-prices (Silver $149, Gold $199, Aureus $299), pink "Call to book 0434 137 393" bar, address in bold, hours. Vector only, no photos (the owner rejected the AI foam car photo as cheap). Print PDF has 3 mm bleed (606 x 906 mm).
+- Print copy of the logo fixes a faint hairline under the wordmark (reflection mask edge).
+
+**Files changed**
+- `Aureus Detailing/10 Print/A-Frame 600x900/` (aframe.html source, print PDF, preview JPG, assets/logo-print.svg)
+- `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Owner approves the design, then send the PDF to the printer (ask for 3 mm bleed, double-sided if both faces are wanted).
+
+---
+
 ## 24 Nov 2026: posting times moved to 5–8:30 pm Perth
 
 **What I did**

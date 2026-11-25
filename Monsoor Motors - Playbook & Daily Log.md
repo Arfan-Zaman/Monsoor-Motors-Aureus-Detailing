@@ -210,6 +210,12 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - Decisions / feedback: owner wants the calendar as statics + videos per day: 2 videos and 4–6 static posts per week for each business; big posts Tue/Wed evenings; Monsoor feed stays real photos only (no AI label).
 - To-do next: owner confirms C-HR and Golf stock/prices, finance wording, drive-away inclusions, holiday hours, customer permissions; then schedule week 1 in Meta Business Suite.
 
+### 2026-11-25 (Wed)
+- What we made / changed: Aureus A-frame sign 600 x 900 mm: logo, "Car Wash & Detailing", 3 packages with icons and from-prices, pink call-to-book bar, bold address, hours.
+- Files: `Aureus Detailing/10 Print/A-Frame 600x900/` (print PDF with 3 mm bleed, preview JPG, HTML source; rebuild PDF with Chrome headless print-to-pdf).
+- Decisions / feedback: owner rejected the AI foam-car photo as "cheap"; print pieces stay vector-only (logo, type, line icons) unless we have a sharp real photo.
+- To-do next: owner approves, then order print.
+
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)
 - What we made / changed:
