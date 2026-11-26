@@ -4,6 +4,22 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 26 Nov 2026: C-HR hybrids Reel delivery
+
+**What I did**
+- Reproduced the light-sweep build. Picture and mix match the approved master; the caption stage couldn't run because `caption_burn.py` is missing from the pack and there's no libass locally.
+- Shipped the approved 9:16 master, remuxed losslessly for faststart, plus the cover, `captions.srt` (26 cues, verified against the burned captions), an interim 4:5 crop, check frames and REPORT.md. Loudness −14.9 LUFS, −2.8 dBTP.
+- Flagged: the banner in the footage reads MD322748 (licence is MD32748), and the captions aren't Montserrat.
+
+**Files changed**
+- `Ready Posts/2026-11-26-chr-hybrids-reel/` (REPORT.md, captions.srt, monsoor_cover.jpg, checks/; mp4s local only)
+- `Tools/words_to_srt.py`, `Monsoor Motors - Playbook & Daily Log.md`, `.claude/STATUS.md`
+
+**What's next**
+- Final 4:5 feed cut: needs `caption_burn.py`, or the owner's OK for a local Montserrat caption burn.
+
+---
+
 ## 24 Nov 2026: posting times moved to 5–8:30 pm Perth
 
 **What I did**
