@@ -99,6 +99,7 @@ Run with: `/opt/miniconda3/bin/python -I "Tools/<script>.py"`
 | `showroom_cover_v2.py` | Helper used by the cover script (car softening + shared settings). Keep it next to the others. |
 | `docx_to_pdf.sh` | Exports a Word document to PDF through Microsoft Word (keeps Montserrat and the exact layout). Usage: `Tools/docx_to_pdf.sh "path/file.docx"`; the PDF is saved next to it. |
 | `words_to_srt.py` | Word-timing JSON (`{"words":[{text,start,end}]}`) → `.srt`, max 3 words / 22 chars per cue, break at sentence ends, never end a cue on "a/of/and/in/the". Matches the reel caption burner. Usage: `python -I Tools/words_to_srt.py words.json captions.srt` |
+| `burn_captions.py` | Burns `.srt` captions onto a video with Pillow + ffmpeg overlay (no libass needed). Montserrat, Warm White text, navy outline; options for size, margin-v %, max-width %, a pre-filter (`--vf "crop=..."`) and `--audio-from` (stream-copies another file's audio). |
 
 Cutting a car out of its background: macOS built-in subject detection (Vision) via a small Swift tool. Ask Claude to set it up again if needed.
 
@@ -213,10 +214,10 @@ Cutting a car out of its background: macOS built-in subject detection (Vision) v
 - To-do next: owner confirms C-HR and Golf stock/prices, finance wording, drive-away inclusions, holiday hours, customer permissions; then schedule week 1 in Meta Business Suite.
 
 ### 26 Nov 2026 (Thu)
-- What we made / changed: delivery of the C-HR hybrids Reel (18.2 s). Verified the sweep build reproduces the approved master (picture and mix match; caption stage couldn't run because `caption_burn.py` wasn't in the pack and local ffmpeg has no libass). Shipped the approved master remuxed for faststart (it failed faststart), the cover, `captions.srt`, an interim 4:5 crop and REPORT.md.
-- Files: `Ready Posts/2026-11-26-chr-hybrids-reel/` (REPORT.md, captions.srt, cover, checks/; mp4s stay local), `Tools/words_to_srt.py`
+- What we made / changed: delivery of the C-HR hybrids Reel (18.2 s). Verified the sweep build reproduces the approved master (picture and mix match; caption stage couldn't run because `caption_burn.py` wasn't in the pack and local ffmpeg has no libass). Shipped the approved master remuxed for faststart (it failed faststart), the cover, `captions.srt` and REPORT.md. Owner said "finish it", so the 4:5 feed cut was made from the verified caption-free build, cropped y 285–1635, with Montserrat captions burned locally (margin 12 %, max width 90 %) and the master's audio stream-copied.
+- Files: `Ready Posts/2026-11-26-chr-hybrids-reel/` (REPORT.md, captions.srt, cover, checks/; mp4s are git-ignored, copies in the main folder's same path), `Tools/words_to_srt.py`, `Tools/burn_captions.py`
 - Decisions / feedback: −14.9 LUFS, −2.8 dBTP; all text inside the safe band. Banner in the footage shows MD322748 (licence is MD32748). Captions in the approved master are not Montserrat.
-- To-do next: final 4:5 needs either the original `caption_burn.py` or the owner's OK for a local Montserrat caption burn.
+- To-do next: decide whether to re-burn the 9:16 captions in Montserrat so both cuts match; check the banner licence number.
 
 <!-- Next entry template:
 ### YYYY-MM-DD (Day)

@@ -4,6 +4,20 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 26 Nov 2026: C-HR hybrids Reel, final 4:5 feed cut
+
+**What I did**
+- Built `Tools/burn_captions.py` (Pillow + ffmpeg overlay, because there's no libass here). Made the final `monsoor_feed_4x5.mp4` from the verified caption-free build: re-timed like the master, cropped y 285–1635, Montserrat captions at margin 12 %, width 90 %. The audio is the master's, stream-copied (identical hash). Every frame is within 39 dB of the master; 18.20 s; −14.9 LUFS / −2.8 dBTP; faststart.
+- Deleted the interim cut. Copied both mp4s to the main folder's `Ready Posts/2026-11-26-chr-hybrids-reel/`.
+
+**Files changed**
+- `Tools/burn_captions.py`, `Ready Posts/2026-11-26-chr-hybrids-reel/REPORT.md`, `checks/feed_*.jpg`, playbook, `.claude/STATUS.md`
+
+**What's next**
+- Optional: re-burn the 9:16 captions in Montserrat so both cuts match. Check the banner licence number (MD322748 on the banner vs MD32748).
+
+---
+
 ## 26 Nov 2026: C-HR hybrids Reel delivery
 
 **What I did**
