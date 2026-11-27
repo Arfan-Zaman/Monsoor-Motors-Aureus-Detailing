@@ -4,6 +4,22 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 27 Nov 2026 (late): real plate restored, no price on the Lexus posts
+
+**What I did**
+- Front slide: replaced the AI-drawn plate "1GZI 497" with the real plate **1GZL 497**, taken from raw photo 20261125_120934. Saved as `Cars/Lexus/Higgsfield/03_front_real_plate.jpg`; the original was left untouched.
+- Price removed, as the owner asked. The card now says **Ask for price**, with the tagline **Surprising price · Very affordable**. Set through `price_text` and `tagline` in `car.yaml`; `make_brand_posts.py` now supports both for any car.
+- Rebuilt the Lexus branded set (8 slides + story) in `Cars/Lexus/Branded/`.
+
+**Files changed**
+- `Tools/car_studio/make_brand_posts.py`, `.claude/STATUS.md`
+- Outside git: `Monsoor Motors/Cars/Lexus/car.yaml`, `Cars/Lexus/Higgsfield/03_front_real_plate.jpg`, `Cars/Lexus/Branded/`
+
+**What's next**
+- Owner sends the model year (the card still shows [YEAR]).
+
+---
+
 ## 27 Nov 2026 (evening): new simple, modern brand template; Lexus branded set
 
 **What I did**

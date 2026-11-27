@@ -68,7 +68,10 @@ def car_bits(car):
     name = f"{car.get('make', '')} {v('model')}".strip()
     km = f"{car['km']:,} km" if isinstance(car.get("km"), int) else v("km", "{} km")
     specs = "  ·  ".join([km, v("transmission"), v("colour")])
-    price = f"${car['price']:,}" if isinstance(car.get("price"), (int, float)) else v("price")
+    if isinstance(car.get("price"), (int, float)):
+        price = f"${car['price']:,}"
+    else:  # no number: show the call-to-action text instead (e.g. "Ask for price")
+        price = car.get("price_text") or v("price")
     return year, name, specs, price
 
 
@@ -93,7 +96,8 @@ def hero(photo, car, size=(W, H)):
     x0, y0, x1, y1 = box
     px = 44
     # label
-    spaced(d, (x0 + px, y0 + 38), "FOR SALE  ·  PERTH", font(22, 700), ORANGE, tracking=2)
+    tag = (car.get("tagline") or "For sale  ·  Perth").upper()
+    spaced(d, (x0 + px, y0 + 38), tag, font(22, 700), ORANGE, tracking=2)
     # model + price on one line
     pf = fit_font(d, price, 800, 54, 300)
     pw = d.textlength(price, font=pf)
