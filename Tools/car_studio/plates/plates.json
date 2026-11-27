@@ -1,0 +1,740 @@
+{
+  "front": {
+    "angle": 0,
+    "size": [
+      2048,
+      2048
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 62
+    },
+    "ground_centre": [
+      1024.0,
+      1359.8
+    ],
+    "px_per_m": 501.55,
+    "horizon_y": 882.9
+  },
+  "front34": {
+    "angle": 38,
+    "size": [
+      2048,
+      2048
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      1024.0,
+      1267.7
+    ],
+    "px_per_m": 364.03,
+    "horizon_y": 921.6
+  },
+  "side": {
+    "angle": 90,
+    "size": [
+      2048,
+      2048
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      1024.0,
+      1267.7
+    ],
+    "px_per_m": 364.03,
+    "horizon_y": 921.6
+  },
+  "rear34": {
+    "angle": 142,
+    "size": [
+      2048,
+      2048
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      1024.0,
+      1267.7
+    ],
+    "px_per_m": 364.03,
+    "horizon_y": 921.6
+  },
+  "rear": {
+    "angle": 180,
+    "size": [
+      2048,
+      2048
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 62
+    },
+    "ground_centre": [
+      1024.0,
+      1359.8
+    ],
+    "px_per_m": 501.55,
+    "horizon_y": 882.9
+  },
+  "orbit_00": {
+    "angle": 0.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_01": {
+    "angle": 10.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_02": {
+    "angle": 20.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_03": {
+    "angle": 30.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_04": {
+    "angle": 40.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_05": {
+    "angle": 50.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_06": {
+    "angle": 60.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_07": {
+    "angle": 70.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_08": {
+    "angle": 80.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_09": {
+    "angle": 90.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_10": {
+    "angle": 100.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_11": {
+    "angle": 110.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_12": {
+    "angle": 120.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_13": {
+    "angle": 130.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_14": {
+    "angle": 140.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_15": {
+    "angle": 150.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_16": {
+    "angle": 160.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_17": {
+    "angle": 170.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_18": {
+    "angle": 180.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_19": {
+    "angle": 190.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_20": {
+    "angle": 200.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_21": {
+    "angle": 210.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_22": {
+    "angle": 220.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_23": {
+    "angle": 230.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_24": {
+    "angle": 240.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_25": {
+    "angle": 250.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_26": {
+    "angle": 260.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_27": {
+    "angle": 270.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_28": {
+    "angle": 280.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_29": {
+    "angle": 290.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_30": {
+    "angle": 300.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_31": {
+    "angle": 310.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_32": {
+    "angle": 320.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_33": {
+    "angle": 330.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_34": {
+    "angle": 340.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  },
+  "orbit_35": {
+    "angle": 350.0,
+    "size": [
+      1920,
+      1280
+    ],
+    "camera": {
+      "height_m": 1.0,
+      "distance_m": 7.0,
+      "lens_mm": 45
+    },
+    "ground_centre": [
+      960.0,
+      868.5
+    ],
+    "px_per_m": 341.28,
+    "horizon_y": 544.0
+  }
+}
