@@ -95,7 +95,7 @@ def spin_framing(angle):
 
 
 def composite(photo_path, view, plate_name, out_path, mask_dir, plate_boxes=None, scale_adj=1.0, nudge_y=0.0,
-              out_size=None, framing=None):
+              out_size=None, framing=None, erase=None):
     plate = Image.open(os.path.join(PLATES, plate_name + ".jpg")).convert("RGB")
     PW, PH = plate.size
     W, H = out_size or OUT_SIZE
@@ -104,7 +104,13 @@ def composite(photo_path, view, plate_name, out_path, mask_dir, plate_boxes=None
     fr = framing or FRAMING.get(view, {"width": 0.85, "ground": 0.80})
 
     photo = blur_boxes(load(photo_path), plate_boxes)
-    mask = clean_mask(get_mask(photo_path, mask_dir))
+    mask = get_mask(photo_path, mask_dir)
+    if erase:  # background objects the cut-out wrongly kept (flags, poles): [[x0,y0,x1,y1], ...] photo pixels
+        from PIL import ImageDraw
+        mask = mask.copy()
+        for box in erase:
+            ImageDraw.Draw(mask).rectangle(box, fill=0)
+    mask = clean_mask(mask)
     bbox = mask.point(lambda v: 255 if v > 40 else 0).getbbox()
     car = photo.crop(bbox)
     m = mask.crop(bbox)
@@ -166,7 +172,8 @@ def main():
         p = composite(os.path.join(folder, shot["file"]), view, shot.get("plate", view),
                       os.path.join(out_dir, "stills", f"{view}.jpg"), os.path.join(out_dir, "masks"),
                       plate_boxes=shot.get("plate_blur") if cfg.get("blur_plates") else None,
-                      scale_adj=float(shot.get("scale", 1.0)), nudge_y=float(shot.get("nudge_y", 0.0)))
+                      scale_adj=float(shot.get("scale", 1.0)), nudge_y=float(shot.get("nudge_y", 0.0)),
+                      erase=shot.get("mask_erase"))
         print("made", p)
 
     if "--spin" in sys.argv:

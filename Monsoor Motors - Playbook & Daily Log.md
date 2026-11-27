@@ -101,6 +101,21 @@ Run with: `/opt/miniconda3/bin/python -I "Tools/<script>.py"`
 
 Cutting a car out of its background: macOS built-in subject detection (Vision) via a small Swift tool. Ask Claude to set it up again if needed.
 
+### Monsoor Studio (`Tools/car_studio/`), every car listing (added 27 Nov 2026)
+Our own studio, free and open source, runs on this Mac. **The car is always the real photo, never generated or edited**, so posts carry no AI label and never misrepresent a car. Per car: put the photos in `Cars/<car>/`, copy `Cars/Lexus/car.yaml` as the template and fill it, then run:
+
+| Step | Command (from `Tools/car_studio/`) | Makes |
+|---|---|---|
+| Studio (once) | `blender -b -P studio_scene.py -- --out plates --orbit 36` | Grey seamless cove backgrounds (`plates/`) for the 5 still angles + 36 spin angles. `--style showroom` = navy/LED version |
+| Cut-out + place | `python -I car_studio.py "<car folder>"` (add `--spin` for the 36-photo spin) | `Studio/stills/*.jpg` 4:5, `Studio/spin/` frames, cached masks |
+| Posts | `python -I make_posts.py "<car folder>"` | `Studio/posts/`: branded hero, story 9:16, studio stills, interiors, `caption.txt` |
+| 360 page | `python -I make_viewer.py "<car folder>"` | `Studio/viewer/index.html` drag-to-spin + flaw markers + interior 360 |
+| Guide | `python -I make_guide.py "<out folder>"` | `Monsoor Studio - Shooting Guide.pdf` (one page, print it) |
+
+Cut-outs use BiRefNet through `rembg` (installed in miniconda). Shots must follow the guide: whole car in frame including tyres, 2x lens, camera ~1 m high. A photo that hides the tyres can't go in the studio. Reshoot it.
+Missing details in `car.yaml` show as `[BRACKETS]` on the posts; nothing is guessed.
+**Don't use Higgsfield or other AI "studio" edits for listings.** On 27 Nov they changed the Lexus's plate (1GZL → 1GZI) and redrew the bumper and nudge bar. That's misleading under consumer law, and Facebook labels it as AI.
+
 ---
 
 - `Tools/publish_aureus_public.sh`: publishes a clean public copy of the Aureus Detailing folder to github.com/Arfan-Zaman/Aureus-Detailing (fresh single commit, private items left out).

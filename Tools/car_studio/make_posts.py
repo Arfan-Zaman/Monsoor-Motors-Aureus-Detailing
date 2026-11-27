@@ -67,6 +67,7 @@ def val(car, key, fmt="{}", blank=None):
 
 def hero_card(still, car, headline, size=(W, H)):
     w, h = size
+    L, R = 90 * w // W, w - 90 * w // W
     im = still.copy()
     d = ImageDraw.Draw(im)
     top = int(h * 0.755)
@@ -163,11 +164,12 @@ def main():
 
     # story 9:16: hero card on top of extended studio
     base = Image.open(tmp).convert("RGB")
-    story = Image.new("RGB", (1152, 2048), (90, 90, 92))
-    sb = ImageOps.fit(base, (1152, 1440), Image.LANCZOS, centering=(0.5, 0.6))
-    story.paste(sb, (0, 250))
-    top = ImageOps.fit(base.crop((0, 0, base.width, 300)), (1152, 260), Image.LANCZOS)
-    story.paste(top.filter(ImageFilter.GaussianBlur(30)), (0, 0))
+    sb = base.resize((1152, round(base.height * 1152 / base.width)), Image.LANCZOS)  # 1152x1440
+    story = sb.crop((0, 0, 1152, 8)).resize((1152, 2048), Image.BILINEAR)  # extend the top tone smoothly
+    story.paste(sb, (0, 2048 - sb.height - 300))
+    # continue the floor tone under the car down to the panel
+    floor = sb.crop((0, sb.height - 8, 1152, sb.height)).resize((1152, 300), Image.BILINEAR)
+    story.paste(floor, (0, 2048 - 300))
     card = hero_card(story, car, headline, size=(1152, 2048))
     card.save(os.path.join(out, "story_hero.jpg"), quality=93)
     os.remove(tmp)

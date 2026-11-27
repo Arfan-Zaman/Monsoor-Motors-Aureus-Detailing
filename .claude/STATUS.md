@@ -4,6 +4,26 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 27 Nov 2026: Monsoor Studio built (own car studio, free, real photos only)
+
+**What I did**
+- Built our own 3D studio in Blender: a grey seamless cove like Carma's, with background plates for 5 still angles and 36 spin angles.
+- Built the tool that cuts each real car photo out on this Mac (BiRefNet, nothing uploaded), adds a tyre contact shadow and places the car in the studio.
+- Built the post template (hero card, 9:16 story, stills, interiors, caption), the 360 viewer page and a one-page shooting guide.
+- Ran it on the Lexus: the hero, story, side and rear-three-quarter stills, 7 interiors and the caption. The front shot was left out because its tyres are hidden in the photo; it needs a reshoot.
+- Checked the Higgsfield pack: it changed the front plate (1GZL to 1GZI) and redrew the bumper and nudge bar, so it can't be used for a listing.
+
+**Files changed**
+- `Tools/car_studio/` (studio_scene.py, car_studio.py, make_posts.py, make_viewer.py, make_guide.py, assets, plates)
+- Outside git, in the main folder: `Monsoor Motors/Cars/Lexus/car.yaml`, `Monsoor Motors/Cars/Lexus/Studio/`, `Monsoor Motors/Cars/Monsoor Studio - Shooting Guide.pdf`
+- `Monsoor Motors - Playbook & Daily Log.md` (section 5), `.claude/STATUS.md`
+
+**What's next**
+- Owner to send the year, model/variant, price and rego date, and confirm the km (273,213) and whether to show the plate.
+- Reshoot the Lexus with the guide (front + 36-photo spin) to finish the full set and the 360 page.
+
+---
+
 ## 24 Nov 2026: posting times moved to 5–8:30 pm Perth
 
 **What I did**
