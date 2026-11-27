@@ -67,7 +67,10 @@ def car_bits(car):
     year = v("year")
     name = f"{car.get('make', '')} {v('model')}".strip()
     km = f"{car['km']:,} km" if isinstance(car.get("km"), int) else v("km", "{} km")
-    specs = "  ·  ".join([km, v("transmission"), v("colour")])
+    parts = [km, v("transmission"), v("colour")]
+    if car.get("rego_until"):
+        parts.append(f"Rego to {car['rego_until']}")
+    specs = "  ·  ".join(parts)
     if isinstance(car.get("price"), (int, float)):
         price = f"${car['price']:,}"
     else:  # no number: show the call-to-action text instead (e.g. "Ask for price")

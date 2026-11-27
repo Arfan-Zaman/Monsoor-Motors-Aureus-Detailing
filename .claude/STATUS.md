@@ -4,6 +4,22 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 27 Nov 2026 (night): Lexus details from the WA rego check
+
+**What I did**
+- Looked up plate 1GZL497 on the WA DoT vehicle licence check: **2008 Lexus RX350**, silver/chrome, licence expires **08/03/2027**. The last recorded odometer is 191,434 km (Mar 2020), which fits today's 273,213.
+- Put the year and "Rego to 03/2027" on the static posts. `make_brand_posts.py` now adds the rego date to the specs line when `car.yaml` has one.
+- Rebuilt `Cars/Lexus/Branded/`: 8 static slides are ready to post (plus a story version).
+
+**Files changed**
+- `Tools/car_studio/make_brand_posts.py`, `.claude/STATUS.md`
+- Outside git: `Monsoor Motors/Cars/Lexus/car.yaml`, `Cars/Lexus/Branded/`
+
+**What's next**
+- Owner reviews and posts (5–8:30 pm Perth).
+
+---
+
 ## 27 Nov 2026 (late): real plate restored, no price on the Lexus posts
 
 **What I did**
