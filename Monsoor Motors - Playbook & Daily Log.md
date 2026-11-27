@@ -109,12 +109,13 @@ Our own studio, free and open source, runs on this Mac. **The car is always the 
 | Studio (once) | `blender -b -P studio_scene.py -- --out plates --orbit 36` | Grey seamless cove backgrounds (`plates/`) for the 5 still angles + 36 spin angles. `--style showroom` = navy/LED version |
 | Cut-out + place | `python -I car_studio.py "<car folder>"` (add `--spin` for the 36-photo spin) | `Studio/stills/*.jpg` 4:5, `Studio/spin/` frames, cached masks |
 | Posts | `python -I make_posts.py "<car folder>"` | `Studio/posts/`: branded hero, story 9:16, studio stills, interiors, `caption.txt` |
+| Branded set v2 (simple, modern; **current house style**) | `python -I make_brand_posts.py "<car folder>"` | `Branded/`: hero with a floating white info card, 9:16 story, carousel slides with frosted labels + logo pill, navy "Come and see it" closing card. Reads `branded_set` in `car.yaml` |
 | 360 page | `python -I make_viewer.py "<car folder>"` | `Studio/viewer/index.html` drag-to-spin + flaw markers + interior 360 |
 | Guide | `python -I make_guide.py "<out folder>"` | `Monsoor Studio - Shooting Guide.pdf` (one page, print it) |
 
 Cut-outs use BiRefNet through `rembg` (installed in miniconda). Shots must follow the guide: whole car in frame including tyres, 2x lens, camera ~1 m high. A photo that hides the tyres can't go in the studio. Reshoot it.
 Missing details in `car.yaml` show as `[BRACKETS]` on the posts; nothing is guessed.
-**Don't use Higgsfield or other AI "studio" edits for listings.** On 27 Nov they changed the Lexus's plate (1GZL → 1GZI) and redrew the bumper and nudge bar. That's misleading under consumer law, and Facebook labels it as AI.
+**Default: don't use Higgsfield or other AI "studio" edits for listings.** (The owner chose to use them for the Lexus anyway, 27 Nov, after being told about the problems below.) On 27 Nov they changed the Lexus's plate (1GZL → 1GZI) and redrew the bumper and nudge bar. That's misleading under consumer law, and Facebook labels it as AI.
 
 ---
 

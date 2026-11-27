@@ -4,6 +4,24 @@ Claude updates this file after every step and pushes it to GitHub. Newest entry 
 
 ---
 
+## 27 Nov 2026 (evening): new simple, modern brand template; Lexus branded set
+
+**What I did**
+- Built `make_brand_posts.py`, the new house style. The hero has a full-bleed photo and one floating white card (FOR SALE · PERTH, model, price, specs, logo, phone). The carousel slides get small frosted labels, a logo pill and a slide counter. It ends with a navy "Come and see it in person" card, and makes a 9:16 story.
+- Made the Lexus set from the owner's `monsoor_lexus_final_photos.zip`: 8 slides plus the story, in `Monsoor Motors/Cars/Lexus/Branded/`. The source images are kept in `Cars/Lexus/Higgsfield/`.
+- Before building, told the owner that 7 of the zip's images are identical to the earlier Higgsfield set and all are AI-edited: the front plate shows 1GZI instead of the real 1GZL, the side shots are missing the nudge bar, and the interiors have redrawn windows and gauges. The owner chose to use them all; that choice is recorded in `car.yaml` and the playbook.
+
+**Files changed**
+- `Tools/car_studio/make_brand_posts.py`, `Tools/car_studio/assets/` (navy logo, icon)
+- Outside git: `Monsoor Motors/Cars/Lexus/car.yaml`, `Cars/Lexus/Branded/`, `Cars/Lexus/Higgsfield/`
+- `Monsoor Motors - Playbook & Daily Log.md` (section 5), `.claude/STATUS.md`
+
+**What's next**
+- Owner sends the year, price and rego date, then I re-run the one command to fill the [brackets].
+- Optionally blur the plate on the front slide so the wrong plate isn't shown.
+
+---
+
 ## 27 Nov 2026: Monsoor Studio built (own car studio, free, real photos only)
 
 **What I did**
